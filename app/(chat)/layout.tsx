@@ -1,15 +1,16 @@
-import { cookies } from "next/headers";
 import Script from "next/script";
 import { Suspense } from "react";
 import { Toaster } from "sonner";
-import { AppSidebar } from "@/components/chat/app-sidebar";
 import { DataStreamProvider } from "@/components/chat/data-stream-provider";
-import { ChatShell } from "@/components/chat/shell";
-import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { DataStreamHandler } from "@/components/chat/data-stream-handler";
+import { ChatRouteLayoutSwitcher } from "@/components/home/chat-route-layout-switcher";
 import { ActiveChatProvider } from "@/hooks/use-active-chat";
-import { auth } from "../(auth)/auth";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
       <Script
@@ -17,37 +18,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         strategy="lazyOnload"
       />
       <DataStreamProvider>
-        <Suspense fallback={<div className="flex h-dvh bg-sidebar" />}>
-          <SidebarShell>{children}</SidebarShell>
-        </Suspense>
-      </DataStreamProvider>
-    </>
-  );
-}
-
-async function SidebarShell({ children }: { children: React.ReactNode }) {
-  const [session, cookieStore] = await Promise.all([auth(), cookies()]);
-  const isCollapsed = cookieStore.get("sidebar_state")?.value !== "true";
-
-  return (
-    <SidebarProvider defaultOpen={!isCollapsed}>
-      <AppSidebar user={session?.user} />
-      <SidebarInset>
         <Toaster
           position="top-center"
           theme="system"
           toastOptions={{
             className:
-              "!bg-card !text-foreground !border-border/50 !shadow-[var(--shadow-float)]",
+              "!bg-card !text-foreground/90 !border-border !shadow-[0_20px_60px_rgba(0,0,0,0.4)]",
           }}
         />
-        <Suspense fallback={<div className="flex h-dvh" />}>
+        <Suspense fallback={<div className="flex h-dvh bg-background" />}>
           <ActiveChatProvider>
-            <ChatShell />
+            <ChatRouteLayoutSwitcher>{children}</ChatRouteLayoutSwitcher>
           </ActiveChatProvider>
         </Suspense>
-        {children}
-      </SidebarInset>
-    </SidebarProvider>
+        <DataStreamHandler />
+      </DataStreamProvider>
+    </>
   );
 }

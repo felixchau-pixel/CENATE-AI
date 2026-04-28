@@ -1,0 +1,179 @@
+{
+  "slug": "saas",
+  "prompt": "Build a premium AI productivity SaaS landing page for FlowState. Include hero, feature grid, workflow section, testimonials, pricing teaser, CTA, and footer. Make it modern, sharp, premium, and visually dynamic.",
+  "durationMs": 156591,
+  "meta": {
+    "type": "project",
+    "framework": "vite-react-ts",
+    "title": "FlowState - AI Productivity Platform",
+    "entryFile": "src/main.tsx",
+    "previewEntryFile": "src/App.tsx",
+    "siteType": "saas",
+    "designDirection": "modern technical premium with dark theme, high-contrast typography, and product-surface focus",
+    "colorStrategy": "dark background (#0a0a0a), blue accent (#3B82F6), surface layers (#1a1a1a), white text with muted grays",
+    "typography": "Inter display and body with technical precision",
+    "sectionOrder": [
+      "Hero",
+      "ProductShowcase",
+      "WorkflowSection",
+      "CapabilitiesGrid",
+      "TestimonialsBand",
+      "PricingTeaser",
+      "ConversionPanel",
+      "Footer"
+    ],
+    "assets": [
+      {
+        "path": "public/images/hero-dashboard.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&q=80",
+        "prompt": "modern dashboard interface on computer screen"
+      },
+      {
+        "path": "public/images/workflow-automation.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop&q=80",
+        "prompt": "automated workflow visualization"
+      },
+      {
+        "path": "public/images/analytics-charts.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
+        "prompt": "data analytics charts and graphs"
+      },
+      {
+        "path": "public/images/team-collaboration.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop&q=80",
+        "prompt": "team collaboration workspace"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "package.json",
+      "language": "json",
+      "size": 745
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "size": 440
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "size": 626
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "size": 189
+    },
+    {
+      "path": "postcss.config.js",
+      "language": "javascript",
+      "size": 79
+    },
+    {
+      "path": "tailwind.config.ts",
+      "language": "typescript",
+      "size": 404
+    },
+    {
+      "path": "src/main.tsx",
+      "language": "tsx",
+      "size": 240
+    },
+    {
+      "path": "src/styles/globals.css",
+      "language": "css",
+      "size": 1280
+    },
+    {
+      "path": "src/App.tsx",
+      "language": "tsx",
+      "size": 827
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "language": "tsx",
+      "size": 1730
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "language": "tsx",
+      "size": 3757
+    },
+    {
+      "path": "src/components/ProductShowcase.tsx",
+      "language": "tsx",
+      "size": 3800
+    },
+    {
+      "path": "src/components/WorkflowSection.tsx",
+      "language": "tsx",
+      "size": 3686
+    },
+    {
+      "path": "src/components/CapabilitiesGrid.tsx",
+      "language": "tsx",
+      "size": 4541
+    },
+    {
+      "path": "src/components/TestimonialsBand.tsx",
+      "language": "tsx",
+      "size": 4373
+    },
+    {
+      "path": "src/components/PricingTeaser.tsx",
+      "language": "tsx",
+      "size": 5252
+    },
+    {
+      "path": "src/components/ConversionPanel.tsx",
+      "language": "tsx",
+      "size": 5300
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "language": "tsx",
+      "size": 6010
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/images/hero-dashboard.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&q=80",
+      "prompt": "modern dashboard interface on computer screen"
+    },
+    {
+      "path": "public/images/workflow-automation.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop&q=80",
+      "prompt": "automated workflow visualization"
+    },
+    {
+      "path": "public/images/analytics-charts.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
+      "prompt": "data analytics charts and graphs"
+    },
+    {
+      "path": "public/images/team-collaboration.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop&q=80",
+      "prompt": "team collaboration workspace"
+    }
+  ],
+  "isComplete": true
+}

@@ -1,0 +1,173 @@
+{
+  "slug": "saas",
+  "prompt": "Build a premium AI productivity SaaS landing page for FlowState. Include hero, feature grid, workflow section, testimonials, pricing teaser, CTA, and footer. Make it modern, sharp, premium, and visually dynamic.",
+  "durationMs": 151492,
+  "meta": {
+    "type": "project",
+    "framework": "vite-react-ts",
+    "title": "FlowState - AI Productivity Platform",
+    "entryFile": "src/main.tsx",
+    "previewEntryFile": "src/App.tsx",
+    "siteType": "saas",
+    "designDirection": "modern dark premium with sharp typography, electric accents, and dynamic visual hierarchy",
+    "colorStrategy": "dark charcoal backgrounds with electric blue accents (#3B82F6) and subtle gradients",
+    "typography": "Inter display and body with tight tracking for premium tech aesthetic",
+    "sectionOrder": [
+      "hero",
+      "features",
+      "workflow",
+      "testimonials",
+      "pricing",
+      "cta",
+      "footer"
+    ],
+    "assets": [
+      {
+        "path": "public/images/hero.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=800&fit=crop&q=80",
+        "prompt": "Abstract AI neural network visualization with flowing data streams"
+      },
+      {
+        "path": "public/images/dashboard.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+        "prompt": "Clean modern dashboard interface on laptop screen"
+      },
+      {
+        "path": "public/images/workflow.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&h=700&fit=crop&q=80",
+        "prompt": "Dynamic workflow visualization with connected nodes and data flow"
+      },
+      {
+        "path": "public/images/automation.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&h=400&fit=crop&q=80",
+        "prompt": "Futuristic automation interface with glowing elements"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "package.json",
+      "language": "json",
+      "size": 543
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "size": 440
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "size": 626
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "size": 189
+    },
+    {
+      "path": "postcss.config.js",
+      "language": "javascript",
+      "size": 79
+    },
+    {
+      "path": "tailwind.config.ts",
+      "language": "typescript",
+      "size": 285
+    },
+    {
+      "path": "src/main.tsx",
+      "language": "tsx",
+      "size": 240
+    },
+    {
+      "path": "src/styles/globals.css",
+      "language": "css",
+      "size": 1038
+    },
+    {
+      "path": "src/App.tsx",
+      "language": "tsx",
+      "size": 668
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "language": "tsx",
+      "size": 1902
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "language": "tsx",
+      "size": 4936
+    },
+    {
+      "path": "src/components/Features.tsx",
+      "language": "tsx",
+      "size": 5462
+    },
+    {
+      "path": "src/components/Workflow.tsx",
+      "language": "tsx",
+      "size": 4640
+    },
+    {
+      "path": "src/components/Testimonials.tsx",
+      "language": "tsx",
+      "size": 4213
+    },
+    {
+      "path": "src/components/Pricing.tsx",
+      "language": "tsx",
+      "size": 5302
+    },
+    {
+      "path": "src/components/CTA.tsx",
+      "language": "tsx",
+      "size": 3230
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "language": "tsx",
+      "size": 4928
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/images/hero.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=800&fit=crop&q=80",
+      "prompt": "Abstract AI neural network visualization with flowing data streams"
+    },
+    {
+      "path": "public/images/dashboard.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+      "prompt": "Clean modern dashboard interface on laptop screen"
+    },
+    {
+      "path": "public/images/workflow.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&h=700&fit=crop&q=80",
+      "prompt": "Dynamic workflow visualization with connected nodes and data flow"
+    },
+    {
+      "path": "public/images/automation.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&h=400&fit=crop&q=80",
+      "prompt": "Futuristic automation interface with glowing elements"
+    }
+  ],
+  "isComplete": true
+}

@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class'],
+      theme: {
+        container: { center: true, padding: '2rem', screens: { '2xl': '1400px' } },
+        extend: {
+          fontFamily: {
+            heading: ['var(--font-heading)', 'system-ui', 'sans-serif'],
+            body: ['var(--font-body)', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            border: 'hsl(var(--border))',
+            input: 'hsl(var(--input))',
+            ring: 'hsl(var(--ring))',
+            background: 'hsl(var(--background))',
+            foreground: 'hsl(var(--foreground))',
+            primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
+            secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+            destructive: { DEFAULT: 'hsl(var(--destructive))', foreground: 'hsl(var(--destructive-foreground))' },
+            muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+            accent: { DEFAULT: 'hsl(var(--accent))', foreground: 'hsl(var(--accent-foreground))' },
+            popover: { DEFAULT: 'hsl(var(--popover))', foreground: 'hsl(var(--popover-foreground))' },
+            card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+          },
+          borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+          keyframes: {
+            'fade-in-up': { from: { opacity: '0', transform: 'translateY(20px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+            'count-up': { from: { opacity: '0', transform: 'scale(0.8)' }, to: { opacity: '1', transform: 'scale(1)' } },
+            'accordion-down': { from: { height: '0' }, to: { height: 'var(--radix-accordion-content-height)' } },
+            'accordion-up': { from: { height: 'var(--radix-accordion-content-height)' }, to: { height: '0' } },
+          },
+          animation: {
+            'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+            'count-up': 'count-up 0.5s ease-out forwards',
+            'accordion-down': 'accordion-down 0.2s ease-out',
+            'accordion-up': 'accordion-up 0.2s ease-out',
+          },
+        },
+      },
+    }
+  </script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+    #root { min-height: 100vh; }
+    #cenate-error {
+      display: none;
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      max-height: 50vh;
+      overflow: auto;
+      padding: 16px 20px;
+      background: #fff5f5;
+      color: #b91c1c;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 12px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      border-top: 2px solid #ef4444;
+      z-index: 999999;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <div id="cenate-error"></div>
+  <script>
+    (function () {
+      try {
+      const FILES = {"package.json":"{\n  \"name\": \"cenate-website\",\n  \"private\": true,\n  \"version\": \"1.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"tsc -b && vite build\",\n    \"build:dev\": \"vite build --mode development\",\n    \"lint\": \"eslint .\",\n    \"preview\": \"vite preview\",\n    \"test\": \"vitest run\",\n    \"test:watch\": \"vitest\"\n  },\n  \"dependencies\": {\n    \"@radix-ui/react-accordion\": \"^1.2.2\",\n    \"@radix-ui/react-alert-dialog\": \"^1.1.4\",\n    \"@radix-ui/react-aspect-ratio\": \"^1.1.1\",\n    \"@radix-ui/react-avatar\": \"^1.1.2\",\n    \"@radix-ui/react-checkbox\": \"^1.1.3\",\n    \"@radix-ui/react-collapsible\": \"^1.1.2\",\n    \"@radix-ui/react-context-menu\": \"^2.2.4\",\n    \"@radix-ui/react-dialog\": \"^1.1.4\",\n    \"@radix-ui/react-dropdown-menu\": \"^2.1.4\",\n    \"@radix-ui/react-hover-card\": \"^1.1.4\",\n    \"@radix-ui/react-label\": \"^2.1.1\",\n    \"@radix-ui/react-menubar\": \"^1.1.4\",\n    \"@radix-ui/react-navigation-menu\": \"^1.2.3\",\n    \"@radix-ui/react-popover\": \"^1.1.4\",\n    \"@radix-ui/react-progress\": \"^1.1.1\",\n    \"@radix-ui/react-radio-group\": \"^1.2.2\",\n    \"@radix-ui/react-scroll-area\": \"^1.2.2\",\n    \"@radix-ui/react-select\": \"^2.1.4\",\n    \"@radix-ui/react-separator\": \"^1.1.1\",\n    \"@radix-ui/react-slider\": \"^1.2.2\",\n    \"@radix-ui/react-slot\": \"^1.1.0\",\n    \"@radix-ui/react-switch\": \"^1.1.2\",\n    \"@radix-ui/react-tabs\": \"^1.1.2\",\n    \"@radix-ui/react-toast\": \"^1.2.4\",\n    \"@radix-ui/react-toggle\": \"^1.1.1\",\n    \"@radix-ui/react-toggle-group\": \"^1.1.1\",\n    \"@radix-ui/react-tooltip\": \"^1.1.6\",\n    \"@hookform/resolvers\": \"^3.9.1\",\n    \"@tanstack/react-query\": \"^5.62.8\",\n    \"@radix-ui/react-visually-hidden\": \"^1.1.1\",\n    \"class-variance-authority\": \"^0.7.1\",\n    \"clsx\": \"^2.1.1\",\n    \"cmdk\": \"^1.0.4\",\n    \"date-fns\": \"^4.1.0\",\n    \"embla-carousel-react\": \"^8.5.1\",\n    \"input-otp\": \"^1.4.1\",\n    \"lucide-react\": \"^0.468.0\",\n    \"next-themes\": \"^0.4.4\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"react-day-picker\": \"^9.4.3\",\n    \"react-hook-form\": \"^7.54.2\",\n    \"react-resizable-panels\": \"^2.1.7\",\n    \"react-router-dom\": \"^7.1.1\",\n    \"recharts\": \"^2.15.0\",\n    \"sonner\": \"^1.7.1\",\n    \"tailwind-merge\": \"^2.6.0\",\n    \"tailwindcss-animate\": \"^1.0.7\",\n    \"vaul\": \"^1.1.2\",\n    \"zod\": \"^3.24.1\"\n  },\n  \"devDependencies\": {\n    \"@eslint/js\": \"^9.17.0\",\n    \"@tailwindcss/typography\": \"^0.5.16\",\n    \"@testing-library/jest-dom\": \"^6.6.3\",\n    \"@testing-library/react\": \"^16.1.0\",\n    \"@types/node\": \"^22.10.2\",\n    \"@types/react\": \"^18.3.12\",\n    \"@types/react-dom\": \"^18.3.1\",\n    \"@vitejs/plugin-react-swc\": \"^3.7.2\",\n    \"autoprefixer\": \"^10.4.20\",\n    \"eslint\": \"^9.17.0\",\n    \"eslint-plugin-react-hooks\": \"^5.1.0\",\n    \"eslint-plugin-react-refresh\": \"^0.4.16\",\n    \"globals\": \"^15.14.0\",\n    \"jsdom\": \"^25.0.1\",\n    \"postcss\": \"^8.4.49\",\n    \"tailwindcss\": \"^3.4.15\",\n    \"typescript-eslint\": \"^8.18.1\",\n    \"typescript\": \"^5.6.3\",\n    \"vite\": \"^6.0.1\",\n    \"vitest\": \"^2.1.8\"\n  }\n}","bun.lock":"{\n  \"lockfileVersion\": 1,\n  \"workspaces\": {\n    \"\": {\n      \"name\": \"cenate-website\",\n      \"dependencies\": {\n        \"@radix-ui/react-accordion\": \"^1.2.2\",\n        \"@radix-ui/react-alert-dialog\": \"^1.1.4\",\n        \"@radix-ui/react-aspect-ratio\": \"^1.1.1\",\n        \"@radix-ui/react-avatar\": \"^1.1.2\",\n        \"@radix-ui/react-checkbox\": \"^1.1.3\",\n        \"@radix-ui/react-collapsible\": \"^1.1.2\",\n        \"@radix-ui/react-context-menu\": \"^2.2.4\",\n        \"@radix-ui/react-dialog\": \"^1.1.4\",\n        \"@radix-ui/react-dropdown-menu\": \"^2.1.4\",\n        \"@radix-ui/react-hover-card\": \"^1.1.4\",\n        \"@radix-ui/react-label\": \"^2.1.1\",\n        \"@radix-ui/react-menubar\": \"^1.1.4\",\n        \"@radix-ui/react-navigation-menu\": \"^1.2.3\",\n        \"@radix-ui/react-popover\": \"^1.1.4\",\n        \"@radix-ui/react-progress\": \"^1.1.1\",\n        \"@radix-ui/react-radio-group\": \"^1.2.2\",\n        \"@radix-ui/react-scroll-area\": \"^1.2.2\",\n        \"@radix-ui/react-select\": \"^2.1.4\",\n        \"@radix-ui/react-separator\": \"^1.1.1\",\n        \"@radix-ui/react-slider\": \"^1.2.2\",\n        \"@radix-ui/react-slot\": \"^1.1.0\",\n        \"@radix-ui/react-switch\": \"^1.1.2\",\n        \"@radix-ui/react-tabs\": \"^1.1.2\",\n        \"@radix-ui/react-toast\": \"^1.2.4\",\n        \"@radix-ui/react-toggle\": \"^1.1.1\",\n        \"@radix-ui/react-toggle-group\": \"^1.1.1\",\n        \"@radix-ui/react-tooltip\": \"^1.1.6\",\n        \"@radix-ui/react-visually-hidden\": \"^1.1.1\",\n        \"@hookform/resolvers\": \"^3.9.1\",\n        \"@tanstack/react-query\": \"^5.62.8\",\n        \"class-variance-authority\": \"^0.7.1\",\n        \"clsx\": \"^2.1.1\",\n        \"cmdk\": \"^1.0.4\",\n        \"date-fns\": \"^4.1.0\",\n        \"embla-carousel-react\": \"^8.5.1\",\n        \"input-otp\": \"^1.4.1\",\n        \"lucide-react\": \"^0.468.0\",\n        \"next-themes\": \"^0.4.4\",\n        \"react\": \"^18.3.1\",\n        \"react-dom\": \"^18.3.1\",\n        \"react-day-picker\": \"^9.4.3\",\n        \"react-hook-form\": \"^7.54.2\",\n        \"react-resizable-panels\": \"^2.1.7\",\n        \"react-router-dom\": \"^7.1.1\",\n        \"recharts\": \"^2.15.0\",\n        \"sonner\": \"^1.7.1\",\n        \"tailwind-merge\": \"^2.6.0\",\n        \"tailwindcss-animate\": \"^1.0.7\",\n        \"vaul\": \"^1.1.2\",\n        \"zod\": \"^3.24.1\"\n      },\n      \"devDependencies\": {\n        \"@eslint/js\": \"^9.17.0\",\n        \"@tailwindcss/typography\": \"^0.5.16\",\n        \"@testing-library/jest-dom\": \"^6.6.3\",\n        \"@testing-library/react\": \"^16.1.0\",\n        \"@types/node\": \"^22.10.2\",\n        \"@types/react\": \"^18.3.12\",\n        \"@types/react-dom\": \"^18.3.1\",\n        \"@vitejs/plugin-react-swc\": \"^3.7.2\",\n        \"autoprefixer\": \"^10.4.20\",\n        \"eslint\": \"^9.17.0\",\n        \"eslint-plugin-react-hooks\": \"^5.1.0\",\n        \"eslint-plugin-react-refresh\": \"^0.4.16\",\n        \"globals\": \"^15.14.0\",\n        \"jsdom\": \"^25.0.1\",\n        \"postcss\": \"^8.4.49\",\n        \"tailwindcss\": \"^3.4.15\",\n        \"typescript-eslint\": \"^8.18.1\",\n        \"typescript\": \"^5.6.3\",\n        \"vite\": \"^6.0.1\",\n        \"vitest\": \"^2.1.8\"\n      }\n    }\n  },\n  \"packages\": {}\n}","index.html":"<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Cenate Website</title>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.tsx\"><\/script>\n  </body>\n</html>","tsconfig.json":"{\n  \"files\": [],\n  \"references\": [\n    { \"path\": \"./tsconfig.app.json\" },\n    { \"path\": \"./tsconfig.node.json\" }\n  ]\n}","tsconfig.app.json":"{\n  \"compilerOptions\": {\n    \"target\": \"ES2020\",\n    \"useDefineForClassFields\": true,\n    \"lib\": [\"ES2020\", \"DOM\", \"DOM.Iterable\"],\n    \"module\": \"ESNext\",\n    \"skipLibCheck\": true,\n    \"moduleResolution\": \"bundler\",\n    \"allowImportingTsExtensions\": true,\n    \"resolveJsonModule\": true,\n    \"isolatedModules\": true,\n    \"moduleDetection\": \"force\",\n    \"noEmit\": true,\n    \"jsx\": \"react-jsx\",\n    \"strict\": true,\n    \"baseUrl\": \".\",\n    \"paths\": {\n      \"@/*\": [\"./src/*\"]\n    }\n  },\n  \"include\": [\"src\"]\n}","tsconfig.node.json":"{\n  \"compilerOptions\": {\n    \"composite\": true,\n    \"skipLibCheck\": true,\n    \"module\": \"ESNext\",\n    \"moduleResolution\": \"bundler\",\n    \"allowSyntheticDefaultImports\": true,\n    \"types\": [\"node\"]\n  },\n  \"include\": [\"vite.config.ts\", \"vitest.config.ts\", \"eslint.config.js\"]\n}","vite.config.ts":"import { defineConfig } from \"vite\";\nimport react from \"@vitejs/plugin-react-swc\";\nimport path from \"path\";\n\nexport default defineConfig({\n  plugins: [react()],\n  resolve: {\n    alias: {\n      \"@\": path.resolve(__dirname, \"./src\"),\n    },\n  },\n});","postcss.config.js":"export default {\n  plugins: {\n    tailwindcss: {},\n    autoprefixer: {},\n  },\n};","tailwind.config.ts":"import type { Config } from \"tailwindcss\";\n\nexport default {\n  darkMode: [\"class\"],\n  content: [\"./pages/**/*.{ts,tsx}\", \"./components/**/*.{ts,tsx}\", \"./app/**/*.{ts,tsx}\", \"./src/**/*.{ts,tsx}\", \"./index.html\"],\n  prefix: \"\",\n  theme: {\n    container: {\n      center: true,\n      padding: \"2rem\",\n      screens: {\n        \"2xl\": \"1400px\",\n      },\n    },\n    extend: {\n      fontFamily: {\n        heading: [\"var(--font-heading)\", \"system-ui\", \"sans-serif\"],\n        body: [\"var(--font-body)\", \"system-ui\", \"sans-serif\"],\n      },\n      colors: {\n        border: \"hsl(var(--border))\",\n        input: \"hsl(var(--input))\",\n        ring: \"hsl(var(--ring))\",\n        background: \"hsl(var(--background))\",\n        foreground: \"hsl(var(--foreground))\",\n        primary: {\n          DEFAULT: \"hsl(var(--primary))\",\n          foreground: \"hsl(var(--primary-foreground))\",\n        },\n        secondary: {\n          DEFAULT: \"hsl(var(--secondary))\",\n          foreground: \"hsl(var(--secondary-foreground))\",\n        },\n        destructive: {\n          DEFAULT: \"hsl(var(--destructive))\",\n          foreground: \"hsl(var(--destructive-foreground))\",\n        },\n        muted: {\n          DEFAULT: \"hsl(var(--muted))\",\n          foreground: \"hsl(var(--muted-foreground))\",\n        },\n        accent: {\n          DEFAULT: \"hsl(var(--accent))\",\n          foreground: \"hsl(var(--accent-foreground))\",\n        },\n        popover: {\n          DEFAULT: \"hsl(var(--popover))\",\n          foreground: \"hsl(var(--popover-foreground))\",\n        },\n        card: {\n          DEFAULT: \"hsl(var(--card))\",\n          foreground: \"hsl(var(--card-foreground))\",\n        },\n      },\n      borderRadius: {\n        lg: \"var(--radius)\",\n        md: \"calc(var(--radius) - 2px)\",\n        sm: \"calc(var(--radius) - 4px)\",\n      },\n      keyframes: {\n        \"accordion-down\": {\n          from: { height: \"0\" },\n          to: { height: \"var(--radix-accordion-content-height)\" },\n        },\n        \"accordion-up\": {\n          from: { height: \"var(--radix-accordion-content-height)\" },\n          to: { height: \"0\" },\n        },\n        \"fade-in-up\": {\n          from: { opacity: \"0\", transform: \"translateY(20px)\" },\n          to: { opacity: \"1\", transform: \"translateY(0)\" },\n        },\n        \"count-up\": {\n          from: { opacity: \"0\", transform: \"scale(0.8)\" },\n          to: { opacity: \"1\", transform: \"scale(1)\" },\n        },\n      },\n      animation: {\n        \"accordion-down\": \"accordion-down 0.2s ease-out\",\n        \"accordion-up\": \"accordion-up 0.2s ease-out\",\n        \"fade-in-up\": \"fade-in-up 0.6s ease-out forwards\",\n        \"count-up\": \"count-up 0.5s ease-out forwards\",\n      },\n    },\n  },\n  plugins: [require(\"tailwindcss-animate\"), require(\"@tailwindcss/typography\")],\n} satisfies Config;","eslint.config.js":"import js from \"@eslint/js\";\nimport globals from \"globals\";\nimport reactHooks from \"eslint-plugin-react-hooks\";\nimport reactRefresh from \"eslint-plugin-react-refresh\";\nimport tseslint from \"typescript-eslint\";\n\nexport default tseslint.config(\n  { ignores: [\"dist\"] },\n  {\n    extends: [js.configs.recommended, ...tseslint.configs.recommended],\n    files: [\"**/*.{ts,tsx}\"],\n    languageOptions: {\n      ecmaVersion: 2020,\n      globals: globals.browser,\n    },\n    plugins: {\n      \"react-hooks\": reactHooks,\n      \"react-refresh\": reactRefresh,\n    },\n    rules: {\n      ...reactHooks.configs.recommended.rules,\n      \"react-refresh/only-export-components\": [\n        \"warn\",\n        { allowConstantExport: true },\n      ],\n    },\n  }\n);","vitest.config.ts":"import { defineConfig } from \"vitest/config\";\nimport react from \"@vitejs/plugin-react-swc\";\nimport path from \"path\";\n\nexport default defineConfig({\n  plugins: [react()],\n  resolve: {\n    alias: {\n      \"@\": path.resolve(__dirname, \"./src\"),\n    },\n  },\n  test: {\n    environment: \"jsdom\",\n    globals: true,\n    setupFiles: \"./src/test/setup.ts\",\n  },\n});","components.json":"{\n  \"$schema\": \"https://ui.shadcn.com/schema.json\",\n  \"style\": \"default\",\n  \"rsc\": false,\n  \"tsx\": true,\n  \"tailwind\": {\n    \"config\": \"tailwind.config.ts\",\n    \"css\": \"src/index.css\",\n    \"baseColor\": \"zinc\",\n    \"cssVariables\": false\n  },\n  \"aliases\": {\n    \"components\": \"@/components\",\n    \"utils\": \"@/lib/utils\",\n    \"ui\": \"@/components/ui\",\n    \"hooks\": \"@/hooks\",\n    \"lib\": \"@/lib\"\n  }\n}","README.md":"# Cenate Website\n\nThis project was generated by Cenate with a fixed Lovable-style Vite + React + TypeScript scaffold.\n\n## Scripts\n\n- `npm run dev`\n- `npm run build`\n- `npm run build:dev`\n- `npm run lint`\n- `npm run preview`\n- `npm run test`\n- `npm run test:watch`",".gitignore":"node_modules\ndist\n.DS_Store\n.env\n.env.local\ncoverage\n*.log","public/robots.txt":"User-agent: *\nAllow: /","public/placeholder.svg":"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" fill=\"none\">\n  <rect width=\"400\" height=\"300\" rx=\"24\" fill=\"#F4F4F5\"/>\n  <path d=\"M120 210L180 150L225 195L290 125L340 210H120Z\" fill=\"#D4D4D8\"/>\n  <circle cx=\"160\" cy=\"110\" r=\"24\" fill=\"#A1A1AA\"/>\n</svg>","public/favicon.ico":"placeholder favicon","src/main.tsx":"import React from \"react\";\nimport ReactDOM from \"react-dom/client\";\nimport App from \"./App\";\nimport \"./index.css\";\nimport \"./App.css\";\n\nclass ErrorBoundary extends React.Component<\n  { children: React.ReactNode },\n  { error: Error | null }\n> {\n  state: { error: Error | null } = { error: null };\n  static getDerivedStateFromError(error: Error) {\n    return { error };\n  }\n  componentDidCatch(error: Error) {\n    const el = document.getElementById(\"cenate-error\");\n    if (el) {\n      el.style.display = \"block\";\n      el.textContent = \"Render error: \" + error.message;\n    }\n  }\n  render() {\n    if (this.state.error) {\n      return React.createElement(\n        \"div\",\n        {\n          style: {\n            padding: 32,\n            color: \"#b91c1c\",\n            fontFamily: \"ui-monospace, monospace\",\n            fontSize: 13,\n            whiteSpace: \"pre-wrap\" as const,\n            background: \"#fff5f5\",\n            minHeight: \"100vh\",\n          },\n        },\n        \"Render error: \" + this.state.error.message\n      );\n    }\n    return this.props.children;\n  }\n}\n\nReactDOM.createRoot(document.getElementById(\"root\")!).render(\n  <React.StrictMode>\n    <ErrorBoundary>\n      <App />\n    </ErrorBoundary>\n  </React.StrictMode>\n);","src/index.css":"@import url(\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap\");\n\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n@layer base {\n  :root {\n    --background: 0 0% 100%;\n    --foreground: 222.2 47.4% 11.2%;\n    --card: 0 0% 100%;\n    --card-foreground: 222.2 47.4% 11.2%;\n    --popover: 0 0% 100%;\n    --popover-foreground: 222.2 47.4% 11.2%;\n    --primary: 222.2 47.4% 11.2%;\n    --primary-foreground: 210 40% 98%;\n    --secondary: 210 40% 96.1%;\n    --secondary-foreground: 222.2 47.4% 11.2%;\n    --muted: 210 40% 96.1%;\n    --muted-foreground: 215.4 16.3% 46.9%;\n    --accent: 210 40% 96.1%;\n    --accent-foreground: 222.2 47.4% 11.2%;\n    --destructive: 0 72.2% 50.6%;\n    --destructive-foreground: 210 40% 98%;\n    --border: 214.3 31.8% 91.4%;\n    --input: 214.3 31.8% 91.4%;\n    --ring: 221.2 83.2% 53.3%;\n    --radius: 1rem;\n\n    --font-heading: 'Inter', system-ui, sans-serif;\n    --font-body: 'Inter', system-ui, sans-serif;\n\n    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.14), hsl(var(--background)) 55%, hsl(var(--accent) / 0.22));\n    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.92) 100%);\n    --shadow-soft: 0 20px 45px -30px rgb(15 23 42 / 0.28);\n    --shadow-card: 0 18px 40px -28px rgb(15 23 42 / 0.22);\n    --shadow-card-hover: 0 24px 60px -32px rgb(15 23 42 / 0.32);\n\n    --sidebar-background: 0 0% 98%;\n    --sidebar-foreground: 240 5.3% 26.1%;\n    --sidebar-primary: 240 5.9% 10%;\n    --sidebar-primary-foreground: 0 0% 98%;\n    --sidebar-accent: 240 4.8% 95.9%;\n    --sidebar-accent-foreground: 240 5.9% 10%;\n    --sidebar-border: 220 13% 91%;\n    --sidebar-ring: 217.2 91.2% 59.8%;\n  }\n\n  .dark {\n    --background: 222.2 47.4% 6%;\n    --foreground: 210 40% 98%;\n    --card: 222.2 47.4% 8.6%;\n    --card-foreground: 210 40% 98%;\n    --popover: 222.2 47.4% 8.6%;\n    --popover-foreground: 210 40% 98%;\n    --primary: 210 40% 98%;\n    --primary-foreground: 222.2 47.4% 11.2%;\n    --secondary: 217.2 32.6% 17.5%;\n    --secondary-foreground: 210 40% 98%;\n    --muted: 217.2 32.6% 17.5%;\n    --muted-foreground: 215 20.2% 65.1%;\n    --accent: 217.2 32.6% 17.5%;\n    --accent-foreground: 210 40% 98%;\n    --destructive: 0 62.8% 40.6%;\n    --destructive-foreground: 210 40% 98%;\n    --border: 217.2 32.6% 17.5%;\n    --input: 217.2 32.6% 17.5%;\n    --ring: 212.7 26.8% 83.9%;\n    --gradient-hero: linear-gradient(140deg, hsl(var(--primary) / 0.12), hsl(var(--background)) 52%, hsl(217.2 91.2% 59.8% / 0.28));\n    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);\n  }\n}\n\n@layer base {\n  * {\n    border-color: hsl(var(--border));\n  }\n\n  body {\n    background-color: hsl(var(--background));\n    color: hsl(var(--foreground));\n    font-family: var(--font-body);\n    background-image:\n      radial-gradient(circle at top, hsl(var(--primary) / 0.06), transparent 28%),\n      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 100%);\n    line-height: 1.6;\n    text-rendering: optimizeLegibility;\n    -webkit-font-smoothing: antialiased;\n  }\n\n  h1, h2, h3, h4, h5, h6 {\n    font-family: var(--font-heading);\n    letter-spacing: -0.03em;\n    line-height: 1.05;\n    text-wrap: balance;\n  }\n\n  p {\n    text-wrap: pretty;\n  }\n\n  ::selection {\n    background: hsl(var(--primary) / 0.16);\n  }\n\n  :focus-visible {\n    outline: 2px solid hsl(var(--ring));\n    outline-offset: 2px;\n  }\n}\n\n@layer utilities {\n  .text-gradient {\n    background-clip: text;\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--primary) / 0.72));\n  }\n\n  .surface-card {\n    background-image: linear-gradient(180deg, hsl(var(--card) / 0.98), hsl(var(--card) / 0.92));\n    box-shadow: var(--shadow-card);\n  }\n\n  .surface-panel {\n    background: hsl(var(--card) / 0.82);\n    backdrop-filter: blur(14px);\n    border: 1px solid hsl(var(--border) / 0.7);\n    box-shadow: var(--shadow-soft);\n  }\n\n  .section-shell {\n    position: relative;\n  }\n\n  .section-shell::before {\n    content: \"\";\n    position: absolute;\n    inset: 0;\n    pointer-events: none;\n    background: linear-gradient(180deg, hsl(var(--background) / 0), hsl(var(--primary) / 0.03));\n    opacity: 0.8;\n  }\n\n  .eyebrow {\n    display: inline-flex;\n    align-items: center;\n    gap: 0.5rem;\n    font-size: 0.75rem;\n    font-weight: 700;\n    letter-spacing: 0.22em;\n    text-transform: uppercase;\n    color: hsl(var(--primary));\n  }\n}\n\nhtml {\n  scroll-behavior: smooth;\n}\n\n* {\n  box-sizing: border-box;\n}\n\n@keyframes fade-in-up {\n  from { opacity: 0; transform: translateY(20px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n\n@keyframes count-up {\n  from { opacity: 0; transform: scale(0.8); }\n  to { opacity: 1; transform: scale(1); }\n}\n\n@keyframes accordion-down {\n  from { height: 0; }\n  to { height: var(--radix-accordion-content-height); }\n}\n\n@keyframes accordion-up {\n  from { height: var(--radix-accordion-content-height); }\n  to { height: 0; }\n}\n\n.animate-fade-in-up {\n  animation: fade-in-up 0.6s ease-out forwards;\n}\n\n.animate-count-up {\n  animation: count-up 0.5s ease-out forwards;\n}\n\n.animate-accordion-down {\n  animation: accordion-down 0.2s ease-out;\n}\n\n.animate-accordion-up {\n  animation: accordion-up 0.2s ease-out;\n}\n\n\n:root {\n  --background: 0 0% 99%;\n  --foreground: 222 47% 11%;\n  --card: 0 0% 100%;\n  --card-foreground: 222 47% 11%;\n  --popover: 0 0% 100%;\n  --popover-foreground: 222 47% 11%;\n  --primary: 224 76% 54%;\n  --primary-foreground: 210 40% 98%;\n  --secondary: 220 20% 96%;\n  --secondary-foreground: 222 47% 11%;\n  --muted: 220 20% 96%;\n  --muted-foreground: 220 9% 42%;\n  --accent: 214 78% 96%;\n  --accent-foreground: 224 76% 36%;\n  --border: 220 14% 90%;\n  --input: 220 14% 90%;\n  --ring: 224 76% 54%;\n  --radius: 1rem;\n  --font-heading: \"Inter\", system-ui, sans-serif;\n  --font-body: \"Inter\", system-ui, sans-serif;\n  --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 30% 98%) 58%, hsl(224 76% 54% / 0.12));\n  --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 20% 97%) 100%);\n  --shadow-soft: 0 16px 38px -30px rgb(15 23 42 / 0.14);\n  --shadow-card: 0 16px 42px -28px rgb(15 23 42 / 0.12);\n  --shadow-card-hover: 0 22px 50px -26px rgb(15 23 42 / 0.18);\n}\nbody {\n  background-image:\n    linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 23% 98%) 100%);\n}\n\n@layer utilities {\n\n.surface-card {\n  border-color: hsl(var(--border));\n  background-image: linear-gradient(180deg, hsl(var(--card)), hsl(var(--secondary) / 0.78));\n}\n\n.surface-panel {\n  background: hsl(var(--card) / 0.86);\n  border: 1px solid hsl(var(--border));\n}\n\n.eyebrow {\n  color: hsl(var(--primary));\n  letter-spacing: 0.22em;\n}\n\n.family-divider {\n  height: 1px;\n  background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);\n}\n\n.family-grid {\n  background-image:\n    linear-gradient(hsl(var(--border) / 0.35) 1px, transparent 1px),\n    linear-gradient(90deg, hsl(var(--border) / 0.35) 1px, transparent 1px);\n  background-size: 28px 28px;\n}\n\n}","src/App.css":"#root {\n  min-height: 100vh;\n  background: hsl(var(--background));\n  color: hsl(var(--foreground));\n}","src/vite-env.d.ts":"/// <reference types=\"vite/client\" />","src/assets/.gitkeep":"","src/hooks/use-mobile.ts":"import { useEffect, useState } from \"react\";\n\nexport function useMobile(breakpoint = 768) {\n  const [isMobile, setIsMobile] = useState(false);\n\n  useEffect(() => {\n    const media = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);\n    const update = () => setIsMobile(media.matches);\n    update();\n    media.addEventListener(\"change\", update);\n    return () => media.removeEventListener(\"change\", update);\n  }, [breakpoint]);\n\n  return isMobile;\n}","src/pages/Home.tsx":"import App from \"../App\";\n\nexport default function HomePage() {\n  return <App />;\n}","src/test/setup.ts":"import \"@testing-library/jest-dom\";","src/test/App.test.tsx":"import { render, screen } from \"@testing-library/react\";\nimport App from \"../App\";\n\ndescribe(\"App\", () => {\n  it(\"renders without crashing\", () => {\n    render(<App />);\n    expect(screen.getByRole(\"main\")).toBeInTheDocument();\n  });\n});","src/lib/utils.ts":"import { clsx, type ClassValue } from \"clsx\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return clsx(inputs);\n}","src/components/ui/button.tsx":"import React from \"react\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst buttonVariants = cva(\n  \"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground hover:bg-primary/90\",\n        destructive: \"bg-destructive text-destructive-foreground hover:bg-destructive/90\",\n        outline: \"border border-input bg-background hover:bg-accent hover:text-accent-foreground\",\n        secondary: \"bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n        ghost: \"hover:bg-accent hover:text-accent-foreground\",\n        link: \"text-primary underline-offset-4 hover:underline\",\n      },\n      size: {\n        default: \"h-10 px-4 py-2\",\n        sm: \"h-9 rounded-md px-3\",\n        lg: \"h-11 rounded-md px-8\",\n        icon: \"h-10 w-10\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  }\n);\n\ntype ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &\n  VariantProps<typeof buttonVariants> & {\n    asChild?: boolean;\n  };\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n  ({ className, variant, size, asChild = false, ...props }, ref) => {\n    const Comp = asChild ? Slot : \"button\";\n    return (\n      <Comp\n        className={cn(buttonVariants({ variant, size, className }))}\n        ref={ref}\n        {...props}\n      />\n    );\n  }\n);\nButton.displayName = \"Button\";\n\nexport { Button, buttonVariants };\nexport default Button;","src/components/ui/accordion.tsx":"import React from \"react\";\nimport * as AccordionPrimitive from \"@radix-ui/react-accordion\";\nimport { cn } from \"@/lib/utils\";\n\nconst Accordion = AccordionPrimitive.Root;\n\nconst AccordionItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(\n  ({ className, ...props }, ref) => (\n    <AccordionPrimitive.Item ref={ref} className={cn(\"border-b\", className)} {...props} />\n  )\n);\nAccordionItem.displayName = \"AccordionItem\";\n\nconst AccordionTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(\n  ({ className, children, ...props }, ref) => (\n    <AccordionPrimitive.Header className=\"flex\">\n      <AccordionPrimitive.Trigger\n        ref={ref}\n        className={cn(\n          \"flex flex-1 items-center justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\" className=\"shrink-0 transition-transform duration-200\"><path d=\"m6 9 6 6 6-6\" /></svg>\n      </AccordionPrimitive.Trigger>\n    </AccordionPrimitive.Header>\n  )\n);\nAccordionTrigger.displayName = \"AccordionTrigger\";\n\nconst AccordionContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, children, ...props }, ref) => (\n    <AccordionPrimitive.Content ref={ref} className=\"overflow-hidden text-sm\" {...props}>\n      <div className={cn(\"pb-4 pt-0\", className)}>{children}</div>\n    </AccordionPrimitive.Content>\n  )\n);\nAccordionContent.displayName = \"AccordionContent\";\n\nexport { Accordion, AccordionItem, AccordionTrigger, AccordionContent };","src/components/ui/tabs.tsx":"import React from \"react\";\nimport * as TabsPrimitive from \"@radix-ui/react-tabs\";\nimport { cn } from \"@/lib/utils\";\n\nconst Tabs = TabsPrimitive.Root;\n\nconst TabsList = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <TabsPrimitive.List\n      ref={ref}\n      className={cn(\n        \"inline-flex h-10 items-center justify-center rounded-lg bg-zinc-100 p-1 text-zinc-500\",\n        className\n      )}\n      {...props}\n    />\n  )\n);\nTabsList.displayName = \"TabsList\";\n\nconst TabsTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement> & { value: string }>(\n  ({ className, ...props }, ref) => (\n    <TabsPrimitive.Trigger\n      ref={ref}\n      className={cn(\n        \"inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-all\",\n        \"data-[state=active]:bg-white data-[state=active]:text-zinc-950 data-[state=active]:shadow-sm\",\n        className\n      )}\n      {...props}\n    />\n  )\n);\nTabsTrigger.displayName = \"TabsTrigger\";\n\nconst TabsContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(\n  ({ className, ...props }, ref) => (\n    <TabsPrimitive.Content\n      ref={ref}\n      className={cn(\"mt-2\", className)}\n      {...props}\n    />\n  )\n);\nTabsContent.displayName = \"TabsContent\";\n\nexport { Tabs, TabsList, TabsTrigger, TabsContent };","src/components/ui/dialog.tsx":"import React from \"react\";\nimport * as DialogPrimitive from \"@radix-ui/react-dialog\";\nimport { cn } from \"@/lib/utils\";\n\nconst Dialog = DialogPrimitive.Root;\nconst DialogTrigger = DialogPrimitive.Trigger;\nconst DialogClose = DialogPrimitive.Close;\nconst DialogPortal = DialogPrimitive.Portal;\n\nconst DialogOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Overlay\n      ref={ref}\n      className={cn(\n        \"fixed inset-0 z-50 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0\",\n        className\n      )}\n      {...props}\n    />\n  )\n);\nDialogOverlay.displayName = \"DialogOverlay\";\n\nconst DialogContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, children, ...props }, ref) => (\n    <DialogPortal>\n      <DialogOverlay />\n      <DialogPrimitive.Content\n        ref={ref}\n        className={cn(\n          \"fixed left-[50%] top-[50%] z-50 w-full max-w-lg translate-x-[-50%] translate-y-[-50%] rounded-xl border bg-white p-6 shadow-xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n      </DialogPrimitive.Content>\n    </DialogPortal>\n  )\n);\nDialogContent.displayName = \"DialogContent\";\n\nconst DialogTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Title ref={ref} className={cn(\"text-lg font-semibold\", className)} {...props} />\n  )\n);\nDialogTitle.displayName = \"DialogTitle\";\n\nconst DialogDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Description ref={ref} className={cn(\"text-sm text-zinc-500\", className)} {...props} />\n  )\n);\nDialogDescription.displayName = \"DialogDescription\";\n\nexport { Dialog, DialogTrigger, DialogContent, DialogClose, DialogOverlay, DialogTitle, DialogDescription };","src/components/ui/sheet.tsx":"import React from \"react\";\nimport * as DialogPrimitive from \"@radix-ui/react-dialog\";\nimport { cn } from \"@/lib/utils\";\n\nconst Sheet = DialogPrimitive.Root;\nconst SheetTrigger = DialogPrimitive.Trigger;\nconst SheetClose = DialogPrimitive.Close;\n\nconst SheetOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Overlay\n      ref={ref}\n      className={cn(\"fixed inset-0 z-50 bg-black/60 backdrop-blur-sm\", className)}\n      {...props}\n    />\n  )\n);\nSheetOverlay.displayName = \"SheetOverlay\";\n\ntype SheetContentProps = React.HTMLAttributes<HTMLDivElement> & {\n  side?: \"left\" | \"right\" | \"top\" | \"bottom\";\n};\n\nconst sideStyles: Record<string, string> = {\n  right: \"inset-y-0 right-0 h-full w-3/4 max-w-sm border-l translate-x-0\",\n  left: \"inset-y-0 left-0 h-full w-3/4 max-w-sm border-r translate-x-0\",\n  top: \"inset-x-0 top-0 border-b\",\n  bottom: \"inset-x-0 bottom-0 border-t\",\n};\n\nconst SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(\n  ({ side = \"right\", className, children, ...props }, ref) => (\n    <DialogPrimitive.Portal>\n      <SheetOverlay />\n      <DialogPrimitive.Content\n        ref={ref}\n        className={cn(\n          \"fixed z-50 bg-white p-6 shadow-xl transition-transform duration-300\",\n          sideStyles[side],\n          className\n        )}\n        {...props}\n      >\n        {children}\n      </DialogPrimitive.Content>\n    </DialogPrimitive.Portal>\n  )\n);\nSheetContent.displayName = \"SheetContent\";\n\nexport { Sheet, SheetTrigger, SheetContent, SheetClose };","src/components/ui/input.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype InputProps = React.InputHTMLAttributes<HTMLInputElement> & {\n  label?: string;\n  error?: string;\n};\n\nexport default function Input({ label, error, className, id, ...props }: InputProps) {\n  const inputId = id || (label ? label.toLowerCase().replace(/\\s+/g, \"-\") : undefined);\n  return (\n    <div>\n      {label && (\n        <label htmlFor={inputId} className=\"block text-sm font-medium mb-1.5\">\n          {label}\n        </label>\n      )}\n      <input\n        id={inputId}\n        className={cn(\n          \"flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\",\n          error && \"border-destructive focus-visible:ring-destructive\",\n          className\n        )}\n        {...props}\n      />\n      {error && <p className=\"mt-1 text-sm text-destructive\">{error}</p>}\n    </div>\n  );\n}","src/components/ui/textarea.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {\n  label?: string;\n};\n\nexport default function Textarea({ label, className, id, ...props }: TextareaProps) {\n  const inputId = id || (label ? label.toLowerCase().replace(/\\s+/g, \"-\") : undefined);\n  return (\n    <div>\n      {label && (\n        <label htmlFor={inputId} className=\"block text-sm font-medium mb-1.5\">\n          {label}\n        </label>\n      )}\n      <textarea\n        id={inputId}\n        rows={4}\n        className={cn(\n          \"w-full rounded-lg border px-4 py-2.5 text-base outline-none transition-colors resize-none\",\n          className\n        )}\n        {...props}\n      />\n    </div>\n  );\n}","src/components/ui/badge.tsx":"import React from \"react\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst badgeVariants = cva(\n  \"inline-flex items-center rounded-full font-medium\",\n  {\n    variants: {\n      size: {\n        sm: \"px-2 py-0.5 text-[10px]\",\n        md: \"px-2.5 py-0.5 text-xs\",\n        lg: \"px-3 py-1 text-sm\",\n      },\n    },\n    defaultVariants: {\n      size: \"md\",\n    },\n  }\n);\n\ntype BadgeProps = React.HTMLAttributes<HTMLSpanElement> &\n  VariantProps<typeof badgeVariants>;\n\nexport default function Badge({ className, size, ...props }: BadgeProps) {\n  return (\n    <span className={cn(badgeVariants({ size }), className)} {...props} />\n  );\n}\n\nexport { badgeVariants };","src/components/ui/card.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype CardProps = {\n  className?: string;\n  children: React.ReactNode;\n};\n\nexport default function Card({ className, children }: CardProps) {\n  return (\n    <div className={cn(\"surface-card rounded-[calc(var(--radius)+6px)] border bg-card text-card-foreground shadow-sm p-6\", className)}>\n      {children}\n    </div>\n  );\n}","src/components/ui/section.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype SectionProps = {\n  id?: string;\n  className?: string;\n  children: React.ReactNode;\n};\n\nexport default function Section({ id, className, children }: SectionProps) {\n  return (\n    <section id={id} className={cn(\"py-16 md:py-24\", className)}>\n      {children}\n    </section>\n  );\n}","src/components/ui/container.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype ContainerProps = {\n  size?: \"sm\" | \"md\" | \"lg\" | \"xl\" | \"full\";\n  className?: string;\n  children: React.ReactNode;\n};\n\nconst maxWidths: Record<string, string> = {\n  sm: \"max-w-3xl\",\n  md: \"max-w-5xl\",\n  lg: \"max-w-6xl\",\n  xl: \"max-w-7xl\",\n  full: \"max-w-full\",\n};\n\nexport default function Container({ size = \"xl\", className, children }: ContainerProps) {\n  return (\n    <div className={cn(\"mx-auto px-4 sm:px-6 lg:px-8\", maxWidths[size], className)}>\n      {children}\n    </div>\n  );\n}","src/components/ui/heading.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype HeadingProps = {\n  as?: \"h1\" | \"h2\" | \"h3\" | \"h4\";\n  size?: \"display\" | \"h1\" | \"h2\" | \"h3\";\n  eyebrow?: string;\n  className?: string;\n  children: React.ReactNode;\n};\n\nconst sizeStyles: Record<string, string> = {\n  display: \"text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]\",\n  h1: \"text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight\",\n  h2: \"text-3xl md:text-4xl font-semibold tracking-tight\",\n  h3: \"text-xl md:text-2xl font-semibold\",\n};\n\nexport default function Heading({\n  as: Tag = \"h2\",\n  size = \"h2\",\n  eyebrow,\n  className,\n  children,\n}: HeadingProps) {\n  return (\n    <div>\n      {eyebrow && (\n        <span className=\"block text-xs uppercase tracking-widest font-medium mb-3 opacity-60\">\n          {eyebrow}\n        </span>\n      )}\n      <Tag className={cn(sizeStyles[size], className)}>{children}</Tag>\n    </div>\n  );\n}","src/components/ui/separator.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype SeparatorProps = {\n  orientation?: \"horizontal\" | \"vertical\";\n  className?: string;\n};\n\nexport default function Separator({ orientation = \"horizontal\", className }: SeparatorProps) {\n  return (\n    <div\n      role=\"separator\"\n      className={cn(\n        \"shrink-0 bg-current opacity-10\",\n        orientation === \"horizontal\" ? \"h-px w-full\" : \"h-full w-px\",\n        className\n      )}\n    />\n  );\n}","src/components/ui/aspect-ratio.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype AspectRatioProps = {\n  ratio?: number;\n  className?: string;\n  children: React.ReactNode;\n};\n\nexport default function AspectRatio({ ratio = 16 / 9, className, children }: AspectRatioProps) {\n  return (\n    <div className={cn(\"relative w-full overflow-hidden\", className)} style={{ paddingBottom: (1 / ratio) * 100 + \"%\" }}>\n      <div className=\"absolute inset-0\">{children}</div>\n    </div>\n  );\n}","src/components/ui/testimonial.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype TestimonialProps = {\n  quote: string;\n  author: string;\n  role?: string;\n  avatar?: string;\n  className?: string;\n};\n\nexport default function Testimonial({ quote, author, role, avatar, className }: TestimonialProps) {\n  return (\n    <figure className={cn(\"space-y-4\", className)}>\n      <blockquote className=\"text-lg md:text-xl leading-relaxed italic\">\n        &ldquo;{quote}&rdquo;\n      </blockquote>\n      <figcaption className=\"flex items-center gap-3\">\n        {avatar && (\n          <img src={avatar} alt={author} className=\"w-10 h-10 rounded-full object-cover\" />\n        )}\n        <div>\n          <p className=\"font-medium text-sm\">{author}</p>\n          {role && <p className=\"text-xs opacity-60\">{role}</p>}\n        </div>\n      </figcaption>\n    </figure>\n  );\n}","src/components/ui/stats-band.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport { cn } from \"@/lib/utils\";\n\ntype Stat = {\n  value: string;\n  label: string;\n};\n\ntype StatsBandProps = {\n  stats: Stat[];\n  className?: string;\n};\n\nexport default function StatsBand({ stats, className }: StatsBandProps) {\n  return (\n    <Section className={cn(\"py-12\", className)}>\n      <Container>\n        <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8 text-center\">\n          {stats.map((s) => (\n            <div key={s.label}>\n              <p className=\"text-3xl md:text-5xl font-bold\">{s.value}</p>\n              <p className=\"text-sm mt-1 opacity-60\">{s.label}</p>\n            </div>\n          ))}\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/ui/gallery.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype GalleryImage = {\n  src: string;\n  alt: string;\n  span?: \"normal\" | \"wide\" | \"tall\";\n};\n\ntype GalleryProps = {\n  images: GalleryImage[];\n  className?: string;\n};\n\nconst spanClasses: Record<string, string> = {\n  normal: \"\",\n  wide: \"md:col-span-2\",\n  tall: \"md:row-span-2\",\n};\n\nexport default function Gallery({ images, className }: GalleryProps) {\n  return (\n    <div className={cn(\"grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4\", className)}>\n      {images.map((img, i) => (\n        <div key={i} className={cn(\"overflow-hidden rounded-lg\", spanClasses[img.span || \"normal\"])}>\n          <img\n            src={img.src}\n            alt={img.alt}\n            className=\"w-full h-full object-cover transition-transform duration-500 hover:scale-105\"\n          />\n        </div>\n      ))}\n    </div>\n  );\n}","src/components/ui/mobile-nav.tsx":"import React from \"react\";\nimport { Sheet, SheetTrigger, SheetContent, SheetClose } from \"@/components/ui/sheet\";\nimport Button from \"@/components/ui/button\";\nimport { cn } from \"@/lib/utils\";\n\ntype MobileNavProps = {\n  links: { label: string; href: string }[];\n  brandName: string;\n  ctaLabel?: string;\n  ctaHref?: string;\n  className?: string;\n};\n\nexport default function MobileNav({ links, brandName, ctaLabel, ctaHref, className }: MobileNavProps) {\n  return (\n    <Sheet>\n      <SheetTrigger asChild>\n        <button className={cn(\"md:hidden p-2\", className)} aria-label=\"Open menu\">\n          <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\">\n            <line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\" /><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\" /><line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\" />\n          </svg>\n        </button>\n      </SheetTrigger>\n      <SheetContent side=\"right\" className=\"flex flex-col pt-16\">\n        <p className=\"text-lg font-semibold mb-8\">{brandName}</p>\n        <nav className=\"flex flex-col gap-4\">\n          {links.map((link) => (\n            <SheetClose key={link.href} asChild>\n              <a href={link.href} className=\"text-lg py-2 border-b border-zinc-100 hover:text-zinc-600 transition-colors\">\n                {link.label}\n              </a>\n            </SheetClose>\n          ))}\n        </nav>\n        {ctaLabel && ctaHref && (\n          <div className=\"mt-auto pt-8\">\n            <SheetClose asChild>\n              <Button asChild size=\"lg\" className=\"w-full\">\n                <a href={ctaHref}>{ctaLabel}</a>\n              </Button>\n            </SheetClose>\n          </div>\n        )}\n      </SheetContent>\n    </Sheet>\n  );\n}","src/assets/generated-images.ts":"export const projectImages = {\n  hero: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmhlcm88L3RleHQ+Cjwvc3ZnPg==`,\n  support: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPnN1cHBvcnQ8L3RleHQ+Cjwvc3ZnPg==`,\n  gallery1: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkxPC90ZXh0Pgo8L3N2Zz4=`,\n  gallery2: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkyPC90ZXh0Pgo8L3N2Zz4=`,\n  gallery3: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkzPC90ZXh0Pgo8L3N2Zz4=`,\n  detail1: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmRldGFpbDE8L3RleHQ+Cjwvc3ZnPg==`,\n} as const;\n\nexport type ProjectImageKey = keyof typeof projectImages;\n\nexport default projectImages;","src/App.tsx":"import React from 'react';\nimport Navbar from './components/Navbar';\nimport Hero from './components/Hero';\nimport ProductDemo from './components/ProductDemo';\nimport Capabilities from './components/Capabilities';\nimport Metrics from './components/Metrics';\nimport Testimonial from './components/Testimonial';\nimport Pricing from './components/Pricing';\nimport Footer from './components/Footer';\n\nexport default function App() {\n  return (\n    <main role=\"main\" className=\"min-h-screen bg-background text-foreground\">\n      <Navbar />\n      <Hero />\n      <ProductDemo />\n      <Capabilities />\n      <Metrics />\n      <Testimonial />\n      <Pricing />\n<Footer />\n    </main>\n  );\n}","src/components/Navbar.tsx":"import React from 'react';\nimport Button from '@/components/ui/button';\nimport MobileNav from '@/components/ui/mobile-nav';\n\nexport default function Navbar() {\n  const links = [\n    { label: 'Features', href: '#features' },\n    { label: 'Pricing', href: '#pricing' },\n    { label: 'Resources', href: '#resources' },\n    { label: 'Support', href: '#support' }\n  ];\n\n  return (\n    <nav className=\"sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md\">\n      <div className=\"mx-auto max-w-7xl px-4 sm:px-6 lg:px-8\">\n        <div className=\"flex h-16 items-center justify-between\">\n          <div className=\"flex items-center\">\n            <span className=\"text-xl font-heading font-bold text-primary\">DataFlow Pro</span>\n          </div>\n          \n          {/* Desktop Navigation */}\n          <div className=\"hidden md:block\">\n            <div className=\"ml-10 flex items-baseline space-x-8\">\n              {links.map((link) => (\n                <a\n                  key={link.label}\n                  href={link.href}\n                  className=\"text-sm font-medium text-muted-foreground hover:text-foreground transition-colors\"\n                >\n                  {link.label}\n                </a>\n              ))}\n            </div>\n          </div>\n\n          <div className=\"hidden md:block\">\n            <div className=\"ml-4 flex items-center space-x-4\">\n              <Button variant=\"ghost\" size=\"sm\">Sign In</Button>\n              <Button size=\"sm\">Start Free Trial</Button>\n            </div>\n          </div>\n\n          {/* Mobile Navigation */}\n          <div className=\"md:hidden\">\n            <MobileNav \n              links={links}\n              brandName=\"DataFlow Pro\"\n              ctaLabel=\"Start Free Trial\"\n              ctaHref=\"#signup\"\n            />\n          </div>\n        </div>\n      </div>\n    </nav>\n  );\n}","src/components/Hero.tsx":"import React from 'react';\nimport Section from '@/components/ui/section';\nimport Container from '@/components/ui/container';\nimport Heading from '@/components/ui/heading';\nimport Button from '@/components/ui/button';\nimport { projectImages } from '@/assets/generated-images';\n\nexport default function Hero() {\n  return (\n    <Section className=\"min-h-[85vh] flex items-center bg-zinc-950 text-white py-24\">\n      <Container>\n        <div className=\"grid lg:grid-cols-12 gap-12 items-center\">\n          <div className=\"lg:col-span-5 max-w-xl\">\n            <Heading as=\"h1\" size=\"display\" className=\"font-heading text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight\">\n              Transform Data Into \n              <span className=\"text-blue-400\"> Intelligent Insights</span>\n            </Heading>\n            <p className=\"mt-6 text-lg text-zinc-300 max-w-lg leading-relaxed\">\n              Unify your data sources, automate complex workflows, and deliver real-time analytics that drive business decisions with confidence.\n            </p>\n            <div className=\"mt-8 flex flex-wrap gap-4\">\n              <Button size=\"lg\" className=\"bg-blue-600 hover:bg-blue-700\">Start Free Trial</Button>\n              <Button size=\"lg\" variant=\"outline\" className=\"border-zinc-600 text-zinc-300 hover:bg-zinc-800\">\n                Watch Demo\n              </Button>\n            </div>\n            \n            {/* Credibility Rail */}\n            <div className=\"mt-12 pt-8 border-t border-zinc-800\">\n              <p className=\"text-xs uppercase tracking-[0.2em] text-zinc-500 font-medium mb-4\">Trusted by 10,000+ teams</p>\n              <div className=\"flex items-center space-x-8 text-zinc-400\">\n                <span className=\"text-sm font-medium\">Stripe</span>\n                <span className=\"text-sm font-medium\">Notion</span>\n                <span className=\"text-sm font-medium\">Figma</span>\n                <span className=\"text-sm font-medium\">Linear</span>\n              </div>\n            </div>\n          </div>\n          \n          {/* Product Window */}\n          <div className=\"lg:col-span-7\">\n            <div className=\"relative\">\n              {/* Browser Chrome */}\n              <div className=\"bg-zinc-800 rounded-t-xl p-3 border border-zinc-700\">\n                <div className=\"flex items-center space-x-2\">\n                  <div className=\"w-3 h-3 bg-red-500 rounded-full\"></div>\n                  <div className=\"w-3 h-3 bg-yellow-500 rounded-full\"></div>\n                  <div className=\"w-3 h-3 bg-green-500 rounded-full\"></div>\n                  <div className=\"ml-4 flex-1 bg-zinc-900 rounded px-3 py-1 text-xs text-zinc-400\">\n                    app.dataflowpro.com/dashboard\n                  </div>\n                </div>\n              </div>\n              \n              {/* Product UI */}\n              <div className=\"bg-zinc-900 rounded-b-xl border-x border-b border-zinc-700 overflow-hidden\">\n                <img \n                  src={projectImages.hero} \n                  alt=\"DataFlow Pro dashboard interface showing real-time analytics and data visualization\"\n                  className=\"w-full h-auto object-cover\"\n                />\n              </div>\n              \n              {/* Subtle overlay effect */}\n              <div className=\"absolute inset-0 bg-gradient-to-t from-zinc-950/20 to-transparent rounded-xl pointer-events-none\"></div>\n            </div>\n          </div>\n        </div>\n      \n      <div className=\"mt-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4\">\n        <div className=\"surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3\">\n          <p className=\"text-lg font-semibold\">12K+</p>\n          <p className=\"mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground\">Teams onboarded</p>\n        </div>\n<div className=\"surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3\">\n          <p className=\"text-lg font-semibold\">99.9%</p>\n          <p className=\"mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground\">Uptime</p>\n        </div>\n<div className=\"surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3\">\n          <p className=\"text-lg font-semibold\">24/7</p>\n          <p className=\"mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground\">Support</p>\n        </div>\n      </div>\n      <div className=\"family-divider mt-6 max-w-2xl\"></div>\n      <p className=\"mt-4 max-w-xl text-sm text-muted-foreground\">Buttons are dense, crisp, and product-like with strong contrast and direct labels.</p>\n      </Container>\n    </Section>\n  );\n}","src/components/ProductDemo.tsx":"import React from 'react';\nimport Section from '@/components/ui/section';\nimport Container from '@/components/ui/container';\nimport Heading from '@/components/ui/heading';\nimport { projectImages } from '@/assets/generated-images';\n\nexport default function ProductDemo() {\n  const callouts = [\n    { number: '1', label: 'Connect data sources', position: 'top-[15%] left-[8%]' },\n    { number: '2', label: 'Configure transformations', position: 'top-[25%] right-[12%]' },\n    { number: '3', label: 'Set up real-time monitoring', position: 'top-[45%] left-[15%]' },\n    { number: '4', label: 'Deploy with one click', position: 'bottom-[20%] right-[8%]' },\n    { number: '5', label: 'Share insights instantly', position: 'bottom-[15%] left-[25%]' }\n  ];\n\n  return (\n    <Section className=\"bg-background py-20\">\n      <Container>\n        <div className=\"text-center mb-16\">\n          <Heading size=\"h2\" eyebrow=\"How it works\" className=\"font-heading\">\n            Build Data Pipelines in Minutes, Not Months\n          </Heading>\n          <p className=\"mt-6 text-lg text-muted-foreground max-w-3xl mx-auto\">\n            Watch how DataFlow Pro transforms complex data workflows into simple, visual processes that anyone on your team can understand and manage.\n          </p>\n        </div>\n\n        <div className=\"relative max-w-6xl mx-auto\">\n          <div className=\"bg-card rounded-2xl p-1 shadow-lg border border-border\">\n            <img \n              src={projectImages.support} \n              alt=\"DataFlow Pro workflow editor showing step-by-step data transformation pipeline with visual connectors\"\n              className=\"w-full h-auto rounded-xl object-cover\"\n            />\n            \n            {/* Animated Callouts */}\n            {callouts.map((callout, index) => (\n              <div \n                key={callout.number}\n                className={`absolute ${callout.position} animate-pulse`}\n                style={{ animationDelay: `${index * 400}ms` }}\n              >\n                <div className=\"flex items-center space-x-2 bg-blue-600 text-white px-3 py-2 rounded-full text-sm font-medium shadow-lg\">\n                  <span className=\"w-5 h-5 bg-white text-blue-600 rounded-full flex items-center justify-center text-xs font-bold\">\n                    {callout.number}\n                  </span>\n                  <span>{callout.label}</span>\n                </div>\n              </div>\n            ))}\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Capabilities.tsx":"import React from 'react';\nimport Section from '@/components/ui/section';\nimport Container from '@/components/ui/container';\nimport Heading from '@/components/ui/heading';\nimport { projectImages } from '@/assets/generated-images';\n\nexport default function Capabilities() {\n  const capabilities = [\n    {\n      icon: (\n        <svg className=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n          <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z\" />\n        </svg>\n      ),\n      title: 'Real-Time Data Processing',\n      description: 'Process millions of events per second with sub-100ms latency. Built for enterprise scale with automatic failover and recovery.',\n      detail: '50ms avg response'\n    },\n    {\n      icon: (\n        <svg className=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n          <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M13 10V3L4 14h7v7l9-11h-7z\" />\n        </svg>\n      ),\n      title: 'Intelligent Automation',\n      description: 'AI-powered data transformations that learn from your patterns. Automatically detect anomalies and suggest optimizations.',\n      detail: 'ML-powered insights'\n    },\n    {\n      icon: (\n        <svg className=\"w-6 h-6\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n          <path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z\" />\n        </svg>\n      ),\n      title: 'Enterprise Security',\n      description: 'SOC 2 Type II compliant with end-to-end encryption. Role-based access controls and comprehensive audit logs.',\n      detail: 'SOC 2 certified'\n    }\n  ];\n\n  return (\n    <Section className=\"bg-secondary py-20\">\n      <Container>\n        <div className=\"text-left mb-16\">\n          <Heading size=\"h2\" eyebrow=\"Capabilities\" className=\"font-heading\">\n            Built for Modern Data Teams\n          </Heading>\n        </div>\n\n        <div className=\"space-y-1\">\n          {capabilities.map((capability, index) => (\n            <div \n              key={capability.title}\n              className={`grid lg:grid-cols-12 gap-8 items-center py-12 px-8 rounded-xl transition-all duration-300 hover:bg-card ${\n                index % 2 === 0 ? 'bg-background/50' : 'bg-card/30'\n              }`}\n            >\n              <div className=\"lg:col-span-1\">\n                <div className=\"w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white\">\n                  {capability.icon}\n                </div>\n              </div>\n              <div className=\"lg:col-span-7\">\n                <h3 className=\"text-xl font-heading font-semibold mb-3\">{capability.title}</h3>\n                <p className=\"text-muted-foreground leading-relaxed\">{capability.description}</p>\n              </div>\n              <div className=\"lg:col-span-4\">\n                <div className=\"bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4 text-left border border-blue-200 dark:border-blue-800\">\n                  <span className=\"text-sm font-medium text-blue-600 dark:text-blue-400\">{capability.detail}</span>\n                  <div className=\"mt-2 w-16 h-12 bg-blue-100 dark:bg-blue-900/30 rounded mx-auto flex items-center justify-center\">\n                    <div className=\"w-8 h-1 bg-blue-600 rounded\"></div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          ))}\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Metrics.tsx":"import React from 'react';\nimport Section from '@/components/ui/section';\nimport Container from '@/components/ui/container';\n\nexport default function Metrics() {\n  const metrics = [\n    { value: '99.99%', label: 'Uptime SLA' },\n    { value: '<50ms', label: 'Response Time' },\n    { value: '10K+', label: 'Active Teams' },\n    { value: '500M+', label: 'Events/Month' },\n    { value: 'SOC 2', label: 'Certified' }\n  ];\n\n  return (\n    <Section className=\"bg-blue-950 text-white py-16\">\n      <Container>\n        <div className=\"grid grid-cols-2 md:grid-cols-5 gap-8 text-left\">\n          {metrics.map((metric, index) => (\n            <div key={metric.label} className=\"space-y-2\">\n              <div className=\"text-3xl md:text-5xl font-heading font-bold text-blue-400\">\n                {metric.value}\n              </div>\n              <div className=\"text-sm text-blue-200 uppercase tracking-wide\">\n                {metric.label}\n              </div>\n            </div>\n          ))}\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Testimonial.tsx":"import React from 'react';\nimport Section from '@/components/ui/section';\nimport Container from '@/components/ui/container';\nimport { projectImages } from '@/assets/generated-images';\n\nexport default function Testimonial() {\n  return (\n    <Section className=\"bg-card py-20\">\n      <Container>\n        <div className=\"max-w-5xl mx-auto\">\n          {/* Logo Wall */}\n          <div className=\"text-center mb-12\">\n            <p className=\"text-xs uppercase tracking-[0.2em] text-muted-foreground font-medium mb-8\">\n              Trusted by industry leaders\n            </p>\n            <div className=\"flex items-center justify-center space-x-12 text-muted-foreground\">\n              <span className=\"text-xl font-medium\">Stripe</span>\n              <span className=\"text-xl font-medium\">Shopify</span>\n              <span className=\"text-xl font-medium\">Notion</span>\n              <span className=\"text-xl font-medium\">Linear</span>\n              <span className=\"text-xl font-medium\">Figma</span>\n            </div>\n          </div>\n\n          {/* Main Testimonial */}\n          <div className=\"bg-background rounded-2xl p-8 md:p-12 border border-border\">\n            <div className=\"grid lg:grid-cols-12 gap-8 items-center\">\n              <div className=\"lg:col-span-8\">\n                <blockquote className=\"text-xl md:text-2xl font-medium leading-relaxed text-foreground mb-6\">\n                  \"DataFlow Pro transformed how we handle customer data. What used to take our engineering team weeks to build now takes minutes. The real-time insights have improved our conversion rates by 40% and reduced our data infrastructure costs by 60%.\"\n                </blockquote>\n                <div className=\"flex items-center space-x-4\">\n                  <img \n                    src={projectImages.detail1} \n                    alt=\"Sarah Chen, VP of Engineering at TechFlow\"\n                    className=\"w-12 h-12 rounded-full object-cover\"\n                  />\n                  <div>\n                    <p className=\"font-semibold text-foreground\">Sarah Chen</p>\n                    <p className=\"text-sm text-muted-foreground\">VP of Engineering, TechFlow</p>\n                  </div>\n                </div>\n              </div>\n              <div className=\"lg:col-span-4\">\n                <div className=\"bg-card rounded-xl p-6 border border-border\">\n                  <div className=\"flex items-center space-x-3 mb-4\">\n                    <div className=\"w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center\">\n                      <span className=\"text-white text-sm font-bold\">T</span>\n                    </div>\n                    <span className=\"font-semibold\">TechFlow</span>\n                  </div>\n                  <div className=\"space-y-3 text-sm text-muted-foreground\">\n                    <div className=\"flex justify-between\">\n                      <span>Data processed daily</span>\n                      <span className=\"font-medium text-foreground\">2.5B events</span>\n                    </div>\n                    <div className=\"flex justify-between\">\n                      <span>Response time</span>\n                      <span className=\"font-medium text-foreground\">23ms avg</span>\n                    </div>\n                    <div className=\"flex justify-between\">\n                      <span>Cost reduction</span>\n                      <span className=\"font-medium text-green-600\">-60%</span>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Pricing.tsx":"import React from 'react';\nimport Section from '@/components/ui/section';\nimport Container from '@/components/ui/container';\nimport Heading from '@/components/ui/heading';\nimport Button from '@/components/ui/button';\nimport Badge from '@/components/ui/badge';\n\nexport default function Pricing() {\n  return (\n    <Section className=\"bg-background py-24\">\n      <Container>\n        <div className=\"text-center mb-16\">\n          <Heading size=\"h2\" eyebrow=\"Pricing\" className=\"font-heading\">\n            Simple, Transparent Pricing\n          </Heading>\n          <p className=\"mt-6 text-lg text-muted-foreground max-w-2xl mx-auto\">\n            Start free, scale as you grow. No hidden fees, no surprises.\n          </p>\n        </div>\n\n        <div className=\"max-w-5xl mx-auto\">\n          {/* Two-tier comparison */}\n          <div className=\"grid lg:grid-cols-12 gap-8 mb-12\">\n            {/* Essentials Plan */}\n            <div className=\"lg:col-span-5\">\n              <div className=\"bg-card rounded-2xl p-8 border border-border h-full\">\n                <div className=\"mb-8\">\n                  <h3 className=\"text-xl font-heading font-semibold mb-2\">Essentials</h3>\n                  <p className=\"text-muted-foreground mb-4\">Perfect for growing teams</p>\n                  <div className=\"flex items-baseline\">\n                    <span className=\"text-3xl font-heading font-bold\">$49</span>\n                    <span className=\"text-muted-foreground ml-2\">/month</span>\n                  </div>\n                </div>\n                \n                <ul className=\"space-y-3 mb-8 text-sm\">\n                  <li className=\"flex items-start space-x-3\">\n                    <svg className=\"w-4 h-4 text-green-600\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                      <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                    </svg>\n                    <span>Up to 1M events/month</span>\n                  </li>\n                  <li className=\"flex items-start space-x-3\">\n                    <svg className=\"w-4 h-4 text-green-600\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                      <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                    </svg>\n                    <span>5 team members</span>\n                  </li>\n                  <li className=\"flex items-start space-x-3\">\n                    <svg className=\"w-4 h-4 text-green-600\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                      <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                    </svg>\n                    <span>Email support</span>\n                  </li>\n                  <li className=\"flex items-start space-x-3\">\n                    <svg className=\"w-4 h-4 text-green-600\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                      <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                    </svg>\n                    <span>Basic integrations</span>\n                  </li>\n                </ul>\n                \n                <Button variant=\"outline\" className=\"w-full\">Start Free Trial</Button>\n              </div>\n            </div>\n\n            {/* Pro Plan - Featured */}\n            <div className=\"lg:col-span-7\">\n              <div className=\"bg-blue-950 text-white rounded-2xl p-8 border-2 border-blue-500 h-full relative\">\n                <Badge className=\"absolute -top-3 left-8 bg-blue-500 text-white\">Most Popular</Badge>\n                \n                <div className=\"mb-8\">\n                  <h3 className=\"text-xl font-heading font-semibold mb-2\">Pro</h3>\n                  <p className=\"text-blue-200 mb-4\">For scaling businesses</p>\n                  <div className=\"flex items-baseline\">\n                    <span className=\"text-4xl font-heading font-bold\">$149</span>\n                    <span className=\"text-blue-200 ml-2\">/month</span>\n                  </div>\n                </div>\n                \n                <div className=\"grid grid-cols-1 gap-6 mb-8 text-sm\">\n                  <ul className=\"space-y-3\">\n                    <li className=\"flex items-start space-x-3\">\n                      <svg className=\"w-4 h-4 text-blue-400\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                        <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                      </svg>\n                      <span>Up to 50M events/month</span>\n                    </li>\n                    <li className=\"flex items-start space-x-3\">\n                      <svg className=\"w-4 h-4 text-blue-400\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                        <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                      </svg>\n                      <span>Unlimited team members</span>\n                    </li>\n                    <li className=\"flex items-start space-x-3\">\n                      <svg className=\"w-4 h-4 text-blue-400\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                        <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                      </svg>\n                      <span>24/7 priority support</span>\n                    </li>\n                    <li className=\"flex items-start space-x-3\">\n                      <svg className=\"w-4 h-4 text-blue-400\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                        <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                      </svg>\n                      <span>Advanced integrations</span>\n                    </li>\n                  </ul>\n                  <ul className=\"space-y-3\">\n                    <li className=\"flex items-start space-x-3\">\n                      <svg className=\"w-4 h-4 text-blue-400\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                        <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                      </svg>\n                      <span>Real-time monitoring</span>\n                    </li>\n                    <li className=\"flex items-start space-x-3\">\n                      <svg className=\"w-4 h-4 text-blue-400\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                        <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                      </svg>\n                      <span>Custom workflows</span>\n                    </li>\n                    <li className=\"flex items-start space-x-3\">\n                      <svg className=\"w-4 h-4 text-blue-400\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                        <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                      </svg>\n                      <span>API access</span>\n                    </li>\n                    <li className=\"flex items-start space-x-3\">\n                      <svg className=\"w-4 h-4 text-blue-400\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                        <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                      </svg>\n                      <span>SSO & advanced security</span>\n                    </li>\n                  </ul>\n                </div>\n                \n                <Button size=\"lg\" className=\"w-full bg-white text-blue-950 hover:bg-blue-50\">\n                  Start Free Trial\n                </Button>\n              </div>\n            </div>\n          </div>\n\n          {/* Enterprise */}\n          <div className=\"bg-card rounded-2xl p-8 border border-border\">\n            <div className=\"grid grid-cols-1 gap-8 items-start\">\n              <div>\n                <h3 className=\"text-2xl font-heading font-semibold mb-3\">Enterprise</h3>\n                <p className=\"text-muted-foreground mb-4\">\n                  Custom solutions for large organizations with dedicated support and advanced security features.\n                </p>\n                <ul className=\"space-y-2 text-sm\">\n                  <li className=\"flex items-start space-x-2\">\n                    <svg className=\"w-4 h-4 text-green-600\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                      <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                    </svg>\n                    <span>Unlimited events</span>\n                  </li>\n                  <li className=\"flex items-start space-x-2\">\n                    <svg className=\"w-4 h-4 text-green-600\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                      <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                    </svg>\n                    <span>Dedicated account manager</span>\n                  </li>\n                  <li className=\"flex items-start space-x-2\">\n                    <svg className=\"w-4 h-4 text-green-600\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                      <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                    </svg>\n                    <span>On-premise deployment</span>\n                  </li>\n                </ul>\n              </div>\n              <div className=\"text-center\">\n                <Button size=\"lg\">Contact Sales</Button>\n                <p className=\"text-sm text-muted-foreground mt-3\">\n                  Custom pricing based on your needs\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Conversion.tsx":"import React from 'react';\nimport Section from '@/components/ui/section';\nimport Container from '@/components/ui/container';\nimport Heading from '@/components/ui/heading';\nimport Button from '@/components/ui/button';\nimport Input from '@/components/ui/input';\n\nexport default function Conversion() {\n  return (\n    <Section className=\"bg-zinc-950 text-white py-24\">\n      <Container>\n        <div className=\"max-w-5xl mx-auto\">\n          <div className=\"grid lg:grid-cols-12 gap-12 items-start\">\n            {/* Left Column - Value Proposition */}\n            <div className=\"lg:col-span-6\">\n              <Heading size=\"h2\" className=\"font-heading text-white mb-6\">\n                Ready to Transform Your Data Operations?\n              </Heading>\n              <p className=\"text-xl text-zinc-300 mb-8 leading-relaxed\">\n                Join thousands of teams already using DataFlow Pro to build better data products, faster.\n              </p>\n              \n              <div className=\"space-y-4 mb-8\">\n                <div className=\"flex items-center space-x-3\">\n                  <div className=\"w-5 h-5 bg-green-500 rounded-full flex items-center justify-center\">\n                    <svg className=\"w-3 h-3 text-white\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                      <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                    </svg>\n                  </div>\n                  <span className=\"text-zinc-300\">No credit card required</span>\n                </div>\n                <div className=\"flex items-center space-x-3\">\n                  <div className=\"w-5 h-5 bg-green-500 rounded-full flex items-center justify-center\">\n                    <svg className=\"w-3 h-3 text-white\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                      <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                    </svg>\n                  </div>\n                  <span className=\"text-zinc-300\">3-minute setup process</span>\n                </div>\n                <div className=\"flex items-center space-x-3\">\n                  <div className=\"w-5 h-5 bg-green-500 rounded-full flex items-center justify-center\">\n                    <svg className=\"w-3 h-3 text-white\" fill=\"currentColor\" viewBox=\"0 0 20 20\">\n                      <path fillRule=\"evenodd\" d=\"M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z\" clipRule=\"evenodd\" />\n                    </svg>\n                  </div>\n                  <span className=\"text-zinc-300\">14-day free trial</span>\n                </div>\n              </div>\n            </div>\n\n            {/* Right Column - Signup Form */}\n            <div className=\"lg:col-span-6\">\n              <div className=\"bg-zinc-900 rounded-2xl p-8 border border-zinc-800\">\n                <form className=\"space-y-6\" onSubmit={(e) => e.preventDefault()}>\n                  <div>\n                    <Input \n                      label=\"Work Email\"\n                      type=\"email\"\n                      placeholder=\"you@company.com\"\n                      className=\"bg-zinc-800 border-zinc-700 text-white\"\n                    />\n                  </div>\n                  \n                  <div>\n                    <Input \n                      label=\"Company Name\"\n                      placeholder=\"Your Company\"\n                      className=\"bg-zinc-800 border-zinc-700 text-white\"\n                    />\n                  </div>\n                  \n                  <div>\n                    <label className=\"block text-sm font-medium text-zinc-200 mb-2\">\n                      Use Case\n                    </label>\n                    <select className=\"w-full px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500\">\n                      <option value=\"\">Select your primary use case</option>\n                      <option value=\"analytics\">Real-time Analytics</option>\n                      <option value=\"etl\">Data ETL/ELT</option>\n                      <option value=\"monitoring\">System Monitoring</option>\n                      <option value=\"ml\">Machine Learning</option>\n                      <option value=\"other\">Other</option>\n                    </select>\n                  </div>\n                  \n                  <Button size=\"lg\" className=\"w-full bg-blue-600 hover:bg-blue-700\">\n                    Start Free Trial\n                  </Button>\n                </form>\n                \n                <p className=\"text-xs text-zinc-400 mt-4 text-left\">\n                  By signing up, you agree to our{' '}\n                  <a href=\"#\" className=\"text-blue-400 hover:underline\">Terms of Service</a>{' '}\n                  and{' '}\n                  <a href=\"#\" className=\"text-blue-400 hover:underline\">Privacy Policy</a>\n                </p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Footer.tsx":"import React from 'react';\nimport Section from '@/components/ui/section';\nimport Container from '@/components/ui/container';\nimport Button from '@/components/ui/button';\nimport Input from '@/components/ui/input';\n\nexport default function Footer() {\n  return (\n    <Section className=\"bg-card py-16 border-t border-border\">\n      <Container>\n        <div className=\"grid lg:grid-cols-12 gap-12 mb-12\">\n          {/* Brand & Closing Statement */}\n          <div className=\"lg:col-span-6\">\n            <div className=\"mb-6\">\n              <h3 className=\"text-2xl font-heading font-bold text-primary mb-3\">DataFlow Pro</h3>\n              <p className=\"text-lg text-foreground font-medium leading-relaxed\">\n                Built for teams that ship data products with confidence.\n              </p>\n            </div>\n            \n            {/* Status Badge */}\n            <div className=\"flex items-center space-x-3 mb-6\">\n              <div className=\"w-2 h-2 bg-green-500 rounded-full animate-pulse\"></div>\n              <span className=\"text-sm text-muted-foreground\">All systems operational</span>\n              <a href=\"#\" className=\"text-sm text-blue-600 hover:underline\">View status →</a>\n            </div>\n\n            {/* Minimal Product Links */}\n            <div className=\"grid grid-cols-2 gap-8 max-w-sm\">\n              <div>\n                <h4 className=\"font-semibold mb-3\">Product</h4>\n                <ul className=\"space-y-2 text-sm text-muted-foreground\">\n                  <li><a href=\"#\" className=\"hover:text-foreground\">Features</a></li>\n                  <li><a href=\"#\" className=\"hover:text-foreground\">Pricing</a></li>\n                  <li><a href=\"#\" className=\"hover:text-foreground\">Documentation</a></li>\n                  <li><a href=\"#\" className=\"hover:text-foreground\">Changelog</a></li>\n                </ul>\n              </div>\n              <div>\n                <h4 className=\"font-semibold mb-3\">Support</h4>\n                <ul className=\"space-y-2 text-sm text-muted-foreground\">\n                  <li><a href=\"#\" className=\"hover:text-foreground\">Help Center</a></li>\n                  <li><a href=\"#\" className=\"hover:text-foreground\">Contact</a></li>\n                  <li><a href=\"#\" className=\"hover:text-foreground\">Security</a></li>\n                  <li><a href=\"#\" className=\"hover:text-foreground\">Privacy</a></li>\n                </ul>\n              </div>\n            </div>\n          </div>\n\n          {/* Newsletter Signup */}\n          <div className=\"lg:col-span-6\">\n            <div className=\"bg-background rounded-xl p-6 border border-border max-w-md lg:ml-auto\">\n              <h4 className=\"font-semibold mb-3\">Get Product Updates</h4>\n              <p className=\"text-sm text-muted-foreground mb-4\">\n                Stay updated with new features, best practices, and industry insights.\n              </p>\n              <form className=\"space-y-3\" onSubmit={(e) => e.preventDefault()}>\n                <Input \n                  type=\"email\"\n                  placeholder=\"Enter your email\"\n                  className=\"bg-card\"\n                />\n                <Button size=\"sm\" className=\"w-full\">Subscribe</Button>\n              </form>\n            </div>\n          </div>\n        </div>\n\n        {/* Bottom Bar */}\n        <div className=\"pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0\">\n          <p className=\"text-sm text-muted-foreground\">\n            © 2024 DataFlow Pro. All rights reserved.\n          </p>\n          <div className=\"flex items-center space-x-6 text-sm\">\n            <a href=\"#\" className=\"text-muted-foreground hover:text-foreground\">Terms</a>\n            <a href=\"#\" className=\"text-muted-foreground hover:text-foreground\">Privacy</a>\n            <a href=\"#\" className=\"text-muted-foreground hover:text-foreground\">Cookies</a>\n            <div className=\"flex items-center space-x-4\">\n              <a href=\"#\" className=\"text-muted-foreground hover:text-foreground\">\n                <svg className=\"w-5 h-5\" fill=\"currentColor\" viewBox=\"0 0 24 24\">\n                  <path d=\"M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z\"/>\n                </svg>\n              </a>\n              <a href=\"#\" className=\"text-muted-foreground hover:text-foreground\">\n                <svg className=\"w-5 h-5\" fill=\"currentColor\" viewBox=\"0 0 24 24\">\n                  <path fillRule=\"evenodd\" d=\"M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z\" clipRule=\"evenodd\"/>\n                </svg>\n              </a>\n            </div>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}"};
+
+      function showError(msg) {
+        var el = document.getElementById('cenate-error');
+        if (el) {
+          el.style.display = 'block';
+          el.textContent = (el.textContent ? el.textContent + '\n\n' : '') + msg;
+        }
+        try { console.error(msg); } catch (_) {}
+        try {
+          document.body.innerHTML = '<pre style="margin:0;padding:16px;color:#b91c1c;background:#fff5f5;font:12px/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;white-space:pre-wrap;">' + String(msg) + '</pre>';
+        } catch (_) {}
+      }
+
+      // Global error handlers — catch errors React's render cycle throws
+      // outside the try/catch in run() (async render errors, event handlers)
+      window.onerror = function (msg, source, line, col, error) {
+        showError('Runtime error: ' + msg + (source ? ' (' + source + ':' + line + ')' : '') + (error && error.stack ? '\n' + error.stack : ''));
+        return true;
+      };
+      window.addEventListener('unhandledrejection', function (event) {
+        var reason = event.reason;
+        showError('Unhandled promise rejection: ' + (reason && reason.message ? reason.message : String(reason)));
+      });
+
+      function waitForGlobals(cb, attempts) {
+        attempts = attempts || 0;
+        if (typeof window.React !== 'undefined' && typeof window.ReactDOM !== 'undefined' && typeof window.Babel !== 'undefined') {
+          cb();
+          return;
+        }
+        if (attempts > 200) {
+          showError('Preview runtime failed to load (React/Babel did not initialize within 10s).');
+          return;
+        }
+        setTimeout(function () { waitForGlobals(cb, attempts + 1); }, 50);
+      }
+
+      var LOCAL_IMPORT_SUFFIXES = ["",".tsx",".ts",".jsx",".js","/index.tsx","/index.ts","/index.jsx","/index.js"];
+
+      function normalize(p) {
+        const parts = p.split('/');
+        const out = [];
+        for (let i = 0; i < parts.length; i++) {
+          const part = parts[i];
+          if (part === '..') { out.pop(); }
+          else if (part !== '.' && part !== '') { out.push(part); }
+        }
+        return out.join('/');
+      }
+
+      function resolvePath(importerPath, target) {
+        if (target.startsWith('@/')) {
+          return 'src/' + target.slice(2);
+        }
+        if (target.startsWith('src/')) {
+          return target;
+        }
+        if (target.startsWith('./src/')) {
+          return target.slice(2);
+        }
+        if (target.startsWith('.')) {
+          var base = importerPath ? importerPath.split('/').slice(0, -1) : [];
+          var parts = target.split('/');
+          for (var pi = 0; pi < parts.length; pi++) {
+            var part = parts[pi];
+            if (part === '.') continue;
+            if (part === '..') base.pop();
+            else base.push(part);
+          }
+          return normalize(base.join('/'));
+        }
+        return target;
+      }
+
+      function buildResolution(basePath, fileMap) {
+        var normalizedBase = normalize(basePath);
+        var candidates = [];
+        for (var i = 0; i < LOCAL_IMPORT_SUFFIXES.length; i++) {
+          candidates.push(normalize(normalizedBase + LOCAL_IMPORT_SUFFIXES[i]));
+        }
+        var exactExists = fileMap[normalizedBase] !== undefined;
+        var chosen = null;
+        for (var j = 0; j < candidates.length; j++) {
+          if (fileMap[candidates[j]] !== undefined) {
+            chosen = candidates[j];
+            break;
+          }
+        }
+        return {
+          basePath: normalizedBase,
+          candidates: candidates,
+          exactExists: exactExists,
+          chosen: chosen,
+        };
+      }
+
+      function toNamedDefaultAlias(filePath) {
+        var normalized = normalize(filePath);
+        var baseName = normalized.split('/').pop() || '';
+        if (baseName.indexOf('.') > -1) {
+          baseName = baseName.replace(/.[^.]+$/, '');
+        }
+        if (baseName === 'index') {
+          var parentParts = normalized.split('/');
+          baseName = parentParts[parentParts.length - 2] || baseName;
+        }
+        return baseName
+          .split(/[^A-Za-z0-9]+/)
+          .filter(Boolean)
+          .map(function(part) {
+            return part.charAt(0).toUpperCase() + part.slice(1);
+          })
+          .join('');
+      }
+
+      function finalizeModuleExports(filePath, exportsValue) {
+        if (!exportsValue || exportsValue.default === undefined) {
+          return exportsValue;
+        }
+
+        var alias = toNamedDefaultAlias(filePath);
+        if (alias && exportsValue[alias] === undefined) {
+          exportsValue[alias] = exportsValue.default;
+        }
+
+        return exportsValue;
+      }
+
+      function compile(source, filename) {
+        return window.Babel.transform(source, {
+          presets: [
+            ['env', { modules: 'commonjs', loose: true }],
+            'react',
+            ['typescript', { allExtensions: true, isTSX: true, onlyRemoveTypeImports: false }],
+          ],
+          filename: filename,
+          sourceType: 'module',
+          compact: false,
+          comments: false,
+        }).code;
+      }
+
+      function run() {
+        const fileMap = FILES;
+        const moduleCache = Object.create(null);
+        console.log('[preview-runtime] module-loader-start', {
+          fileCount: Object.keys(fileMap).length,
+          hasMainTsx: !!buildResolution('src/main', fileMap).chosen,
+          hasAppTsx: !!(
+            fileMap[buildResolution('src/App', fileMap).chosen] ||
+            fileMap[buildResolution('App', fileMap).chosen]
+          ),
+        });
+
+        // Wrap React + ReactDOM as ES-module-shaped builtins so Babel interop works
+        const reactModule = Object.assign(
+          { default: window.React, __esModule: true },
+          window.React
+        );
+        const reactDomModule = Object.assign(
+          { default: window.ReactDOM, __esModule: true },
+          window.ReactDOM
+        );
+        const reactDomClientModule = Object.assign(
+          {
+            default: window.ReactDOM,
+            __esModule: true,
+            createRoot: window.ReactDOM.createRoot,
+            hydrateRoot: window.ReactDOM.hydrateRoot,
+          },
+          window.ReactDOM
+        );
+
+        // ── clsx: class name utility (inline implementation) ──
+        var __ClsxModule = (function () {
+          function clsx() {
+            var classes = [];
+            for (var i = 0; i < arguments.length; i++) {
+              var arg = arguments[i];
+              if (!arg) continue;
+              if (typeof arg === 'string' || typeof arg === 'number') {
+                classes.push(arg);
+              } else if (Array.isArray(arg)) {
+                var inner = clsx.apply(null, arg);
+                if (inner) classes.push(inner);
+              } else if (typeof arg === 'object') {
+                for (var key in arg) {
+                  if (Object.prototype.hasOwnProperty.call(arg, key) && arg[key]) {
+                    classes.push(key);
+                  }
+                }
+              }
+            }
+            return classes.join(' ');
+          }
+          return { __esModule: true, default: clsx, clsx: clsx };
+        })();
+
+        // ── class-variance-authority: variant-based class generation ──
+        var __CvaModule = (function () {
+          function cva(base, config) {
+            var fn = function (props) {
+              props = props || {};
+              if (!config) return base || '';
+              var variants = config.variants || {};
+              var defaultVariants = config.defaultVariants || {};
+              var compoundVariants = config.compoundVariants || [];
+              var resolved = Object.assign({}, defaultVariants);
+              for (var k in props) {
+                if (k !== 'className' && k !== 'class' && props[k] != null) {
+                  resolved[k] = props[k];
+                }
+              }
+              var classes = [base];
+              for (var vKey in variants) {
+                var value = resolved[vKey];
+                if (value != null && variants[vKey] && variants[vKey][value] != null) {
+                  classes.push(variants[vKey][value]);
+                }
+              }
+              for (var ci = 0; ci < compoundVariants.length; ci++) {
+                var cv = compoundVariants[ci];
+                var match = true;
+                for (var ck in cv) {
+                  if (ck === 'class' || ck === 'className') continue;
+                  if (resolved[ck] !== cv[ck]) { match = false; break; }
+                }
+                if (match) classes.push(cv['class'] || cv.className);
+              }
+              return classes.filter(Boolean).join(' ');
+            };
+            return fn;
+          }
+          return { __esModule: true, default: cva, cva: cva };
+        })();
+
+        // ── @radix-ui/react-slot: polymorphic Slot component ──
+        var __RadixSlotModule = (function () {
+          var R = window.React;
+          function composeHandlers(a, b) {
+            return function () { b.apply(this, arguments); a.apply(this, arguments); };
+          }
+          function mergeProps(slotProps, childProps) {
+            var result = {};
+            var key;
+            for (key in slotProps) { result[key] = slotProps[key]; }
+            for (key in childProps) {
+              var sv = slotProps[key];
+              var cv = childProps[key];
+              if (/^on[A-Z]/.test(key) && typeof sv === 'function' && typeof cv === 'function') {
+                result[key] = composeHandlers(sv, cv);
+              } else if (key === 'style') {
+                result[key] = Object.assign({}, sv || {}, cv || {});
+              } else if (key === 'className') {
+                result[key] = [sv, cv].filter(Boolean).join(' ');
+              } else {
+                result[key] = cv !== undefined ? cv : sv;
+              }
+            }
+            return result;
+          }
+          var Slot = R.forwardRef(function (props, ref) {
+            var children = props.children;
+            var slotProps = {};
+            for (var key in props) { if (key !== 'children') slotProps[key] = props[key]; }
+            if (R.isValidElement(children)) {
+              var merged = mergeProps(slotProps, children.props);
+              merged.ref = ref;
+              return R.cloneElement(children, merged);
+            }
+            if (R.Children.count(children) > 1) {
+              throw new Error('Slot: expected a single child element');
+            }
+            return null;
+          });
+          Slot.displayName = 'Slot';
+          return { __esModule: true, default: Slot, Slot: Slot };
+        })();
+
+        // ── @radix-ui/react-accordion: collapsible content sections ──
+        var __RadixAccordionModule = (function () {
+          var R = window.React;
+          var AccCtx = R.createContext({ value: '', onToggle: function(){}, type: 'single', isOpen: function(){ return false; } });
+          var ItemCtx = R.createContext({ value: '', disabled: false, open: false });
+
+          function Root(props) {
+            var type = props.type || 'single';
+            var children = props.children;
+            var className = props.className;
+            var stateHook = R.useState(function() {
+              if (type === 'multiple') return props.defaultValue || [];
+              return props.defaultValue || '';
+            });
+            var val = props.value !== undefined ? props.value : stateHook[0];
+            var setVal = stateHook[1];
+            function onToggle(itemValue) {
+              if (type === 'multiple') {
+                var arr = Array.isArray(val) ? val : [];
+                var next = arr.indexOf(itemValue) > -1
+                  ? arr.filter(function(v) { return v !== itemValue; })
+                  : arr.concat([itemValue]);
+                setVal(next);
+                if (props.onValueChange) props.onValueChange(next);
+              } else {
+                var next2 = val === itemValue ? '' : itemValue;
+                setVal(next2);
+                if (props.onValueChange) props.onValueChange(next2);
+              }
+            }
+            var isOpen = function(v) {
+              if (type === 'multiple') return Array.isArray(val) && val.indexOf(v) > -1;
+              return val === v;
+            };
+            return R.createElement(AccCtx.Provider, {
+              value: { value: val, onToggle: onToggle, type: type, isOpen: isOpen }
+            }, R.createElement('div', { className: className, 'data-orientation': 'vertical' }, children));
+          }
+
+          var Item = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(AccCtx);
+            var open = ctx.isOpen(props.value);
+            return R.createElement(ItemCtx.Provider, {
+              value: { value: props.value, disabled: props.disabled || false, open: open }
+            }, R.createElement('div', {
+              ref: ref, className: props.className,
+              'data-state': open ? 'open' : 'closed',
+              'data-disabled': props.disabled ? '' : undefined
+            }, props.children));
+          });
+          Item.displayName = 'AccordionItem';
+
+          var Header = R.forwardRef(function(props, ref) {
+            return R.createElement('h3', { ref: ref, className: props.className }, props.children);
+          });
+          Header.displayName = 'AccordionHeader';
+
+          var Trigger = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(AccCtx);
+            var itemCtx = R.useContext(ItemCtx);
+            return R.createElement('button', {
+              ref: ref, type: 'button',
+              'aria-expanded': itemCtx.open,
+              'data-state': itemCtx.open ? 'open' : 'closed',
+              'data-disabled': itemCtx.disabled ? '' : undefined,
+              disabled: itemCtx.disabled,
+              className: props.className,
+              onClick: function() { if (!itemCtx.disabled) ctx.onToggle(itemCtx.value); }
+            }, props.children);
+          });
+          Trigger.displayName = 'AccordionTrigger';
+
+          var Content = R.forwardRef(function(props, ref) {
+            var itemCtx = R.useContext(ItemCtx);
+            if (!itemCtx.open) return null;
+            return R.createElement('div', {
+              ref: ref, 'data-state': 'open', className: props.className, role: 'region'
+            }, props.children);
+          });
+          Content.displayName = 'AccordionContent';
+
+          return { __esModule: true, Root: Root, Item: Item, Header: Header, Trigger: Trigger, Content: Content, default: Root };
+        })();
+
+        // ── @radix-ui/react-tabs: tabbed content switcher ──
+        var __RadixTabsModule = (function () {
+          var R = window.React;
+          var TabsCtx = R.createContext({ value: '', onValueChange: function(){} });
+
+          function Root(props) {
+            var stateHook = R.useState(props.defaultValue || '');
+            var val = props.value !== undefined ? props.value : stateHook[0];
+            var setVal = stateHook[1];
+            function onChange(v) { setVal(v); if (props.onValueChange) props.onValueChange(v); }
+            return R.createElement(TabsCtx.Provider, {
+              value: { value: val, onValueChange: onChange }
+            }, R.createElement('div', { className: props.className }, props.children));
+          }
+
+          var List = R.forwardRef(function(props, ref) {
+            return R.createElement('div', { ref: ref, role: 'tablist', className: props.className }, props.children);
+          });
+          List.displayName = 'TabsList';
+
+          var Trigger = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(TabsCtx);
+            var isActive = ctx.value === props.value;
+            return R.createElement('button', {
+              ref: ref, type: 'button', role: 'tab',
+              'aria-selected': isActive,
+              'data-state': isActive ? 'active' : 'inactive',
+              className: props.className,
+              onClick: function() { ctx.onValueChange(props.value); }
+            }, props.children);
+          });
+          Trigger.displayName = 'TabsTrigger';
+
+          var Content = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(TabsCtx);
+            if (ctx.value !== props.value) return null;
+            return R.createElement('div', {
+              ref: ref, role: 'tabpanel', 'data-state': 'active', className: props.className
+            }, props.children);
+          });
+          Content.displayName = 'TabsContent';
+
+          return { __esModule: true, Root: Root, List: List, Trigger: Trigger, Content: Content, default: Root };
+        })();
+
+        // ── @radix-ui/react-dialog: modal/sheet dialog ──
+        var __RadixDialogModule = (function () {
+          var R = window.React;
+          var RD = window.ReactDOM;
+          var DialogCtx = R.createContext({ open: false, onOpenChange: function(){} });
+
+          function Root(props) {
+            var stateHook = R.useState(props.defaultOpen || false);
+            var open = props.open !== undefined ? props.open : stateHook[0];
+            var setOpen = stateHook[1];
+            function onOpenChange(v) {
+              setOpen(v);
+              if (props.onOpenChange) props.onOpenChange(v);
+            }
+            return R.createElement(DialogCtx.Provider, {
+              value: { open: open, onOpenChange: onOpenChange }
+            }, props.children);
+          }
+
+          var Trigger = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            var child = props.children;
+            var asChild = props.asChild;
+            if (asChild && R.isValidElement(child)) {
+              return R.cloneElement(child, {
+                ref: ref,
+                onClick: function(e) {
+                  ctx.onOpenChange(!ctx.open);
+                  if (child.props && child.props.onClick) child.props.onClick(e);
+                }
+              });
+            }
+            return R.createElement('button', {
+              ref: ref, type: 'button', className: props.className,
+              onClick: function() { ctx.onOpenChange(!ctx.open); }
+            }, child);
+          });
+          Trigger.displayName = 'DialogTrigger';
+
+          var Close = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            var child = props.children;
+            var asChild = props.asChild;
+            if (asChild && R.isValidElement(child)) {
+              return R.cloneElement(child, {
+                ref: ref,
+                onClick: function(e) {
+                  ctx.onOpenChange(false);
+                  if (child.props && child.props.onClick) child.props.onClick(e);
+                }
+              });
+            }
+            return R.createElement('button', {
+              ref: ref, type: 'button', 'aria-label': 'Close', className: props.className,
+              onClick: function() { ctx.onOpenChange(false); }
+            }, child || 'X');
+          });
+          Close.displayName = 'DialogClose';
+
+          function Portal(props) {
+            var ctx = R.useContext(DialogCtx);
+            if (!ctx.open) return null;
+            var container = props.container || document.body;
+            return RD.createPortal(
+              R.createElement(DialogCtx.Provider, { value: ctx }, props.children),
+              container
+            );
+          }
+
+          var Overlay = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            return R.createElement('div', {
+              ref: ref,
+              'data-state': ctx.open ? 'open' : 'closed',
+              className: props.className,
+              style: Object.assign({ position: 'fixed', inset: 0, zIndex: 50 }, props.style || {}),
+              onClick: function(e) {
+                if (e.target === e.currentTarget) ctx.onOpenChange(false);
+              }
+            });
+          });
+          Overlay.displayName = 'DialogOverlay';
+
+          var Content = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            if (!ctx.open) return null;
+            return R.createElement('div', {
+              ref: ref, role: 'dialog', 'aria-modal': true,
+              'data-state': ctx.open ? 'open' : 'closed',
+              className: props.className,
+              style: props.style
+            }, props.children);
+          });
+          Content.displayName = 'DialogContent';
+
+          var Title = R.forwardRef(function(props, ref) {
+            return R.createElement('h2', { ref: ref, className: props.className }, props.children);
+          });
+          Title.displayName = 'DialogTitle';
+
+          var Description = R.forwardRef(function(props, ref) {
+            return R.createElement('p', { ref: ref, className: props.className }, props.children);
+          });
+          Description.displayName = 'DialogDescription';
+
+          return {
+            __esModule: true, Root: Root, Trigger: Trigger, Close: Close,
+            Portal: Portal, Overlay: Overlay, Content: Content,
+            Title: Title, Description: Description, default: Root
+          };
+        })();
+
+        // ── @radix-ui/react-visually-hidden ──
+        var __RadixVisuallyHiddenModule = (function () {
+          var R = window.React;
+          var VisuallyHidden = R.forwardRef(function(props, ref) {
+            return R.createElement('span', {
+              ref: ref,
+              style: {
+                position: 'absolute', border: 0, width: 1, height: 1,
+                padding: 0, margin: -1, overflow: 'hidden',
+                clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', wordWrap: 'normal'
+              }
+            }, props.children);
+          });
+          VisuallyHidden.displayName = 'VisuallyHidden';
+          return { __esModule: true, Root: VisuallyHidden, default: VisuallyHidden };
+        })();
+
+        // ── @radix-ui/react-navigation-menu (stub) ──
+        var __RadixNavMenuModule = (function () {
+          var R = window.React;
+          function Root(props) { return R.createElement('nav', { className: props.className }, props.children); }
+          var List = R.forwardRef(function(p, r) { return R.createElement('ul', { ref: r, className: p.className }, p.children); });
+          var Item = R.forwardRef(function(p, r) { return R.createElement('li', { ref: r, className: p.className }, p.children); });
+          var Link = R.forwardRef(function(p, r) {
+            var child = p.children;
+            if (p.asChild && R.isValidElement(child)) return R.cloneElement(child, { ref: r });
+            return R.createElement('a', { ref: r, className: p.className, href: p.href }, child);
+          });
+          return { __esModule: true, Root: Root, List: List, Item: Item, Link: Link, default: Root };
+        })();
+
+        // ── lucide-react: icon library (Proxy that returns SVG placeholders) ──
+        // Generated code uses named imports like { Menu, X, ChevronDown, ArrowRight }
+        // Each icon becomes a simple inline SVG so React.createElement never receives undefined
+        var __LucideModule = (function () {
+          var R = window.React;
+          var cache = {};
+          function makeIcon(name) {
+            if (cache[name]) return cache[name];
+            var Icon = R.forwardRef(function(props, ref) {
+              var size = props.size || 24;
+              var className = props.className || '';
+              return R.createElement('svg', {
+                ref: ref, xmlns: 'http://www.w3.org/2000/svg', width: size, height: size,
+                viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor',
+                strokeWidth: props.strokeWidth || 2, strokeLinecap: 'round', strokeLinejoin: 'round',
+                className: 'lucide ' + className, 'aria-hidden': 'true'
+              }, R.createElement('rect', { x: '3', y: '3', width: '18', height: '18', rx: '2' }));
+            });
+            Icon.displayName = name;
+            cache[name] = Icon;
+            return Icon;
+          }
+          // Return a Proxy so any named import resolves to a valid icon component
+          var mod = { __esModule: true, default: makeIcon };
+          return typeof Proxy !== 'undefined'
+            ? new Proxy(mod, { get: function(t, p) { if (p in t) return t[p]; return makeIcon(String(p)); } })
+            : mod;
+        })();
+
+        // ── sonner: toast library ──
+        var __SonnerModule = (function () {
+          var R = window.React;
+          function Toaster() { return null; } // No-op in preview
+          var toast = function() {}; toast.success = toast; toast.error = toast; toast.info = toast; toast.warning = toast; toast.promise = function(p) { return p; };
+          return { __esModule: true, default: toast, toast: toast, Toaster: Toaster };
+        })();
+
+        // ── react-router-dom: routing (preview renders in single page) ──
+        var __ReactRouterModule = (function () {
+          var R = window.React;
+          function BrowserRouter(p) { return R.createElement(R.Fragment, null, p.children); }
+          function Routes(p) { return R.createElement(R.Fragment, null, p.children); }
+          function Route(p) { return p.element || null; }
+          var Link = R.forwardRef(function(p, r) {
+            return R.createElement('a', { ref: r, href: p.to || '#', className: p.className, onClick: function(e) { e.preventDefault(); } }, p.children);
+          });
+          Link.displayName = 'Link';
+          var NavLink = Link;
+          function useNavigate() { return function() {}; }
+          function useLocation() { return { pathname: '/', search: '', hash: '' }; }
+          function useParams() { return {}; }
+          return { __esModule: true, BrowserRouter: BrowserRouter, Routes: Routes, Route: Route, Link: Link, NavLink: NavLink, useNavigate: useNavigate, useLocation: useLocation, useParams: useParams, default: {} };
+        })();
+
+        // ── vaul: drawer component ──
+        var __VaulModule = (function () {
+          var R = window.React;
+          function DrawerRoot(p) {
+            var st = R.useState(p.open || false);
+            return R.createElement(R.Fragment, null, p.children);
+          }
+          var Trigger = R.forwardRef(function(p, r) { return R.createElement('button', { ref: r, type: 'button', className: p.className }, p.children); });
+          var Content = R.forwardRef(function(p, r) { return R.createElement('div', { ref: r, className: p.className }, p.children); });
+          var Overlay = R.forwardRef(function(p, r) { return null; });
+          var Close = R.forwardRef(function(p, r) { return R.createElement('button', { ref: r, type: 'button', className: p.className }, p.children); });
+          var Title = R.forwardRef(function(p, r) { return R.createElement('h2', { ref: r, className: p.className }, p.children); });
+          var Description = R.forwardRef(function(p, r) { return R.createElement('p', { ref: r, className: p.className }, p.children); });
+          var Portal = function(p) { return p.children || null; };
+          var Drawer = Object.assign(DrawerRoot, { Trigger: Trigger, Content: Content, Overlay: Overlay, Close: Close, Title: Title, Description: Description, Portal: Portal });
+          return { __esModule: true, Drawer: Drawer, default: Drawer, Root: DrawerRoot, Trigger: Trigger, Content: Content, Overlay: Overlay, Close: Close, Title: Title, Description: Description, Portal: Portal };
+        })();
+
+        // ── tailwind-merge ──
+        var __TailwindMergeModule = (function () {
+          function twMerge() {
+            var classes = [];
+            for (var i = 0; i < arguments.length; i++) {
+              if (arguments[i]) classes.push(arguments[i]);
+            }
+            return classes.join(' ');
+          }
+          return { __esModule: true, default: twMerge, twMerge: twMerge };
+        })();
+
+        // ── date-fns (basic stubs) ──
+        var __DateFnsModule = (function () {
+          function format(d, f) { try { return new Date(d).toLocaleDateString(); } catch(e) { return String(d); } }
+          function formatDistance(a, b) { return ''; }
+          function parseISO(s) { return new Date(s); }
+          return { __esModule: true, format: format, formatDistance: formatDistance, parseISO: parseISO, default: { format: format } };
+        })();
+
+        // ── recharts (stub: renders children as-is) ──
+        var __RechartsModule = (function () {
+          var R = window.React;
+          function ChartContainer(p) { return R.createElement('div', { className: p.className, style: { width: '100%', height: p.height || 300 } }, p.children); }
+          function noop(p) { return p.children || null; }
+          function nullFn() { return null; }
+          return {
+            __esModule: true,
+            ResponsiveContainer: ChartContainer, LineChart: noop, BarChart: noop, AreaChart: noop, PieChart: noop,
+            Line: nullFn, Bar: nullFn, Area: nullFn, Pie: nullFn, Cell: nullFn,
+            XAxis: nullFn, YAxis: nullFn, CartesianGrid: nullFn, Tooltip: nullFn, Legend: nullFn,
+            default: {}
+          };
+        })();
+
+        // ── @radix-ui generic passthrough: covers all @radix-ui/* not explicitly shimmed ──
+        var __RadixGenericModule = (function () {
+          var R = window.React;
+          function Passthrough(p) { return R.createElement('div', { className: p.className }, p.children); }
+          var Fwd = R.forwardRef(function(p, r) { return R.createElement('div', { ref: r, className: p.className }, p.children); });
+          return {
+            __esModule: true, default: Passthrough, Root: Passthrough,
+            Trigger: Fwd, Content: Fwd, Item: Fwd, Close: Fwd,
+            Portal: function(p) { return p.children || null; },
+            Overlay: function() { return null; },
+            Title: R.forwardRef(function(p, r) { return R.createElement('h3', { ref: r, className: p.className }, p.children); }),
+            Description: R.forwardRef(function(p, r) { return R.createElement('p', { ref: r, className: p.className }, p.children); }),
+            Group: Fwd, Value: Fwd, Icon: Fwd, Indicator: Fwd, Header: Fwd, Footer: Fwd,
+            Separator: R.forwardRef(function(p, r) { return R.createElement('hr', { ref: r, className: p.className }); }),
+            Label: R.forwardRef(function(p, r) { return R.createElement('label', { ref: r, className: p.className }, p.children); }),
+            Thumb: Fwd, Track: Fwd, Range: Fwd, Viewport: Fwd, Scrollbar: function(){ return null; },
+          };
+        })();
+
+
+        const builtins = {
+          'react': reactModule,
+          'react-dom': reactDomModule,
+          'react-dom/client': reactDomClientModule,
+
+          'clsx': __ClsxModule,
+          'class-variance-authority': __CvaModule,
+          'tailwind-merge': __TailwindMergeModule,
+          '@radix-ui/react-slot': __RadixSlotModule,
+          '@radix-ui/react-accordion': __RadixAccordionModule,
+          '@radix-ui/react-tabs': __RadixTabsModule,
+          '@radix-ui/react-dialog': __RadixDialogModule,
+          '@radix-ui/react-visually-hidden': __RadixVisuallyHiddenModule,
+          '@radix-ui/react-navigation-menu': __RadixNavMenuModule,
+          '@radix-ui/react-alert-dialog': __RadixDialogModule,
+          '@radix-ui/react-aspect-ratio': __RadixGenericModule,
+          '@radix-ui/react-avatar': __RadixGenericModule,
+          '@radix-ui/react-checkbox': __RadixGenericModule,
+          '@radix-ui/react-collapsible': __RadixGenericModule,
+          '@radix-ui/react-context-menu': __RadixGenericModule,
+          '@radix-ui/react-dropdown-menu': __RadixGenericModule,
+          '@radix-ui/react-hover-card': __RadixGenericModule,
+          '@radix-ui/react-label': __RadixGenericModule,
+          '@radix-ui/react-menubar': __RadixGenericModule,
+          '@radix-ui/react-popover': __RadixGenericModule,
+          '@radix-ui/react-progress': __RadixGenericModule,
+          '@radix-ui/react-radio-group': __RadixGenericModule,
+          '@radix-ui/react-scroll-area': __RadixGenericModule,
+          '@radix-ui/react-select': __RadixGenericModule,
+          '@radix-ui/react-separator': __RadixGenericModule,
+          '@radix-ui/react-slider': __RadixGenericModule,
+          '@radix-ui/react-switch': __RadixGenericModule,
+          '@radix-ui/react-toast': __RadixGenericModule,
+          '@radix-ui/react-toggle': __RadixGenericModule,
+          '@radix-ui/react-toggle-group': __RadixGenericModule,
+          '@radix-ui/react-tooltip': __RadixGenericModule,
+          'lucide-react': __LucideModule,
+          'sonner': __SonnerModule,
+          'react-router-dom': __ReactRouterModule,
+          'vaul': __VaulModule,
+          'date-fns': __DateFnsModule,
+          'recharts': __RechartsModule,
+
+        };
+        console.log('[preview-runtime] shim-loaded');
+        console.log('[preview-runtime] builtins', Object.keys(builtins));
+
+        if (!builtins.react || !builtins['react-dom'] || !builtins['react-dom/client']) {
+          throw new Error('Missing React builtins');
+        }
+
+        if (
+          !buildResolution('src/main', fileMap).chosen &&
+          !buildResolution('src/App', fileMap).chosen &&
+          !buildResolution('App', fileMap).chosen
+        ) {
+          throw new Error('Missing entry module');
+        }
+
+        function makeSafeProxy(name) {
+          var proxy = { __esModule: true, default: function(p) { return window.React.createElement('span', null, p && p.children); } };
+          if (typeof Proxy !== 'undefined') {
+            proxy = new Proxy(proxy, {
+              get: function(t, p) {
+                if (p in t) return t[p];
+                if (typeof p === 'string' && /^[A-Z]/.test(p)) {
+                  var C = window.React.forwardRef(function(props, ref) {
+                    return window.React.createElement('div', { ref: ref, className: props.className }, props.children);
+                  });
+                  C.displayName = p;
+                  t[p] = C;
+                  return C;
+                }
+                if (typeof p === 'string') { t[p] = function() {}; return t[p]; }
+                return undefined;
+              }
+            });
+          }
+          return proxy;
+        }
+
+        function loadModule(importerPath, target) {
+          if (builtins[target]) return builtins[target];
+
+          var resolved = resolvePath(importerPath, target);
+          var resolution = buildResolution(resolved, fileMap);
+          var found = resolution.chosen;
+          var isLocalImport = target.indexOf('./') === 0 || target.indexOf('../') === 0
+            || target.indexOf('@/') === 0 || target.indexOf('src/') === 0 || target.indexOf('./src/') === 0;
+
+          if (isLocalImport) {
+            console.log('[preview-runtime] local-import-resolution', {
+              importer: importerPath || 'entry',
+              target: target,
+              basePath: resolution.basePath,
+              candidates: resolution.candidates,
+              chosen: resolution.chosen,
+              exactExists: resolution.exactExists
+            });
+          }
+
+          if (!found || fileMap[found] === undefined) {
+            // Log diagnostic info for debugging
+            console.warn('[preview-runtime] module-not-found', {
+              target: target,
+              importer: importerPath,
+              resolved: resolved,
+              basePath: resolution.basePath,
+              candidates: resolution.candidates,
+              chosen: resolution.chosen,
+              exactExists: resolution.exactExists,
+              availableFiles: Object.keys(fileMap).filter(function(k) { return k.indexOf('.tsx') > -1 || k.indexOf('.ts') > -1; }).slice(0, 30)
+            });
+
+            if (isLocalImport) {
+              // Local file imports that fail are real errors — don't mask them.
+              // Throw so the preview shows a clear error instead of empty divs.
+              throw new Error('Module not found: ' + target + ' (imported by ' + (importerPath || 'entry') + '). Resolved base: ' + resolution.basePath + '. Candidates: ' + resolution.candidates.join(', '));
+            }
+
+            // For bare npm packages not in builtins, return a safe proxy.
+            // These are non-critical optional deps (e.g. animation libs).
+            var proxyModule = makeSafeProxy(target);
+            moduleCache[target] = proxyModule;
+            return proxyModule;
+          }
+
+          if (moduleCache[found]) return moduleCache[found];
+
+          // CSS handling — inject as style tag, return empty module
+          if (found.endsWith('.css')) {
+            let css = fileMap[found] || '';
+            // Strip @tailwind / @apply directives — Tailwind CDN handles JIT scanning
+            css = css.replace(/@tailwind\s+[^;]+;/g, '');
+            css = css.replace(/@apply\s+[^;]+;/g, '');
+            const style = document.createElement('style');
+            style.setAttribute('data-source', found);
+            style.textContent = css;
+            document.head.appendChild(style);
+            const empty = { __esModule: true, default: {} };
+            moduleCache[found] = empty;
+            return empty;
+          }
+
+          // JSON handling
+          if (found.endsWith('.json')) {
+            try {
+              const parsed = JSON.parse(fileMap[found]);
+              const mod = { __esModule: true, default: parsed };
+              moduleCache[found] = mod;
+              return mod;
+            } catch (e) {
+              throw new Error('Failed to parse JSON file ' + found + ': ' + e.message);
+            }
+          }
+
+          // TS/TSX/JS/JSX — compile and evaluate
+          let compiled;
+          try {
+            compiled = compile(fileMap[found], found);
+          } catch (e) {
+            throw new Error('Failed to compile ' + found + ':\n' + (e && e.message ? e.message : String(e)));
+          }
+
+          const moduleObj = { exports: {} };
+          // Pre-cache to handle circular deps
+          moduleCache[found] = moduleObj.exports;
+
+          const requireFn = function (t) {
+            return loadModule(found, t);
+          };
+
+          let fn;
+          try {
+            fn = new Function(
+              'require',
+              'module',
+              'exports',
+              'React',
+              'ReactDOM',
+              compiled
+            );
+          } catch (e) {
+            throw new Error('Failed to instantiate ' + found + ': ' + (e && e.message ? e.message : String(e)));
+          }
+
+          try {
+            fn(requireFn, moduleObj, moduleObj.exports, window.React, window.ReactDOM);
+          } catch (e) {
+            throw new Error('Runtime error in ' + found + ': ' + (e && e.message ? e.message : String(e)) + (e && e.stack ? '\n' + e.stack : ''));
+          }
+
+          finalizeModuleExports(found, moduleObj.exports);
+          moduleCache[found] = moduleObj.exports;
+          console.log('[preview-runtime] module-load-success', found);
+          return moduleObj.exports;
+        }
+
+        // Find an entry. Prefer src/main.tsx (real Vite entry).
+        // If main.tsx is missing, fall back to a synthetic mount of src/App.
+        const mainEntry = buildResolution('src/main', fileMap).chosen;
+        if (mainEntry && fileMap[mainEntry]) {
+          console.log('[preview-runtime] mounting-entry', mainEntry);
+          loadModule('', mainEntry);
+          return;
+        }
+
+        const appEntry = buildResolution('src/App', fileMap).chosen || buildResolution('App', fileMap).chosen;
+        if (!appEntry || !fileMap[appEntry]) {
+          throw new Error('No entry file found. Looked for src/main.tsx, src/main.ts, src/App.tsx, App.tsx.');
+        }
+
+        // Synthetic mount: import App and render it into #root
+        var appModule = loadModule('', appEntry);
+        var App = (appModule && (appModule.default || appModule)) || null;
+        if (!App) {
+          throw new Error('Entry file ' + appEntry + ' does not export a default component.');
+        }
+
+        // ErrorBoundary for synthetic mount (main.tsx handles its own)
+        class _EB extends window.React.Component {
+          constructor(props) { super(props); this.state = { error: null }; }
+          componentDidCatch(error) { showError('Render error: ' + error.message + (error.stack ? '\n' + error.stack : '')); }
+          render() {
+            if (this.state.error) {
+              return window.React.createElement('div', { style: { padding: 32, color: '#b91c1c', fontFamily: 'ui-monospace, monospace', fontSize: 13, whiteSpace: 'pre-wrap', background: '#fff5f5', minHeight: '100vh' } }, 'Render error: ' + this.state.error.message);
+            }
+            return this.props.children;
+          }
+        }
+        _EB.getDerivedStateFromError = function(error) { return { error: error }; };
+
+        var rootNode = document.getElementById('root') || document.body;
+        var root = window.ReactDOM.createRoot(rootNode);
+        root.render(window.React.createElement(_EB, null, window.React.createElement(App)));
+        console.log('[preview-runtime] mount-success', appEntry);
+      }
+
+      waitForGlobals(function () {
+        try {
+          console.log('[preview-runtime] globals-ready');
+          run();
+        } catch (e) {
+          console.error('[preview-runtime-error]', e);
+          showError('Preview error: ' + (e && e.message ? e.message : String(e)) + (e && e.stack ? '\n\n' + e.stack : ''));
+        }
+      });
+      } catch (e) {
+        console.error('[preview-runtime-error]', e);
+        document.body.innerHTML =
+          "<pre style='margin:0;padding:16px;color:#b91c1c;background:#fff5f5;font:12px/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;white-space:pre-wrap;'>" +
+          String(e && e.stack ? e.stack : e) +
+          "</pre>";
+      }
+    })();
+  </script>
+</body>
+</html>

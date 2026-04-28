@@ -1,0 +1,213 @@
+{
+  "restaurant": {
+    "durationMs": 158294,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "Noma House - Premium Restaurant",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "restaurant",
+      "designDirection": "Dark editorial luxury with serif display typography and high-contrast photography showcasing culinary artistry",
+      "colorStrategy": "Dark background (#0a0a0a), warm surfaces (#1a1616), gold accents (#d4af37) for premium touch",
+      "typography": "Playfair Display for headings, Inter for body text",
+      "sectionOrder": [
+        "Hero",
+        "MenuHighlights",
+        "ChefStory",
+        "ReservationCTA",
+        "Testimonials",
+        "Gallery",
+        "Location",
+        "Footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop&q=80",
+          "prompt": "elegant fine dining restaurant interior with warm lighting"
+        },
+        {
+          "path": "public/images/chef.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=600&fit=crop&q=80",
+          "prompt": "professional chef in kitchen preparing gourmet dish"
+        },
+        {
+          "path": "public/images/dish1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop&q=80",
+          "prompt": "artistic plated gourmet dish"
+        },
+        {
+          "path": "public/images/dish2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=400&fit=crop&q=80",
+          "prompt": "elegant seafood dish presentation"
+        },
+        {
+          "path": "public/images/dish3.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&h=400&fit=crop&q=80",
+          "prompt": "fine dining dessert with artistic presentation"
+        },
+        {
+          "path": "public/images/gallery1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=600&fit=crop&q=80",
+          "prompt": "restaurant dining room with elegant table setting"
+        },
+        {
+          "path": "public/images/gallery2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&h=800&fit=crop&q=80",
+          "prompt": "wine cellar with premium bottles"
+        },
+        {
+          "path": "public/images/gallery3.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800&h=600&fit=crop&q=80",
+          "prompt": "chef hands preparing food in professional kitchen"
+        }
+      ]
+    },
+    "fileCount": 18,
+    "assetCount": 8,
+    "isComplete": true
+  },
+  "saas": {
+    "durationMs": 153681,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "FlowState - AI Productivity Platform",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "saas",
+      "designDirection": "dark modern premium with sharp gradients, high-contrast typography, and dynamic AI-themed visuals",
+      "colorStrategy": "dark backgrounds (#0a0a0a to #111111) with electric blue accent (#3b82f6) and subtle surfaces (#1a1a1a)",
+      "typography": "Inter display and body with sharp tracking and bold weights",
+      "sectionOrder": [
+        "hero",
+        "features",
+        "workflow",
+        "testimonials",
+        "pricing",
+        "cta",
+        "footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop&q=80",
+          "prompt": "futuristic workspace with multiple monitors and code"
+        },
+        {
+          "path": "public/images/workflow.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop&q=80",
+          "prompt": "abstract data visualization and analytics dashboard"
+        },
+        {
+          "path": "public/images/testimonial1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&q=80",
+          "prompt": "professional headshot of a tech executive"
+        },
+        {
+          "path": "public/images/testimonial2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1494790108755-2616b612b494?w=120&h=120&fit=crop&q=80",
+          "prompt": "professional headshot of a female startup founder"
+        },
+        {
+          "path": "public/images/testimonial3.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&q=80",
+          "prompt": "professional headshot of a product manager"
+        }
+      ]
+    },
+    "fileCount": 17,
+    "assetCount": 5,
+    "isComplete": true
+  },
+  "portfolio": {
+    "durationMs": 119132,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "Lina Moreau - Creative Portfolio",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "portfolio",
+      "designDirection": "Dark editorial luxury with serif display typography and high-contrast art photography",
+      "colorStrategy": "Dark theme with rich blacks (#0a0a0a bg, #1a1a1a surfaces) + warm gold accent (#d4af37) for luxury feel",
+      "typography": "Playfair Display for headings + Inter for body text",
+      "sectionOrder": [
+        "hero",
+        "selected-work",
+        "about",
+        "testimonials",
+        "process",
+        "contact-cta",
+        "footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=1920&h=1080&fit=crop&q=80",
+          "prompt": "Artistic workspace with creative tools and dramatic lighting"
+        },
+        {
+          "path": "public/images/work1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1000&fit=crop&q=80",
+          "prompt": "Modern branding design mockup"
+        },
+        {
+          "path": "public/images/work2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=1000&fit=crop&q=80",
+          "prompt": "Editorial magazine layout design"
+        },
+        {
+          "path": "public/images/work3.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=1000&fit=crop&q=80",
+          "prompt": "Luxury packaging design"
+        },
+        {
+          "path": "public/images/about.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1494790108755-2616c0763c5e?w=600&h=800&fit=crop&q=80",
+          "prompt": "Professional portrait of creative woman in natural light"
+        }
+      ]
+    },
+    "fileCount": 17,
+    "assetCount": 5,
+    "isComplete": true
+  }
+}

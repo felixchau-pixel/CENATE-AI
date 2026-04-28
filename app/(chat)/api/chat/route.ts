@@ -25,7 +25,7 @@ import { editDocument } from "@/lib/ai/tools/edit-document";
 import { getWeather } from "@/lib/ai/tools/get-weather";
 import { requestSuggestions } from "@/lib/ai/tools/request-suggestions";
 import { updateDocument } from "@/lib/ai/tools/update-document";
-import { isProductionEnvironment } from "@/lib/constants";
+import { isProductionEnvironment, OPENAI_DISABLED } from "@/lib/constants";
 import {
   createStreamId,
   deleteChatById,
@@ -45,7 +45,7 @@ import { convertToUIMessages, generateUUID } from "@/lib/utils";
 import { generateTitleFromUserMessage } from "../../actions";
 import { type PostRequestBody, postRequestBodySchema } from "./schema";
 
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 function getStreamContext() {
   try {
@@ -183,10 +183,21 @@ export async function POST(request: Request) {
     const modelConfig = chatModels.find((m) => m.id === chatModel);
     const modelCapabilities = await getCapabilities();
     const capabilities = modelCapabilities[chatModel];
+
+    console.log("[chat:request]", {
+      selectedChatModel: selectedChatModel,
+      resolvedChatModel: chatModel,
+      provider: chatModel.split("/")[0],
+      openaiDisabled: OPENAI_DISABLED,
+    });
     const isReasoningModel = capabilities?.reasoning === true;
     const supportsTools = capabilities?.tools === true;
 
     const modelMessages = await convertToModelMessages(uiMessages);
+
+    const uploadedImageUrls = (message?.parts ?? [])
+      .filter((p): p is { type: "file"; mediaType: "image/jpeg" | "image/png"; name: string; url: string } => p.type === "file")
+      .map((p) => p.url);
 
     const stream = createUIMessageStream({
       originalMessages: isToolApprovalFlow ? uiMessages : undefined,
@@ -220,6 +231,7 @@ export async function POST(request: Request) {
               session,
               dataStream,
               modelId: chatModel,
+              uploadedImageUrls: uploadedImageUrls.length > 0 ? uploadedImageUrls : undefined,
             }),
             editDocument: editDocument({ dataStream, session }),
             updateDocument: updateDocument({

@@ -40,6 +40,12 @@ export type CustomUIDataTypes = {
   clear: null;
   finish: null;
   "chat-title": string;
+  generationStage: {
+    phase: "generating" | "repairing" | "finalizing" | "preview_ready" | "hard_failed";
+    attempt: number;
+    maxAttempts: number;
+    message: string;
+  };
 };
 
 export type ChatMessage = UIMessage<

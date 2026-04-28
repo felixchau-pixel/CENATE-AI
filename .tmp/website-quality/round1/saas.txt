@@ -1,0 +1,969 @@
+===PROJECT_MANIFEST===
+{
+  "type": "project",
+  "framework": "vite-react-ts",
+  "title": "FlowState - AI Productivity Platform",
+  "entryFile": "src/main.tsx",
+  "previewEntryFile": "src/App.tsx",
+  "siteType": "saas",
+  "designDirection": "dark modern premium with sharp gradients, high-contrast typography, and dynamic AI-themed visuals",
+  "colorStrategy": "dark backgrounds (#0a0a0a to #111111) with electric blue accent (#3b82f6) and subtle surfaces (#1a1a1a)",
+  "typography": "Inter display and body with sharp tracking and bold weights",
+  "sectionOrder": ["hero", "features", "workflow", "testimonials", "pricing", "cta", "footer"],
+  "assets": [
+    { "path": "public/images/hero.jpg", "kind": "image", "source": "fallback", "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop&q=80", "prompt": "futuristic workspace with multiple monitors and code" },
+    { "path": "public/images/workflow.jpg", "kind": "image", "source": "fallback", "url": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop&q=80", "prompt": "abstract data visualization and analytics dashboard" },
+    { "path": "public/images/testimonial1.jpg", "kind": "image", "source": "fallback", "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&q=80", "prompt": "professional headshot of a tech executive" },
+    { "path": "public/images/testimonial2.jpg", "kind": "image", "source": "fallback", "url": "https://images.unsplash.com/photo-1494790108755-2616b612b494?w=120&h=120&fit=crop&q=80", "prompt": "professional headshot of a female startup founder" },
+    { "path": "public/images/testimonial3.jpg", "kind": "image", "source": "fallback", "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&q=80", "prompt": "professional headshot of a product manager" }
+  ]
+}
+===END_MANIFEST===
+
+===FILE:package.json===
+{
+  "name": "flowstate-landing",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
+}
+===END_FILE===
+
+===FILE:index.html===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowState - AI Productivity Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+===END_FILE===
+
+===FILE:tsconfig.json===
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path mapping */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+===END_FILE===
+
+===FILE:vite.config.ts===
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': '/src'
+    }
+  }
+})
+===END_FILE===
+
+===FILE:postcss.config.js===
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+===END_FILE===
+
+===FILE:tailwind.config.ts===
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+}
+===END_FILE===
+
+===FILE:src/main.tsx===
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import './styles/globals.css'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+===END_FILE===
+
+===FILE:src/styles/globals.css===
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+}
+
+/* Custom gradient animations */
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+/* Glow effects */
+.glow {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+===END_FILE===
+
+===FILE:src/App.tsx===
+import React from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Features from './components/Features'
+import Workflow from './components/Workflow'
+import Testimonials from './components/Testimonials'
+import Pricing from './components/Pricing'
+import CTA from './components/CTA'
+import Footer from './components/Footer'
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <Navbar />
+      <Hero />
+      <Features />
+      <Workflow />
+      <Testimonials />
+      <Pricing />
+      <CTA />
+      <Footer />
+    </div>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Navbar.tsx===
+import React, { useState } from 'react'
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <nav className="fixed w-full top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <span className="text-xl font-bold">FlowState</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
+              <a href="#workflow" className="text-gray-300 hover:text-white transition-colors">Workflow</a>
+              <a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">Testimonials</a>
+              <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
+            </div>
+          </div>
+
+          <div className="hidden md:flex items-center space-x-4">
+            <button className="text-gray-300 hover:text-white transition-colors">Sign In</button>
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+              Start Free Trial
+            </button>
+          </div>
+
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {isOpen && (
+        <div className="md:hidden bg-black/95 border-t border-white/10">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            <a href="#features" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">Features</a>
+            <a href="#workflow" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">Workflow</a>
+            <a href="#testimonials" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">Testimonials</a>
+            <a href="#pricing" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">Pricing</a>
+            <div className="border-t border-white/10 pt-4 pb-3">
+              <button className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white transition-colors">Sign In</button>
+              <button className="block w-full mt-2 mx-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
+                Start Free Trial
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </nav>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Hero.tsx===
+import React from 'react'
+
+export default function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop&q=80"
+          alt="futuristic workspace with multiple monitors and code"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+      </div>
+
+      {/* Animated gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-cyan-900/20 animate-gradient"></div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6">
+            Enter Your
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              AI-Powered
+            </span>
+            Flow State
+          </h1>
+          
+          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-12 max-w-3xl mx-auto">
+            Transform your productivity with intelligent automation, seamless workflows, and AI-driven insights 
+            that adapt to your unique work patterns.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg glow-hover transition-all duration-300 transform hover:scale-105">
+              Start 14-Day Free Trial
+            </button>
+            <button className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white/5">
+              Watch Demo
+            </button>
+          </div>
+
+          {/* Stats */}
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-16 text-center">
+            <div>
+              <div className="text-3xl font-bold text-blue-400">500%</div>
+              <div className="text-gray-400">Productivity Boost</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-purple-400">10M+</div>
+              <div className="text-gray-400">Tasks Automated</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-cyan-400">50k+</div>
+              <div className="text-gray-400">Active Users</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating elements */}
+      <div className="absolute top-1/4 left-10 w-20 h-20 bg-blue-500/10 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute bottom-1/3 right-10 w-32 h-32 bg-purple-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-cyan-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Features.tsx===
+import React from 'react'
+
+export default function Features() {
+  const features = [
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+        </svg>
+      ),
+      title: 'AI Task Automation',
+      description: 'Intelligent automation that learns from your patterns and eliminates repetitive work.',
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      title: 'Smart Prioritization',
+      description: 'AI-powered task ranking based on deadlines, importance, and your work history.',
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+        </svg>
+      ),
+      title: 'Unified Dashboard',
+      description: 'Centralized workspace that integrates all your tools and provides real-time insights.',
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+        </svg>
+      ),
+      title: 'Team Collaboration',
+      description: 'Seamless collaboration tools with AI-powered meeting summaries and action items.',
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+          <path fillRule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3h4v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm8 8a1 1 0 100-2 1 1 0 000 2zm-3-1a1 1 0 11-2 0 1 1 0 012 0zm-2-3a1 1 0 100-2 1 1 0 000 2zm3-1a1 1 0 11-2 0 1 1 0 012 0zm3 1a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd" />
+        </svg>
+      ),
+      title: 'Predictive Scheduling',
+      description: 'AI calendar optimization that finds the perfect time for deep work and meetings.',
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+      ),
+      title: 'Performance Analytics',
+      description: 'Deep insights into your productivity patterns with personalized improvement suggestions.',
+    },
+  ]
+
+  return (
+    <section id="features" className="py-24 bg-gradient-to-b from-black to-gray-900/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <h2 className="text-sm uppercase tracking-widest font-medium text-blue-400 mb-4">Features</h2>
+          <h3 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+            Supercharge Your
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Workflow</span>
+          </h3>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Discover the AI-powered features that will transform how you work, collaborate, and achieve your goals.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 rounded-2xl p-8 border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6 text-blue-400 group-hover:text-blue-300 transition-colors">
+                  {feature.icon}
+                </div>
+                
+                <h4 className="text-xl font-semibold mb-4 text-white group-hover:text-blue-100 transition-colors">
+                  {feature.title}
+                </h4>
+                
+                <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors">
+                  {feature.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Workflow.tsx===
+import React from 'react'
+
+export default function Workflow() {
+  const steps = [
+    {
+      number: '01',
+      title: 'Connect Your Tools',
+      description: 'Seamlessly integrate with your existing apps and platforms in minutes.',
+    },
+    {
+      number: '02',
+      title: 'AI Learns Your Patterns',
+      description: 'Our AI observes your work habits and identifies optimization opportunities.',
+    },
+    {
+      number: '03',
+      title: 'Automate & Optimize',
+      description: 'Watch as repetitive tasks disappear and your focus time increases dramatically.',
+    },
+  ]
+
+  return (
+    <section id="workflow" className="py-32 bg-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Content */}
+          <div>
+            <h2 className="text-sm uppercase tracking-widest font-medium text-purple-400 mb-4">Workflow</h2>
+            <h3 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-8">
+              From Setup to
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"> Flow State</span>
+            </h3>
+            <p className="text-xl text-gray-300 leading-relaxed mb-12">
+              Getting started is effortless. Our AI-powered platform adapts to your unique work style 
+              and begins optimizing your productivity from day one.
+            </p>
+
+            <div className="space-y-10">
+              {steps.map((step, index) => (
+                <div key={index} className="flex space-x-6 group">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center border border-purple-500/30 group-hover:border-purple-400/50 transition-colors">
+                      <span className="text-purple-400 font-bold">{step.number}</span>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-100 transition-colors">
+                      {step.title}
+                    </h4>
+                    <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Visual */}
+          <div className="relative">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10">
+              <img 
+                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop&q=80"
+                alt="abstract data visualization and analytics dashboard"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            </div>
+            
+            {/* Floating cards */}
+            <div className="absolute -top-8 -right-8 bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-xl rounded-xl p-4 border border-white/10">
+              <div className="flex items-center space-x-3">
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <span className="text-sm text-white font-medium">AI Active</span>
+              </div>
+            </div>
+            
+            <div className="absolute -bottom-8 -left-8 bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-xl rounded-xl p-4 border border-white/10">
+              <div className="text-2xl font-bold text-blue-400 mb-1">94%</div>
+              <div className="text-xs text-gray-300">Efficiency Boost</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Testimonials.tsx===
+import React from 'react'
+
+export default function Testimonials() {
+  const testimonials = [
+    {
+      quote: "FlowState transformed our team's productivity completely. The AI automation saved us 20+ hours per week, and the insights are incredibly actionable.",
+      name: "Marcus Chen",
+      role: "VP of Product, TechFlow",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&q=80"
+    },
+    {
+      quote: "I've tried every productivity tool out there. FlowState is the first one that actually understands how I work and adapts accordingly. Game-changer.",
+      name: "Sarah Martinez",
+      role: "Founder, StartupLab",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b494?w=120&h=120&fit=crop&q=80"
+    },
+    {
+      quote: "The predictive scheduling alone is worth the price. FlowState finds time for deep work I didn't even know I had. My best decision this year.",
+      name: "David Park",
+      role: "Senior PM, InnovateCorp",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&q=80"
+    }
+  ]
+
+  return (
+    <section id="testimonials" className="py-32 bg-gradient-to-b from-gray-900/50 to-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <h2 className="text-sm uppercase tracking-widest font-medium text-cyan-400 mb-4">Testimonials</h2>
+          <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+            Loved by
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400"> Professionals</span>
+          </h3>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            See how FlowState is transforming productivity for teams and individuals worldwide.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="group bg-gradient-to-br from-gray-900/60 to-gray-800/40 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div className="mb-6">
+                <svg className="w-8 h-8 text-cyan-400/60" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 10-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L4.414 9H17a1 1 0 100-2H4.414l1.879-1.879z" clipRule="evenodd" />
+                </svg>
+              </div>
+              
+              <blockquote className="text-gray-200 leading-relaxed mb-8 group-hover:text-white transition-colors">
+                "{testimonial.quote}"
+              </blockquote>
+              
+              <div className="flex items-center space-x-4">
+                <img 
+                  src={testimonial.image}
+                  alt={`${testimonial.name} headshot`}
+                  className="w-12 h-12 rounded-full object-cover ring-2 ring-cyan-500/20 group-hover:ring-cyan-400/40 transition-all"
+                />
+                <div>
+                  <div className="font-semibold text-white group-hover:text-cyan-100 transition-colors">
+                    {testimonial.name}
+                  </div>
+                  <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                    {testimonial.role}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Stats */}
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div className="text-3xl font-bold text-cyan-400 mb-2">4.9/5</div>
+            <div className="text-gray-400">User Rating</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-blue-400 mb-2">50k+</div>
+            <div className="text-gray-400">Happy Users</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+            <div className="text-gray-400">Uptime</div>
+          </div>
+          <div>
+            <div className="text-3xl font-bold text-green-400 mb-2">500%</div>
+            <div className="text-gray-400">ROI Average</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Pricing.tsx===
+import React from 'react'
+
+export default function Pricing() {
+  const plans = [
+    {
+      name: 'Starter',
+      price: '$9',
+      period: '/month',
+      description: 'Perfect for individuals getting started with AI productivity',
+      features: [
+        'Up to 1,000 automated tasks/month',
+        'Basic AI insights',
+        'Email support',
+        '5 tool integrations'
+      ],
+      cta: 'Start Free Trial',
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$29',
+      period: '/month',
+      description: 'Ideal for professionals and small teams',
+      features: [
+        'Up to 10,000 automated tasks/month',
+        'Advanced AI analytics',
+        'Priority support',
+        'Unlimited integrations',
+        'Team collaboration tools'
+      ],
+      cta: 'Start Free Trial',
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Built for large teams and organizations',
+      features: [
+        'Unlimited automated tasks',
+        'Custom AI models',
+        'Dedicated support',
+        'Enterprise integrations',
+        'Advanced security & compliance'
+      ],
+      cta: 'Contact Sales',
+      popular: false
+    }
+  ]
+
+  return (
+    <section id="pricing" className="py-32 bg-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <h2 className="text-sm uppercase tracking-widest font-medium text-green-400 mb-4">Pricing</h2>
+          <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
+            Choose Your
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400"> Flow Plan</span>
+          </h3>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Start free, scale as you grow. All plans include a 14-day free trial with no credit card required.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className={`relative rounded-2xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
+                plan.popular
+                  ? 'bg-gradient-to-br from-blue-900/30 to-purple-900/30 border-blue-500/50 glow'
+                  : 'bg-gradient-to-br from-gray-900/60 to-gray-800/40 border-white/10 hover:border-blue-500/30'
+              }`}
+            >
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    Most Popular
+                  </span>
+                </div>
+              )}
+
+              <div className="text-center mb-8">
+                <h4 className="text-2xl font-bold text-white mb-2">{plan.name}</h4>
+                <div className="flex items-baseline justify-center mb-4">
+                  <span className="text-4xl font-bold text-white">{plan.price}</span>
+                  {plan.period && <span className="text-gray-400 ml-1">{plan.period}</span>}
+                </div>
+                <p className="text-gray-300">{plan.description}</p>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                {plan.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-start space-x-3">
+                    <svg className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-gray-300">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                className={`w-full py-4 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white glow-hover'
+                    : 'border border-white/20 hover:border-white/40 text-white hover:bg-white/5'
+                }`}
+              >
+                {plan.cta}
+              </button>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <p className="text-gray-400 mb-4">All plans include:</p>
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
+            <span className="flex items-center">
+              <svg className="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              14-day free trial
+            </span>
+            <span className="flex items-center">
+              <svg className="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              Cancel anytime
+            </span>
+            <span className="flex items-center">
+              <svg className="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              30-day money back
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/CTA.tsx===
+import React from 'react'
+
+export default function CTA() {
+  return (
+    <section className="py-32 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/40 rounded-3xl p-12 border border-white/10 backdrop-blur-xl">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+            Ready to Transform
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 block">
+              Your Productivity?
+            </span>
+          </h2>
+          
+          <p className="text-xl text-gray-300 leading-relaxed mb-12 max-w-2xl mx-auto">
+            Join thousands of professionals who've already discovered their AI-powered flow state. 
+            Start your free trial today—no credit card required.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg glow-hover transition-all duration-300 transform hover:scale-105">
+              Start Your 14-Day Free Trial
+            </button>
+            <button className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white/5">
+              Schedule Demo
+            </button>
+          </div>
+
+          <div className="flex justify-center items-center space-x-8 text-sm text-gray-400">
+            <span className="flex items-center">
+              <svg className="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              No credit card
+            </span>
+            <span className="flex items-center">
+              <svg className="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              Setup in 2 minutes
+            </span>
+            <span className="flex items-center">
+              <svg className="w-4 h-4 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              Cancel anytime
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Footer.tsx===
+import React from 'react'
+
+export default function Footer() {
+  const links = {
+    Product: ['Features', 'Integrations', 'API', 'Security', 'Pricing'],
+    Company: ['About', 'Careers', 'Press', 'Partners', 'Contact'],
+    Resources: ['Blog', 'Documentation', 'Help Center', 'Community', 'Status'],
+    Legal: ['Privacy', 'Terms', 'Cookies', 'Licenses', 'Data Processing']
+  }
+
+  return (
+    <footer className="bg-black border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid lg:grid-cols-6 gap-8">
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-6">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <span className="text-xl font-bold text-white">FlowState</span>
+            </div>
+            <p className="text-gray-400 mb-6 max-w-md">
+              AI-powered productivity platform that transforms how you work, 
+              collaborate, and achieve your goals.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                </svg>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.74.097.118.112.223.083.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.749-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-12C24.007 5.367 18.641.001 12.017.001z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Links */}
+          {Object.entries(links).map(([category, items]) => (
+            <div key={category}>
+              <h4 className="text-white font-semibold mb-4">{category}</h4>
+              <ul className="space-y-2">
+                {items.map((item) => (
+                  <li key={item}>
+                    <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm">
+            © 2024 FlowState. All rights reserved.
+          </p>
+          <div className="flex items-center space-x-6 mt-4 md:mt-0">
+            <span className="text-gray-400 text-sm">Made with ❤️ for productivity</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
+===END_FILE===

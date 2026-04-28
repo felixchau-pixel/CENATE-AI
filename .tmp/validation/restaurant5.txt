@@ -1,0 +1,2072 @@
+===PROJECT_MANIFEST===
+{
+  "type": "project",
+  "framework": "vite-react-ts",
+  "title": "Lumière - Fine Dining Restaurant",
+  "entryFile": "src/main.tsx",
+  "previewEntryFile": "src/App.tsx",
+  "siteType": "restaurant",
+  "designDirection": "Dark editorial luxury with serif display typography, warm candlelit atmosphere, and cinematic food photography",
+  "colorStrategy": "Deep charcoal backgrounds (#0a0a0a), warm surface shifts (#1a1612), gold accent (#d4af37), warm white text (#faf8f5)",
+  "typography": "Playfair Display for headings, Inter for body text",
+  "sectionOrder": ["Navbar", "Hero", "ChefStory", "MenuHighlights", "Gallery", "PressProof", "Reservation", "Location", "Footer"],
+  "assets": [
+    { "path": "public/images/hero.jpg", "kind": "image", "source": "curated", "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop&q=80", "prompt": "Elegant fine dining restaurant interior with warm candlelight" },
+    { "path": "public/images/chef.jpg", "kind": "image", "source": "curated", "url": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=1000&fit=crop&q=80", "prompt": "Chef working at the pass under warm kitchen light" },
+    { "path": "public/images/dish.jpg", "kind": "image", "source": "curated", "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop&q=80", "prompt": "Artfully plated signature dish on dark surface" },
+    { "path": "public/images/gallery1.jpg", "kind": "image", "source": "curated", "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1080&fit=crop&q=80", "prompt": "Upscale restaurant dining room at evening service" },
+    { "path": "public/images/gallery2.jpg", "kind": "image", "source": "curated", "url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=800&fit=crop&q=80", "prompt": "Wine cellar or sommelier service" },
+    { "path": "public/images/gallery3.jpg", "kind": "image", "source": "curated", "url": "https://images.unsplash.com/photo-1470337458703-46a1888eb515?w=800&h=600&fit=crop&q=80", "prompt": "Bartender crafting cocktail in upscale bar" },
+    { "path": "public/images/exterior.jpg", "kind": "image", "source": "curated", "url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop&q=80", "prompt": "Restaurant exterior at evening with warm interior glow" }
+  ]
+}
+===END_MANIFEST===
+===FILE:package.json===
+{
+  "name": "cenate-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:dev": "vite build --mode development",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.2",
+    "@radix-ui/react-alert-dialog": "^1.1.4",
+    "@radix-ui/react-aspect-ratio": "^1.1.1",
+    "@radix-ui/react-avatar": "^1.1.2",
+    "@radix-ui/react-checkbox": "^1.1.3",
+    "@radix-ui/react-collapsible": "^1.1.2",
+    "@radix-ui/react-context-menu": "^2.2.4",
+    "@radix-ui/react-dialog": "^1.1.4",
+    "@radix-ui/react-dropdown-menu": "^2.1.4",
+    "@radix-ui/react-hover-card": "^1.1.4",
+    "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-menubar": "^1.1.4",
+    "@radix-ui/react-navigation-menu": "^1.2.3",
+    "@radix-ui/react-popover": "^1.1.4",
+    "@radix-ui/react-progress": "^1.1.1",
+    "@radix-ui/react-radio-group": "^1.2.2",
+    "@radix-ui/react-scroll-area": "^1.2.2",
+    "@radix-ui/react-select": "^2.1.4",
+    "@radix-ui/react-separator": "^1.1.1",
+    "@radix-ui/react-slider": "^1.2.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.2",
+    "@radix-ui/react-tabs": "^1.1.2",
+    "@radix-ui/react-toast": "^1.2.4",
+    "@radix-ui/react-toggle": "^1.1.1",
+    "@radix-ui/react-toggle-group": "^1.1.1",
+    "@radix-ui/react-tooltip": "^1.1.6",
+    "@hookform/resolvers": "^3.9.1",
+    "@tanstack/react-query": "^5.62.8",
+    "@radix-ui/react-visually-hidden": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.0.4",
+    "date-fns": "^4.1.0",
+    "embla-carousel-react": "^8.5.1",
+    "input-otp": "^1.4.1",
+    "lucide-react": "^0.468.0",
+    "next-themes": "^0.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-day-picker": "^9.4.3",
+    "react-hook-form": "^7.54.2",
+    "react-resizable-panels": "^2.1.7",
+    "react-router-dom": "^7.1.1",
+    "recharts": "^2.15.0",
+    "sonner": "^1.7.1",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript-eslint": "^8.18.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.1",
+    "vitest": "^2.1.8"
+  }
+}
+===END_FILE===
+===FILE:index.html===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cenate Website</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+===END_FILE===
+===FILE:tsconfig.json===
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
+===END_FILE===
+===FILE:tsconfig.app.json===
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}
+===END_FILE===
+===FILE:tsconfig.node.json===
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "vitest.config.ts", "eslint.config.js"]
+}
+===END_FILE===
+===FILE:vite.config.ts===
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
+===END_FILE===
+===FILE:postcss.config.js===
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+===END_FILE===
+===FILE:tailwind.config.ts===
+import type { Config } from "tailwindcss";
+
+export default {
+  darkMode: ["class"],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}", "./index.html"],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      fontFamily: {
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+      },
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "count-up": {
+          from: { opacity: "0", transform: "scale(0.8)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "count-up": "count-up 0.5s ease-out forwards",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config;
+===END_FILE===
+===FILE:eslint.config.js===
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+  { ignores: ["dist"] },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+    },
+  }
+);
+===END_FILE===
+===FILE:vitest.config.ts===
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: "./src/test/setup.ts",
+  },
+});
+===END_FILE===
+===FILE:components.json===
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "src/index.css",
+    "baseColor": "zinc",
+    "cssVariables": false
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "hooks": "@/hooks",
+    "lib": "@/lib"
+  }
+}
+===END_FILE===
+===FILE:README.md===
+# Cenate Website
+
+This project was generated by Cenate with a fixed Lovable-style Vite + React + TypeScript scaffold.
+
+## Scripts
+
+- `npm run dev`
+- `npm run build`
+- `npm run build:dev`
+- `npm run lint`
+- `npm run preview`
+- `npm run test`
+- `npm run test:watch`
+
+===END_FILE===
+===FILE:.gitignore===
+node_modules
+dist
+.DS_Store
+.env
+.env.local
+coverage
+*.log
+===END_FILE===
+===FILE:public/robots.txt===
+User-agent: *
+Allow: /
+===END_FILE===
+===FILE:public/placeholder.svg===
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="24" fill="#F4F4F5"/>
+  <path d="M120 210L180 150L225 195L290 125L340 210H120Z" fill="#D4D4D8"/>
+  <circle cx="160" cy="110" r="24" fill="#A1A1AA"/>
+</svg>
+===END_FILE===
+===FILE:public/favicon.ico===
+placeholder favicon
+===END_FILE===
+===FILE:src/main.tsx===
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import "./App.css";
+
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { error: Error | null }
+> {
+  state: { error: Error | null } = { error: null };
+  static getDerivedStateFromError(error: Error) {
+    return { error };
+  }
+  componentDidCatch(error: Error) {
+    const el = document.getElementById("cenate-error");
+    if (el) {
+      el.style.display = "block";
+      el.textContent = "Render error: " + error.message;
+    }
+  }
+  render() {
+    if (this.state.error) {
+      return React.createElement(
+        "div",
+        {
+          style: {
+            padding: 32,
+            color: "#b91c1c",
+            fontFamily: "ui-monospace, monospace",
+            fontSize: 13,
+            whiteSpace: "pre-wrap" as const,
+            background: "#fff5f5",
+            minHeight: "100vh",
+          },
+        },
+        "Render error: " + this.state.error.message
+      );
+    }
+    return this.props.children;
+  }
+}
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </React.StrictMode>
+);
+===END_FILE===
+===FILE:src/index.css===
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 1rem;
+
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.14), hsl(var(--background)) 55%, hsl(var(--accent) / 0.22));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.92) 100%);
+    --shadow-soft: 0 20px 45px -30px rgb(15 23 42 / 0.28);
+    --shadow-card: 0 18px 40px -28px rgb(15 23 42 / 0.22);
+    --shadow-card-hover: 0 24px 60px -32px rgb(15 23 42 / 0.32);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 47.4% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 47.4% 8.6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 47.4% 8.6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --gradient-hero: linear-gradient(140deg, hsl(var(--primary) / 0.12), hsl(var(--background)) 52%, hsl(217.2 91.2% 59.8% / 0.28));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    background-image:
+      radial-gradient(circle at top, hsl(var(--primary) / 0.06), transparent 28%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 100%);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--primary) / 0.72));
+  }
+
+  .surface-card {
+    background-image: linear-gradient(180deg, hsl(var(--card) / 0.98), hsl(var(--card) / 0.92));
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-panel {
+    background: hsl(var(--card) / 0.82);
+    backdrop-filter: blur(14px);
+    border: 1px solid hsl(var(--border) / 0.7);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .section-shell {
+    position: relative;
+  }
+
+  .section-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, hsl(var(--background) / 0), hsl(var(--primary) / 0.03));
+    opacity: 0.8;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-count-up {
+  animation: count-up 0.5s ease-out forwards;
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+===END_FILE===
+===FILE:src/App.css===
+#root {
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+===END_FILE===
+===FILE:src/vite-env.d.ts===
+/// <reference types="vite/client" />
+===END_FILE===
+===FILE:src/assets/.gitkeep===
+
+===END_FILE===
+===FILE:src/hooks/use-mobile.ts===
+import { useEffect, useState } from "react";
+
+export function useMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    const update = () => setIsMobile(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+===END_FILE===
+===FILE:src/pages/Home.tsx===
+import App from "../App";
+
+export default function HomePage() {
+  return <App />;
+}
+===END_FILE===
+===FILE:src/test/setup.ts===
+import "@testing-library/jest-dom";
+===END_FILE===
+===FILE:src/test/App.test.tsx===
+import { render, screen } from "@testing-library/react";
+import App from "../App";
+
+describe("App", () => {
+  it("renders without crashing", () => {
+    render(<App />);
+    expect(screen.getByRole("main")).toBeInTheDocument();
+  });
+});
+===END_FILE===
+===FILE:src/lib/utils.ts===
+import { clsx, type ClassValue } from "clsx";
+
+export function cn(...inputs: ClassValue[]) {
+  return clsx(inputs);
+}
+===END_FILE===
+===FILE:src/components/ui/button.tsx===
+import React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };
+export default Button;
+===END_FILE===
+===FILE:src/components/ui/accordion.tsx===
+import React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { cn } from "@/lib/utils";
+
+const Accordion = AccordionPrimitive.Root;
+
+const AccordionItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <AccordionPrimitive.Item ref={ref} className={cn("border-b", className)} {...props} />
+  )
+);
+AccordionItem.displayName = "AccordionItem";
+
+const AccordionTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        ref={ref}
+        className={cn(
+          "flex flex-1 items-center justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
+          className
+        )}
+        {...props}
+      >
+        {children}
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6" /></svg>
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  )
+);
+AccordionTrigger.displayName = "AccordionTrigger";
+
+const AccordionContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Content ref={ref} className="overflow-hidden text-sm" {...props}>
+      <div className={cn("pb-4 pt-0", className)}>{children}</div>
+    </AccordionPrimitive.Content>
+  )
+);
+AccordionContent.displayName = "AccordionContent";
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+===END_FILE===
+===FILE:src/components/ui/tabs.tsx===
+import React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { cn } from "@/lib/utils";
+
+const Tabs = TabsPrimitive.Root;
+
+const TabsList = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.List
+      ref={ref}
+      className={cn(
+        "inline-flex h-10 items-center justify-center rounded-lg bg-zinc-100 p-1 text-zinc-500",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsList.displayName = "TabsList";
+
+const TabsTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-all",
+        "data-[state=active]:bg-white data-[state=active]:text-zinc-950 data-[state=active]:shadow-sm",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsTrigger.displayName = "TabsTrigger";
+
+const TabsContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Content
+      ref={ref}
+      className={cn("mt-2", className)}
+      {...props}
+    />
+  )
+);
+TabsContent.displayName = "TabsContent";
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+===END_FILE===
+===FILE:src/components/ui/dialog.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Dialog = DialogPrimitive.Root;
+const DialogTrigger = DialogPrimitive.Trigger;
+const DialogClose = DialogPrimitive.Close;
+const DialogPortal = DialogPrimitive.Portal;
+
+const DialogOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn(
+        "fixed inset-0 z-50 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+DialogOverlay.displayName = "DialogOverlay";
+
+const DialogContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <DialogPortal>
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed left-[50%] top-[50%] z-50 w-full max-w-lg translate-x-[-50%] translate-y-[-50%] rounded-xl border bg-white p-6 shadow-xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  )
+);
+DialogContent.displayName = "DialogContent";
+
+const DialogTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Title ref={ref} className={cn("text-lg font-semibold", className)} {...props} />
+  )
+);
+DialogTitle.displayName = "DialogTitle";
+
+const DialogDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Description ref={ref} className={cn("text-sm text-zinc-500", className)} {...props} />
+  )
+);
+DialogDescription.displayName = "DialogDescription";
+
+export { Dialog, DialogTrigger, DialogContent, DialogClose, DialogOverlay, DialogTitle, DialogDescription };
+===END_FILE===
+===FILE:src/components/ui/sheet.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Sheet = DialogPrimitive.Root;
+const SheetTrigger = DialogPrimitive.Trigger;
+const SheetClose = DialogPrimitive.Close;
+
+const SheetOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn("fixed inset-0 z-50 bg-black/60 backdrop-blur-sm", className)}
+      {...props}
+    />
+  )
+);
+SheetOverlay.displayName = "SheetOverlay";
+
+type SheetContentProps = React.HTMLAttributes<HTMLDivElement> & {
+  side?: "left" | "right" | "top" | "bottom";
+};
+
+const sideStyles: Record<string, string> = {
+  right: "inset-y-0 right-0 h-full w-3/4 max-w-sm border-l translate-x-0",
+  left: "inset-y-0 left-0 h-full w-3/4 max-w-sm border-r translate-x-0",
+  top: "inset-x-0 top-0 border-b",
+  bottom: "inset-x-0 bottom-0 border-t",
+};
+
+const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
+  ({ side = "right", className, children, ...props }, ref) => (
+    <DialogPrimitive.Portal>
+      <SheetOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed z-50 bg-white p-6 shadow-xl transition-transform duration-300",
+          sideStyles[side],
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPrimitive.Portal>
+  )
+);
+SheetContent.displayName = "SheetContent";
+
+export { Sheet, SheetTrigger, SheetContent, SheetClose };
+===END_FILE===
+===FILE:src/components/ui/input.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+  error?: string;
+};
+
+export default function Input({ label, error, className, id, ...props }: InputProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <input
+        id={inputId}
+        className={cn(
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          error && "border-destructive focus-visible:ring-destructive",
+          className
+        )}
+        {...props}
+      />
+      {error && <p className="mt-1 text-sm text-destructive">{error}</p>}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/textarea.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  label?: string;
+};
+
+export default function Textarea({ label, className, id, ...props }: TextareaProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <textarea
+        id={inputId}
+        rows={4}
+        className={cn(
+          "w-full rounded-lg border px-4 py-2.5 text-base outline-none transition-colors resize-none",
+          className
+        )}
+        {...props}
+      />
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/badge.tsx===
+import React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const badgeVariants = cva(
+  "inline-flex items-center rounded-full font-medium",
+  {
+    variants: {
+      size: {
+        sm: "px-2 py-0.5 text-[10px]",
+        md: "px-2.5 py-0.5 text-xs",
+        lg: "px-3 py-1 text-sm",
+      },
+    },
+    defaultVariants: {
+      size: "md",
+    },
+  }
+);
+
+type BadgeProps = React.HTMLAttributes<HTMLSpanElement> &
+  VariantProps<typeof badgeVariants>;
+
+export default function Badge({ className, size, ...props }: BadgeProps) {
+  return (
+    <span className={cn(badgeVariants({ size }), className)} {...props} />
+  );
+}
+
+export { badgeVariants };
+===END_FILE===
+===FILE:src/components/ui/card.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type CardProps = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Card({ className, children }: CardProps) {
+  return (
+    <div className={cn("surface-card rounded-[calc(var(--radius)+6px)] border bg-card text-card-foreground shadow-sm p-6", className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/section.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SectionProps = {
+  id?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Section({ id, className, children }: SectionProps) {
+  return (
+    <section id={id} className={cn("py-16 md:py-24", className)}>
+      {children}
+    </section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/container.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type ContainerProps = {
+  size?: "sm" | "md" | "lg" | "xl" | "full";
+  className?: string;
+  children: React.ReactNode;
+};
+
+const maxWidths: Record<string, string> = {
+  sm: "max-w-3xl",
+  md: "max-w-5xl",
+  lg: "max-w-6xl",
+  xl: "max-w-7xl",
+  full: "max-w-full",
+};
+
+export default function Container({ size = "xl", className, children }: ContainerProps) {
+  return (
+    <div className={cn("mx-auto px-4 sm:px-6 lg:px-8", maxWidths[size], className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/heading.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type HeadingProps = {
+  as?: "h1" | "h2" | "h3" | "h4";
+  size?: "display" | "h1" | "h2" | "h3";
+  eyebrow?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+const sizeStyles: Record<string, string> = {
+  display: "text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]",
+  h1: "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight",
+  h2: "text-3xl md:text-4xl font-semibold tracking-tight",
+  h3: "text-xl md:text-2xl font-semibold",
+};
+
+export default function Heading({
+  as: Tag = "h2",
+  size = "h2",
+  eyebrow,
+  className,
+  children,
+}: HeadingProps) {
+  return (
+    <div>
+      {eyebrow && (
+        <span className="block text-xs uppercase tracking-widest font-medium mb-3 opacity-60">
+          {eyebrow}
+        </span>
+      )}
+      <Tag className={cn(sizeStyles[size], className)}>{children}</Tag>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/separator.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SeparatorProps = {
+  orientation?: "horizontal" | "vertical";
+  className?: string;
+};
+
+export default function Separator({ orientation = "horizontal", className }: SeparatorProps) {
+  return (
+    <div
+      role="separator"
+      className={cn(
+        "shrink-0 bg-current opacity-10",
+        orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
+        className
+      )}
+    />
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/aspect-ratio.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type AspectRatioProps = {
+  ratio?: number;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function AspectRatio({ ratio = 16 / 9, className, children }: AspectRatioProps) {
+  return (
+    <div className={cn("relative w-full overflow-hidden", className)} style={{ paddingBottom: (1 / ratio) * 100 + "%" }}>
+      <div className="absolute inset-0">{children}</div>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/testimonial.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TestimonialProps = {
+  quote: string;
+  author: string;
+  role?: string;
+  avatar?: string;
+  className?: string;
+};
+
+export default function Testimonial({ quote, author, role, avatar, className }: TestimonialProps) {
+  return (
+    <figure className={cn("space-y-4", className)}>
+      <blockquote className="text-lg md:text-xl leading-relaxed italic">
+        &ldquo;{quote}&rdquo;
+      </blockquote>
+      <figcaption className="flex items-center gap-3">
+        {avatar && (
+          <img src={avatar} alt={author} className="w-10 h-10 rounded-full object-cover" />
+        )}
+        <div>
+          <p className="font-medium text-sm">{author}</p>
+          {role && <p className="text-xs opacity-60">{role}</p>}
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/stats-band.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import { cn } from "@/lib/utils";
+
+type Stat = {
+  value: string;
+  label: string;
+};
+
+type StatsBandProps = {
+  stats: Stat[];
+  className?: string;
+};
+
+export default function StatsBand({ stats, className }: StatsBandProps) {
+  return (
+    <Section className={cn("py-12", className)}>
+      <Container>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <p className="text-3xl md:text-5xl font-bold">{s.value}</p>
+              <p className="text-sm mt-1 opacity-60">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/gallery.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type GalleryImage = {
+  src: string;
+  alt: string;
+  span?: "normal" | "wide" | "tall";
+};
+
+type GalleryProps = {
+  images: GalleryImage[];
+  className?: string;
+};
+
+const spanClasses: Record<string, string> = {
+  normal: "",
+  wide: "md:col-span-2",
+  tall: "md:row-span-2",
+};
+
+export default function Gallery({ images, className }: GalleryProps) {
+  return (
+    <div className={cn("grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4", className)}>
+      {images.map((img, i) => (
+        <div key={i} className={cn("overflow-hidden rounded-lg", spanClasses[img.span || "normal"])}>
+          <img
+            src={img.src}
+            alt={img.alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/mobile-nav.tsx===
+import React from "react";
+import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/ui/sheet";
+import Button from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+type MobileNavProps = {
+  links: { label: string; href: string }[];
+  brandName: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  className?: string;
+};
+
+export default function MobileNav({ links, brandName, ctaLabel, ctaHref, className }: MobileNavProps) {
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <button className={cn("md:hidden p-2", className)} aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </SheetTrigger>
+      <SheetContent side="right" className="flex flex-col pt-16">
+        <p className="text-lg font-semibold mb-8">{brandName}</p>
+        <nav className="flex flex-col gap-4">
+          {links.map((link) => (
+            <SheetClose key={link.href} asChild>
+              <a href={link.href} className="text-lg py-2 border-b border-zinc-100 hover:text-zinc-600 transition-colors">
+                {link.label}
+              </a>
+            </SheetClose>
+          ))}
+        </nav>
+        {ctaLabel && ctaHref && (
+          <div className="mt-auto pt-8">
+            <SheetClose asChild>
+              <Button asChild size="lg" className="w-full">
+                <a href={ctaHref}>{ctaLabel}</a>
+              </Button>
+            </SheetClose>
+          </div>
+        )}
+      </SheetContent>
+    </Sheet>
+  );
+}
+===END_FILE===
+
+===FILE:src/App.tsx===
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import ChefStory from './components/ChefStory';
+import MenuHighlights from './components/MenuHighlights';
+import Gallery from './components/Gallery';
+import PressProof from './components/PressProof';
+import Reservation from './components/Reservation';
+import Location from './components/Location';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <main role="main" className="min-h-screen bg-zinc-950 text-zinc-100 font-serif">
+      <Navbar />
+      <Hero />
+      <ChefStory />
+      <MenuHighlights />
+      <Gallery />
+      <PressProof />
+      <Reservation />
+      <Location />
+      <Footer />
+    </main>
+  );
+}
+
+export default App;
+===END_FILE===
+
+===FILE:src/components/Navbar.tsx===
+import React from "react";
+import Container from "@/components/ui/container";
+import Button from "@/components/ui/button";
+import MobileNav from "@/components/ui/mobile-nav";
+
+const links = [
+  { label: "Story", href: "#story" },
+  { label: "Menu", href: "#menu" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Press", href: "#press" },
+  { label: "Location", href: "#location" },
+];
+
+export default function Navbar() {
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-950/95 backdrop-blur-sm border-b border-zinc-800/50">
+      <Container>
+        <div className="flex items-center justify-between h-16">
+          <a href="#" className="text-2xl font-serif text-amber-400 tracking-wide">Lumière</a>
+          <nav className="hidden md:flex items-center gap-8">
+            {links.map((link) => (
+              <a 
+                key={link.href} 
+                href={link.href} 
+                className="text-sm text-zinc-300 hover:text-amber-400 transition-colors duration-200 tracking-wide"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Button size="sm" className="bg-amber-600 text-zinc-950 hover:bg-amber-500 font-medium">
+              Reserve Table
+            </Button>
+          </nav>
+          <MobileNav 
+            links={links} 
+            brandName="Lumière" 
+            ctaLabel="Reserve Table" 
+            ctaHref="#reservation" 
+            className="md:hidden"
+          />
+        </div>
+      </Container>
+    </header>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Hero.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+import Button from "@/components/ui/button";
+
+export default function Hero() {
+  return (
+    <Section className="min-h-screen flex items-center bg-zinc-950 text-zinc-100 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-zinc-950/80 via-zinc-900/60 to-zinc-950/90 z-10"></div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop&q=80)`
+        }}
+      ></div>
+      <Container className="relative z-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="order-2 lg:order-1 relative">
+            <img
+              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop&q=80"
+              alt="Signature dish artfully plated"
+              className="rounded-2xl object-cover w-full aspect-[4/3] shadow-2xl border border-zinc-800/50"
+            />
+            <div className="absolute -top-4 -right-4 bg-zinc-900/90 backdrop-blur-sm border border-zinc-700 rounded-xl p-3">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
+                <span className="text-xs text-zinc-300 font-medium">Michelin Guide</span>
+              </div>
+            </div>
+          </div>
+          <div className="order-1 lg:order-2 max-w-lg lg:ml-8">
+            <p className="text-xs uppercase tracking-[0.3em] text-amber-400 font-medium mb-6">
+              Est. 2019 &middot; Contemporary French
+            </p>
+            <Heading as="h1" className="text-5xl md:text-6xl lg:text-7xl font-serif text-zinc-100 leading-[0.9] mb-6">
+              An Evening of 
+              <span className="block text-amber-400">Culinary Art</span>
+            </Heading>
+            <p className="text-lg text-zinc-300 leading-relaxed mb-8 max-w-md">
+              Experience our chef's seasonal tasting menu, crafted with locally-sourced ingredients and classical French technique.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Button size="lg" className="bg-amber-600 text-zinc-950 hover:bg-amber-500 font-medium px-8">
+                Reserve Your Table
+              </Button>
+              <Button size="lg" variant="outline" className="border-zinc-600 text-zinc-300 hover:bg-zinc-800/50">
+                View Tasting Menu
+              </Button>
+            </div>
+            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-zinc-700/50">
+              <div className="text-center">
+                <p className="text-2xl font-serif text-amber-400 mb-1">★</p>
+                <p className="text-xs text-zinc-500 uppercase tracking-widest">Michelin Guide</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl font-serif text-amber-400 mb-1">5</p>
+                <p className="text-xs text-zinc-500 uppercase tracking-widest">Years Running</p>
+              </div>
+              <div className="text-center">
+                <p className="text-2xl font-serif text-amber-400 mb-1">12</p>
+                <p className="text-xs text-zinc-500 uppercase tracking-widest">Course Menu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/ChefStory.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+
+export default function ChefStory() {
+  return (
+    <Section id="story" className="bg-stone-900 text-zinc-100 py-24">
+      <Container>
+        <div className="grid lg:grid-cols-5 gap-12 items-start">
+          <div className="lg:col-span-2">
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=1000&fit=crop&q=80"
+                alt="Chef working at the pass under warm kitchen light"
+                className="rounded-2xl object-cover w-full aspect-[3/4] shadow-xl"
+              />
+              <div className="absolute bottom-4 left-4 bg-stone-900/90 backdrop-blur-sm rounded-lg p-3 border border-stone-700">
+                <p className="text-xs text-zinc-300 uppercase tracking-widest mb-1">Executive Chef</p>
+                <p className="text-sm font-serif text-zinc-100">Marcel Dubois</p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:col-span-3 lg:pt-16">
+            <Heading as="h2" size="h2" eyebrow="Our Philosophy" className="text-zinc-100 font-serif mb-8">
+              Where Tradition Meets Innovation
+            </Heading>
+            <div className="space-y-6 text-zinc-300 leading-relaxed">
+              <p className="text-lg">
+                My culinary journey began in the kitchens of Lyon, where I learned that great cooking starts with respect—for the ingredient, for the technique, and for the guest who will experience what you create.
+              </p>
+              <p>
+                At Lumière, we honor classical French foundations while embracing the bounty of local farms and markets. Each dish tells a story of the season, the region, and our commitment to culinary excellence.
+              </p>
+              <blockquote className="border-l-2 border-amber-600 pl-6 text-xl font-serif italic text-zinc-200 my-8">
+                "Cooking is an act of love made visible. Every plate that leaves our kitchen carries our passion, our precision, and our promise of an unforgettable experience."
+              </blockquote>
+              <p className="text-sm text-zinc-400">
+                — Marcel Dubois, Executive Chef & Owner
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/MenuHighlights.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+
+const menuCategories = [
+  {
+    title: "Amuse-Bouche & Starters",
+    items: [
+      { name: "Oyster Foam", desc: "Champagne pearls, micro herbs", price: "—" },
+      { name: "Foie Gras Terrine", desc: "Sauternes gelée, toasted brioche, fig compote", price: "38" },
+      { name: "Lobster Bisque", desc: "Cognac cream, chive oil, puff pastry", price: "32" },
+    ]
+  },
+  {
+    title: "Mains",
+    items: [
+      { name: "Duck Breast Confit", desc: "Cherry gastrique, fondant potato, seasonal vegetables", price: "54" },
+      { name: "Wagyu Beef Tenderloin", desc: "Truffle jus, roasted marrow, forest mushrooms", price: "78" },
+      { name: "John Dory", desc: "Beurre blanc, capers, lemon confit, samphire", price: "48" },
+    ]
+  },
+  {
+    title: "Desserts",
+    items: [
+      { name: "Dark Chocolate Soufflé", desc: "Raspberry coulis, vanilla bean ice cream", price: "24" },
+      { name: "Tarte Tatin", desc: "Calvados caramel, crème fraîche", price: "22" },
+    ]
+  }
+];
+
+const signatureDish = {
+  name: "Chef's Signature Tasting Menu",
+  description: "A 12-course culinary journey showcasing the finest seasonal ingredients, expertly prepared with classical French technique and modern innovation. Each course is carefully paired with wines selected by our sommelier.",
+  price: "145",
+  note: "Available Tuesday through Saturday evenings"
+};
+
+export default function MenuHighlights() {
+  return (
+    <Section id="menu" className="bg-zinc-950 text-zinc-100 py-24">
+      <Container size="lg">
+        <div className="text-center mb-16">
+          <Heading as="h2" size="h2" eyebrow="The Menu" className="text-zinc-100 font-serif">
+            Seasonal Selections
+          </Heading>
+          <p className="mt-4 text-zinc-400 max-w-2xl mx-auto">
+            Our menu changes with the seasons, featuring the finest local ingredients prepared with French precision and creative flair.
+          </p>
+        </div>
+
+        {/* Signature Dish Feature */}
+        <div className="bg-stone-900 rounded-2xl p-8 mb-16 border border-stone-700">
+          <div className="grid lg:grid-cols-3 gap-8 items-center">
+            <div className="lg:col-span-2">
+              <h3 className="text-2xl font-serif text-amber-400 mb-3">{signatureDish.name}</h3>
+              <p className="text-zinc-300 leading-relaxed mb-4">{signatureDish.description}</p>
+              <p className="text-sm text-zinc-500 italic">{signatureDish.note}</p>
+            </div>
+            <div className="text-center lg:text-right">
+              <p className="text-4xl font-serif text-amber-400 mb-2">${signatureDish.price}</p>
+              <p className="text-xs text-zinc-500 uppercase tracking-widest">Per Person</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Menu Categories */}
+        <div className="space-y-16">
+          {menuCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex}>
+              <h3 className="text-xl font-serif text-amber-400 mb-8 text-center">{category.title}</h3>
+              <div className="space-y-6">
+                {category.items.map((item, itemIndex) => (
+                  <div key={itemIndex} className="flex items-start justify-between py-4 border-b border-zinc-800/50 last:border-b-0">
+                    <div className="flex-1 pr-4">
+                      <h4 className="text-lg font-serif text-zinc-100 mb-2">{item.name}</h4>
+                      <p className="text-sm text-zinc-400 leading-relaxed">{item.desc}</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-lg font-medium text-amber-400 tabular-nums">
+                        {item.price === "—" ? item.price : `$${item.price}`}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-16 pt-8 border-t border-zinc-800/50">
+          <p className="text-sm text-zinc-500">
+            Wine pairings available for all courses. Please inform us of any dietary restrictions when making your reservation.
+          </p>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Gallery.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+
+export default function Gallery() {
+  return (
+    <Section id="gallery" className="bg-stone-900 text-zinc-100 py-24">
+      <Container>
+        <div className="text-center mb-16">
+          <Heading as="h2" size="h2" eyebrow="The Experience" className="text-zinc-100 font-serif">
+            Atmosphere &amp; Ambiance
+          </Heading>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          {/* Large feature image */}
+          <div className="lg:col-span-2 lg:row-span-2">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&h=1080&fit=crop&q=80"
+              alt="Elegant dining room at evening service"
+              className="rounded-2xl object-cover w-full h-full aspect-[4/3] lg:aspect-square shadow-xl hover:scale-[1.02] transition-transform duration-500"
+            />
+          </div>
+          
+          {/* Wine cellar */}
+          <div className="lg:col-span-1">
+            <img
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=800&fit=crop&q=80"
+              alt="Curated wine cellar"
+              className="rounded-2xl object-cover w-full aspect-[3/4] shadow-xl hover:scale-[1.02] transition-transform duration-500"
+            />
+          </div>
+          
+          {/* Bar service */}
+          <div className="lg:col-span-1">
+            <img
+              src="https://images.unsplash.com/photo-1470337458703-46a1888eb515?w=800&h=600&fit=crop&q=80"
+              alt="Artisanal cocktail preparation"
+              className="rounded-2xl object-cover w-full aspect-[3/4] shadow-xl hover:scale-[1.02] transition-transform duration-500"
+            />
+          </div>
+          
+          {/* Kitchen action */}
+          <div className="lg:col-span-1">
+            <img
+              src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=800&h=600&fit=crop&q=80"
+              alt="Kitchen during service"
+              className="rounded-2xl object-cover w-full aspect-[4/3] shadow-xl hover:scale-[1.02] transition-transform duration-500"
+            />
+          </div>
+          
+          {/* Dessert presentation */}
+          <div className="lg:col-span-1">
+            <img
+              src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&h=600&fit=crop&q=80"
+              alt="Exquisite dessert presentation"
+              className="rounded-2xl object-cover w-full aspect-[4/3] shadow-xl hover:scale-[1.02] transition-transform duration-500"
+            />
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/PressProof.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Separator from "@/components/ui/separator";
+
+const reviews = [
+  {
+    quote: "Chef Dubois has created something truly extraordinary here. Each course builds upon the last in a symphony of flavors that showcases both technical mastery and creative vision.",
+    source: "The New York Times",
+    critic: "Pete Wells"
+  },
+  {
+    quote: "Lumière represents the pinnacle of contemporary French cuisine in the city. This is destination dining at its finest.",
+    source: "Food & Wine Magazine",
+    critic: "James Oseland"
+  },
+  {
+    quote: "An intimate culinary journey that honors tradition while pushing boundaries. The tasting menu is nothing short of revelatory.",
+    source: "Bon Appétit",
+    critic: "Andrew Knowlton"
+  }
+];
+
+export default function PressProof() {
+  return (
+    <Section id="press" className="bg-zinc-950 text-zinc-100 py-24">
+      <Container size="lg">
+        <div className="text-center mb-16">
+          <p className="text-xs uppercase tracking-[0.3em] text-amber-400 font-medium mb-4">Recognition</p>
+          <h2 className="text-3xl md:text-4xl font-serif text-zinc-100">What Critics Are Saying</h2>
+        </div>
+        
+        <div className="space-y-16">
+          {reviews.map((review, index) => (
+            <div key={index} className="max-w-4xl mx-auto">
+              <blockquote className="text-2xl md:text-3xl font-serif italic leading-relaxed text-zinc-200 text-center mb-6">
+                "{review.quote}"
+              </blockquote>
+              <div className="text-center">
+                <p className="text-sm uppercase tracking-widest text-zinc-500 mb-1">{review.source}</p>
+                <p className="text-xs text-zinc-600">{review.critic}</p>
+              </div>
+              {index < reviews.length - 1 && (
+                <div className="flex justify-center mt-16">
+                  <Separator className="w-16 opacity-30" />
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        
+        <div className="mt-20 text-center">
+          <div className="inline-flex items-center gap-8 text-amber-400">
+            <div className="text-center">
+              <p className="text-2xl font-serif mb-1">★</p>
+              <p className="text-xs text-zinc-500 uppercase tracking-widest">Michelin Guide</p>
+            </div>
+            <div className="w-px h-8 bg-zinc-700"></div>
+            <div className="text-center">
+              <p className="text-2xl font-serif mb-1">96</p>
+              <p className="text-xs text-zinc-500 uppercase tracking-widest">Zagat Rating</p>
+            </div>
+            <div className="w-px h-8 bg-zinc-700"></div>
+            <div className="text-center">
+              <p className="text-2xl font-serif mb-1">★★★★</p>
+              <p className="text-xs text-zinc-500 uppercase tracking-widest">James Beard</p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Reservation.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+import Input from "@/components/ui/input";
+import Textarea from "@/components/ui/textarea";
+import Button from "@/components/ui/button";
+import Card from "@/components/ui/card";
+
+export default function Reservation() {
+  return (
+    <Section id="reservation" className="bg-stone-900 text-zinc-100 py-24">
+      <Container>
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <Heading as="h2" size="h2" className="text-zinc-100 font-serif mb-6">
+              Reserve Your Table
+            </Heading>
+            <p className="text-zinc-300 leading-relaxed mb-8 max-w-md">
+              Join us for an unforgettable evening of culinary artistry. For parties of eight or more, please call us directly to discuss our private dining options.
+            </p>
+            
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-serif text-amber-400 mb-3">Service Hours</h3>
+                <div className="space-y-2 text-sm text-zinc-400">
+                  <p>Tuesday – Thursday: 6:00 PM – 9:30 PM</p>
+                  <p>Friday – Saturday: 6:00 PM – 10:30 PM</p>
+                  <p>Sunday: 5:30 PM – 9:00 PM</p>
+                  <p className="text-zinc-500 italic">Closed Mondays</p>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-serif text-amber-400 mb-3">Dining Notes</h3>
+                <div className="space-y-2 text-sm text-zinc-400">
+                  <p>Smart casual attire requested</p>
+                  <p>Private dining room available for 8-16 guests</p>
+                  <p>Wine pairings available with advance notice</p>
+                  <p>Please inform us of dietary restrictions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <Card className="bg-zinc-900 border border-zinc-700 p-8">
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid grid-cols-2 gap-4">
+                <Input 
+                  label="Preferred Date" 
+                  type="date" 
+                  className="bg-zinc-800 border-zinc-600 text-zinc-100 placeholder-zinc-500" 
+                />
+                <Input 
+                  label="Preferred Time" 
+                  type="time" 
+                  className="bg-zinc-800 border-zinc-600 text-zinc-100" 
+                />
+              </div>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <Input 
+                  label="Party Size" 
+                  type="number" 
+                  placeholder="2" 
+                  min="1" 
+                  max="16"
+                  className="bg-zinc-800 border-zinc-600 text-zinc-100 placeholder-zinc-500" 
+                />
+                <Input 
+                  label="Occasion" 
+                  placeholder="Anniversary, Business..." 
+                  className="bg-zinc-800 border-zinc-600 text-zinc-100 placeholder-zinc-500" 
+                />
+              </div>
+              
+              <Input 
+                label="Full Name" 
+                placeholder="Your full name" 
+                className="bg-zinc-800 border-zinc-600 text-zinc-100 placeholder-zinc-500" 
+              />
+              
+              <Input 
+                label="Phone Number" 
+                type="tel" 
+                placeholder="+1 (555) 000-0000" 
+                className="bg-zinc-800 border-zinc-600 text-zinc-100 placeholder-zinc-500" 
+              />
+              
+              <Input 
+                label="Email Address" 
+                type="email" 
+                placeholder="your@email.com" 
+                className="bg-zinc-800 border-zinc-600 text-zinc-100 placeholder-zinc-500" 
+              />
+              
+              <Textarea 
+                label="Special Requests" 
+                placeholder="Dietary restrictions, wine preferences, special occasions..." 
+                className="bg-zinc-800 border-zinc-600 text-zinc-100 placeholder-zinc-500 resize-none h-24" 
+              />
+              
+              <Button 
+                size="lg" 
+                className="w-full bg-amber-600 text-zinc-950 hover:bg-amber-500 font-medium py-3"
+              >
+                Request Reservation
+              </Button>
+              
+              <p className="text-xs text-zinc-500 text-center mt-4">
+                You will receive a confirmation email within 24 hours. For immediate assistance, call us at (555) 123-DINE.
+              </p>
+            </form>
+          </Card>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Location.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+
+export default function Location() {
+  return (
+    <Section id="location" className="bg-zinc-950 text-zinc-100 py-24">
+      <Container>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <Heading as="h2" size="h2" eyebrow="Visit Us" className="text-zinc-100 font-serif mb-8">
+              Find Lumière
+            </Heading>
+            
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-serif text-amber-400 mb-3">Address</h3>
+                <p className="text-lg text-zinc-200 mb-2">425 Park Avenue South</p>
+                <p className="text-zinc-400 mb-4">New York, NY 10016</p>
+                <p className="text-sm text-zinc-500">
+                  Located between 29th and 30th Streets in the heart of NoMad, 
+                  just steps from Madison Square Park.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-serif text-amber-400 mb-3">Transportation</h3>
+                <div className="space-y-2 text-sm text-zinc-400">
+                  <p>Subway: 6 train to 28th Street (2 blocks)</p>
+                  <p>Bus: M101, M102, M103 (Park Avenue stops)</p>
+                  <p>Parking: Valet service available ($35)</p>
+                  <p>Taxi/Uber: Main entrance on Park Avenue</p>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-serif text-amber-400 mb-3">Contact</h3>
+                <div className="space-y-2 text-sm text-zinc-400">
+                  <p>Reservations: (212) 555-DINE</p>
+                  <p>Private Events: events@lumierenyc.com</p>
+                  <p>General Inquiries: info@lumierenyc.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop&q=80"
+                alt="Lumière restaurant exterior at evening"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent"></div>
+            <div className="absolute bottom-6 left-6 right-6">
+              <p className="text-white font-serif text-lg mb-2">
+                An intimate setting in the heart of Manhattan
+              </p>
+              <p className="text-zinc-300 text-sm">
+                Our historic townhouse offers an elegant escape from the city's energy
+              </p>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Footer.tsx===
+import React from "react";
+import Container from "@/components/ui/container";
+
+export default function Footer() {
+  return (
+    <footer className="bg-zinc-950 text-zinc-100 border-t border-zinc-800 py-16">
+      <Container>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-serif text-amber-400 mb-3">Lumière</h2>
+          <p className="text-xs uppercase tracking-[0.3em] text-zinc-500 mb-6">
+            A Culinary Journey Since 2019
+          </p>
+          <p className="text-sm text-zinc-400 italic max-w-md mx-auto">
+            "Where every meal becomes a cherished memory, and every guest becomes part of our story."
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-4 gap-8 text-sm">
+          <div className="text-center md:text-left">
+            <h3 className="text-zinc-100 font-medium mb-3">Location</h3>
+            <div className="space-y-1 text-zinc-400">
+              <p>425 Park Avenue South</p>
+              <p>New York, NY 10016</p>
+              <p>NoMad District</p>
+            </div>
+          </div>
+          
+          <div className="text-center md:text-left">
+            <h3 className="text-zinc-100 font-medium mb-3">Service Hours</h3>
+            <div className="space-y-1 text-zinc-400">
+              <p>Tue–Thu: 6:00–9:30 PM</p>
+              <p>Fri–Sat: 6:00–10:30 PM</p>
+              <p>Sun: 5:30–9:00 PM</p>
+              <p className="text-zinc-600 italic">Closed Mondays</p>
+            </div>
+          </div>
+          
+          <div className="text-center md:text-left">
+            <h3 className="text-zinc-100 font-medium mb-3">Reservations</h3>
+            <div className="space-y-1 text-zinc-400">
+              <p>(212) 555-DINE</p>
+              <p>reservations@lumierenyc.com</p>
+              <p className="text-zinc-600 text-xs mt-2">
+                Book 2-3 weeks in advance
+              </p>
+            </div>
+          </div>
+          
+          <div className="text-center md:text-left">
+            <h3 className="text-zinc-100 font-medium mb-3">Private Events</h3>
+            <div className="space-y-1 text-zinc-400">
+              <p>events@lumierenyc.com</p>
+              <p>Private dining room</p>
+              <p>8-16 guests</p>
+              <p className="text-zinc-600 text-xs mt-2">
+                Custom tasting menus
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-16 pt-8 border-t border-zinc-800 text-center">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-xs text-zinc-600">
+              &copy; {new Date().getFullYear()} Lumière Restaurant. All rights reserved.
+            </p>
+            <div className="flex items-center gap-4 text-xs text-zinc-600">
+              <a href="#" className="hover:text-zinc-400 transition-colors">Privacy Policy</a>
+              <span>•</span>
+              <a href="#" className="hover:text-zinc-400 transition-colors">Terms of Service</a>
+              <span>•</span>
+              <a href="#" className="hover:text-zinc-400 transition-colors">Accessibility</a>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </footer>
+  );
+}
+===END_FILE===

@@ -1,0 +1,159 @@
+{
+  "slug": "saas",
+  "prompt": "Build a premium AI productivity SaaS landing page for FlowState. Include hero, feature grid, workflow section, testimonials, pricing teaser, CTA, and footer. Make it modern, sharp, premium, and visually dynamic.",
+  "durationMs": 144859,
+  "meta": {
+    "type": "project",
+    "framework": "vite-react-ts",
+    "title": "FlowState - AI Productivity Platform",
+    "entryFile": "src/main.tsx",
+    "previewEntryFile": "src/App.tsx",
+    "siteType": "saas",
+    "designDirection": "Modern premium SaaS with dark editorial foundation, strong product framing, and dynamic visual hierarchy through typography and structured content",
+    "colorStrategy": "Dark theme with #0a0a0a background, #1a1a1a surfaces, #3B82F6 blue accent for CTAs and highlights, high contrast white text with #888 muted",
+    "typography": "Inter for display and body with tight tracking for headlines, medium weights for hierarchy",
+    "sectionOrder": [
+      "hero",
+      "features",
+      "workflow",
+      "testimonials",
+      "pricing",
+      "cta",
+      "footer"
+    ],
+    "assets": [
+      {
+        "path": "public/images/hero-dashboard.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop&q=80",
+        "prompt": "Modern dark computer screen showing analytics dashboard"
+      },
+      {
+        "path": "public/images/workflow-automation.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
+        "prompt": "Connected workflow diagram with nodes and connections"
+      },
+      {
+        "path": "public/images/ai-visualization.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&q=80",
+        "prompt": "AI neural network visualization with glowing connections"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "package.json",
+      "language": "json",
+      "size": 543
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "size": 794
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "size": 626
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "size": 239
+    },
+    {
+      "path": "postcss.config.js",
+      "language": "javascript",
+      "size": 79
+    },
+    {
+      "path": "tailwind.config.ts",
+      "language": "typescript",
+      "size": 375
+    },
+    {
+      "path": "src/main.tsx",
+      "language": "tsx",
+      "size": 239
+    },
+    {
+      "path": "src/styles/globals.css",
+      "language": "css",
+      "size": 1135
+    },
+    {
+      "path": "src/App.tsx",
+      "language": "tsx",
+      "size": 632
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "language": "tsx",
+      "size": 2342
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "language": "tsx",
+      "size": 4080
+    },
+    {
+      "path": "src/components/Features.tsx",
+      "language": "tsx",
+      "size": 4384
+    },
+    {
+      "path": "src/components/Workflow.tsx",
+      "language": "tsx",
+      "size": 3884
+    },
+    {
+      "path": "src/components/Testimonials.tsx",
+      "language": "tsx",
+      "size": 5064
+    },
+    {
+      "path": "src/components/Pricing.tsx",
+      "language": "tsx",
+      "size": 4534
+    },
+    {
+      "path": "src/components/CTA.tsx",
+      "language": "tsx",
+      "size": 3232
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "language": "tsx",
+      "size": 6251
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/images/hero-dashboard.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop&q=80",
+      "prompt": "Modern dark computer screen showing analytics dashboard"
+    },
+    {
+      "path": "public/images/workflow-automation.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
+      "prompt": "Connected workflow diagram with nodes and connections"
+    },
+    {
+      "path": "public/images/ai-visualization.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&q=80",
+      "prompt": "AI neural network visualization with glowing connections"
+    }
+  ],
+  "isComplete": true
+}

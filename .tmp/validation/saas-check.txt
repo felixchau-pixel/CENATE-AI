@@ -1,0 +1,2382 @@
+===PROJECT_MANIFEST===
+{
+  "type": "project",
+  "framework": "vite-react-ts",
+  "title": "DataFlow Pro - Intelligent Analytics Platform",
+  "entryFile": "src/main.tsx",
+  "previewEntryFile": "src/App.tsx",
+  "siteType": "saas",
+  "designFamily": "modern_minimal",
+  "designDirection": "dark technical premium with product-surface-first hero and crisp interface language",
+  "colorStrategy": "deep ink (#0a0a0a) background, surface (#111111), electric blue (#3B82F6) accent, white text",
+  "typography": "Inter Display for headings, Inter for body text",
+  "sectionOrder": [
+    "Navbar",
+    "Hero",
+    "ProductDemo",
+    "Capabilities",
+    "Metrics",
+    "Testimonial",
+    "Pricing",
+    "Conversion",
+    "Footer"
+  ],
+  "assets": [
+    {
+      "path": "generated/hero.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmhlcm88L3RleHQ+Cjwvc3ZnPg==",
+      "prompt": "Project brief: build me a saas landing page. Create the hero image for a saas website in the Modern Minimal family. Subject: high-fidelity product UI inside a real application shell, not a stock photo. Style: Modern Minimal. Framed UI or documentary imagery with simple chrome, clean aspect ratios, restrained overlays, and utility-first support blocks. Grid texture, status dots, clean stat rails, subtle panel strokes, sharp footer closure. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/support.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPnN1cHBvcnQ8L3RleHQ+Cjwvc3ZnPg==",
+      "prompt": "Project brief: build me a saas landing page. Create a supporting image for a saas website in the Modern Minimal family. Subject: product workflow, analytics panel, or automation interface detail. Style must match the hero image. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/gallery-1.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkxPC90ZXh0Pgo8L3N2Zz4=",
+      "prompt": "Project brief: build me a saas landing page. Create gallery image 1 for a saas website in the Modern Minimal family. Subject: distinct product views, dashboards, workflows, or customer proof screens. Match the same palette and framing language. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/gallery-2.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkyPC90ZXh0Pgo8L3N2Zz4=",
+      "prompt": "Project brief: build me a saas landing page. Create gallery image 2 for a saas website in the Modern Minimal family. Subject: distinct product views, dashboards, workflows, or customer proof screens. Keep the same visual grammar but vary the scene. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/gallery-3.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkzPC90ZXh0Pgo8L3N2Zz4=",
+      "prompt": "Project brief: build me a saas landing page. Create gallery image 3 for a saas website in the Modern Minimal family. Subject: distinct product views, dashboards, workflows, or customer proof screens. Keep the same visual grammar but vary the crop and distance. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/detail-1.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmRldGFpbDE8L3RleHQ+Cjwvc3ZnPg==",
+      "prompt": "Project brief: build me a saas landing page. Create a detail image for a saas website in the Modern Minimal family. Subject: close-up product workflow or team-in-context supporting visual. Keep the same palette and motif language. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    }
+  ]
+}
+===END_MANIFEST===
+===FILE:package.json===
+{
+  "name": "cenate-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:dev": "vite build --mode development",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.2",
+    "@radix-ui/react-alert-dialog": "^1.1.4",
+    "@radix-ui/react-aspect-ratio": "^1.1.1",
+    "@radix-ui/react-avatar": "^1.1.2",
+    "@radix-ui/react-checkbox": "^1.1.3",
+    "@radix-ui/react-collapsible": "^1.1.2",
+    "@radix-ui/react-context-menu": "^2.2.4",
+    "@radix-ui/react-dialog": "^1.1.4",
+    "@radix-ui/react-dropdown-menu": "^2.1.4",
+    "@radix-ui/react-hover-card": "^1.1.4",
+    "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-menubar": "^1.1.4",
+    "@radix-ui/react-navigation-menu": "^1.2.3",
+    "@radix-ui/react-popover": "^1.1.4",
+    "@radix-ui/react-progress": "^1.1.1",
+    "@radix-ui/react-radio-group": "^1.2.2",
+    "@radix-ui/react-scroll-area": "^1.2.2",
+    "@radix-ui/react-select": "^2.1.4",
+    "@radix-ui/react-separator": "^1.1.1",
+    "@radix-ui/react-slider": "^1.2.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.2",
+    "@radix-ui/react-tabs": "^1.1.2",
+    "@radix-ui/react-toast": "^1.2.4",
+    "@radix-ui/react-toggle": "^1.1.1",
+    "@radix-ui/react-toggle-group": "^1.1.1",
+    "@radix-ui/react-tooltip": "^1.1.6",
+    "@hookform/resolvers": "^3.9.1",
+    "@tanstack/react-query": "^5.62.8",
+    "@radix-ui/react-visually-hidden": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.0.4",
+    "date-fns": "^4.1.0",
+    "embla-carousel-react": "^8.5.1",
+    "input-otp": "^1.4.1",
+    "lucide-react": "^0.468.0",
+    "next-themes": "^0.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-day-picker": "^9.4.3",
+    "react-hook-form": "^7.54.2",
+    "react-resizable-panels": "^2.1.7",
+    "react-router-dom": "^7.1.1",
+    "recharts": "^2.15.0",
+    "sonner": "^1.7.1",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript-eslint": "^8.18.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.1",
+    "vitest": "^2.1.8"
+  }
+}
+===END_FILE===
+===FILE:bun.lock===
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "cenate-website",
+      "dependencies": {
+        "@radix-ui/react-accordion": "^1.2.2",
+        "@radix-ui/react-alert-dialog": "^1.1.4",
+        "@radix-ui/react-aspect-ratio": "^1.1.1",
+        "@radix-ui/react-avatar": "^1.1.2",
+        "@radix-ui/react-checkbox": "^1.1.3",
+        "@radix-ui/react-collapsible": "^1.1.2",
+        "@radix-ui/react-context-menu": "^2.2.4",
+        "@radix-ui/react-dialog": "^1.1.4",
+        "@radix-ui/react-dropdown-menu": "^2.1.4",
+        "@radix-ui/react-hover-card": "^1.1.4",
+        "@radix-ui/react-label": "^2.1.1",
+        "@radix-ui/react-menubar": "^1.1.4",
+        "@radix-ui/react-navigation-menu": "^1.2.3",
+        "@radix-ui/react-popover": "^1.1.4",
+        "@radix-ui/react-progress": "^1.1.1",
+        "@radix-ui/react-radio-group": "^1.2.2",
+        "@radix-ui/react-scroll-area": "^1.2.2",
+        "@radix-ui/react-select": "^2.1.4",
+        "@radix-ui/react-separator": "^1.1.1",
+        "@radix-ui/react-slider": "^1.2.2",
+        "@radix-ui/react-slot": "^1.1.0",
+        "@radix-ui/react-switch": "^1.1.2",
+        "@radix-ui/react-tabs": "^1.1.2",
+        "@radix-ui/react-toast": "^1.2.4",
+        "@radix-ui/react-toggle": "^1.1.1",
+        "@radix-ui/react-toggle-group": "^1.1.1",
+        "@radix-ui/react-tooltip": "^1.1.6",
+        "@radix-ui/react-visually-hidden": "^1.1.1",
+        "@hookform/resolvers": "^3.9.1",
+        "@tanstack/react-query": "^5.62.8",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "cmdk": "^1.0.4",
+        "date-fns": "^4.1.0",
+        "embla-carousel-react": "^8.5.1",
+        "input-otp": "^1.4.1",
+        "lucide-react": "^0.468.0",
+        "next-themes": "^0.4.4",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-day-picker": "^9.4.3",
+        "react-hook-form": "^7.54.2",
+        "react-resizable-panels": "^2.1.7",
+        "react-router-dom": "^7.1.1",
+        "recharts": "^2.15.0",
+        "sonner": "^1.7.1",
+        "tailwind-merge": "^2.6.0",
+        "tailwindcss-animate": "^1.0.7",
+        "vaul": "^1.1.2",
+        "zod": "^3.24.1"
+      },
+      "devDependencies": {
+        "@eslint/js": "^9.17.0",
+        "@tailwindcss/typography": "^0.5.16",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.1.0",
+        "@types/node": "^22.10.2",
+        "@types/react": "^18.3.12",
+        "@types/react-dom": "^18.3.1",
+        "@vitejs/plugin-react-swc": "^3.7.2",
+        "autoprefixer": "^10.4.20",
+        "eslint": "^9.17.0",
+        "eslint-plugin-react-hooks": "^5.1.0",
+        "eslint-plugin-react-refresh": "^0.4.16",
+        "globals": "^15.14.0",
+        "jsdom": "^25.0.1",
+        "postcss": "^8.4.49",
+        "tailwindcss": "^3.4.15",
+        "typescript-eslint": "^8.18.1",
+        "typescript": "^5.6.3",
+        "vite": "^6.0.1",
+        "vitest": "^2.1.8"
+      }
+    }
+  },
+  "packages": {}
+}
+===END_FILE===
+===FILE:index.html===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cenate Website</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+===END_FILE===
+===FILE:tsconfig.json===
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
+===END_FILE===
+===FILE:tsconfig.app.json===
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}
+===END_FILE===
+===FILE:tsconfig.node.json===
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "vitest.config.ts", "eslint.config.js"]
+}
+===END_FILE===
+===FILE:vite.config.ts===
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
+===END_FILE===
+===FILE:postcss.config.js===
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+===END_FILE===
+===FILE:tailwind.config.ts===
+import type { Config } from "tailwindcss";
+
+export default {
+  darkMode: ["class"],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}", "./index.html"],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      fontFamily: {
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+      },
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "count-up": {
+          from: { opacity: "0", transform: "scale(0.8)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "count-up": "count-up 0.5s ease-out forwards",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config;
+===END_FILE===
+===FILE:eslint.config.js===
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+  { ignores: ["dist"] },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+    },
+  }
+);
+===END_FILE===
+===FILE:vitest.config.ts===
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: "./src/test/setup.ts",
+  },
+});
+===END_FILE===
+===FILE:components.json===
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "src/index.css",
+    "baseColor": "zinc",
+    "cssVariables": false
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "hooks": "@/hooks",
+    "lib": "@/lib"
+  }
+}
+===END_FILE===
+===FILE:README.md===
+# Cenate Website
+
+This project was generated by Cenate with a fixed Lovable-style Vite + React + TypeScript scaffold.
+
+## Scripts
+
+- `npm run dev`
+- `npm run build`
+- `npm run build:dev`
+- `npm run lint`
+- `npm run preview`
+- `npm run test`
+- `npm run test:watch`
+
+===END_FILE===
+===FILE:.gitignore===
+node_modules
+dist
+.DS_Store
+.env
+.env.local
+coverage
+*.log
+===END_FILE===
+===FILE:public/robots.txt===
+User-agent: *
+Allow: /
+===END_FILE===
+===FILE:public/placeholder.svg===
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="24" fill="#F4F4F5"/>
+  <path d="M120 210L180 150L225 195L290 125L340 210H120Z" fill="#D4D4D8"/>
+  <circle cx="160" cy="110" r="24" fill="#A1A1AA"/>
+</svg>
+===END_FILE===
+===FILE:public/favicon.ico===
+placeholder favicon
+===END_FILE===
+===FILE:src/main.tsx===
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import "./App.css";
+
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { error: Error | null }
+> {
+  state: { error: Error | null } = { error: null };
+  static getDerivedStateFromError(error: Error) {
+    return { error };
+  }
+  componentDidCatch(error: Error) {
+    const el = document.getElementById("cenate-error");
+    if (el) {
+      el.style.display = "block";
+      el.textContent = "Render error: " + error.message;
+    }
+  }
+  render() {
+    if (this.state.error) {
+      return React.createElement(
+        "div",
+        {
+          style: {
+            padding: 32,
+            color: "#b91c1c",
+            fontFamily: "ui-monospace, monospace",
+            fontSize: 13,
+            whiteSpace: "pre-wrap" as const,
+            background: "#fff5f5",
+            minHeight: "100vh",
+          },
+        },
+        "Render error: " + this.state.error.message
+      );
+    }
+    return this.props.children;
+  }
+}
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </React.StrictMode>
+);
+===END_FILE===
+===FILE:src/index.css===
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 1rem;
+
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.14), hsl(var(--background)) 55%, hsl(var(--accent) / 0.22));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.92) 100%);
+    --shadow-soft: 0 20px 45px -30px rgb(15 23 42 / 0.28);
+    --shadow-card: 0 18px 40px -28px rgb(15 23 42 / 0.22);
+    --shadow-card-hover: 0 24px 60px -32px rgb(15 23 42 / 0.32);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 47.4% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 47.4% 8.6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 47.4% 8.6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --gradient-hero: linear-gradient(140deg, hsl(var(--primary) / 0.12), hsl(var(--background)) 52%, hsl(217.2 91.2% 59.8% / 0.28));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    background-image:
+      radial-gradient(circle at top, hsl(var(--primary) / 0.06), transparent 28%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 100%);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--primary) / 0.72));
+  }
+
+  .surface-card {
+    background-image: linear-gradient(180deg, hsl(var(--card) / 0.98), hsl(var(--card) / 0.92));
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-panel {
+    background: hsl(var(--card) / 0.82);
+    backdrop-filter: blur(14px);
+    border: 1px solid hsl(var(--border) / 0.7);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .section-shell {
+    position: relative;
+  }
+
+  .section-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, hsl(var(--background) / 0), hsl(var(--primary) / 0.03));
+    opacity: 0.8;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-count-up {
+  animation: count-up 0.5s ease-out forwards;
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+
+:root {
+  --background: 0 0% 99%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 224 76% 54%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 220 20% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 220 20% 96%;
+  --muted-foreground: 220 9% 42%;
+  --accent: 214 78% 96%;
+  --accent-foreground: 224 76% 36%;
+  --border: 220 14% 90%;
+  --input: 220 14% 90%;
+  --ring: 224 76% 54%;
+  --radius: 1rem;
+  --font-heading: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 30% 98%) 58%, hsl(224 76% 54% / 0.12));
+  --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 20% 97%) 100%);
+  --shadow-soft: 0 16px 38px -30px rgb(15 23 42 / 0.14);
+  --shadow-card: 0 16px 42px -28px rgb(15 23 42 / 0.12);
+  --shadow-card-hover: 0 22px 50px -26px rgb(15 23 42 / 0.18);
+}
+body {
+  background-image:
+    linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 23% 98%) 100%);
+}
+
+@layer utilities {
+
+.surface-card {
+  border-color: hsl(var(--border));
+  background-image: linear-gradient(180deg, hsl(var(--card)), hsl(var(--secondary) / 0.78));
+}
+
+.surface-panel {
+  background: hsl(var(--card) / 0.86);
+  border: 1px solid hsl(var(--border));
+}
+
+.eyebrow {
+  color: hsl(var(--primary));
+  letter-spacing: 0.22em;
+}
+
+.family-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+}
+
+.family-grid {
+  background-image:
+    linear-gradient(hsl(var(--border) / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.35) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+}
+===END_FILE===
+===FILE:src/App.css===
+#root {
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+===END_FILE===
+===FILE:src/vite-env.d.ts===
+/// <reference types="vite/client" />
+===END_FILE===
+===FILE:src/assets/.gitkeep===
+
+===END_FILE===
+===FILE:src/hooks/use-mobile.ts===
+import { useEffect, useState } from "react";
+
+export function useMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    const update = () => setIsMobile(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+===END_FILE===
+===FILE:src/pages/Home.tsx===
+import App from "../App";
+
+export default function HomePage() {
+  return <App />;
+}
+===END_FILE===
+===FILE:src/test/setup.ts===
+import "@testing-library/jest-dom";
+===END_FILE===
+===FILE:src/test/App.test.tsx===
+import { render, screen } from "@testing-library/react";
+import App from "../App";
+
+describe("App", () => {
+  it("renders without crashing", () => {
+    render(<App />);
+    expect(screen.getByRole("main")).toBeInTheDocument();
+  });
+});
+===END_FILE===
+===FILE:src/lib/utils.ts===
+import { clsx, type ClassValue } from "clsx";
+
+export function cn(...inputs: ClassValue[]) {
+  return clsx(inputs);
+}
+===END_FILE===
+===FILE:src/components/ui/button.tsx===
+import React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };
+export default Button;
+===END_FILE===
+===FILE:src/components/ui/accordion.tsx===
+import React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { cn } from "@/lib/utils";
+
+const Accordion = AccordionPrimitive.Root;
+
+const AccordionItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <AccordionPrimitive.Item ref={ref} className={cn("border-b", className)} {...props} />
+  )
+);
+AccordionItem.displayName = "AccordionItem";
+
+const AccordionTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        ref={ref}
+        className={cn(
+          "flex flex-1 items-center justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
+          className
+        )}
+        {...props}
+      >
+        {children}
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6" /></svg>
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  )
+);
+AccordionTrigger.displayName = "AccordionTrigger";
+
+const AccordionContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Content ref={ref} className="overflow-hidden text-sm" {...props}>
+      <div className={cn("pb-4 pt-0", className)}>{children}</div>
+    </AccordionPrimitive.Content>
+  )
+);
+AccordionContent.displayName = "AccordionContent";
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+===END_FILE===
+===FILE:src/components/ui/tabs.tsx===
+import React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { cn } from "@/lib/utils";
+
+const Tabs = TabsPrimitive.Root;
+
+const TabsList = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.List
+      ref={ref}
+      className={cn(
+        "inline-flex h-10 items-center justify-center rounded-lg bg-zinc-100 p-1 text-zinc-500",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsList.displayName = "TabsList";
+
+const TabsTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-all",
+        "data-[state=active]:bg-white data-[state=active]:text-zinc-950 data-[state=active]:shadow-sm",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsTrigger.displayName = "TabsTrigger";
+
+const TabsContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Content
+      ref={ref}
+      className={cn("mt-2", className)}
+      {...props}
+    />
+  )
+);
+TabsContent.displayName = "TabsContent";
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+===END_FILE===
+===FILE:src/components/ui/dialog.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Dialog = DialogPrimitive.Root;
+const DialogTrigger = DialogPrimitive.Trigger;
+const DialogClose = DialogPrimitive.Close;
+const DialogPortal = DialogPrimitive.Portal;
+
+const DialogOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn(
+        "fixed inset-0 z-50 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+DialogOverlay.displayName = "DialogOverlay";
+
+const DialogContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <DialogPortal>
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed left-[50%] top-[50%] z-50 w-full max-w-lg translate-x-[-50%] translate-y-[-50%] rounded-xl border bg-white p-6 shadow-xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  )
+);
+DialogContent.displayName = "DialogContent";
+
+const DialogTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Title ref={ref} className={cn("text-lg font-semibold", className)} {...props} />
+  )
+);
+DialogTitle.displayName = "DialogTitle";
+
+const DialogDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Description ref={ref} className={cn("text-sm text-zinc-500", className)} {...props} />
+  )
+);
+DialogDescription.displayName = "DialogDescription";
+
+export { Dialog, DialogTrigger, DialogContent, DialogClose, DialogOverlay, DialogTitle, DialogDescription };
+===END_FILE===
+===FILE:src/components/ui/sheet.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Sheet = DialogPrimitive.Root;
+const SheetTrigger = DialogPrimitive.Trigger;
+const SheetClose = DialogPrimitive.Close;
+
+const SheetOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn("fixed inset-0 z-50 bg-black/60 backdrop-blur-sm", className)}
+      {...props}
+    />
+  )
+);
+SheetOverlay.displayName = "SheetOverlay";
+
+type SheetContentProps = React.HTMLAttributes<HTMLDivElement> & {
+  side?: "left" | "right" | "top" | "bottom";
+};
+
+const sideStyles: Record<string, string> = {
+  right: "inset-y-0 right-0 h-full w-3/4 max-w-sm border-l translate-x-0",
+  left: "inset-y-0 left-0 h-full w-3/4 max-w-sm border-r translate-x-0",
+  top: "inset-x-0 top-0 border-b",
+  bottom: "inset-x-0 bottom-0 border-t",
+};
+
+const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
+  ({ side = "right", className, children, ...props }, ref) => (
+    <DialogPrimitive.Portal>
+      <SheetOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed z-50 bg-white p-6 shadow-xl transition-transform duration-300",
+          sideStyles[side],
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPrimitive.Portal>
+  )
+);
+SheetContent.displayName = "SheetContent";
+
+export { Sheet, SheetTrigger, SheetContent, SheetClose };
+===END_FILE===
+===FILE:src/components/ui/input.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+  error?: string;
+};
+
+export default function Input({ label, error, className, id, ...props }: InputProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <input
+        id={inputId}
+        className={cn(
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          error && "border-destructive focus-visible:ring-destructive",
+          className
+        )}
+        {...props}
+      />
+      {error && <p className="mt-1 text-sm text-destructive">{error}</p>}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/textarea.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  label?: string;
+};
+
+export default function Textarea({ label, className, id, ...props }: TextareaProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <textarea
+        id={inputId}
+        rows={4}
+        className={cn(
+          "w-full rounded-lg border px-4 py-2.5 text-base outline-none transition-colors resize-none",
+          className
+        )}
+        {...props}
+      />
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/badge.tsx===
+import React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const badgeVariants = cva(
+  "inline-flex items-center rounded-full font-medium",
+  {
+    variants: {
+      size: {
+        sm: "px-2 py-0.5 text-[10px]",
+        md: "px-2.5 py-0.5 text-xs",
+        lg: "px-3 py-1 text-sm",
+      },
+    },
+    defaultVariants: {
+      size: "md",
+    },
+  }
+);
+
+type BadgeProps = React.HTMLAttributes<HTMLSpanElement> &
+  VariantProps<typeof badgeVariants>;
+
+export default function Badge({ className, size, ...props }: BadgeProps) {
+  return (
+    <span className={cn(badgeVariants({ size }), className)} {...props} />
+  );
+}
+
+export { badgeVariants };
+===END_FILE===
+===FILE:src/components/ui/card.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type CardProps = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Card({ className, children }: CardProps) {
+  return (
+    <div className={cn("surface-card rounded-[calc(var(--radius)+6px)] border bg-card text-card-foreground shadow-sm p-6", className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/section.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SectionProps = {
+  id?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Section({ id, className, children }: SectionProps) {
+  return (
+    <section id={id} className={cn("py-16 md:py-24", className)}>
+      {children}
+    </section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/container.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type ContainerProps = {
+  size?: "sm" | "md" | "lg" | "xl" | "full";
+  className?: string;
+  children: React.ReactNode;
+};
+
+const maxWidths: Record<string, string> = {
+  sm: "max-w-3xl",
+  md: "max-w-5xl",
+  lg: "max-w-6xl",
+  xl: "max-w-7xl",
+  full: "max-w-full",
+};
+
+export default function Container({ size = "xl", className, children }: ContainerProps) {
+  return (
+    <div className={cn("mx-auto px-4 sm:px-6 lg:px-8", maxWidths[size], className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/heading.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type HeadingProps = {
+  as?: "h1" | "h2" | "h3" | "h4";
+  size?: "display" | "h1" | "h2" | "h3";
+  eyebrow?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+const sizeStyles: Record<string, string> = {
+  display: "text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]",
+  h1: "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight",
+  h2: "text-3xl md:text-4xl font-semibold tracking-tight",
+  h3: "text-xl md:text-2xl font-semibold",
+};
+
+export default function Heading({
+  as: Tag = "h2",
+  size = "h2",
+  eyebrow,
+  className,
+  children,
+}: HeadingProps) {
+  return (
+    <div>
+      {eyebrow && (
+        <span className="block text-xs uppercase tracking-widest font-medium mb-3 opacity-60">
+          {eyebrow}
+        </span>
+      )}
+      <Tag className={cn(sizeStyles[size], className)}>{children}</Tag>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/separator.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SeparatorProps = {
+  orientation?: "horizontal" | "vertical";
+  className?: string;
+};
+
+export default function Separator({ orientation = "horizontal", className }: SeparatorProps) {
+  return (
+    <div
+      role="separator"
+      className={cn(
+        "shrink-0 bg-current opacity-10",
+        orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
+        className
+      )}
+    />
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/aspect-ratio.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type AspectRatioProps = {
+  ratio?: number;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function AspectRatio({ ratio = 16 / 9, className, children }: AspectRatioProps) {
+  return (
+    <div className={cn("relative w-full overflow-hidden", className)} style={{ paddingBottom: (1 / ratio) * 100 + "%" }}>
+      <div className="absolute inset-0">{children}</div>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/testimonial.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TestimonialProps = {
+  quote: string;
+  author: string;
+  role?: string;
+  avatar?: string;
+  className?: string;
+};
+
+export default function Testimonial({ quote, author, role, avatar, className }: TestimonialProps) {
+  return (
+    <figure className={cn("space-y-4", className)}>
+      <blockquote className="text-lg md:text-xl leading-relaxed italic">
+        &ldquo;{quote}&rdquo;
+      </blockquote>
+      <figcaption className="flex items-center gap-3">
+        {avatar && (
+          <img src={avatar} alt={author} className="w-10 h-10 rounded-full object-cover" />
+        )}
+        <div>
+          <p className="font-medium text-sm">{author}</p>
+          {role && <p className="text-xs opacity-60">{role}</p>}
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/stats-band.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import { cn } from "@/lib/utils";
+
+type Stat = {
+  value: string;
+  label: string;
+};
+
+type StatsBandProps = {
+  stats: Stat[];
+  className?: string;
+};
+
+export default function StatsBand({ stats, className }: StatsBandProps) {
+  return (
+    <Section className={cn("py-12", className)}>
+      <Container>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <p className="text-3xl md:text-5xl font-bold">{s.value}</p>
+              <p className="text-sm mt-1 opacity-60">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/gallery.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type GalleryImage = {
+  src: string;
+  alt: string;
+  span?: "normal" | "wide" | "tall";
+};
+
+type GalleryProps = {
+  images: GalleryImage[];
+  className?: string;
+};
+
+const spanClasses: Record<string, string> = {
+  normal: "",
+  wide: "md:col-span-2",
+  tall: "md:row-span-2",
+};
+
+export default function Gallery({ images, className }: GalleryProps) {
+  return (
+    <div className={cn("grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4", className)}>
+      {images.map((img, i) => (
+        <div key={i} className={cn("overflow-hidden rounded-lg", spanClasses[img.span || "normal"])}>
+          <img
+            src={img.src}
+            alt={img.alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/mobile-nav.tsx===
+import React from "react";
+import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/ui/sheet";
+import Button from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+type MobileNavProps = {
+  links: { label: string; href: string }[];
+  brandName: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  className?: string;
+};
+
+export default function MobileNav({ links, brandName, ctaLabel, ctaHref, className }: MobileNavProps) {
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <button className={cn("md:hidden p-2", className)} aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </SheetTrigger>
+      <SheetContent side="right" className="flex flex-col pt-16">
+        <p className="text-lg font-semibold mb-8">{brandName}</p>
+        <nav className="flex flex-col gap-4">
+          {links.map((link) => (
+            <SheetClose key={link.href} asChild>
+              <a href={link.href} className="text-lg py-2 border-b border-zinc-100 hover:text-zinc-600 transition-colors">
+                {link.label}
+              </a>
+            </SheetClose>
+          ))}
+        </nav>
+        {ctaLabel && ctaHref && (
+          <div className="mt-auto pt-8">
+            <SheetClose asChild>
+              <Button asChild size="lg" className="w-full">
+                <a href={ctaHref}>{ctaLabel}</a>
+              </Button>
+            </SheetClose>
+          </div>
+        )}
+      </SheetContent>
+    </Sheet>
+  );
+}
+===END_FILE===
+===FILE:src/assets/generated-images.ts===
+export const projectImages = {
+  hero: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmhlcm88L3RleHQ+Cjwvc3ZnPg==`,
+  support: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPnN1cHBvcnQ8L3RleHQ+Cjwvc3ZnPg==`,
+  gallery1: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkxPC90ZXh0Pgo8L3N2Zz4=`,
+  gallery2: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkyPC90ZXh0Pgo8L3N2Zz4=`,
+  gallery3: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkzPC90ZXh0Pgo8L3N2Zz4=`,
+  detail1: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmRldGFpbDE8L3RleHQ+Cjwvc3ZnPg==`,
+} as const;
+
+export type ProjectImageKey = keyof typeof projectImages;
+
+export default projectImages;
+===END_FILE===
+
+===FILE:src/App.tsx===
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import ProductDemo from './components/ProductDemo';
+import Capabilities from './components/Capabilities';
+import Metrics from './components/Metrics';
+import Testimonial from './components/Testimonial';
+import Pricing from './components/Pricing';
+import Footer from './components/Footer';
+
+export default function App() {
+  return (
+    <main role="main" className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <Hero />
+      <ProductDemo />
+      <Capabilities />
+      <Metrics />
+      <Testimonial />
+      <Pricing />
+<Footer />
+    </main>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Navbar.tsx===
+import React from 'react';
+import Button from '@/components/ui/button';
+import MobileNav from '@/components/ui/mobile-nav';
+
+export default function Navbar() {
+  const links = [
+    { label: 'Features', href: '#features' },
+    { label: 'Pricing', href: '#pricing' },
+    { label: 'Resources', href: '#resources' },
+    { label: 'Support', href: '#support' }
+  ];
+
+  return (
+    <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          <div className="flex items-center">
+            <span className="text-xl font-heading font-bold text-primary">DataFlow Pro</span>
+          </div>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              {links.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="hidden md:block">
+            <div className="ml-4 flex items-center space-x-4">
+              <Button variant="ghost" size="sm">Sign In</Button>
+              <Button size="sm">Start Free Trial</Button>
+            </div>
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden">
+            <MobileNav 
+              links={links}
+              brandName="DataFlow Pro"
+              ctaLabel="Start Free Trial"
+              ctaHref="#signup"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Hero.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import Button from '@/components/ui/button';
+import { projectImages } from '@/assets/generated-images';
+
+export default function Hero() {
+  return (
+    <Section className="min-h-[85vh] flex items-center bg-zinc-950 text-white py-24">
+      <Container>
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-5 max-w-xl">
+            <Heading as="h1" size="display" className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight">
+              Transform Data Into 
+              <span className="text-blue-400"> Intelligent Insights</span>
+            </Heading>
+            <p className="mt-6 text-lg text-zinc-300 max-w-lg leading-relaxed">
+              Unify your data sources, automate complex workflows, and deliver real-time analytics that drive business decisions with confidence.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">Start Free Trial</Button>
+              <Button size="lg" variant="outline" className="border-zinc-600 text-zinc-300 hover:bg-zinc-800">
+                Watch Demo
+              </Button>
+            </div>
+            
+            {/* Credibility Rail */}
+            <div className="mt-12 pt-8 border-t border-zinc-800">
+              <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-medium mb-4">Trusted by 10,000+ teams</p>
+              <div className="flex items-center space-x-8 text-zinc-400">
+                <span className="text-sm font-medium">Stripe</span>
+                <span className="text-sm font-medium">Notion</span>
+                <span className="text-sm font-medium">Figma</span>
+                <span className="text-sm font-medium">Linear</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Product Window */}
+          <div className="lg:col-span-7">
+            <div className="relative">
+              {/* Browser Chrome */}
+              <div className="bg-zinc-800 rounded-t-xl p-3 border border-zinc-700">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <div className="ml-4 flex-1 bg-zinc-900 rounded px-3 py-1 text-xs text-zinc-400">
+                    app.dataflowpro.com/dashboard
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product UI */}
+              <div className="bg-zinc-900 rounded-b-xl border-x border-b border-zinc-700 overflow-hidden">
+                <img 
+                  src={projectImages.hero} 
+                  alt="DataFlow Pro dashboard interface showing real-time analytics and data visualization"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
+              {/* Subtle overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/20 to-transparent rounded-xl pointer-events-none"></div>
+            </div>
+          </div>
+        </div>
+      
+      <div className="mt-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
+        <div className="surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3">
+          <p className="text-lg font-semibold">12K+</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">Teams onboarded</p>
+        </div>
+<div className="surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3">
+          <p className="text-lg font-semibold">99.9%</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">Uptime</p>
+        </div>
+<div className="surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3">
+          <p className="text-lg font-semibold">24/7</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">Support</p>
+        </div>
+      </div>
+      <div className="family-divider mt-6 max-w-2xl"></div>
+      <p className="mt-4 max-w-xl text-sm text-muted-foreground">Buttons are dense, crisp, and product-like with strong contrast and direct labels.</p>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/ProductDemo.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import { projectImages } from '@/assets/generated-images';
+
+export default function ProductDemo() {
+  const callouts = [
+    { number: '1', label: 'Connect data sources', position: 'top-[15%] left-[8%]' },
+    { number: '2', label: 'Configure transformations', position: 'top-[25%] right-[12%]' },
+    { number: '3', label: 'Set up real-time monitoring', position: 'top-[45%] left-[15%]' },
+    { number: '4', label: 'Deploy with one click', position: 'bottom-[20%] right-[8%]' },
+    { number: '5', label: 'Share insights instantly', position: 'bottom-[15%] left-[25%]' }
+  ];
+
+  return (
+    <Section className="bg-background py-20">
+      <Container>
+        <div className="text-center mb-16">
+          <Heading size="h2" eyebrow="How it works" className="font-heading">
+            Build Data Pipelines in Minutes, Not Months
+          </Heading>
+          <p className="mt-6 text-lg text-muted-foreground max-w-3xl mx-auto">
+            Watch how DataFlow Pro transforms complex data workflows into simple, visual processes that anyone on your team can understand and manage.
+          </p>
+        </div>
+
+        <div className="relative max-w-6xl mx-auto">
+          <div className="bg-card rounded-2xl p-1 shadow-lg border border-border">
+            <img 
+              src={projectImages.support} 
+              alt="DataFlow Pro workflow editor showing step-by-step data transformation pipeline with visual connectors"
+              className="w-full h-auto rounded-xl object-cover"
+            />
+            
+            {/* Animated Callouts */}
+            {callouts.map((callout, index) => (
+              <div 
+                key={callout.number}
+                className={`absolute ${callout.position} animate-pulse`}
+                style={{ animationDelay: `${index * 400}ms` }}
+              >
+                <div className="flex items-center space-x-2 bg-blue-600 text-white px-3 py-2 rounded-full text-sm font-medium shadow-lg">
+                  <span className="w-5 h-5 bg-white text-blue-600 rounded-full flex items-center justify-center text-xs font-bold">
+                    {callout.number}
+                  </span>
+                  <span>{callout.label}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Capabilities.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import { projectImages } from '@/assets/generated-images';
+
+export default function Capabilities() {
+  const capabilities = [
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      ),
+      title: 'Real-Time Data Processing',
+      description: 'Process millions of events per second with sub-100ms latency. Built for enterprise scale with automatic failover and recovery.',
+      detail: '50ms avg response'
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+      title: 'Intelligent Automation',
+      description: 'AI-powered data transformations that learn from your patterns. Automatically detect anomalies and suggest optimizations.',
+      detail: 'ML-powered insights'
+    },
+    {
+      icon: (
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      ),
+      title: 'Enterprise Security',
+      description: 'SOC 2 Type II compliant with end-to-end encryption. Role-based access controls and comprehensive audit logs.',
+      detail: 'SOC 2 certified'
+    }
+  ];
+
+  return (
+    <Section className="bg-secondary py-20">
+      <Container>
+        <div className="text-left mb-16">
+          <Heading size="h2" eyebrow="Capabilities" className="font-heading">
+            Built for Modern Data Teams
+          </Heading>
+        </div>
+
+        <div className="space-y-1">
+          {capabilities.map((capability, index) => (
+            <div 
+              key={capability.title}
+              className={`grid lg:grid-cols-12 gap-8 items-center py-12 px-8 rounded-xl transition-all duration-300 hover:bg-card ${
+                index % 2 === 0 ? 'bg-background/50' : 'bg-card/30'
+              }`}
+            >
+              <div className="lg:col-span-1">
+                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white">
+                  {capability.icon}
+                </div>
+              </div>
+              <div className="lg:col-span-7">
+                <h3 className="text-xl font-heading font-semibold mb-3">{capability.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{capability.description}</p>
+              </div>
+              <div className="lg:col-span-4">
+                <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4 text-left border border-blue-200 dark:border-blue-800">
+                  <span className="text-sm font-medium text-blue-600 dark:text-blue-400">{capability.detail}</span>
+                  <div className="mt-2 w-16 h-12 bg-blue-100 dark:bg-blue-900/30 rounded mx-auto flex items-center justify-center">
+                    <div className="w-8 h-1 bg-blue-600 rounded"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Metrics.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+
+export default function Metrics() {
+  const metrics = [
+    { value: '99.99%', label: 'Uptime SLA' },
+    { value: '<50ms', label: 'Response Time' },
+    { value: '10K+', label: 'Active Teams' },
+    { value: '500M+', label: 'Events/Month' },
+    { value: 'SOC 2', label: 'Certified' }
+  ];
+
+  return (
+    <Section className="bg-blue-950 text-white py-16">
+      <Container>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-left">
+          {metrics.map((metric, index) => (
+            <div key={metric.label} className="space-y-2">
+              <div className="text-3xl md:text-5xl font-heading font-bold text-blue-400">
+                {metric.value}
+              </div>
+              <div className="text-sm text-blue-200 uppercase tracking-wide">
+                {metric.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Testimonial.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import { projectImages } from '@/assets/generated-images';
+
+export default function Testimonial() {
+  return (
+    <Section className="bg-card py-20">
+      <Container>
+        <div className="max-w-5xl mx-auto">
+          {/* Logo Wall */}
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-medium mb-8">
+              Trusted by industry leaders
+            </p>
+            <div className="flex items-center justify-center space-x-12 text-muted-foreground">
+              <span className="text-xl font-medium">Stripe</span>
+              <span className="text-xl font-medium">Shopify</span>
+              <span className="text-xl font-medium">Notion</span>
+              <span className="text-xl font-medium">Linear</span>
+              <span className="text-xl font-medium">Figma</span>
+            </div>
+          </div>
+
+          {/* Main Testimonial */}
+          <div className="bg-background rounded-2xl p-8 md:p-12 border border-border">
+            <div className="grid lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-8">
+                <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-foreground mb-6">
+                  "DataFlow Pro transformed how we handle customer data. What used to take our engineering team weeks to build now takes minutes. The real-time insights have improved our conversion rates by 40% and reduced our data infrastructure costs by 60%."
+                </blockquote>
+                <div className="flex items-center space-x-4">
+                  <img 
+                    src={projectImages.detail1} 
+                    alt="Sarah Chen, VP of Engineering at TechFlow"
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                  <div>
+                    <p className="font-semibold text-foreground">Sarah Chen</p>
+                    <p className="text-sm text-muted-foreground">VP of Engineering, TechFlow</p>
+                  </div>
+                </div>
+              </div>
+              <div className="lg:col-span-4">
+                <div className="bg-card rounded-xl p-6 border border-border">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                      <span className="text-white text-sm font-bold">T</span>
+                    </div>
+                    <span className="font-semibold">TechFlow</span>
+                  </div>
+                  <div className="space-y-3 text-sm text-muted-foreground">
+                    <div className="flex justify-between">
+                      <span>Data processed daily</span>
+                      <span className="font-medium text-foreground">2.5B events</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Response time</span>
+                      <span className="font-medium text-foreground">23ms avg</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Cost reduction</span>
+                      <span className="font-medium text-green-600">-60%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Pricing.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import Button from '@/components/ui/button';
+import Badge from '@/components/ui/badge';
+
+export default function Pricing() {
+  return (
+    <Section className="bg-background py-24">
+      <Container>
+        <div className="text-center mb-16">
+          <Heading size="h2" eyebrow="Pricing" className="font-heading">
+            Simple, Transparent Pricing
+          </Heading>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Start free, scale as you grow. No hidden fees, no surprises.
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto">
+          {/* Two-tier comparison */}
+          <div className="grid lg:grid-cols-12 gap-8 mb-12">
+            {/* Essentials Plan */}
+            <div className="lg:col-span-5">
+              <div className="bg-card rounded-2xl p-8 border border-border h-full">
+                <div className="mb-8">
+                  <h3 className="text-xl font-heading font-semibold mb-2">Essentials</h3>
+                  <p className="text-muted-foreground mb-4">Perfect for growing teams</p>
+                  <div className="flex items-baseline">
+                    <span className="text-3xl font-heading font-bold">$49</span>
+                    <span className="text-muted-foreground ml-2">/month</span>
+                  </div>
+                </div>
+                
+                <ul className="space-y-3 mb-8 text-sm">
+                  <li className="flex items-start space-x-3">
+                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Up to 1M events/month</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>5 team members</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Email support</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Basic integrations</span>
+                  </li>
+                </ul>
+                
+                <Button variant="outline" className="w-full">Start Free Trial</Button>
+              </div>
+            </div>
+
+            {/* Pro Plan - Featured */}
+            <div className="lg:col-span-7">
+              <div className="bg-blue-950 text-white rounded-2xl p-8 border-2 border-blue-500 h-full relative">
+                <Badge className="absolute -top-3 left-8 bg-blue-500 text-white">Most Popular</Badge>
+                
+                <div className="mb-8">
+                  <h3 className="text-xl font-heading font-semibold mb-2">Pro</h3>
+                  <p className="text-blue-200 mb-4">For scaling businesses</p>
+                  <div className="flex items-baseline">
+                    <span className="text-4xl font-heading font-bold">$149</span>
+                    <span className="text-blue-200 ml-2">/month</span>
+                  </div>
+                </div>
+                
+                <div className="grid grid-cols-1 gap-6 mb-8 text-sm">
+                  <ul className="space-y-3">
+                    <li className="flex items-start space-x-3">
+                      <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>Up to 50M events/month</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>Unlimited team members</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>24/7 priority support</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>Advanced integrations</span>
+                    </li>
+                  </ul>
+                  <ul className="space-y-3">
+                    <li className="flex items-start space-x-3">
+                      <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>Real-time monitoring</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>Custom workflows</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>API access</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span>SSO & advanced security</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <Button size="lg" className="w-full bg-white text-blue-950 hover:bg-blue-50">
+                  Start Free Trial
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Enterprise */}
+          <div className="bg-card rounded-2xl p-8 border border-border">
+            <div className="grid grid-cols-1 gap-8 items-start">
+              <div>
+                <h3 className="text-2xl font-heading font-semibold mb-3">Enterprise</h3>
+                <p className="text-muted-foreground mb-4">
+                  Custom solutions for large organizations with dedicated support and advanced security features.
+                </p>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-start space-x-2">
+                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Unlimited events</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>Dedicated account manager</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span>On-premise deployment</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="text-center">
+                <Button size="lg">Contact Sales</Button>
+                <p className="text-sm text-muted-foreground mt-3">
+                  Custom pricing based on your needs
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Conversion.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import Button from '@/components/ui/button';
+import Input from '@/components/ui/input';
+
+export default function Conversion() {
+  return (
+    <Section className="bg-zinc-950 text-white py-24">
+      <Container>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
+            {/* Left Column - Value Proposition */}
+            <div className="lg:col-span-6">
+              <Heading size="h2" className="font-heading text-white mb-6">
+                Ready to Transform Your Data Operations?
+              </Heading>
+              <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
+                Join thousands of teams already using DataFlow Pro to build better data products, faster.
+              </p>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center space-x-3">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-zinc-300">No credit card required</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-zinc-300">3-minute setup process</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-zinc-300">14-day free trial</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Signup Form */}
+            <div className="lg:col-span-6">
+              <div className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800">
+                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                  <div>
+                    <Input 
+                      label="Work Email"
+                      type="email"
+                      placeholder="you@company.com"
+                      className="bg-zinc-800 border-zinc-700 text-white"
+                    />
+                  </div>
+                  
+                  <div>
+                    <Input 
+                      label="Company Name"
+                      placeholder="Your Company"
+                      className="bg-zinc-800 border-zinc-700 text-white"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-200 mb-2">
+                      Use Case
+                    </label>
+                    <select className="w-full px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                      <option value="">Select your primary use case</option>
+                      <option value="analytics">Real-time Analytics</option>
+                      <option value="etl">Data ETL/ELT</option>
+                      <option value="monitoring">System Monitoring</option>
+                      <option value="ml">Machine Learning</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  
+                  <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
+                    Start Free Trial
+                  </Button>
+                </form>
+                
+                <p className="text-xs text-zinc-400 mt-4 text-left">
+                  By signing up, you agree to our{' '}
+                  <a href="#" className="text-blue-400 hover:underline">Terms of Service</a>{' '}
+                  and{' '}
+                  <a href="#" className="text-blue-400 hover:underline">Privacy Policy</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Footer.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Button from '@/components/ui/button';
+import Input from '@/components/ui/input';
+
+export default function Footer() {
+  return (
+    <Section className="bg-card py-16 border-t border-border">
+      <Container>
+        <div className="grid lg:grid-cols-12 gap-12 mb-12">
+          {/* Brand & Closing Statement */}
+          <div className="lg:col-span-6">
+            <div className="mb-6">
+              <h3 className="text-2xl font-heading font-bold text-primary mb-3">DataFlow Pro</h3>
+              <p className="text-lg text-foreground font-medium leading-relaxed">
+                Built for teams that ship data products with confidence.
+              </p>
+            </div>
+            
+            {/* Status Badge */}
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-sm text-muted-foreground">All systems operational</span>
+              <a href="#" className="text-sm text-blue-600 hover:underline">View status →</a>
+            </div>
+
+            {/* Minimal Product Links */}
+            <div className="grid grid-cols-2 gap-8 max-w-sm">
+              <div>
+                <h4 className="font-semibold mb-3">Product</h4>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li><a href="#" className="hover:text-foreground">Features</a></li>
+                  <li><a href="#" className="hover:text-foreground">Pricing</a></li>
+                  <li><a href="#" className="hover:text-foreground">Documentation</a></li>
+                  <li><a href="#" className="hover:text-foreground">Changelog</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-3">Support</h4>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li><a href="#" className="hover:text-foreground">Help Center</a></li>
+                  <li><a href="#" className="hover:text-foreground">Contact</a></li>
+                  <li><a href="#" className="hover:text-foreground">Security</a></li>
+                  <li><a href="#" className="hover:text-foreground">Privacy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="lg:col-span-6">
+            <div className="bg-background rounded-xl p-6 border border-border max-w-md lg:ml-auto">
+              <h4 className="font-semibold mb-3">Get Product Updates</h4>
+              <p className="text-sm text-muted-foreground mb-4">
+                Stay updated with new features, best practices, and industry insights.
+              </p>
+              <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+                <Input 
+                  type="email"
+                  placeholder="Enter your email"
+                  className="bg-card"
+                />
+                <Button size="sm" className="w-full">Subscribe</Button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+          <p className="text-sm text-muted-foreground">
+            © 2024 DataFlow Pro. All rights reserved.
+          </p>
+          <div className="flex items-center space-x-6 text-sm">
+            <a href="#" className="text-muted-foreground hover:text-foreground">Terms</a>
+            <a href="#" className="text-muted-foreground hover:text-foreground">Privacy</a>
+            <a href="#" className="text-muted-foreground hover:text-foreground">Cookies</a>
+            <div className="flex items-center space-x-4">
+              <a href="#" className="text-muted-foreground hover:text-foreground">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                </svg>
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-foreground">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===

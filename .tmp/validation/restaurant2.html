@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generated Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; background: #0a0a0a; }
+    #root { min-height: 100vh; }
+    #cenate-error {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999999;
+      max-height: 45vh;
+      overflow: auto;
+      white-space: pre-wrap;
+      background: #fff1f2;
+      color: #9f1239;
+      padding: 16px;
+      font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+      border-top: 2px solid #fb7185;
+    }
+  </style>
+</head>
+<body data-hash="1526918831">
+  <div id="root"></div>
+  <pre id="cenate-error"></pre>
+  <script>
+    (function () {
+      const FILES = {"package.json":"{\n  \"name\": \"cenate-website\",\n  \"private\": true,\n  \"version\": \"1.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"tsc -b && vite build\",\n    \"build:dev\": \"vite build --mode development\",\n    \"lint\": \"eslint .\",\n    \"preview\": \"vite preview\",\n    \"test\": \"vitest run\",\n    \"test:watch\": \"vitest\"\n  },\n  \"dependencies\": {\n    \"@radix-ui/react-accordion\": \"^1.2.2\",\n    \"@radix-ui/react-alert-dialog\": \"^1.1.4\",\n    \"@radix-ui/react-aspect-ratio\": \"^1.1.1\",\n    \"@radix-ui/react-avatar\": \"^1.1.2\",\n    \"@radix-ui/react-checkbox\": \"^1.1.3\",\n    \"@radix-ui/react-collapsible\": \"^1.1.2\",\n    \"@radix-ui/react-context-menu\": \"^2.2.4\",\n    \"@radix-ui/react-dialog\": \"^1.1.4\",\n    \"@radix-ui/react-dropdown-menu\": \"^2.1.4\",\n    \"@radix-ui/react-hover-card\": \"^1.1.4\",\n    \"@radix-ui/react-label\": \"^2.1.1\",\n    \"@radix-ui/react-menubar\": \"^1.1.4\",\n    \"@radix-ui/react-navigation-menu\": \"^1.2.3\",\n    \"@radix-ui/react-popover\": \"^1.1.4\",\n    \"@radix-ui/react-progress\": \"^1.1.1\",\n    \"@radix-ui/react-radio-group\": \"^1.2.2\",\n    \"@radix-ui/react-scroll-area\": \"^1.2.2\",\n    \"@radix-ui/react-select\": \"^2.1.4\",\n    \"@radix-ui/react-separator\": \"^1.1.1\",\n    \"@radix-ui/react-slider\": \"^1.2.2\",\n    \"@radix-ui/react-slot\": \"^1.1.0\",\n    \"@radix-ui/react-switch\": \"^1.1.2\",\n    \"@radix-ui/react-tabs\": \"^1.1.2\",\n    \"@radix-ui/react-toast\": \"^1.2.4\",\n    \"@radix-ui/react-toggle\": \"^1.1.1\",\n    \"@radix-ui/react-toggle-group\": \"^1.1.1\",\n    \"@radix-ui/react-tooltip\": \"^1.1.6\",\n    \"@hookform/resolvers\": \"^3.9.1\",\n    \"@tanstack/react-query\": \"^5.62.8\",\n    \"@radix-ui/react-visually-hidden\": \"^1.1.1\",\n    \"class-variance-authority\": \"^0.7.1\",\n    \"clsx\": \"^2.1.1\",\n    \"cmdk\": \"^1.0.4\",\n    \"date-fns\": \"^4.1.0\",\n    \"embla-carousel-react\": \"^8.5.1\",\n    \"input-otp\": \"^1.4.1\",\n    \"lucide-react\": \"^0.468.0\",\n    \"next-themes\": \"^0.4.4\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"react-day-picker\": \"^9.4.3\",\n    \"react-hook-form\": \"^7.54.2\",\n    \"react-resizable-panels\": \"^2.1.7\",\n    \"react-router-dom\": \"^7.1.1\",\n    \"recharts\": \"^2.15.0\",\n    \"sonner\": \"^1.7.1\",\n    \"tailwind-merge\": \"^2.6.0\",\n    \"tailwindcss-animate\": \"^1.0.7\",\n    \"vaul\": \"^1.1.2\",\n    \"zod\": \"^3.24.1\"\n  },\n  \"devDependencies\": {\n    \"@eslint/js\": \"^9.17.0\",\n    \"@tailwindcss/typography\": \"^0.5.16\",\n    \"@testing-library/jest-dom\": \"^6.6.3\",\n    \"@testing-library/react\": \"^16.1.0\",\n    \"@types/node\": \"^22.10.2\",\n    \"@types/react\": \"^18.3.12\",\n    \"@types/react-dom\": \"^18.3.1\",\n    \"@vitejs/plugin-react-swc\": \"^3.7.2\",\n    \"autoprefixer\": \"^10.4.20\",\n    \"eslint\": \"^9.17.0\",\n    \"eslint-plugin-react-hooks\": \"^5.1.0\",\n    \"eslint-plugin-react-refresh\": \"^0.4.16\",\n    \"globals\": \"^15.14.0\",\n    \"jsdom\": \"^25.0.1\",\n    \"postcss\": \"^8.4.49\",\n    \"tailwindcss\": \"^3.4.15\",\n    \"typescript-eslint\": \"^8.18.1\",\n    \"typescript\": \"^5.6.3\",\n    \"vite\": \"^6.0.1\",\n    \"vitest\": \"^2.1.8\"\n  }\n}","index.html":"<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Cenate Website</title>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.tsx\"><\/script>\n  </body>\n</html>","tsconfig.json":"{\n  \"files\": [],\n  \"references\": [\n    { \"path\": \"./tsconfig.app.json\" },\n    { \"path\": \"./tsconfig.node.json\" }\n  ]\n}","tsconfig.app.json":"{\n  \"compilerOptions\": {\n    \"target\": \"ES2020\",\n    \"useDefineForClassFields\": true,\n    \"lib\": [\"ES2020\", \"DOM\", \"DOM.Iterable\"],\n    \"module\": \"ESNext\",\n    \"skipLibCheck\": true,\n    \"moduleResolution\": \"bundler\",\n    \"allowImportingTsExtensions\": true,\n    \"resolveJsonModule\": true,\n    \"isolatedModules\": true,\n    \"moduleDetection\": \"force\",\n    \"noEmit\": true,\n    \"jsx\": \"react-jsx\",\n    \"strict\": true,\n    \"baseUrl\": \".\",\n    \"paths\": {\n      \"@/*\": [\"./src/*\"]\n    }\n  },\n  \"include\": [\"src\"]\n}","tsconfig.node.json":"{\n  \"compilerOptions\": {\n    \"composite\": true,\n    \"skipLibCheck\": true,\n    \"module\": \"ESNext\",\n    \"moduleResolution\": \"bundler\",\n    \"allowSyntheticDefaultImports\": true,\n    \"types\": [\"node\"]\n  },\n  \"include\": [\"vite.config.ts\", \"vitest.config.ts\", \"eslint.config.js\"]\n}","vite.config.ts":"import { defineConfig } from \"vite\";\nimport react from \"@vitejs/plugin-react-swc\";\nimport path from \"path\";\n\nexport default defineConfig({\n  plugins: [react()],\n  resolve: {\n    alias: {\n      \"@\": path.resolve(__dirname, \"./src\"),\n    },\n  },\n});","postcss.config.js":"export default {\n  plugins: {\n    tailwindcss: {},\n    autoprefixer: {},\n  },\n};","tailwind.config.ts":"import type { Config } from \"tailwindcss\";\n\nexport default {\n  content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\"],\n  theme: {\n    extend: {\n      container: {\n        center: true,\n        padding: \"2rem\",\n        screens: {\n          \"2xl\": \"1400px\",\n        },\n      },\n    },\n  },\n  plugins: [require(\"@tailwindcss/typography\"), require(\"tailwindcss-animate\")],\n} satisfies Config;","eslint.config.js":"import js from \"@eslint/js\";\nimport globals from \"globals\";\nimport reactHooks from \"eslint-plugin-react-hooks\";\nimport reactRefresh from \"eslint-plugin-react-refresh\";\nimport tseslint from \"typescript-eslint\";\n\nexport default tseslint.config(\n  { ignores: [\"dist\"] },\n  {\n    extends: [js.configs.recommended, ...tseslint.configs.recommended],\n    files: [\"**/*.{ts,tsx}\"],\n    languageOptions: {\n      ecmaVersion: 2020,\n      globals: globals.browser,\n    },\n    plugins: {\n      \"react-hooks\": reactHooks,\n      \"react-refresh\": reactRefresh,\n    },\n    rules: {\n      ...reactHooks.configs.recommended.rules,\n      \"react-refresh/only-export-components\": [\n        \"warn\",\n        { allowConstantExport: true },\n      ],\n    },\n  }\n);","vitest.config.ts":"import { defineConfig } from \"vitest/config\";\nimport react from \"@vitejs/plugin-react-swc\";\nimport path from \"path\";\n\nexport default defineConfig({\n  plugins: [react()],\n  resolve: {\n    alias: {\n      \"@\": path.resolve(__dirname, \"./src\"),\n    },\n  },\n  test: {\n    environment: \"jsdom\",\n    globals: true,\n    setupFiles: \"./src/test/setup.ts\",\n  },\n});","components.json":"{\n  \"$schema\": \"https://ui.shadcn.com/schema.json\",\n  \"style\": \"default\",\n  \"rsc\": false,\n  \"tsx\": true,\n  \"tailwind\": {\n    \"config\": \"tailwind.config.ts\",\n    \"css\": \"src/index.css\",\n    \"baseColor\": \"zinc\",\n    \"cssVariables\": false\n  },\n  \"aliases\": {\n    \"components\": \"@/components\",\n    \"utils\": \"@/lib/utils\",\n    \"ui\": \"@/components/ui\",\n    \"hooks\": \"@/hooks\",\n    \"lib\": \"@/lib\"\n  }\n}","README.md":"# Cenate Website\n\nThis project was generated by Cenate with a fixed Lovable-style Vite + React + TypeScript scaffold.\n\n## Scripts\n\n- `npm run dev`\n- `npm run build`\n- `npm run build:dev`\n- `npm run lint`\n- `npm run preview`\n- `npm run test`\n- `npm run test:watch`",".gitignore":"node_modules\ndist\n.DS_Store\n.env\n.env.local\ncoverage\n*.log","public/robots.txt":"User-agent: *\nAllow: /","public/placeholder.svg":"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" fill=\"none\">\n  <rect width=\"400\" height=\"300\" rx=\"24\" fill=\"#F4F4F5\"/>\n  <path d=\"M120 210L180 150L225 195L290 125L340 210H120Z\" fill=\"#D4D4D8\"/>\n  <circle cx=\"160\" cy=\"110\" r=\"24\" fill=\"#A1A1AA\"/>\n</svg>","public/favicon.ico":"placeholder favicon","src/main.tsx":"import React from \"react\";\nimport ReactDOM from \"react-dom/client\";\nimport App from \"./App\";\nimport \"./index.css\";\nimport \"./App.css\";\n\nclass ErrorBoundary extends React.Component<\n  { children: React.ReactNode },\n  { error: Error | null }\n> {\n  state: { error: Error | null } = { error: null };\n  static getDerivedStateFromError(error: Error) {\n    return { error };\n  }\n  componentDidCatch(error: Error) {\n    const el = document.getElementById(\"cenate-error\");\n    if (el) {\n      el.style.display = \"block\";\n      el.textContent = \"Render error: \" + error.message;\n    }\n  }\n  render() {\n    if (this.state.error) {\n      return React.createElement(\n        \"div\",\n        {\n          style: {\n            padding: 32,\n            color: \"#b91c1c\",\n            fontFamily: \"ui-monospace, monospace\",\n            fontSize: 13,\n            whiteSpace: \"pre-wrap\" as const,\n            background: \"#fff5f5\",\n            minHeight: \"100vh\",\n          },\n        },\n        \"Render error: \" + this.state.error.message\n      );\n    }\n    return this.props.children;\n  }\n}\n\nReactDOM.createRoot(document.getElementById(\"root\")!).render(\n  <React.StrictMode>\n    <ErrorBoundary>\n      <App />\n    </ErrorBoundary>\n  </React.StrictMode>\n);","src/index.css":"@import url(\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap\");\n\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n:root {\n  color-scheme: light;\n}\n\nhtml {\n  scroll-behavior: smooth;\n}\n\nbody {\n  margin: 0;\n  font-family: \"Inter\", system-ui, sans-serif;\n  background: #ffffff;\n  color: #09090b;\n}\n\n* {\n  box-sizing: border-box;\n}","src/App.css":"#root {\n  min-height: 100vh;\n}","src/vite-env.d.ts":"/// <reference types=\"vite/client\" />","src/assets/.gitkeep":"","src/hooks/use-mobile.ts":"import { useEffect, useState } from \"react\";\n\nexport function useMobile(breakpoint = 768) {\n  const [isMobile, setIsMobile] = useState(false);\n\n  useEffect(() => {\n    const media = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);\n    const update = () => setIsMobile(media.matches);\n    update();\n    media.addEventListener(\"change\", update);\n    return () => media.removeEventListener(\"change\", update);\n  }, [breakpoint]);\n\n  return isMobile;\n}","src/pages/Home.tsx":"export default function HomePage() {\n  return null;\n}","src/test/setup.ts":"import \"@testing-library/jest-dom\";","src/test/App.test.tsx":"import { render, screen } from \"@testing-library/react\";\nimport App from \"../App\";\n\ndescribe(\"App\", () => {\n  it(\"renders without crashing\", () => {\n    render(<App />);\n    expect(screen.getByRole(\"main\")).toBeInTheDocument();\n  });\n});","src/lib/utils.ts":"import { clsx, type ClassValue } from \"clsx\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return clsx(inputs);\n}","src/components/ui/button.tsx":"import React from \"react\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst buttonVariants = cva(\n  \"inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 cursor-pointer\",\n  {\n    variants: {\n      size: {\n        sm: \"px-3 py-1.5 text-sm\",\n        md: \"px-5 py-2.5 text-base\",\n        lg: \"px-8 py-3.5 text-lg\",\n      },\n    },\n    defaultVariants: {\n      size: \"md\",\n    },\n  }\n);\n\ntype ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &\n  VariantProps<typeof buttonVariants> & {\n    asChild?: boolean;\n  };\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n  ({ className, size, asChild = false, ...props }, ref) => {\n    const Comp = asChild ? Slot : \"button\";\n    return (\n      <Comp\n        className={cn(buttonVariants({ size }), className)}\n        ref={ref}\n        {...props}\n      />\n    );\n  }\n);\nButton.displayName = \"Button\";\n\nexport default Button;\nexport { buttonVariants };","src/components/ui/accordion.tsx":"import React from \"react\";\nimport * as AccordionPrimitive from \"@radix-ui/react-accordion\";\nimport { cn } from \"@/lib/utils\";\n\nconst Accordion = AccordionPrimitive.Root;\n\nconst AccordionItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(\n  ({ className, ...props }, ref) => (\n    <AccordionPrimitive.Item ref={ref} className={cn(\"border-b\", className)} {...props} />\n  )\n);\nAccordionItem.displayName = \"AccordionItem\";\n\nconst AccordionTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(\n  ({ className, children, ...props }, ref) => (\n    <AccordionPrimitive.Header className=\"flex\">\n      <AccordionPrimitive.Trigger\n        ref={ref}\n        className={cn(\n          \"flex flex-1 items-center justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\" className=\"shrink-0 transition-transform duration-200\"><path d=\"m6 9 6 6 6-6\" /></svg>\n      </AccordionPrimitive.Trigger>\n    </AccordionPrimitive.Header>\n  )\n);\nAccordionTrigger.displayName = \"AccordionTrigger\";\n\nconst AccordionContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, children, ...props }, ref) => (\n    <AccordionPrimitive.Content ref={ref} className=\"overflow-hidden text-sm\" {...props}>\n      <div className={cn(\"pb-4 pt-0\", className)}>{children}</div>\n    </AccordionPrimitive.Content>\n  )\n);\nAccordionContent.displayName = \"AccordionContent\";\n\nexport { Accordion, AccordionItem, AccordionTrigger, AccordionContent };","src/components/ui/tabs.tsx":"import React from \"react\";\nimport * as TabsPrimitive from \"@radix-ui/react-tabs\";\nimport { cn } from \"@/lib/utils\";\n\nconst Tabs = TabsPrimitive.Root;\n\nconst TabsList = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <TabsPrimitive.List\n      ref={ref}\n      className={cn(\n        \"inline-flex h-10 items-center justify-center rounded-lg bg-zinc-100 p-1 text-zinc-500\",\n        className\n      )}\n      {...props}\n    />\n  )\n);\nTabsList.displayName = \"TabsList\";\n\nconst TabsTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement> & { value: string }>(\n  ({ className, ...props }, ref) => (\n    <TabsPrimitive.Trigger\n      ref={ref}\n      className={cn(\n        \"inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-all\",\n        \"data-[state=active]:bg-white data-[state=active]:text-zinc-950 data-[state=active]:shadow-sm\",\n        className\n      )}\n      {...props}\n    />\n  )\n);\nTabsTrigger.displayName = \"TabsTrigger\";\n\nconst TabsContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(\n  ({ className, ...props }, ref) => (\n    <TabsPrimitive.Content\n      ref={ref}\n      className={cn(\"mt-2\", className)}\n      {...props}\n    />\n  )\n);\nTabsContent.displayName = \"TabsContent\";\n\nexport { Tabs, TabsList, TabsTrigger, TabsContent };","src/components/ui/dialog.tsx":"import React from \"react\";\nimport * as DialogPrimitive from \"@radix-ui/react-dialog\";\nimport { cn } from \"@/lib/utils\";\n\nconst Dialog = DialogPrimitive.Root;\nconst DialogTrigger = DialogPrimitive.Trigger;\nconst DialogClose = DialogPrimitive.Close;\nconst DialogPortal = DialogPrimitive.Portal;\n\nconst DialogOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Overlay\n      ref={ref}\n      className={cn(\n        \"fixed inset-0 z-50 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0\",\n        className\n      )}\n      {...props}\n    />\n  )\n);\nDialogOverlay.displayName = \"DialogOverlay\";\n\nconst DialogContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, children, ...props }, ref) => (\n    <DialogPortal>\n      <DialogOverlay />\n      <DialogPrimitive.Content\n        ref={ref}\n        className={cn(\n          \"fixed left-[50%] top-[50%] z-50 w-full max-w-lg translate-x-[-50%] translate-y-[-50%] rounded-xl border bg-white p-6 shadow-xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n      </DialogPrimitive.Content>\n    </DialogPortal>\n  )\n);\nDialogContent.displayName = \"DialogContent\";\n\nconst DialogTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Title ref={ref} className={cn(\"text-lg font-semibold\", className)} {...props} />\n  )\n);\nDialogTitle.displayName = \"DialogTitle\";\n\nconst DialogDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Description ref={ref} className={cn(\"text-sm text-zinc-500\", className)} {...props} />\n  )\n);\nDialogDescription.displayName = \"DialogDescription\";\n\nexport { Dialog, DialogTrigger, DialogContent, DialogClose, DialogOverlay, DialogTitle, DialogDescription };","src/components/ui/sheet.tsx":"import React from \"react\";\nimport * as DialogPrimitive from \"@radix-ui/react-dialog\";\nimport { cn } from \"@/lib/utils\";\n\nconst Sheet = DialogPrimitive.Root;\nconst SheetTrigger = DialogPrimitive.Trigger;\nconst SheetClose = DialogPrimitive.Close;\n\nconst SheetOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Overlay\n      ref={ref}\n      className={cn(\"fixed inset-0 z-50 bg-black/60 backdrop-blur-sm\", className)}\n      {...props}\n    />\n  )\n);\nSheetOverlay.displayName = \"SheetOverlay\";\n\ntype SheetContentProps = React.HTMLAttributes<HTMLDivElement> & {\n  side?: \"left\" | \"right\" | \"top\" | \"bottom\";\n};\n\nconst sideStyles: Record<string, string> = {\n  right: \"inset-y-0 right-0 h-full w-3/4 max-w-sm border-l translate-x-0\",\n  left: \"inset-y-0 left-0 h-full w-3/4 max-w-sm border-r translate-x-0\",\n  top: \"inset-x-0 top-0 border-b\",\n  bottom: \"inset-x-0 bottom-0 border-t\",\n};\n\nconst SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(\n  ({ side = \"right\", className, children, ...props }, ref) => (\n    <DialogPrimitive.Portal>\n      <SheetOverlay />\n      <DialogPrimitive.Content\n        ref={ref}\n        className={cn(\n          \"fixed z-50 bg-white p-6 shadow-xl transition-transform duration-300\",\n          sideStyles[side],\n          className\n        )}\n        {...props}\n      >\n        {children}\n      </DialogPrimitive.Content>\n    </DialogPrimitive.Portal>\n  )\n);\nSheetContent.displayName = \"SheetContent\";\n\nexport { Sheet, SheetTrigger, SheetContent, SheetClose };","src/components/ui/input.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype InputProps = React.InputHTMLAttributes<HTMLInputElement> & {\n  label?: string;\n  error?: string;\n};\n\nexport default function Input({ label, error, className, id, ...props }: InputProps) {\n  const inputId = id || (label ? label.toLowerCase().replace(/\\s+/g, \"-\") : undefined);\n  return (\n    <div>\n      {label && (\n        <label htmlFor={inputId} className=\"block text-sm font-medium mb-1.5\">\n          {label}\n        </label>\n      )}\n      <input\n        id={inputId}\n        className={cn(\n          \"w-full rounded-lg border px-4 py-2.5 text-base outline-none transition-colors\",\n          error ? \"border-red-500 focus:ring-1 focus:ring-red-500\" : \"focus:ring-1\",\n          className\n        )}\n        {...props}\n      />\n      {error && <p className=\"mt-1 text-sm text-red-500\">{error}</p>}\n    </div>\n  );\n}","src/components/ui/textarea.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {\n  label?: string;\n};\n\nexport default function Textarea({ label, className, id, ...props }: TextareaProps) {\n  const inputId = id || (label ? label.toLowerCase().replace(/\\s+/g, \"-\") : undefined);\n  return (\n    <div>\n      {label && (\n        <label htmlFor={inputId} className=\"block text-sm font-medium mb-1.5\">\n          {label}\n        </label>\n      )}\n      <textarea\n        id={inputId}\n        rows={4}\n        className={cn(\n          \"w-full rounded-lg border px-4 py-2.5 text-base outline-none transition-colors resize-none\",\n          className\n        )}\n        {...props}\n      />\n    </div>\n  );\n}","src/components/ui/badge.tsx":"import React from \"react\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst badgeVariants = cva(\n  \"inline-flex items-center rounded-full font-medium\",\n  {\n    variants: {\n      size: {\n        sm: \"px-2 py-0.5 text-[10px]\",\n        md: \"px-2.5 py-0.5 text-xs\",\n        lg: \"px-3 py-1 text-sm\",\n      },\n    },\n    defaultVariants: {\n      size: \"md\",\n    },\n  }\n);\n\ntype BadgeProps = React.HTMLAttributes<HTMLSpanElement> &\n  VariantProps<typeof badgeVariants>;\n\nexport default function Badge({ className, size, ...props }: BadgeProps) {\n  return (\n    <span className={cn(badgeVariants({ size }), className)} {...props} />\n  );\n}\n\nexport { badgeVariants };","src/components/ui/card.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype CardProps = {\n  className?: string;\n  children: React.ReactNode;\n};\n\nexport default function Card({ className, children }: CardProps) {\n  return (\n    <div className={cn(\"rounded-xl p-6\", className)}>\n      {children}\n    </div>\n  );\n}","src/components/ui/section.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype SectionProps = {\n  id?: string;\n  className?: string;\n  children: React.ReactNode;\n};\n\nexport default function Section({ id, className, children }: SectionProps) {\n  return (\n    <section id={id} className={cn(\"py-16 md:py-24\", className)}>\n      {children}\n    </section>\n  );\n}","src/components/ui/container.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype ContainerProps = {\n  size?: \"sm\" | \"md\" | \"lg\" | \"xl\" | \"full\";\n  className?: string;\n  children: React.ReactNode;\n};\n\nconst maxWidths: Record<string, string> = {\n  sm: \"max-w-3xl\",\n  md: \"max-w-5xl\",\n  lg: \"max-w-6xl\",\n  xl: \"max-w-7xl\",\n  full: \"max-w-full\",\n};\n\nexport default function Container({ size = \"xl\", className, children }: ContainerProps) {\n  return (\n    <div className={cn(\"mx-auto px-4 sm:px-6 lg:px-8\", maxWidths[size], className)}>\n      {children}\n    </div>\n  );\n}","src/components/ui/heading.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype HeadingProps = {\n  as?: \"h1\" | \"h2\" | \"h3\" | \"h4\";\n  size?: \"display\" | \"h1\" | \"h2\" | \"h3\";\n  eyebrow?: string;\n  className?: string;\n  children: React.ReactNode;\n};\n\nconst sizeStyles: Record<string, string> = {\n  display: \"text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]\",\n  h1: \"text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight\",\n  h2: \"text-3xl md:text-4xl font-semibold tracking-tight\",\n  h3: \"text-xl md:text-2xl font-semibold\",\n};\n\nexport default function Heading({\n  as: Tag = \"h2\",\n  size = \"h2\",\n  eyebrow,\n  className,\n  children,\n}: HeadingProps) {\n  return (\n    <div>\n      {eyebrow && (\n        <span className=\"block text-xs uppercase tracking-widest font-medium mb-3 opacity-60\">\n          {eyebrow}\n        </span>\n      )}\n      <Tag className={cn(sizeStyles[size], className)}>{children}</Tag>\n    </div>\n  );\n}","src/components/ui/separator.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype SeparatorProps = {\n  orientation?: \"horizontal\" | \"vertical\";\n  className?: string;\n};\n\nexport default function Separator({ orientation = \"horizontal\", className }: SeparatorProps) {\n  return (\n    <div\n      role=\"separator\"\n      className={cn(\n        \"shrink-0 bg-current opacity-10\",\n        orientation === \"horizontal\" ? \"h-px w-full\" : \"h-full w-px\",\n        className\n      )}\n    />\n  );\n}","src/components/ui/aspect-ratio.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype AspectRatioProps = {\n  ratio?: number;\n  className?: string;\n  children: React.ReactNode;\n};\n\nexport default function AspectRatio({ ratio = 16 / 9, className, children }: AspectRatioProps) {\n  return (\n    <div className={cn(\"relative w-full overflow-hidden\", className)} style={{ paddingBottom: (1 / ratio) * 100 + \"%\" }}>\n      <div className=\"absolute inset-0\">{children}</div>\n    </div>\n  );\n}","src/components/ui/testimonial.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype TestimonialProps = {\n  quote: string;\n  author: string;\n  role?: string;\n  avatar?: string;\n  className?: string;\n};\n\nexport default function Testimonial({ quote, author, role, avatar, className }: TestimonialProps) {\n  return (\n    <figure className={cn(\"space-y-4\", className)}>\n      <blockquote className=\"text-lg md:text-xl leading-relaxed italic\">\n        &ldquo;{quote}&rdquo;\n      </blockquote>\n      <figcaption className=\"flex items-center gap-3\">\n        {avatar && (\n          <img src={avatar} alt={author} className=\"w-10 h-10 rounded-full object-cover\" />\n        )}\n        <div>\n          <p className=\"font-medium text-sm\">{author}</p>\n          {role && <p className=\"text-xs opacity-60\">{role}</p>}\n        </div>\n      </figcaption>\n    </figure>\n  );\n}","src/components/ui/stats-band.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport { cn } from \"@/lib/utils\";\n\ntype Stat = {\n  value: string;\n  label: string;\n};\n\ntype StatsBandProps = {\n  stats: Stat[];\n  className?: string;\n};\n\nexport default function StatsBand({ stats, className }: StatsBandProps) {\n  return (\n    <Section className={cn(\"py-12\", className)}>\n      <Container>\n        <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8 text-center\">\n          {stats.map((s) => (\n            <div key={s.label}>\n              <p className=\"text-3xl md:text-5xl font-bold\">{s.value}</p>\n              <p className=\"text-sm mt-1 opacity-60\">{s.label}</p>\n            </div>\n          ))}\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/ui/gallery.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype GalleryImage = {\n  src: string;\n  alt: string;\n  span?: \"normal\" | \"wide\" | \"tall\";\n};\n\ntype GalleryProps = {\n  images: GalleryImage[];\n  className?: string;\n};\n\nconst spanClasses: Record<string, string> = {\n  normal: \"\",\n  wide: \"md:col-span-2\",\n  tall: \"md:row-span-2\",\n};\n\nexport default function Gallery({ images, className }: GalleryProps) {\n  return (\n    <div className={cn(\"grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4\", className)}>\n      {images.map((img, i) => (\n        <div key={i} className={cn(\"overflow-hidden rounded-lg\", spanClasses[img.span || \"normal\"])}>\n          <img\n            src={img.src}\n            alt={img.alt}\n            className=\"w-full h-full object-cover transition-transform duration-500 hover:scale-105\"\n          />\n        </div>\n      ))}\n    </div>\n  );\n}","src/components/ui/mobile-nav.tsx":"import React from \"react\";\nimport { Sheet, SheetTrigger, SheetContent, SheetClose } from \"@/components/ui/sheet\";\nimport Button from \"@/components/ui/button\";\nimport { cn } from \"@/lib/utils\";\n\ntype MobileNavProps = {\n  links: { label: string; href: string }[];\n  brandName: string;\n  ctaLabel?: string;\n  ctaHref?: string;\n  className?: string;\n};\n\nexport default function MobileNav({ links, brandName, ctaLabel, ctaHref, className }: MobileNavProps) {\n  return (\n    <Sheet>\n      <SheetTrigger asChild>\n        <button className={cn(\"md:hidden p-2\", className)} aria-label=\"Open menu\">\n          <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\">\n            <line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\" /><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\" /><line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\" />\n          </svg>\n        </button>\n      </SheetTrigger>\n      <SheetContent side=\"right\" className=\"flex flex-col pt-16\">\n        <p className=\"text-lg font-semibold mb-8\">{brandName}</p>\n        <nav className=\"flex flex-col gap-4\">\n          {links.map((link) => (\n            <SheetClose key={link.href} asChild>\n              <a href={link.href} className=\"text-lg py-2 border-b border-zinc-100 hover:text-zinc-600 transition-colors\">\n                {link.label}\n              </a>\n            </SheetClose>\n          ))}\n        </nav>\n        {ctaLabel && ctaHref && (\n          <div className=\"mt-auto pt-8\">\n            <SheetClose asChild>\n              <Button asChild size=\"lg\" className=\"w-full\">\n                <a href={ctaHref}>{ctaLabel}</a>\n              </Button>\n            </SheetClose>\n          </div>\n        )}\n      </SheetContent>\n    </Sheet>\n  );\n}","src/App.tsx":"import React from 'react';\nimport Navbar from './components/Navbar';\nimport Hero from './components/Hero';\nimport ChefStory from './components/ChefStory';\nimport MenuHighlights from './components/MenuHighlights';\nimport Gallery from './components/Gallery';\nimport PressProof from './components/PressProof';\nimport Reservation from './components/Reservation';\nimport Location from './components/Location';\nimport Footer from './components/Footer';\n\nfunction App() {\n  return (\n    <div className=\"min-h-screen\">\n      <Navbar />\n      <Hero />\n      <ChefStory />\n      <MenuHighlights />\n      <Gallery />\n      <PressProof />\n      <Reservation />\n      <Location />\n      <Footer />\n    </div>\n  );\n}\n\nexport default App;","src/components/Navbar.tsx":"import React from \"react\";\nimport Container from \"@/components/ui/container\";\nimport Button from \"@/components/ui/button\";\nimport MobileNav from \"@/components/ui/mobile-nav\";\n\nconst links = [\n  { label: \"Menu\", href: \"#menu\" },\n  { label: \"Chef\", href: \"#chef\" },\n  { label: \"Gallery\", href: \"#gallery\" },\n  { label: \"Press\", href: \"#press\" },\n  { label: \"Contact\", href: \"#location\" },\n];\n\nexport default function Navbar() {\n  return (\n    <header className=\"fixed top-0 left-0 right-0 z-50 bg-stone-950/95 backdrop-blur-sm border-b border-amber-600/20\">\n      <Container>\n        <div className=\"flex items-center justify-between h-16\">\n          <a href=\"#\" className=\"text-xl font-serif text-amber-400\" style={{ fontFamily: 'Playfair Display, serif' }}>\n            Lumière\n          </a>\n          <nav className=\"hidden md:flex items-center gap-8\">\n            {links.map((l) => (\n              <a key={l.href} href={l.href} className=\"text-sm text-stone-300 hover:text-amber-400 transition-colors\">\n                {l.label}\n              </a>\n            ))}\n            <Button size=\"sm\" className=\"bg-amber-600 text-stone-950 hover:bg-amber-500 font-medium\">\n              Reserve\n            </Button>\n          </nav>\n          <MobileNav \n            links={links} \n            brandName=\"Lumière\" \n            ctaLabel=\"Reserve\" \n            ctaHref=\"#reservation\" \n            className=\"md:hidden\"\n          />\n        </div>\n      </Container>\n    </header>\n  );\n}","src/components/Hero.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\nimport Button from \"@/components/ui/button\";\nimport Badge from \"@/components/ui/badge\";\n\nexport default function Hero() {\n  return (\n    <Section className=\"min-h-screen flex items-center bg-stone-950 text-stone-50 relative overflow-hidden\">\n      <Container>\n        <div className=\"grid lg:grid-cols-12 gap-8 items-center\">\n          <div className=\"lg:col-span-7 relative\">\n            <img\n              src=\"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop&q=80\"\n              alt=\"Elegant fine dining restaurant interior with warm candlelight\"\n              className=\"rounded-2xl object-cover w-full aspect-[4/3] shadow-2xl\"\n            />\n            <div className=\"absolute -bottom-6 -right-6 bg-stone-900/90 backdrop-blur-sm rounded-xl p-4 border border-amber-600/20\">\n              <div className=\"flex items-center gap-3\">\n                <Badge className=\"bg-amber-600/20 text-amber-400 border-amber-600/30\">\n                  ★ Michelin\n                </Badge>\n                <Badge className=\"bg-amber-600/20 text-amber-400 border-amber-600/30\">\n                  Est. 2019\n                </Badge>\n              </div>\n            </div>\n          </div>\n          <div className=\"lg:col-span-5 max-w-lg\">\n            <p className=\"text-xs uppercase tracking-[0.3em] text-amber-400 font-medium mb-6\">\n              Contemporary French Cuisine\n            </p>\n            <Heading \n              as=\"h1\" \n              size=\"display\" \n              className=\"text-stone-50 mb-6\" \n              style={{ fontFamily: 'Playfair Display, serif' }}\n            >\n              An Intimate Culinary Journey\n            </Heading>\n            <p className=\"text-lg text-stone-300 leading-relaxed max-w-md mb-8\">\n              Chef-driven seasonal tasting menus celebrating the finest local ingredients \n              with classical French technique and modern innovation.\n            </p>\n            <div className=\"flex gap-4 mb-12\">\n              <Button size=\"lg\" className=\"bg-amber-600 text-stone-950 hover:bg-amber-500 font-medium\">\n                Reserve Your Table\n              </Button>\n              <Button size=\"lg\" className=\"border border-stone-600 text-stone-300 hover:bg-stone-800/50\">\n                View Menu\n              </Button>\n            </div>\n            <div className=\"flex gap-8 text-sm text-stone-400\">\n              <span>Dinner: Wed–Sun</span>\n              <span>6:00 PM – 10:00 PM</span>\n            </div>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/ChefStory.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\n\nexport default function ChefStory() {\n  return (\n    <Section id=\"chef\" className=\"bg-stone-900 text-stone-50 py-24\">\n      <Container>\n        <div className=\"grid lg:grid-cols-5 gap-12 items-start\">\n          <div className=\"lg:col-span-2\">\n            <img\n              src=\"https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=1000&fit=crop&q=80\"\n              alt=\"Chef working at the pass under warm kitchen light\"\n              className=\"rounded-xl object-cover w-full aspect-[3/4] shadow-lg\"\n            />\n            <p className=\"mt-4 text-xs text-stone-500 uppercase tracking-widest\">\n              Chef Alexandre Dubois &middot; Executive Chef & Owner\n            </p>\n          </div>\n          <div className=\"lg:col-span-3 lg:pt-12\">\n            <Heading \n              as=\"h2\" \n              size=\"h2\" \n              eyebrow=\"Our Philosophy\" \n              className=\"text-stone-50 mb-6\"\n              style={{ fontFamily: 'Playfair Display, serif' }}\n            >\n              Rooted in Tradition, Inspired by Season\n            </Heading>\n            <p className=\"text-stone-300 leading-relaxed text-lg max-w-xl mb-8\">\n              My culinary journey began in Lyon, where I learned that great cooking starts with \n              deep respect for ingredients. Every dish we create tells the story of our local farmers, \n              foragers, and artisans who share our passion for excellence.\n            </p>\n            <blockquote \n              className=\"border-l-2 border-amber-600 pl-6 text-xl italic text-stone-200 max-w-lg\"\n              style={{ fontFamily: 'Playfair Display, serif' }}\n            >\n              \"Cooking is an act of love — for the ingredient, for the craft, \n              and for the guest who trusts us with their evening.\"\n            </blockquote>\n            <div className=\"mt-8 text-stone-400 italic text-sm\">\n              — Alexandre Dubois\n            </div>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/MenuHighlights.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\n\nconst menuItems = [\n  { name: \"Amuse-Bouche\", desc: \"Duck liver mousse, cherry gastrique, brioche crouton\", price: \"—\" },\n  { name: \"Crudo de Saint-Jacques\", desc: \"Dayboat scallops, citrus caviar, fennel pollen\", price: \"32\" },\n  { name: \"Foie Gras Poêlé\", desc: \"Seared foie gras, quince compote, pain d'épices\", price: \"38\" },\n  { name: \"Canard aux Cerises\", desc: \"Roasted duck breast, Bing cherry jus, farro risotto\", price: \"52\" },\n  { name: \"Côte de Bœuf\", desc: \"Dry-aged ribeye, bone marrow, pommes Anna\", price: \"68\" },\n  { name: \"Plateau de Fromages\", desc: \"Selection of French artisan cheeses, honeycomb\", price: \"24\" },\n];\n\nexport default function MenuHighlights() {\n  return (\n    <Section id=\"menu\" className=\"bg-stone-950 text-stone-50 py-24\">\n      <Container size=\"lg\">\n        <div className=\"text-center mb-16\">\n          <Heading \n            as=\"h2\" \n            size=\"h2\" \n            eyebrow=\"The Menu\" \n            className=\"text-stone-50 mb-4\"\n            style={{ fontFamily: 'Playfair Display, serif' }}\n          >\n            Seasonal Tasting Menu\n          </Heading>\n          <p className=\"text-stone-400 max-w-2xl mx-auto\">\n            Our menu changes with the seasons, showcasing the finest ingredients \n            at their peak. Each dish is crafted to tell a story of place and time.\n          </p>\n        </div>\n        \n        <div className=\"max-w-4xl mx-auto\">\n          <div className=\"divide-y divide-stone-700/30\">\n            {menuItems.map((item, index) => (\n              <div key={item.name} className=\"flex items-baseline justify-between py-6 gap-6\">\n                <div className=\"flex-1\">\n                  <p \n                    className=\"text-xl text-stone-100 mb-2\"\n                    style={{ fontFamily: 'Playfair Display, serif' }}\n                  >\n                    {item.name}\n                  </p>\n                  <p className=\"text-sm text-stone-400 leading-relaxed\">{item.desc}</p>\n                </div>\n                <p className=\"text-lg text-amber-400 font-medium tabular-nums\">\n                  {item.price !== \"—\" && \"$\"}{item.price}\n                </p>\n              </div>\n            ))}\n          </div>\n          \n          {/* Signature dish highlight */}\n          <div className=\"mt-16 bg-stone-900/50 rounded-2xl p-8 border border-stone-700/30\">\n            <div className=\"grid md:grid-cols-3 gap-8 items-center\">\n              <div className=\"md:col-span-1\">\n                <img\n                  src=\"https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=800&h=600&fit=crop&q=80\"\n                  alt=\"Artfully plated signature dish\"\n                  className=\"rounded-xl object-cover w-full aspect-square\"\n                />\n              </div>\n              <div className=\"md:col-span-2\">\n                <p className=\"text-xs uppercase tracking-widest text-amber-400 mb-3\">Signature</p>\n                <h3 \n                  className=\"text-2xl text-stone-100 mb-4\"\n                  style={{ fontFamily: 'Playfair Display, serif' }}\n                >\n                  Bouillabaisse Moderne\n                </h3>\n                <p className=\"text-stone-300 leading-relaxed mb-4\">\n                  Our contemporary interpretation of the Marseille classic features locally sourced \n                  shellfish and fish in a saffron-scented broth, served with house-made rouille \n                  and sourdough croutons.\n                </p>\n                <p className=\"text-lg text-amber-400 font-medium\">$46</p>\n              </div>\n            </div>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Gallery.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\n\nexport default function Gallery() {\n  return (\n    <Section id=\"gallery\" className=\"bg-stone-900 text-stone-50 py-20\">\n      <Container>\n        <Heading \n          as=\"h2\" \n          size=\"h2\" \n          eyebrow=\"The Experience\" \n          className=\"text-stone-50 mb-12 text-center\"\n          style={{ fontFamily: 'Playfair Display, serif' }}\n        >\n          Atmosphere &amp; Artistry\n        </Heading>\n        \n        {/* Asymmetric gallery layout */}\n        <div className=\"grid grid-cols-12 gap-6\">\n          {/* Large image spanning 8 columns */}\n          <div className=\"col-span-12 md:col-span-8\">\n            <img\n              src=\"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop&q=80\"\n              alt=\"Upscale restaurant dining room at evening service\"\n              className=\"rounded-2xl object-cover w-full aspect-[4/3] shadow-lg hover:scale-[1.02] transition-transform duration-500\"\n            />\n          </div>\n          \n          {/* Two stacked smaller images */}\n          <div className=\"col-span-12 md:col-span-4 space-y-6\">\n            <img\n              src=\"https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=800&h=600&fit=crop&q=80\"\n              alt=\"Fine dining dessert plating with delicate garnish\"\n              className=\"rounded-2xl object-cover w-full aspect-[4/3] shadow-lg hover:scale-[1.02] transition-transform duration-500\"\n            />\n            <img\n              src=\"https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=800&fit=crop&q=80\"\n              alt=\"Wine cellar with sommelier service\"\n              className=\"rounded-2xl object-cover w-full aspect-[4/3] shadow-lg hover:scale-[1.02] transition-transform duration-500\"\n            />\n          </div>\n          \n          {/* Bottom row spanning full width */}\n          <div className=\"col-span-12 md:col-span-6\">\n            <img\n              src=\"https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=800&h=600&fit=crop&q=80\"\n              alt=\"Restaurant kitchen during active service\"\n              className=\"rounded-2xl object-cover w-full aspect-[3/2] shadow-lg hover:scale-[1.02] transition-transform duration-500\"\n            />\n          </div>\n          <div className=\"col-span-12 md:col-span-6\">\n            <img\n              src=\"https://images.unsplash.com/photo-1470337458703-46a1888eb515?w=800&h=600&fit=crop&q=80\"\n              alt=\"Bartender crafting cocktail in upscale bar\"\n              className=\"rounded-2xl object-cover w-full aspect-[3/2] shadow-lg hover:scale-[1.02] transition-transform duration-500\"\n            />\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/PressProof.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Separator from \"@/components/ui/separator\";\n\nexport default function PressProof() {\n  const quotes = [\n    { \n      text: \"Chef Dubois has created something truly exceptional — a restaurant that honors French tradition while embracing modern innovation. Every dish is a masterpiece.\", \n      source: \"The New York Times\",\n      author: \"Pete Wells\"\n    },\n    { \n      text: \"Lumière represents the future of fine dining in America. The tasting menu is a journey through flavor that will leave you speechless.\", \n      source: \"Food & Wine\",\n      author: \"James Oseland\"\n    },\n    { \n      text: \"This is destination dining at its finest. The attention to detail, from service to presentation, is unparalleled.\", \n      source: \"Bon Appétit\",\n      author: \"Andrew Knowlton\"\n    },\n  ];\n\n  return (\n    <Section id=\"press\" className=\"bg-stone-950 text-stone-50 py-24\">\n      <Container size=\"lg\">\n        <div className=\"space-y-16\">\n          {quotes.map((quote, index) => (\n            <div key={index}>\n              <blockquote \n                className=\"text-2xl md:text-3xl italic leading-relaxed text-stone-200 max-w-4xl\"\n                style={{ fontFamily: 'Playfair Display, serif' }}\n              >\n                \"{quote.text}\"\n              </blockquote>\n              <div className=\"mt-6 flex items-center gap-4\">\n                <p className=\"text-sm uppercase tracking-widest text-amber-400 font-medium\">\n                  {quote.source}\n                </p>\n                <div className=\"w-2 h-2 bg-amber-600 rounded-full\"></div>\n                <p className=\"text-sm text-stone-400\">{quote.author}</p>\n              </div>\n              {index < quotes.length - 1 && (\n                <Separator className=\"mt-16 bg-stone-700/30\" />\n              )}\n            </div>\n          ))}\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Reservation.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\nimport Input from \"@/components/ui/input\";\nimport Button from \"@/components/ui/button\";\nimport Card from \"@/components/ui/card\";\n\nexport default function Reservation() {\n  const handleSubmit = (e: React.FormEvent) => {\n    e.preventDefault();\n    // Handle reservation form submission\n  };\n\n  return (\n    <Section id=\"reservation\" className=\"bg-stone-900 text-stone-50 py-24\">\n      <Container>\n        <div className=\"grid lg:grid-cols-2 gap-16 items-start\">\n          <div>\n            <Heading \n              as=\"h2\" \n              size=\"h2\" \n              eyebrow=\"Reservations\"\n              className=\"text-stone-50 mb-6\"\n              style={{ fontFamily: 'Playfair Display, serif' }}\n            >\n              Reserve Your Experience\n            </Heading>\n            <p className=\"text-stone-300 max-w-md leading-relaxed mb-8\">\n              We recommend booking 3-4 weeks in advance. For parties of 8 or more, \n              please call us directly to arrange your private dining experience.\n            </p>\n            \n            <div className=\"space-y-4 text-stone-400\">\n              <div>\n                <h4 className=\"text-stone-200 font-medium mb-2\">Dinner Service</h4>\n                <p className=\"text-sm\">Wednesday – Sunday</p>\n                <p className=\"text-sm\">First seating: 6:00 PM | Second seating: 8:30 PM</p>\n              </div>\n              \n              <div>\n                <h4 className=\"text-stone-200 font-medium mb-2\">Dress Code</h4>\n                <p className=\"text-sm\">Smart casual attire. Jackets appreciated but not required.</p>\n              </div>\n              \n              <div>\n                <h4 className=\"text-stone-200 font-medium mb-2\">Private Dining</h4>\n                <p className=\"text-sm\">Available for groups of 8-20 guests with custom menus.</p>\n              </div>\n            </div>\n          </div>\n          \n          <Card className=\"bg-stone-800/50 border border-stone-700/50 backdrop-blur-sm p-8\">\n            <form onSubmit={handleSubmit} className=\"space-y-6\">\n              <div className=\"grid grid-cols-2 gap-4\">\n                <Input \n                  label=\"Date\" \n                  type=\"date\" \n                  className=\"bg-stone-700/50 border-stone-600 text-stone-100 placeholder-stone-400\" \n                />\n                <Input \n                  label=\"Time\" \n                  type=\"time\" \n                  className=\"bg-stone-700/50 border-stone-600 text-stone-100 placeholder-stone-400\" \n                />\n              </div>\n              \n              <Input \n                label=\"Party Size\" \n                type=\"number\" \n                placeholder=\"2\" \n                min=\"1\" \n                max=\"8\"\n                className=\"bg-stone-700/50 border-stone-600 text-stone-100 placeholder-stone-400\" \n              />\n              \n              <Input \n                label=\"Name\" \n                placeholder=\"Your full name\" \n                className=\"bg-stone-700/50 border-stone-600 text-stone-100 placeholder-stone-400\" \n              />\n              \n              <Input \n                label=\"Email\" \n                type=\"email\" \n                placeholder=\"your@email.com\" \n                className=\"bg-stone-700/50 border-stone-600 text-stone-100 placeholder-stone-400\" \n              />\n              \n              <Input \n                label=\"Phone\" \n                type=\"tel\" \n                placeholder=\"+1 (555) 000-0000\" \n                className=\"bg-stone-700/50 border-stone-600 text-stone-100 placeholder-stone-400\" \n              />\n              \n              <Input \n                label=\"Special Occasion (Optional)\" \n                placeholder=\"Anniversary, birthday, etc.\" \n                className=\"bg-stone-700/50 border-stone-600 text-stone-100 placeholder-stone-400\" \n              />\n              \n              <Button \n                size=\"lg\" \n                type=\"submit\"\n                className=\"w-full bg-amber-600 text-stone-950 hover:bg-amber-500 font-medium\"\n              >\n                Request Reservation\n              </Button>\n              \n              <p className=\"text-xs text-stone-400 text-center leading-relaxed\">\n                Reservations are confirmed via phone within 24 hours. \n                For immediate assistance, call (555) 123-4567.\n              </p>\n            </form>\n          </Card>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Location.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\n\nexport default function Location() {\n  return (\n    <Section id=\"location\" className=\"bg-stone-950 text-stone-50 py-20\">\n      <Container>\n        <div className=\"grid lg:grid-cols-2 gap-12 items-center\">\n          <div>\n            <Heading \n              as=\"h2\" \n              size=\"h2\" \n              eyebrow=\"Visit Us\" \n              className=\"text-stone-50 mb-6\"\n              style={{ fontFamily: 'Playfair Display, serif' }}\n            >\n              Find Us in the Heart of the City\n            </Heading>\n            \n            <div className=\"space-y-6 text-stone-300\">\n              <div>\n                <h4 className=\"text-stone-100 font-medium mb-2\">Address</h4>\n                <p className=\"text-lg\">456 Madison Avenue</p>\n                <p>New York, NY 10022</p>\n                <p className=\"text-sm text-stone-400 mt-2\">\n                  Located between 50th and 51st Street, two blocks from \n                  Rockefeller Center and St. Patrick's Cathedral.\n                </p>\n              </div>\n              \n              <div>\n                <h4 className=\"text-stone-100 font-medium mb-2\">Transportation</h4>\n                <p className=\"text-sm text-stone-400\">\n                  Subway: 6 train to 51st Street<br/>\n                  Valet parking available Wednesday through Sunday<br/>\n                  Private car service entrance on 51st Street\n                </p>\n              </div>\n              \n              <div>\n                <h4 className=\"text-stone-100 font-medium mb-2\">Contact</h4>\n                <p>Phone: (212) 555-0100</p>\n                <p>Email: info@lumiererestaurant.com</p>\n              </div>\n              \n              <div>\n                <h4 className=\"text-stone-100 font-medium mb-2\">Private Events</h4>\n                <p className=\"text-sm text-stone-400\">\n                  For private dining inquiries and special events,<br/>\n                  please contact our events coordinator at<br/>\n                  events@lumiererestaurant.com\n                </p>\n              </div>\n            </div>\n          </div>\n          \n          <div className=\"rounded-2xl overflow-hidden shadow-2xl\">\n            <img\n              src=\"https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop&q=80\"\n              alt=\"Restaurant exterior at evening with warm interior glow\"\n              className=\"w-full aspect-[4/3] object-cover\"\n            />\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Footer.tsx":"import React from \"react\";\nimport Container from \"@/components/ui/container\";\n\nexport default function Footer() {\n  return (\n    <footer className=\"bg-stone-950 text-stone-400 border-t border-stone-800/50 py-16\">\n      <Container>\n        <div className=\"text-center mb-12\">\n          <h3 \n            className=\"text-3xl text-amber-400 mb-3\"\n            style={{ fontFamily: 'Playfair Display, serif' }}\n          >\n            Lumière\n          </h3>\n          <p \n            className=\"text-xs uppercase tracking-[0.3em] text-stone-500\"\n            style={{ fontFamily: 'Playfair Display, serif' }}\n          >\n            A Culinary Journey Since 2019\n          </p>\n        </div>\n        \n        <div className=\"grid md:grid-cols-4 gap-8 text-sm\">\n          <div className=\"text-center md:text-left\">\n            <h4 className=\"text-stone-200 font-medium mb-3\">Location</h4>\n            <p>456 Madison Avenue</p>\n            <p>New York, NY 10022</p>\n            <p className=\"mt-2 text-xs text-stone-500\">\n              Between 50th & 51st Street\n            </p>\n          </div>\n          \n          <div className=\"text-center md:text-left\">\n            <h4 className=\"text-stone-200 font-medium mb-3\">Dinner Hours</h4>\n            <p>Wednesday – Sunday</p>\n            <p>6:00 PM – 10:00 PM</p>\n            <p className=\"mt-2 text-xs text-stone-500\">\n              Closed Monday & Tuesday\n            </p>\n          </div>\n          \n          <div className=\"text-center md:text-left\">\n            <h4 className=\"text-stone-200 font-medium mb-3\">Reservations</h4>\n            <p>(212) 555-0100</p>\n            <p>reservations@lumiererestaurant.com</p>\n            <p className=\"mt-2 text-xs text-stone-500\">\n              Book 3-4 weeks in advance\n            </p>\n          </div>\n          \n          <div className=\"text-center md:text-left\">\n            <h4 className=\"text-stone-200 font-medium mb-3\">Private Events</h4>\n            <p>Groups of 8-20 guests</p>\n            <p>events@lumiererestaurant.com</p>\n            <p className=\"mt-2 text-xs text-stone-500\">\n              Custom tasting menus available\n            </p>\n          </div>\n        </div>\n        \n        <div className=\"mt-12 pt-8 border-t border-stone-800/50\">\n          <div className=\"flex flex-col md:flex-row justify-between items-center text-xs text-stone-500\">\n            <p>&copy; {new Date().getFullYear()} Lumière Restaurant. All rights reserved.</p>\n            <p className=\"mt-2 md:mt-0\">Smart casual attire requested</p>\n          </div>\n        </div>\n      </Container>\n    </footer>\n  );\n}"};
+
+      function showError(message) {
+        const error = document.getElementById("cenate-error");
+        if (error) {
+          error.style.display = "block";
+          error.textContent = message;
+        }
+        console.error(message);
+      }
+
+      function normalizePath(value) {
+        const parts = value.split("/");
+        const next = [];
+        for (const part of parts) {
+          if (part === "..") {
+            next.pop();
+          } else if (part && part !== ".") {
+            next.push(part);
+          }
+        }
+        return next.join("/");
+      }
+
+      function resolvePath(importerPath, target) {
+        if (target.startsWith("@/")) {
+          return "src/" + target.slice(2);
+        }
+        if (target.startsWith("src/")) {
+          return target;
+        }
+        if (target.startsWith(".")) {
+          const base = importerPath.split("/").slice(0, -1);
+          const parts = target.split("/");
+          for (const part of parts) {
+            if (part === ".") continue;
+            if (part === "..") base.pop();
+            else base.push(part);
+          }
+          return normalizePath(base.join("/"));
+        }
+        return target;
+      }
+
+      function resolveWithExtensions(value, fileMap) {
+        const candidates = [
+          value,
+          value + ".tsx",
+          value + ".ts",
+          value + ".jsx",
+          value + ".js",
+          value + "/index.tsx",
+          value + "/index.ts",
+          value + "/index.jsx",
+          value + "/index.js",
+        ];
+        for (const candidate of candidates) {
+          if (fileMap[candidate] !== undefined) {
+            return candidate;
+          }
+        }
+        return value;
+      }
+
+      function compile(source, filename) {
+        return window.Babel.transform(source, {
+          presets: [
+            ["env", { modules: "commonjs", loose: true }],
+            "react",
+            ["typescript", { allExtensions: true, isTSX: true, onlyRemoveTypeImports: false }],
+          ],
+          filename,
+          sourceType: "module",
+          compact: false,
+          comments: false,
+        }).code;
+      }
+
+      function run() {
+        const fileMap = FILES;
+        const moduleCache = Object.create(null);
+        console.log("[preview-runtime] module-loader-start", {
+          fileCount: Object.keys(fileMap).length,
+          hasMainTsx: !!fileMap[resolveWithExtensions("src/main", fileMap)],
+          hasAppTsx:
+            !!fileMap[resolveWithExtensions("src/App", fileMap)] ||
+            !!fileMap[resolveWithExtensions("App", fileMap)],
+        });
+        const reactModule = Object.assign({ default: window.React, __esModule: true }, window.React);
+        const reactDomModule = Object.assign({ default: window.ReactDOM, __esModule: true }, window.ReactDOM);
+        const reactDomClientModule = Object.assign(
+          {
+            default: window.ReactDOM,
+            __esModule: true,
+            createRoot: window.ReactDOM.createRoot,
+            hydrateRoot: window.ReactDOM.hydrateRoot,
+          },
+          window.ReactDOM
+        );
+
+        // ── clsx: class name utility (inline implementation) ──
+        var __ClsxModule = (function () {
+          function clsx() {
+            var classes = [];
+            for (var i = 0; i < arguments.length; i++) {
+              var arg = arguments[i];
+              if (!arg) continue;
+              if (typeof arg === 'string' || typeof arg === 'number') {
+                classes.push(arg);
+              } else if (Array.isArray(arg)) {
+                var inner = clsx.apply(null, arg);
+                if (inner) classes.push(inner);
+              } else if (typeof arg === 'object') {
+                for (var key in arg) {
+                  if (Object.prototype.hasOwnProperty.call(arg, key) && arg[key]) {
+                    classes.push(key);
+                  }
+                }
+              }
+            }
+            return classes.join(' ');
+          }
+          return { __esModule: true, default: clsx, clsx: clsx };
+        })();
+
+        // ── class-variance-authority: variant-based class generation ──
+        var __CvaModule = (function () {
+          function cva(base, config) {
+            var fn = function (props) {
+              props = props || {};
+              if (!config) return base || '';
+              var variants = config.variants || {};
+              var defaultVariants = config.defaultVariants || {};
+              var compoundVariants = config.compoundVariants || [];
+              var resolved = Object.assign({}, defaultVariants);
+              for (var k in props) {
+                if (k !== 'className' && k !== 'class' && props[k] != null) {
+                  resolved[k] = props[k];
+                }
+              }
+              var classes = [base];
+              for (var vKey in variants) {
+                var value = resolved[vKey];
+                if (value != null && variants[vKey] && variants[vKey][value] != null) {
+                  classes.push(variants[vKey][value]);
+                }
+              }
+              for (var ci = 0; ci < compoundVariants.length; ci++) {
+                var cv = compoundVariants[ci];
+                var match = true;
+                for (var ck in cv) {
+                  if (ck === 'class' || ck === 'className') continue;
+                  if (resolved[ck] !== cv[ck]) { match = false; break; }
+                }
+                if (match) classes.push(cv['class'] || cv.className);
+              }
+              return classes.filter(Boolean).join(' ');
+            };
+            return fn;
+          }
+          return { __esModule: true, default: cva, cva: cva };
+        })();
+
+        // ── @radix-ui/react-slot: polymorphic Slot component ──
+        var __RadixSlotModule = (function () {
+          var R = window.React;
+          function composeHandlers(a, b) {
+            return function () { b.apply(this, arguments); a.apply(this, arguments); };
+          }
+          function mergeProps(slotProps, childProps) {
+            var result = {};
+            var key;
+            for (key in slotProps) { result[key] = slotProps[key]; }
+            for (key in childProps) {
+              var sv = slotProps[key];
+              var cv = childProps[key];
+              if (/^on[A-Z]/.test(key) && typeof sv === 'function' && typeof cv === 'function') {
+                result[key] = composeHandlers(sv, cv);
+              } else if (key === 'style') {
+                result[key] = Object.assign({}, sv || {}, cv || {});
+              } else if (key === 'className') {
+                result[key] = [sv, cv].filter(Boolean).join(' ');
+              } else {
+                result[key] = cv !== undefined ? cv : sv;
+              }
+            }
+            return result;
+          }
+          var Slot = R.forwardRef(function (props, ref) {
+            var children = props.children;
+            var slotProps = {};
+            for (var key in props) { if (key !== 'children') slotProps[key] = props[key]; }
+            if (R.isValidElement(children)) {
+              var merged = mergeProps(slotProps, children.props);
+              merged.ref = ref;
+              return R.cloneElement(children, merged);
+            }
+            if (R.Children.count(children) > 1) {
+              throw new Error('Slot: expected a single child element');
+            }
+            return null;
+          });
+          Slot.displayName = 'Slot';
+          return { __esModule: true, default: Slot, Slot: Slot };
+        })();
+
+        // ── @radix-ui/react-accordion: collapsible content sections ──
+        var __RadixAccordionModule = (function () {
+          var R = window.React;
+          var AccCtx = R.createContext({ value: '', onToggle: function(){}, type: 'single', isOpen: function(){ return false; } });
+          var ItemCtx = R.createContext({ value: '', disabled: false, open: false });
+
+          function Root(props) {
+            var type = props.type || 'single';
+            var children = props.children;
+            var className = props.className;
+            var stateHook = R.useState(function() {
+              if (type === 'multiple') return props.defaultValue || [];
+              return props.defaultValue || '';
+            });
+            var val = props.value !== undefined ? props.value : stateHook[0];
+            var setVal = stateHook[1];
+            function onToggle(itemValue) {
+              if (type === 'multiple') {
+                var arr = Array.isArray(val) ? val : [];
+                var next = arr.indexOf(itemValue) > -1
+                  ? arr.filter(function(v) { return v !== itemValue; })
+                  : arr.concat([itemValue]);
+                setVal(next);
+                if (props.onValueChange) props.onValueChange(next);
+              } else {
+                var next2 = val === itemValue ? '' : itemValue;
+                setVal(next2);
+                if (props.onValueChange) props.onValueChange(next2);
+              }
+            }
+            var isOpen = function(v) {
+              if (type === 'multiple') return Array.isArray(val) && val.indexOf(v) > -1;
+              return val === v;
+            };
+            return R.createElement(AccCtx.Provider, {
+              value: { value: val, onToggle: onToggle, type: type, isOpen: isOpen }
+            }, R.createElement('div', { className: className, 'data-orientation': 'vertical' }, children));
+          }
+
+          var Item = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(AccCtx);
+            var open = ctx.isOpen(props.value);
+            return R.createElement(ItemCtx.Provider, {
+              value: { value: props.value, disabled: props.disabled || false, open: open }
+            }, R.createElement('div', {
+              ref: ref, className: props.className,
+              'data-state': open ? 'open' : 'closed',
+              'data-disabled': props.disabled ? '' : undefined
+            }, props.children));
+          });
+          Item.displayName = 'AccordionItem';
+
+          var Header = R.forwardRef(function(props, ref) {
+            return R.createElement('h3', { ref: ref, className: props.className }, props.children);
+          });
+          Header.displayName = 'AccordionHeader';
+
+          var Trigger = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(AccCtx);
+            var itemCtx = R.useContext(ItemCtx);
+            return R.createElement('button', {
+              ref: ref, type: 'button',
+              'aria-expanded': itemCtx.open,
+              'data-state': itemCtx.open ? 'open' : 'closed',
+              'data-disabled': itemCtx.disabled ? '' : undefined,
+              disabled: itemCtx.disabled,
+              className: props.className,
+              onClick: function() { if (!itemCtx.disabled) ctx.onToggle(itemCtx.value); }
+            }, props.children);
+          });
+          Trigger.displayName = 'AccordionTrigger';
+
+          var Content = R.forwardRef(function(props, ref) {
+            var itemCtx = R.useContext(ItemCtx);
+            if (!itemCtx.open) return null;
+            return R.createElement('div', {
+              ref: ref, 'data-state': 'open', className: props.className, role: 'region'
+            }, props.children);
+          });
+          Content.displayName = 'AccordionContent';
+
+          return { __esModule: true, Root: Root, Item: Item, Header: Header, Trigger: Trigger, Content: Content, default: Root };
+        })();
+
+        // ── @radix-ui/react-tabs: tabbed content switcher ──
+        var __RadixTabsModule = (function () {
+          var R = window.React;
+          var TabsCtx = R.createContext({ value: '', onValueChange: function(){} });
+
+          function Root(props) {
+            var stateHook = R.useState(props.defaultValue || '');
+            var val = props.value !== undefined ? props.value : stateHook[0];
+            var setVal = stateHook[1];
+            function onChange(v) { setVal(v); if (props.onValueChange) props.onValueChange(v); }
+            return R.createElement(TabsCtx.Provider, {
+              value: { value: val, onValueChange: onChange }
+            }, R.createElement('div', { className: props.className }, props.children));
+          }
+
+          var List = R.forwardRef(function(props, ref) {
+            return R.createElement('div', { ref: ref, role: 'tablist', className: props.className }, props.children);
+          });
+          List.displayName = 'TabsList';
+
+          var Trigger = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(TabsCtx);
+            var isActive = ctx.value === props.value;
+            return R.createElement('button', {
+              ref: ref, type: 'button', role: 'tab',
+              'aria-selected': isActive,
+              'data-state': isActive ? 'active' : 'inactive',
+              className: props.className,
+              onClick: function() { ctx.onValueChange(props.value); }
+            }, props.children);
+          });
+          Trigger.displayName = 'TabsTrigger';
+
+          var Content = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(TabsCtx);
+            if (ctx.value !== props.value) return null;
+            return R.createElement('div', {
+              ref: ref, role: 'tabpanel', 'data-state': 'active', className: props.className
+            }, props.children);
+          });
+          Content.displayName = 'TabsContent';
+
+          return { __esModule: true, Root: Root, List: List, Trigger: Trigger, Content: Content, default: Root };
+        })();
+
+        // ── @radix-ui/react-dialog: modal/sheet dialog ──
+        var __RadixDialogModule = (function () {
+          var R = window.React;
+          var RD = window.ReactDOM;
+          var DialogCtx = R.createContext({ open: false, onOpenChange: function(){} });
+
+          function Root(props) {
+            var stateHook = R.useState(props.defaultOpen || false);
+            var open = props.open !== undefined ? props.open : stateHook[0];
+            var setOpen = stateHook[1];
+            function onOpenChange(v) {
+              setOpen(v);
+              if (props.onOpenChange) props.onOpenChange(v);
+            }
+            return R.createElement(DialogCtx.Provider, {
+              value: { open: open, onOpenChange: onOpenChange }
+            }, props.children);
+          }
+
+          var Trigger = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            var child = props.children;
+            var asChild = props.asChild;
+            if (asChild && R.isValidElement(child)) {
+              return R.cloneElement(child, {
+                ref: ref,
+                onClick: function(e) {
+                  ctx.onOpenChange(!ctx.open);
+                  if (child.props && child.props.onClick) child.props.onClick(e);
+                }
+              });
+            }
+            return R.createElement('button', {
+              ref: ref, type: 'button', className: props.className,
+              onClick: function() { ctx.onOpenChange(!ctx.open); }
+            }, child);
+          });
+          Trigger.displayName = 'DialogTrigger';
+
+          var Close = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            var child = props.children;
+            var asChild = props.asChild;
+            if (asChild && R.isValidElement(child)) {
+              return R.cloneElement(child, {
+                ref: ref,
+                onClick: function(e) {
+                  ctx.onOpenChange(false);
+                  if (child.props && child.props.onClick) child.props.onClick(e);
+                }
+              });
+            }
+            return R.createElement('button', {
+              ref: ref, type: 'button', 'aria-label': 'Close', className: props.className,
+              onClick: function() { ctx.onOpenChange(false); }
+            }, child || 'X');
+          });
+          Close.displayName = 'DialogClose';
+
+          function Portal(props) {
+            var ctx = R.useContext(DialogCtx);
+            if (!ctx.open) return null;
+            var container = props.container || document.body;
+            return RD.createPortal(
+              R.createElement(DialogCtx.Provider, { value: ctx }, props.children),
+              container
+            );
+          }
+
+          var Overlay = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            return R.createElement('div', {
+              ref: ref,
+              'data-state': ctx.open ? 'open' : 'closed',
+              className: props.className,
+              style: Object.assign({ position: 'fixed', inset: 0, zIndex: 50 }, props.style || {}),
+              onClick: function(e) {
+                if (e.target === e.currentTarget) ctx.onOpenChange(false);
+              }
+            });
+          });
+          Overlay.displayName = 'DialogOverlay';
+
+          var Content = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            if (!ctx.open) return null;
+            return R.createElement('div', {
+              ref: ref, role: 'dialog', 'aria-modal': true,
+              'data-state': ctx.open ? 'open' : 'closed',
+              className: props.className,
+              style: props.style
+            }, props.children);
+          });
+          Content.displayName = 'DialogContent';
+
+          var Title = R.forwardRef(function(props, ref) {
+            return R.createElement('h2', { ref: ref, className: props.className }, props.children);
+          });
+          Title.displayName = 'DialogTitle';
+
+          var Description = R.forwardRef(function(props, ref) {
+            return R.createElement('p', { ref: ref, className: props.className }, props.children);
+          });
+          Description.displayName = 'DialogDescription';
+
+          return {
+            __esModule: true, Root: Root, Trigger: Trigger, Close: Close,
+            Portal: Portal, Overlay: Overlay, Content: Content,
+            Title: Title, Description: Description, default: Root
+          };
+        })();
+
+        // ── @radix-ui/react-visually-hidden ──
+        var __RadixVisuallyHiddenModule = (function () {
+          var R = window.React;
+          var VisuallyHidden = R.forwardRef(function(props, ref) {
+            return R.createElement('span', {
+              ref: ref,
+              style: {
+                position: 'absolute', border: 0, width: 1, height: 1,
+                padding: 0, margin: -1, overflow: 'hidden',
+                clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', wordWrap: 'normal'
+              }
+            }, props.children);
+          });
+          VisuallyHidden.displayName = 'VisuallyHidden';
+          return { __esModule: true, Root: VisuallyHidden, default: VisuallyHidden };
+        })();
+
+        // ── @radix-ui/react-navigation-menu (stub) ──
+        var __RadixNavMenuModule = (function () {
+          var R = window.React;
+          function Root(props) { return R.createElement('nav', { className: props.className }, props.children); }
+          var List = R.forwardRef(function(p, r) { return R.createElement('ul', { ref: r, className: p.className }, p.children); });
+          var Item = R.forwardRef(function(p, r) { return R.createElement('li', { ref: r, className: p.className }, p.children); });
+          var Link = R.forwardRef(function(p, r) {
+            var child = p.children;
+            if (p.asChild && R.isValidElement(child)) return R.cloneElement(child, { ref: r });
+            return R.createElement('a', { ref: r, className: p.className, href: p.href }, child);
+          });
+          return { __esModule: true, Root: Root, List: List, Item: Item, Link: Link, default: Root };
+        })();
+
+        const builtins = {
+          react: reactModule,
+          "react-dom": reactDomModule,
+          "react-dom/client": reactDomClientModule,
+
+          'clsx': __ClsxModule,
+          'class-variance-authority': __CvaModule,
+          '@radix-ui/react-slot': __RadixSlotModule,
+          '@radix-ui/react-accordion': __RadixAccordionModule,
+          '@radix-ui/react-tabs': __RadixTabsModule,
+          '@radix-ui/react-dialog': __RadixDialogModule,
+          '@radix-ui/react-visually-hidden': __RadixVisuallyHiddenModule,
+          '@radix-ui/react-navigation-menu': __RadixNavMenuModule,
+
+        };
+        console.log("[preview-runtime] shim-loaded");
+        console.log("[preview-runtime] builtins", Object.keys(builtins));
+
+        function loadModule(importerPath, target) {
+          if (builtins[target]) {
+            return builtins[target];
+          }
+          const resolved = resolvePath(importerPath, target);
+          const found = resolveWithExtensions(resolved, fileMap);
+          if (!fileMap[found]) {
+            throw new Error("Module not found: " + target + " → " + found);
+          }
+          if (moduleCache[found]) {
+            return moduleCache[found];
+          }
+          if (found.endsWith(".css")) {
+            let css = fileMap[found] || "";
+            css = css.replace(/@tailwind\s+[^;]+;/g, "");
+            css = css.replace(/@apply\s+[^;]+;/g, "");
+            const style = document.createElement("style");
+            style.setAttribute("data-source", found);
+            style.textContent = css;
+            document.head.appendChild(style);
+            const empty = { __esModule: true, default: {} };
+            moduleCache[found] = empty;
+            return empty;
+          }
+          const compiled = compile(fileMap[found], found);
+          const moduleObject = { exports: {} };
+          moduleCache[found] = moduleObject.exports;
+          const requireFunction = function (nextTarget) {
+            return loadModule(found, nextTarget);
+          };
+          const fn = new Function("require", "module", "exports", "React", "ReactDOM", compiled);
+          fn(requireFunction, moduleObject, moduleObject.exports, window.React, window.ReactDOM);
+          moduleCache[found] = moduleObject.exports;
+          console.log("[preview-runtime] module-load-success", found);
+          return moduleObject.exports;
+        }
+
+        const entryModule = resolveWithExtensions("src/main", fileMap);
+        if (!builtins.react || !builtins["react-dom"]) {
+          throw new Error("Missing React builtins");
+        }
+        if (!fileMap[entryModule]) {
+          throw new Error("Missing entry module");
+        }
+        loadModule("", entryModule);
+        console.log("[preview-runtime] mount-success", entryModule);
+      }
+
+      function waitForGlobals(attempt) {
+        if (window.React && window.ReactDOM && window.Babel) {
+          try {
+            console.log("[preview-runtime] globals-ready");
+            run();
+          } catch (error) {
+            console.error("[preview-runtime-error]", error);
+            showError(String(error && error.stack ? error.stack : error));
+          }
+          return;
+        }
+        if (attempt > 200) {
+          showError("Preview runtime failed to initialize within 10 seconds.");
+          return;
+        }
+        setTimeout(function () {
+          waitForGlobals(attempt + 1);
+        }, 50);
+      }
+
+      waitForGlobals(0);
+    })();
+  </script>
+</body>
+</html>

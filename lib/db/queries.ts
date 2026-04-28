@@ -57,6 +57,69 @@ export async function createUser(email: string, password: string) {
   }
 }
 
+export async function upsertOAuthUser({
+  email,
+  name,
+  image,
+}: {
+  email: string;
+  name?: string | null;
+  image?: string | null;
+}) {
+  const normalizedEmail = email.trim().toLowerCase();
+
+  try {
+    const [existingUser] = await db
+      .select()
+      .from(user)
+      .where(eq(user.email, normalizedEmail));
+
+    if (existingUser) {
+      const [updatedUser] = await db
+        .update(user)
+        .set({
+          name: name ?? existingUser.name,
+          image: image ?? existingUser.image,
+          emailVerified: true,
+          updatedAt: new Date(),
+        })
+        .where(eq(user.id, existingUser.id))
+        .returning({
+          id: user.id,
+          email: user.email,
+          name: user.name,
+          image: user.image,
+          emailVerified: user.emailVerified,
+        });
+
+      return updatedUser;
+    }
+
+    const [createdUser] = await db
+      .insert(user)
+      .values({
+        email: normalizedEmail,
+        name: name ?? null,
+        image: image ?? null,
+        emailVerified: true,
+      })
+      .returning({
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        image: user.image,
+        emailVerified: user.emailVerified,
+      });
+
+    return createdUser;
+  } catch (_error) {
+    throw new ChatbotError(
+      "bad_request:database",
+      "Failed to upsert OAuth user"
+    );
+  }
+}
+
 export async function createGuestUser() {
   const email = `guest-${Date.now()}`;
   const password = generateHashedPassword(generateUUID());
@@ -329,6 +392,7 @@ export async function saveDocument({
   content: string;
   userId: string;
 }) {
+  console.log("[saveDocument] inserting", { id, userId });
   try {
     return await db
       .insert(document)
@@ -557,6 +621,26 @@ export async function updateChatTitleById({
     return await db.update(chat).set({ title }).where(eq(chat.id, chatId));
   } catch (_error) {
     return;
+  }
+}
+
+export async function updateChatPreviewUrl({
+  chatId,
+  previewUrl,
+}: {
+  chatId: string;
+  previewUrl: string;
+}) {
+  try {
+    return await db
+      .update(chat)
+      .set({ previewUrl })
+      .where(eq(chat.id, chatId));
+  } catch (_error) {
+    throw new ChatbotError(
+      "bad_request:database",
+      "Failed to update chat preview URL"
+    );
   }
 }
 

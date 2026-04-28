@@ -4,7 +4,7 @@ import { z } from "zod";
 
 import { createUser, getUser } from "@/lib/db/queries";
 
-import { signIn } from "./auth";
+import { signIn, signOut } from "./auth";
 
 const authFormSchema = z.object({
   email: z.string().email(),
@@ -49,6 +49,10 @@ export type RegisterActionState = {
     | "failed"
     | "user_exists"
     | "invalid_data";
+};
+
+export const signOutAction = async () => {
+  await signOut({ redirectTo: "/early-access" });
 };
 
 export const register = async (

@@ -2,6 +2,15 @@ import { auth } from "@/app/(auth)/auth";
 import { getChatById, getMessagesByChatId } from "@/lib/db/queries";
 import { convertToUIMessages } from "@/lib/utils";
 
+const HTML_MARKERS = ["<!doctype", "<html", "<head>", "<head ", "<body>", "<body "];
+
+function safeTitle(raw: string | null | undefined): string | null {
+  if (!raw) return null;
+  const probe = raw.slice(0, 200).toLowerCase();
+  if (HTML_MARKERS.some((m) => probe.includes(m))) return null;
+  return raw;
+}
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const chatId = searchParams.get("chatId");
@@ -39,5 +48,6 @@ export async function GET(request: Request) {
     visibility: chat.visibility,
     userId: chat.userId,
     isReadonly,
+    title: safeTitle(chat.title),
   });
 }

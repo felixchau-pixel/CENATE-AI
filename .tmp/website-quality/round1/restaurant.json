@@ -1,0 +1,235 @@
+{
+  "slug": "restaurant",
+  "prompt": "Build a premium restaurant website for Noma House. Include hero, menu highlights, chef story, reservation CTA, testimonials, gallery, location, and footer. Make it elegant, editorial, luxurious, and image-led with strong typography and a dark premium palette.",
+  "durationMs": 158294,
+  "meta": {
+    "type": "project",
+    "framework": "vite-react-ts",
+    "title": "Noma House - Premium Restaurant",
+    "entryFile": "src/main.tsx",
+    "previewEntryFile": "src/App.tsx",
+    "siteType": "restaurant",
+    "designDirection": "Dark editorial luxury with serif display typography and high-contrast photography showcasing culinary artistry",
+    "colorStrategy": "Dark background (#0a0a0a), warm surfaces (#1a1616), gold accents (#d4af37) for premium touch",
+    "typography": "Playfair Display for headings, Inter for body text",
+    "sectionOrder": [
+      "Hero",
+      "MenuHighlights",
+      "ChefStory",
+      "ReservationCTA",
+      "Testimonials",
+      "Gallery",
+      "Location",
+      "Footer"
+    ],
+    "assets": [
+      {
+        "path": "public/images/hero.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop&q=80",
+        "prompt": "elegant fine dining restaurant interior with warm lighting"
+      },
+      {
+        "path": "public/images/chef.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=600&fit=crop&q=80",
+        "prompt": "professional chef in kitchen preparing gourmet dish"
+      },
+      {
+        "path": "public/images/dish1.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop&q=80",
+        "prompt": "artistic plated gourmet dish"
+      },
+      {
+        "path": "public/images/dish2.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=400&fit=crop&q=80",
+        "prompt": "elegant seafood dish presentation"
+      },
+      {
+        "path": "public/images/dish3.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&h=400&fit=crop&q=80",
+        "prompt": "fine dining dessert with artistic presentation"
+      },
+      {
+        "path": "public/images/gallery1.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=600&fit=crop&q=80",
+        "prompt": "restaurant dining room with elegant table setting"
+      },
+      {
+        "path": "public/images/gallery2.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&h=800&fit=crop&q=80",
+        "prompt": "wine cellar with premium bottles"
+      },
+      {
+        "path": "public/images/gallery3.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800&h=600&fit=crop&q=80",
+        "prompt": "chef hands preparing food in professional kitchen"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "package.json",
+      "language": "json",
+      "size": 546
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "size": 1106
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "size": 628
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "size": 241
+    },
+    {
+      "path": "postcss.config.js",
+      "language": "javascript",
+      "size": 79
+    },
+    {
+      "path": "tailwind.config.ts",
+      "language": "typescript",
+      "size": 457
+    },
+    {
+      "path": "src/main.tsx",
+      "language": "tsx",
+      "size": 240
+    },
+    {
+      "path": "src/styles/globals.css",
+      "language": "css",
+      "size": 487
+    },
+    {
+      "path": "src/App.tsx",
+      "language": "tsx",
+      "size": 745
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "language": "tsx",
+      "size": 1785
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "language": "tsx",
+      "size": 2380
+    },
+    {
+      "path": "src/components/MenuHighlights.tsx",
+      "language": "tsx",
+      "size": 3316
+    },
+    {
+      "path": "src/components/ChefStory.tsx",
+      "language": "tsx",
+      "size": 3107
+    },
+    {
+      "path": "src/components/ReservationCTA.tsx",
+      "language": "tsx",
+      "size": 3991
+    },
+    {
+      "path": "src/components/Testimonials.tsx",
+      "language": "tsx",
+      "size": 3092
+    },
+    {
+      "path": "src/components/Gallery.tsx",
+      "language": "tsx",
+      "size": 5722
+    },
+    {
+      "path": "src/components/Location.tsx",
+      "language": "tsx",
+      "size": 5281
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "language": "tsx",
+      "size": 5669
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/images/hero.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop&q=80",
+      "prompt": "elegant fine dining restaurant interior with warm lighting"
+    },
+    {
+      "path": "public/images/chef.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=600&fit=crop&q=80",
+      "prompt": "professional chef in kitchen preparing gourmet dish"
+    },
+    {
+      "path": "public/images/dish1.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop&q=80",
+      "prompt": "artistic plated gourmet dish"
+    },
+    {
+      "path": "public/images/dish2.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=400&fit=crop&q=80",
+      "prompt": "elegant seafood dish presentation"
+    },
+    {
+      "path": "public/images/dish3.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&h=400&fit=crop&q=80",
+      "prompt": "fine dining dessert with artistic presentation"
+    },
+    {
+      "path": "public/images/gallery1.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=600&fit=crop&q=80",
+      "prompt": "restaurant dining room with elegant table setting"
+    },
+    {
+      "path": "public/images/gallery2.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&h=800&fit=crop&q=80",
+      "prompt": "wine cellar with premium bottles"
+    },
+    {
+      "path": "public/images/gallery3.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=800&h=600&fit=crop&q=80",
+      "prompt": "chef hands preparing food in professional kitchen"
+    }
+  ],
+  "isComplete": true
+}

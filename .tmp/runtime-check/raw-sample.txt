@@ -1,0 +1,149 @@
+===PROJECT_MANIFEST===
+{
+  "type": "project",
+  "framework": "vite-react-ts",
+  "title": "Preview Runtime Sample",
+  "entryFile": "src/main.tsx",
+  "previewEntryFile": "src/App.tsx",
+  "siteType": "saas",
+  "designDirection": "minimal test scaffold",
+  "colorStrategy": "light with emerald accents",
+  "typography": "Inter + Inter",
+  "sectionOrder": ["Navbar", "Hero", "Faq", "Footer"],
+  "assets": []
+}
+===END_MANIFEST===
+===FILE:src/styles/globals.css===
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+html, body { margin: 0; font-family: 'Inter', sans-serif; background: #f5f7f6; color: #111827; }
+* { box-sizing: border-box; }
+===END_FILE===
+===FILE:src/App.tsx===
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import Faq from '@/components/Faq';
+import Footer from '@/components/Footer';
+
+export default function App() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Faq />
+      <Footer />
+    </>
+  );
+}
+===END_FILE===
+===FILE:src/components/Navbar.tsx===
+import React from 'react';
+import Container from '@/components/ui/container';
+import Button from '@/components/ui/button';
+import MobileNav from '@/components/ui/mobile-nav';
+
+const links = [
+  { label: 'Platform', href: '#platform' },
+  { label: 'FAQ', href: '#faq' },
+];
+
+export default function Navbar() {
+  return (
+    <header className='sticky top-0 z-20 border-b border-emerald-100 bg-white/90 backdrop-blur'>
+      <Container>
+        <div className='flex h-16 items-center justify-between'>
+          <a href='#' className='font-semibold text-slate-900'>Cenate Sample</a>
+          <nav className='hidden md:flex items-center gap-6'>
+            {links.map((link) => (
+              <a key={link.href} href={link.href} className='text-sm text-slate-600 hover:text-slate-900'>{link.label}</a>
+            ))}
+            <Button size='sm' className='bg-emerald-600 text-white hover:bg-emerald-700'>Start</Button>
+          </nav>
+          <MobileNav links={links} brandName='Cenate Sample' ctaLabel='Start' ctaHref='#platform' />
+        </div>
+      </Container>
+    </header>
+  );
+}
+===END_FILE===
+===FILE:src/components/Hero.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import Button from '@/components/ui/button';
+import Card from '@/components/ui/card';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+
+export default function Hero() {
+  return (
+    <Section id='platform' className='bg-slate-950 text-white'>
+      <Container>
+        <div className='grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center'>
+          <div>
+            <p className='mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-300'>Generator Scaffold Test</p>
+            <Heading as='h1' size='display' className='text-white'>Shared preview shims now power both runtimes.</Heading>
+            <p className='mt-6 max-w-xl text-lg text-slate-300'>This sample exercises scaffolded Button, Card, Tabs, and MobileNav imports through the standalone renderer.</p>
+            <div className='mt-8 flex gap-4'>
+              <Button size='lg' className='bg-emerald-500 text-slate-950 hover:bg-emerald-400'>Launch</Button>
+              <Button size='lg' className='border border-white/20 text-white hover:bg-white/10'>Inspect</Button>
+            </div>
+          </div>
+          <Card className='border border-white/10 bg-white/5 p-6'>
+            <Tabs defaultValue='runtime' className='w-full'>
+              <TabsList className='mb-4'>
+                <TabsTrigger value='runtime'>Runtime</TabsTrigger>
+                <TabsTrigger value='scaffold'>Scaffold</TabsTrigger>
+              </TabsList>
+              <TabsContent value='runtime' className='text-sm text-slate-300'>clsx, cva, react-dom/client, and Radix imports resolve inside the preview iframe.</TabsContent>
+              <TabsContent value='scaffold' className='text-sm text-slate-300'>Stable package baseline and UI primitives come from injected scaffold files.</TabsContent>
+            </Tabs>
+          </Card>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+===FILE:src/components/Faq.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
+
+const items = [
+  { q: 'Does the preview need a bundler?', a: 'No. The iframe compiles the project files directly with Babel and resolves scaffold imports from builtin shim modules.' },
+  { q: 'Why keep one shim source?', a: 'It prevents the standalone and in-app preview runtimes from diverging on Radix or utility-module behavior.' },
+];
+
+export default function Faq() {
+  return (
+    <Section id='faq' className='bg-white'>
+      <Container size='md'>
+        <Heading as='h2' size='h2'>Runtime proof</Heading>
+        <Accordion type='single' defaultValue='item-0' className='mt-8 w-full'>
+          {items.map((item, index) => (
+            <AccordionItem key={item.q} value={'item-' + index} className='border-slate-200'>
+              <AccordionTrigger className='text-left text-slate-900'>{item.q}</AccordionTrigger>
+              <AccordionContent className='text-slate-600'>{item.a}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+===FILE:src/components/Footer.tsx===
+import React from 'react';
+import Container from '@/components/ui/container';
+
+export default function Footer() {
+  return (
+    <footer className='border-t border-slate-200 bg-slate-50 py-10 text-sm text-slate-500'>
+      <Container>Shared preview runtime sample.</Container>
+    </footer>
+  );
+}
+===END_FILE===

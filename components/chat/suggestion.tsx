@@ -2,9 +2,10 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 
+import { CenateLogo } from "@/components/brand/cenate-logo";
 import type { UISuggestion } from "@/lib/editor/suggestions";
 import { Button } from "../ui/button";
-import { CrossIcon, SparklesIcon } from "./icons";
+import { CrossIcon } from "./icons";
 
 export const SuggestionDialog = ({
   suggestion,
@@ -40,7 +41,7 @@ export const SuggestionDialog = ({
           <div className="flex flex-row items-center justify-between">
             <div className="flex flex-row items-center gap-2">
               <div className="flex size-5 items-center justify-center rounded-md bg-muted/60 text-muted-foreground ring-1 ring-border/50">
-                <SparklesIcon size={10} />
+                <CenateLogo variant="mark" className="h-4 w-4" />
               </div>
               <div className="font-medium">Suggestion</div>
             </div>

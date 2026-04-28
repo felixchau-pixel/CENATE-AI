@@ -1,0 +1,2344 @@
+===PROJECT_MANIFEST===
+{
+  "type": "project",
+  "framework": "vite-react-ts",
+  "title": "Maison Noir - Fine Dining Experience",
+  "entryFile": "src/main.tsx",
+  "previewEntryFile": "src/App.tsx",
+  "siteType": "restaurant",
+  "designFamily": "warm_artisan",
+  "designDirection": "dark editorial luxury with warm surfaces, serif display typography, and cinematic food photography",
+  "colorStrategy": "deep black (#0a0a0a) background, warm surface (#1a1612), gold accent (#d4af37), warm white (#faf8f5) text",
+  "typography": "Playfair Display for headings, Inter for body text",
+  "sectionOrder": [
+    "Hero",
+    "ChefStory",
+    "MenuHighlights",
+    "Gallery",
+    "PressProof",
+    "Reservation",
+    "Location",
+    "Footer"
+  ],
+  "assets": [
+    {
+      "path": "generated/hero.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5oZXJvPC90ZXh0Pgo8L3N2Zz4=",
+      "prompt": "Project brief: build me a restaurant website. Create the hero image for a restaurant website in the Warm Artisan family. Subject: cinematic fine-dining atmosphere or plated signature dish in service context. Style: Warm Artisan. Natural light, organic crop ratios, craft process details, ingredient or maker context, softer framing. Texture hints, soft dividers, caption notes, craft badges, warm footer closure. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/support.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5zdXBwb3J0PC90ZXh0Pgo8L3N2Zz4=",
+      "prompt": "Project brief: build me a restaurant website. Create a supporting image for a restaurant website in the Warm Artisan family. Subject: chef, kitchen ritual, or private dining vignette. Style must match the hero image. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/gallery-1.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5nYWxsZXJ5MTwvdGV4dD4KPC9zdmc+",
+      "prompt": "Project brief: build me a restaurant website. Create gallery image 1 for a restaurant website in the Warm Artisan family. Subject: dining room, plating, ingredient, bar, or service still. Match the same palette and framing language. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/gallery-2.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5nYWxsZXJ5MjwvdGV4dD4KPC9zdmc+",
+      "prompt": "Project brief: build me a restaurant website. Create gallery image 2 for a restaurant website in the Warm Artisan family. Subject: dining room, plating, ingredient, bar, or service still. Keep the same visual grammar but vary the scene. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/gallery-3.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5nYWxsZXJ5MzwvdGV4dD4KPC9zdmc+",
+      "prompt": "Project brief: build me a restaurant website. Create gallery image 3 for a restaurant website in the Warm Artisan family. Subject: dining room, plating, ingredient, bar, or service still. Keep the same visual grammar but vary the crop and distance. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/detail-1.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5kZXRhaWwxPC90ZXh0Pgo8L3N2Zz4=",
+      "prompt": "Project brief: build me a restaurant website. Create a detail image for a restaurant website in the Warm Artisan family. Subject: close-up culinary detail with editorial framing. Keep the same palette and motif language. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    }
+  ]
+}
+===END_MANIFEST===
+===FILE:package.json===
+{
+  "name": "cenate-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:dev": "vite build --mode development",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.2",
+    "@radix-ui/react-alert-dialog": "^1.1.4",
+    "@radix-ui/react-aspect-ratio": "^1.1.1",
+    "@radix-ui/react-avatar": "^1.1.2",
+    "@radix-ui/react-checkbox": "^1.1.3",
+    "@radix-ui/react-collapsible": "^1.1.2",
+    "@radix-ui/react-context-menu": "^2.2.4",
+    "@radix-ui/react-dialog": "^1.1.4",
+    "@radix-ui/react-dropdown-menu": "^2.1.4",
+    "@radix-ui/react-hover-card": "^1.1.4",
+    "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-menubar": "^1.1.4",
+    "@radix-ui/react-navigation-menu": "^1.2.3",
+    "@radix-ui/react-popover": "^1.1.4",
+    "@radix-ui/react-progress": "^1.1.1",
+    "@radix-ui/react-radio-group": "^1.2.2",
+    "@radix-ui/react-scroll-area": "^1.2.2",
+    "@radix-ui/react-select": "^2.1.4",
+    "@radix-ui/react-separator": "^1.1.1",
+    "@radix-ui/react-slider": "^1.2.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.2",
+    "@radix-ui/react-tabs": "^1.1.2",
+    "@radix-ui/react-toast": "^1.2.4",
+    "@radix-ui/react-toggle": "^1.1.1",
+    "@radix-ui/react-toggle-group": "^1.1.1",
+    "@radix-ui/react-tooltip": "^1.1.6",
+    "@hookform/resolvers": "^3.9.1",
+    "@tanstack/react-query": "^5.62.8",
+    "@radix-ui/react-visually-hidden": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.0.4",
+    "date-fns": "^4.1.0",
+    "embla-carousel-react": "^8.5.1",
+    "input-otp": "^1.4.1",
+    "lucide-react": "^0.468.0",
+    "next-themes": "^0.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-day-picker": "^9.4.3",
+    "react-hook-form": "^7.54.2",
+    "react-resizable-panels": "^2.1.7",
+    "react-router-dom": "^7.1.1",
+    "recharts": "^2.15.0",
+    "sonner": "^1.7.1",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript-eslint": "^8.18.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.1",
+    "vitest": "^2.1.8"
+  }
+}
+===END_FILE===
+===FILE:bun.lock===
+# bun lockfile generated by Cenate
+[install]
+saveTextLockfile = true
+
+[packages]
+
+===END_FILE===
+===FILE:index.html===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cenate Website</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+===END_FILE===
+===FILE:tsconfig.json===
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
+===END_FILE===
+===FILE:tsconfig.app.json===
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}
+===END_FILE===
+===FILE:tsconfig.node.json===
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "vitest.config.ts", "eslint.config.js"]
+}
+===END_FILE===
+===FILE:vite.config.ts===
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
+===END_FILE===
+===FILE:postcss.config.js===
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+===END_FILE===
+===FILE:tailwind.config.ts===
+import type { Config } from "tailwindcss";
+
+export default {
+  darkMode: ["class"],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}", "./index.html"],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      fontFamily: {
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+      },
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "count-up": {
+          from: { opacity: "0", transform: "scale(0.8)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "count-up": "count-up 0.5s ease-out forwards",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config;
+===END_FILE===
+===FILE:eslint.config.js===
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+  { ignores: ["dist"] },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+    },
+  }
+);
+===END_FILE===
+===FILE:vitest.config.ts===
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: "./src/test/setup.ts",
+  },
+});
+===END_FILE===
+===FILE:components.json===
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "src/index.css",
+    "baseColor": "zinc",
+    "cssVariables": false
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "hooks": "@/hooks",
+    "lib": "@/lib"
+  }
+}
+===END_FILE===
+===FILE:README.md===
+# Cenate Website
+
+This project was generated by Cenate with a fixed Lovable-style Vite + React + TypeScript scaffold.
+
+## Scripts
+
+- `npm run dev`
+- `npm run build`
+- `npm run build:dev`
+- `npm run lint`
+- `npm run preview`
+- `npm run test`
+- `npm run test:watch`
+
+===END_FILE===
+===FILE:.gitignore===
+node_modules
+dist
+.DS_Store
+.env
+.env.local
+coverage
+*.log
+===END_FILE===
+===FILE:public/robots.txt===
+User-agent: *
+Allow: /
+===END_FILE===
+===FILE:public/placeholder.svg===
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="24" fill="#F4F4F5"/>
+  <path d="M120 210L180 150L225 195L290 125L340 210H120Z" fill="#D4D4D8"/>
+  <circle cx="160" cy="110" r="24" fill="#A1A1AA"/>
+</svg>
+===END_FILE===
+===FILE:public/favicon.ico===
+placeholder favicon
+===END_FILE===
+===FILE:src/main.tsx===
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import "./App.css";
+
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { error: Error | null }
+> {
+  state: { error: Error | null } = { error: null };
+  static getDerivedStateFromError(error: Error) {
+    return { error };
+  }
+  componentDidCatch(error: Error) {
+    const el = document.getElementById("cenate-error");
+    if (el) {
+      el.style.display = "block";
+      el.textContent = "Render error: " + error.message;
+    }
+  }
+  render() {
+    if (this.state.error) {
+      return React.createElement(
+        "div",
+        {
+          style: {
+            padding: 32,
+            color: "#b91c1c",
+            fontFamily: "ui-monospace, monospace",
+            fontSize: 13,
+            whiteSpace: "pre-wrap" as const,
+            background: "#fff5f5",
+            minHeight: "100vh",
+          },
+        },
+        "Render error: " + this.state.error.message
+      );
+    }
+    return this.props.children;
+  }
+}
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </React.StrictMode>
+);
+===END_FILE===
+===FILE:src/index.css===
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 1rem;
+
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.14), hsl(var(--background)) 55%, hsl(var(--accent) / 0.22));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.92) 100%);
+    --shadow-soft: 0 20px 45px -30px rgb(15 23 42 / 0.28);
+    --shadow-card: 0 18px 40px -28px rgb(15 23 42 / 0.22);
+    --shadow-card-hover: 0 24px 60px -32px rgb(15 23 42 / 0.32);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 47.4% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 47.4% 8.6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 47.4% 8.6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --gradient-hero: linear-gradient(140deg, hsl(var(--primary) / 0.12), hsl(var(--background)) 52%, hsl(217.2 91.2% 59.8% / 0.28));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    background-image:
+      radial-gradient(circle at top, hsl(var(--primary) / 0.06), transparent 28%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 100%);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--primary) / 0.72));
+  }
+
+  .surface-card {
+    background-image: linear-gradient(180deg, hsl(var(--card) / 0.98), hsl(var(--card) / 0.92));
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-panel {
+    background: hsl(var(--card) / 0.82);
+    backdrop-filter: blur(14px);
+    border: 1px solid hsl(var(--border) / 0.7);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .section-shell {
+    position: relative;
+  }
+
+  .section-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, hsl(var(--background) / 0), hsl(var(--primary) / 0.03));
+    opacity: 0.8;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-count-up {
+  animation: count-up 0.5s ease-out forwards;
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+
+:root {
+  --background: 36 44% 97%;
+  --foreground: 18 18% 19%;
+  --card: 33 33% 94%;
+  --card-foreground: 18 18% 19%;
+  --popover: 36 44% 97%;
+  --popover-foreground: 18 18% 19%;
+  --primary: 21 58% 42%;
+  --primary-foreground: 36 44% 97%;
+  --secondary: 34 26% 89%;
+  --secondary-foreground: 18 18% 19%;
+  --muted: 34 26% 89%;
+  --muted-foreground: 24 12% 41%;
+  --accent: 85 18% 58%;
+  --accent-foreground: 18 18% 19%;
+  --border: 28 21% 80%;
+  --input: 28 21% 80%;
+  --ring: 21 58% 42%;
+  --radius: 1.4rem;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Barlow", system-ui, sans-serif;
+  --gradient-hero: linear-gradient(135deg, hsl(36 44% 97%), hsl(34 32% 93%) 54%, hsl(21 58% 42% / 0.12));
+  --gradient-surface: linear-gradient(180deg, hsl(36 44% 97%) 0%, hsl(34 26% 92%) 100%);
+  --shadow-soft: 0 18px 44px -30px rgb(90 63 42 / 0.22);
+  --shadow-card: 0 18px 46px -30px rgb(90 63 42 / 0.2);
+  --shadow-card-hover: 0 24px 58px -30px rgb(90 63 42 / 0.26);
+}
+body {
+  background-image:
+    radial-gradient(circle at top, hsl(var(--accent) / 0.18), transparent 28%),
+    linear-gradient(180deg, hsl(36 44% 97%) 0%, hsl(34 36% 95%) 100%);
+}
+
+@layer utilities {
+
+.surface-card {
+  background-image: linear-gradient(180deg, hsl(var(--card)), hsl(34 26% 92% / 0.92));
+  border-color: hsl(var(--border));
+}
+
+.surface-panel {
+  background: hsl(var(--card) / 0.88);
+  border: 1px solid hsl(var(--border));
+}
+
+.eyebrow {
+  color: hsl(var(--primary));
+  letter-spacing: 0.22em;
+}
+
+.family-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.55), transparent);
+}
+
+.family-kicker {
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+}
+===END_FILE===
+===FILE:src/App.css===
+#root {
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+===END_FILE===
+===FILE:src/vite-env.d.ts===
+/// <reference types="vite/client" />
+===END_FILE===
+===FILE:src/assets/.gitkeep===
+
+===END_FILE===
+===FILE:src/hooks/use-mobile.ts===
+import { useEffect, useState } from "react";
+
+export function useMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    const update = () => setIsMobile(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+===END_FILE===
+===FILE:src/pages/Home.tsx===
+import App from "../App";
+
+export default function HomePage() {
+  return <App />;
+}
+===END_FILE===
+===FILE:src/test/setup.ts===
+import "@testing-library/jest-dom";
+===END_FILE===
+===FILE:src/test/App.test.tsx===
+import { render, screen } from "@testing-library/react";
+import App from "../App";
+
+describe("App", () => {
+  it("renders without crashing", () => {
+    render(<App />);
+    expect(screen.getByRole("main")).toBeInTheDocument();
+  });
+});
+===END_FILE===
+===FILE:src/lib/utils.ts===
+import { clsx, type ClassValue } from "clsx";
+
+export function cn(...inputs: ClassValue[]) {
+  return clsx(inputs);
+}
+===END_FILE===
+===FILE:src/components/ui/button.tsx===
+import React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };
+export default Button;
+===END_FILE===
+===FILE:src/components/ui/accordion.tsx===
+import React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { cn } from "@/lib/utils";
+
+const Accordion = AccordionPrimitive.Root;
+
+const AccordionItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <AccordionPrimitive.Item ref={ref} className={cn("border-b", className)} {...props} />
+  )
+);
+AccordionItem.displayName = "AccordionItem";
+
+const AccordionTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        ref={ref}
+        className={cn(
+          "flex flex-1 items-center justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
+          className
+        )}
+        {...props}
+      >
+        {children}
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6" /></svg>
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  )
+);
+AccordionTrigger.displayName = "AccordionTrigger";
+
+const AccordionContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Content ref={ref} className="overflow-hidden text-sm" {...props}>
+      <div className={cn("pb-4 pt-0", className)}>{children}</div>
+    </AccordionPrimitive.Content>
+  )
+);
+AccordionContent.displayName = "AccordionContent";
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+===END_FILE===
+===FILE:src/components/ui/tabs.tsx===
+import React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { cn } from "@/lib/utils";
+
+const Tabs = TabsPrimitive.Root;
+
+const TabsList = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.List
+      ref={ref}
+      className={cn(
+        "inline-flex h-10 items-center justify-center rounded-lg bg-zinc-100 p-1 text-zinc-500",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsList.displayName = "TabsList";
+
+const TabsTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-all",
+        "data-[state=active]:bg-white data-[state=active]:text-zinc-950 data-[state=active]:shadow-sm",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsTrigger.displayName = "TabsTrigger";
+
+const TabsContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Content
+      ref={ref}
+      className={cn("mt-2", className)}
+      {...props}
+    />
+  )
+);
+TabsContent.displayName = "TabsContent";
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+===END_FILE===
+===FILE:src/components/ui/dialog.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Dialog = DialogPrimitive.Root;
+const DialogTrigger = DialogPrimitive.Trigger;
+const DialogClose = DialogPrimitive.Close;
+const DialogPortal = DialogPrimitive.Portal;
+
+const DialogOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn(
+        "fixed inset-0 z-50 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+DialogOverlay.displayName = "DialogOverlay";
+
+const DialogContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <DialogPortal>
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed left-[50%] top-[50%] z-50 w-full max-w-lg translate-x-[-50%] translate-y-[-50%] rounded-xl border bg-white p-6 shadow-xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  )
+);
+DialogContent.displayName = "DialogContent";
+
+const DialogTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Title ref={ref} className={cn("text-lg font-semibold", className)} {...props} />
+  )
+);
+DialogTitle.displayName = "DialogTitle";
+
+const DialogDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Description ref={ref} className={cn("text-sm text-zinc-500", className)} {...props} />
+  )
+);
+DialogDescription.displayName = "DialogDescription";
+
+export { Dialog, DialogTrigger, DialogContent, DialogClose, DialogOverlay, DialogTitle, DialogDescription };
+===END_FILE===
+===FILE:src/components/ui/sheet.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Sheet = DialogPrimitive.Root;
+const SheetTrigger = DialogPrimitive.Trigger;
+const SheetClose = DialogPrimitive.Close;
+
+const SheetOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn("fixed inset-0 z-50 bg-black/60 backdrop-blur-sm", className)}
+      {...props}
+    />
+  )
+);
+SheetOverlay.displayName = "SheetOverlay";
+
+type SheetContentProps = React.HTMLAttributes<HTMLDivElement> & {
+  side?: "left" | "right" | "top" | "bottom";
+};
+
+const sideStyles: Record<string, string> = {
+  right: "inset-y-0 right-0 h-full w-3/4 max-w-sm border-l translate-x-0",
+  left: "inset-y-0 left-0 h-full w-3/4 max-w-sm border-r translate-x-0",
+  top: "inset-x-0 top-0 border-b",
+  bottom: "inset-x-0 bottom-0 border-t",
+};
+
+const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
+  ({ side = "right", className, children, ...props }, ref) => (
+    <DialogPrimitive.Portal>
+      <SheetOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed z-50 bg-white p-6 shadow-xl transition-transform duration-300",
+          sideStyles[side],
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPrimitive.Portal>
+  )
+);
+SheetContent.displayName = "SheetContent";
+
+export { Sheet, SheetTrigger, SheetContent, SheetClose };
+===END_FILE===
+===FILE:src/components/ui/input.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+  error?: string;
+};
+
+export default function Input({ label, error, className, id, ...props }: InputProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <input
+        id={inputId}
+        className={cn(
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          error && "border-destructive focus-visible:ring-destructive",
+          className
+        )}
+        {...props}
+      />
+      {error && <p className="mt-1 text-sm text-destructive">{error}</p>}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/textarea.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  label?: string;
+};
+
+export default function Textarea({ label, className, id, ...props }: TextareaProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <textarea
+        id={inputId}
+        rows={4}
+        className={cn(
+          "w-full rounded-lg border px-4 py-2.5 text-base outline-none transition-colors resize-none",
+          className
+        )}
+        {...props}
+      />
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/badge.tsx===
+import React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const badgeVariants = cva(
+  "inline-flex items-center rounded-full font-medium",
+  {
+    variants: {
+      size: {
+        sm: "px-2 py-0.5 text-[10px]",
+        md: "px-2.5 py-0.5 text-xs",
+        lg: "px-3 py-1 text-sm",
+      },
+    },
+    defaultVariants: {
+      size: "md",
+    },
+  }
+);
+
+type BadgeProps = React.HTMLAttributes<HTMLSpanElement> &
+  VariantProps<typeof badgeVariants>;
+
+export default function Badge({ className, size, ...props }: BadgeProps) {
+  return (
+    <span className={cn(badgeVariants({ size }), className)} {...props} />
+  );
+}
+
+export { badgeVariants };
+===END_FILE===
+===FILE:src/components/ui/card.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type CardProps = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Card({ className, children }: CardProps) {
+  return (
+    <div className={cn("surface-card rounded-[calc(var(--radius)+6px)] border bg-card text-card-foreground shadow-sm p-6", className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/section.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SectionProps = {
+  id?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Section({ id, className, children }: SectionProps) {
+  return (
+    <section id={id} className={cn("py-16 md:py-24", className)}>
+      {children}
+    </section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/container.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type ContainerProps = {
+  size?: "sm" | "md" | "lg" | "xl" | "full";
+  className?: string;
+  children: React.ReactNode;
+};
+
+const maxWidths: Record<string, string> = {
+  sm: "max-w-3xl",
+  md: "max-w-5xl",
+  lg: "max-w-6xl",
+  xl: "max-w-7xl",
+  full: "max-w-full",
+};
+
+export default function Container({ size = "xl", className, children }: ContainerProps) {
+  return (
+    <div className={cn("mx-auto px-4 sm:px-6 lg:px-8", maxWidths[size], className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/heading.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type HeadingProps = {
+  as?: "h1" | "h2" | "h3" | "h4";
+  size?: "display" | "h1" | "h2" | "h3";
+  eyebrow?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+const sizeStyles: Record<string, string> = {
+  display: "text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]",
+  h1: "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight",
+  h2: "text-3xl md:text-4xl font-semibold tracking-tight",
+  h3: "text-xl md:text-2xl font-semibold",
+};
+
+export default function Heading({
+  as: Tag = "h2",
+  size = "h2",
+  eyebrow,
+  className,
+  children,
+}: HeadingProps) {
+  return (
+    <div>
+      {eyebrow && (
+        <span className="block text-xs uppercase tracking-widest font-medium mb-3 opacity-60">
+          {eyebrow}
+        </span>
+      )}
+      <Tag className={cn(sizeStyles[size], className)}>{children}</Tag>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/separator.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SeparatorProps = {
+  orientation?: "horizontal" | "vertical";
+  className?: string;
+};
+
+export default function Separator({ orientation = "horizontal", className }: SeparatorProps) {
+  return (
+    <div
+      role="separator"
+      className={cn(
+        "shrink-0 bg-current opacity-10",
+        orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
+        className
+      )}
+    />
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/aspect-ratio.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type AspectRatioProps = {
+  ratio?: number;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function AspectRatio({ ratio = 16 / 9, className, children }: AspectRatioProps) {
+  return (
+    <div className={cn("relative w-full overflow-hidden", className)} style={{ paddingBottom: (1 / ratio) * 100 + "%" }}>
+      <div className="absolute inset-0">{children}</div>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/testimonial.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TestimonialProps = {
+  quote: string;
+  author: string;
+  role?: string;
+  avatar?: string;
+  className?: string;
+};
+
+export default function Testimonial({ quote, author, role, avatar, className }: TestimonialProps) {
+  return (
+    <figure className={cn("space-y-4", className)}>
+      <blockquote className="text-lg md:text-xl leading-relaxed italic">
+        &ldquo;{quote}&rdquo;
+      </blockquote>
+      <figcaption className="flex items-center gap-3">
+        {avatar && (
+          <img src={avatar} alt={author} className="w-10 h-10 rounded-full object-cover" />
+        )}
+        <div>
+          <p className="font-medium text-sm">{author}</p>
+          {role && <p className="text-xs opacity-60">{role}</p>}
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/stats-band.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import { cn } from "@/lib/utils";
+
+type Stat = {
+  value: string;
+  label: string;
+};
+
+type StatsBandProps = {
+  stats: Stat[];
+  className?: string;
+};
+
+export default function StatsBand({ stats, className }: StatsBandProps) {
+  return (
+    <Section className={cn("py-12", className)}>
+      <Container>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <p className="text-3xl md:text-5xl font-bold">{s.value}</p>
+              <p className="text-sm mt-1 opacity-60">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/gallery.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type GalleryImage = {
+  src: string;
+  alt: string;
+  span?: "normal" | "wide" | "tall";
+};
+
+type GalleryProps = {
+  images: GalleryImage[];
+  className?: string;
+};
+
+const spanClasses: Record<string, string> = {
+  normal: "",
+  wide: "md:col-span-2",
+  tall: "md:row-span-2",
+};
+
+export default function Gallery({ images, className }: GalleryProps) {
+  return (
+    <div className={cn("grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4", className)}>
+      {images.map((img, i) => (
+        <div key={i} className={cn("overflow-hidden rounded-lg", spanClasses[img.span || "normal"])}>
+          <img
+            src={img.src}
+            alt={img.alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/mobile-nav.tsx===
+import React from "react";
+import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/ui/sheet";
+import Button from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+type MobileNavProps = {
+  links: { label: string; href: string }[];
+  brandName: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  className?: string;
+};
+
+export default function MobileNav({ links, brandName, ctaLabel, ctaHref, className }: MobileNavProps) {
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <button className={cn("md:hidden p-2", className)} aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </SheetTrigger>
+      <SheetContent side="right" className="flex flex-col pt-16">
+        <p className="text-lg font-semibold mb-8">{brandName}</p>
+        <nav className="flex flex-col gap-4">
+          {links.map((link) => (
+            <SheetClose key={link.href} asChild>
+              <a href={link.href} className="text-lg py-2 border-b border-zinc-100 hover:text-zinc-600 transition-colors">
+                {link.label}
+              </a>
+            </SheetClose>
+          ))}
+        </nav>
+        {ctaLabel && ctaHref && (
+          <div className="mt-auto pt-8">
+            <SheetClose asChild>
+              <Button asChild size="lg" className="w-full">
+                <a href={ctaHref}>{ctaLabel}</a>
+              </Button>
+            </SheetClose>
+          </div>
+        )}
+      </SheetContent>
+    </Sheet>
+  );
+}
+===END_FILE===
+===FILE:src/assets/generated-images.ts===
+export const projectImages = {
+  hero: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5oZXJvPC90ZXh0Pgo8L3N2Zz4=`,
+  support: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5zdXBwb3J0PC90ZXh0Pgo8L3N2Zz4=`,
+  gallery1: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5nYWxsZXJ5MTwvdGV4dD4KPC9zdmc+`,
+  gallery2: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5nYWxsZXJ5MjwvdGV4dD4KPC9zdmc+`,
+  gallery3: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5nYWxsZXJ5MzwvdGV4dD4KPC9zdmc+`,
+  detail1: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGNkVGRTYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjZFRkU2IiBzdHJva2U9IiNBQTVBMzQiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjQUE1QTM0IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiNBQTVBMzQiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPldBUk0gQVJUSVNBTjwvdGV4dD4KICA8dGV4dCB4PSI2MTAiIHk9IjYwNCIgZmlsbD0iI0FBNUEzNCIgZmlsbC1vcGFjaXR5PSIwLjk2IiBmb250LWZhbWlseT0iSW50ZXIsIEFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjcyIiBmb250LXdlaWdodD0iNzAwIj5kZXRhaWwxPC90ZXh0Pgo8L3N2Zz4=`,
+} as const;
+
+export type ProjectImageKey = keyof typeof projectImages;
+
+export default projectImages;
+===END_FILE===
+
+===FILE:src/App.tsx===
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import ChefStory from './components/ChefStory';
+import MenuHighlights from './components/MenuHighlights';
+import Gallery from './components/Gallery';
+import PressProof from './components/PressProof';
+import Reservation from './components/Reservation';
+import Footer from './components/Footer';
+
+export default function App() {
+  return (
+    <main role="main" className="min-h-screen bg-zinc-950 text-zinc-50">
+      <Navbar />
+      <Hero />
+      <ChefStory />
+      <MenuHighlights />
+      <Gallery />
+      <PressProof />
+      <Reservation />
+<Footer />
+    </main>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Navbar.tsx===
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import MobileNav from '@/components/ui/mobile-nav';
+
+const navLinks = [
+  { label: 'Menu', href: '#menu' },
+  { label: 'Chef', href: '#chef' },
+  { label: 'Gallery', href: '#gallery' },
+  { label: 'Location', href: '#location' }
+];
+
+export default function Navbar() {
+  return (
+    <nav className="fixed top-0 w-full z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="font-serif text-2xl font-bold text-amber-400">
+          Maison Noir
+        </div>
+        
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-zinc-300 hover:text-amber-400 transition-colors text-sm tracking-wide"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        <div className="hidden md:block">
+          <Button className="bg-amber-600 text-zinc-950 hover:bg-amber-500 font-medium">
+            Reserve Table
+          </Button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <MobileNav 
+            links={navLinks}
+            brandName="Maison Noir"
+            ctaLabel="Reserve Table"
+            ctaHref="#reservation"
+            className="bg-zinc-950 border-zinc-800"
+          />
+        </div>
+      </div>
+    </nav>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Hero.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import projectImages from '@/assets/generated-images';
+
+export default function Hero() {
+  return (
+    <Section className="min-h-screen flex items-center bg-zinc-950 text-zinc-50 relative overflow-hidden">
+      <Container className="relative z-10">
+        <div className="grid lg:grid-cols-12 gap-8 items-center min-h-[80vh]">
+          {/* Left Content Panel */}
+          <div className="lg:col-span-5 max-w-xl">
+            <div className="mb-6">
+              <Badge className="bg-zinc-800 text-amber-400 border-amber-400/30 mb-4">
+                Est. 2018
+              </Badge>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="text-xs uppercase tracking-[0.3em] text-zinc-400">
+                  ★ Michelin Star
+                </div>
+                <div className="text-xs uppercase tracking-[0.3em] text-zinc-400">
+                  James Beard Semifinalist
+                </div>
+              </div>
+            </div>
+            
+            <Heading as="h1" size="display" className="font-serif text-5xl md:text-7xl leading-[0.9] mb-6">
+              Maison Noir
+            </Heading>
+            
+            <p className="text-xl text-zinc-400 mb-2">Modern French Cuisine</p>
+            <p className="text-lg text-zinc-300 leading-relaxed max-w-lg mb-8">
+              An intimate culinary journey where tradition meets innovation. Chef Laurent Dubois crafts each dish with precision and passion in our award-winning kitchen.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <Button size="lg" className="bg-amber-600 text-zinc-950 hover:bg-amber-500">
+                Reserve Your Table
+              </Button>
+              <Button size="lg" variant="outline" className="border-zinc-600 text-zinc-300 hover:bg-zinc-800">
+                View Menu
+              </Button>
+            </div>
+
+            {/* Awards Rail */}
+            <div className="mt-12 pt-8 border-t border-zinc-800">
+              <div className="grid grid-cols-3 gap-6 text-center">
+                <div>
+                  <div className="text-2xl font-serif font-bold text-amber-400 mb-1">★</div>
+                  <div className="text-xs uppercase tracking-wide text-zinc-500">Michelin</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-serif font-bold text-amber-400 mb-1">95</div>
+                  <div className="text-xs uppercase tracking-wide text-zinc-500">Wine Spectator</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-serif font-bold text-amber-400 mb-1">4.9</div>
+                  <div className="text-xs uppercase tracking-wide text-zinc-500">OpenTable</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Image Panel */}
+          <div className="lg:col-span-7 relative">
+            <div className="relative">
+              <img 
+                src={projectImages.hero} 
+                alt="Elegant dining room at Maison Noir with warm atmospheric lighting"
+                className="rounded-2xl object-cover w-full aspect-[4/3] shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/20 to-transparent rounded-2xl"></div>
+            </div>
+          </div>
+        </div>
+      
+      <div className="mt-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
+        <div className="surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3">
+          <p className="text-lg font-semibold">Local</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">Ingredient sourcing</p>
+        </div>
+<div className="surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3">
+          <p className="text-lg font-semibold">Handmade</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">Craft standard</p>
+        </div>
+<div className="surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3">
+          <p className="text-lg font-semibold">Seasonal</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">Small-batch rhythm</p>
+        </div>
+      </div>
+      <div className="family-divider mt-6 max-w-2xl"></div>
+      <p className="mt-4 max-w-xl text-sm text-muted-foreground">Buttons feel inviting and crafted, with warm contrast and soft but confident structure.</p>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/ChefStory.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+import projectImages from '@/assets/generated-images';
+
+export default function ChefStory() {
+  return (
+    <Section className="bg-zinc-900 py-24">
+      <Container>
+        <div className="grid lg:grid-cols-1 lg:grid-cols-1 sm:grid-cols-2 gap-16 items-start">
+          {/* Chef Portrait */}
+          <div className="">
+            <div className="relative">
+              <img 
+                src={projectImages.support} 
+                alt="Chef Laurent Dubois working in the kitchen with warm lighting"
+                className="rounded-2xl object-cover w-full min-h-[260px] shadow-xl"
+              />
+              <div className="mt-6 text-center">
+                <div className="text-sm uppercase tracking-[0.2em] text-zinc-400 mb-1">Executive Chef</div>
+                <div className="text-xl font-serif text-amber-400">Laurent Dubois</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Chef Story Content */}
+          <div className="">
+            <Heading as="h2" size="h1" className="font-serif text-4xl md:text-5xl mb-8 text-zinc-100">
+              A Philosophy of <em className="text-amber-400">Terroir</em>
+            </Heading>
+
+            <div className="prose prose-lg prose-invert max-w-none">
+              <p className="text-lg leading-relaxed text-zinc-300 mb-6">
+                "I believe that great cuisine begins with understanding the land, the seasons, and the stories that connect us to our ingredients. Each dish at Maison Noir is a conversation between tradition and innovation, where classical French techniques meet the vibrant flavors of our local terroir."
+              </p>
+
+              {/* Pull Quote */}
+              <blockquote className="border-l-4 border-amber-400 pl-8 my-8">
+                <p className="text-2xl font-serif italic text-amber-400 leading-relaxed">
+                  "Cooking is not just about feeding the body—it's about nourishing the soul and creating memories that last a lifetime."
+                </p>
+              </blockquote>
+
+              <p className="text-lg leading-relaxed text-zinc-300 mb-8">
+                Born in Lyon and trained in the kitchens of Le Bernardin and Eleven Madison Park, I've spent over two decades perfecting my craft. At Maison Noir, we source from local farms within 50 miles, change our menu with the seasons, and never compromise on the integrity of our ingredients.
+              </p>
+
+              {/* Signature */}
+              <div className="mt-12">
+                <div className="font-serif text-3xl text-amber-400 mb-2">Laurent Dubois</div>
+                <div className="text-sm uppercase tracking-[0.2em] text-zinc-500">Executive Chef & Owner</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/MenuHighlights.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+import { Separator } from '@/components/ui/separator';
+import projectImages from '@/assets/generated-images';
+
+const menuSections = [
+  {
+    title: "Amuse-Bouche",
+    items: [
+      {
+        name: "Oyster Foam",
+        description: "Kumamoto oyster, champagne foam, micro herbs",
+        price: "18"
+      },
+      {
+        name: "Foie Gras Macaron",
+        description: "Duck liver mousse, cherry gastrique, brioche crumb",
+        price: "24"
+      }
+    ]
+  },
+  {
+    title: "Entrées",
+    items: [
+      {
+        name: "Diver Scallops",
+        description: "Pan-seared Maine scallops, cauliflower purée, pancetta, brown butter",
+        price: "42"
+      },
+      {
+        name: "Duck Breast",
+        description: "Muscovy duck, cherry reduction, roasted root vegetables, jus",
+        price: "48",
+        featured: true
+      },
+      {
+        name: "Lobster Thermidor",
+        description: "Atlantic lobster, cognac cream, gruyère, herb crust",
+        price: "65"
+      }
+    ]
+  },
+  {
+    title: "Desserts",
+    items: [
+      {
+        name: "Chocolate Soufflé",
+        description: "Valrhona dark chocolate, vanilla bean ice cream",
+        price: "16"
+      },
+      {
+        name: "Tarte Tatin",
+        description: "Caramelized apple, puff pastry, Calvados crème fraîche",
+        price: "14"
+      }
+    ]
+  }
+];
+
+export default function MenuHighlights() {
+  return (
+    <Section id="menu" className="bg-zinc-950 py-24">
+      <Container>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <Heading as="h2" size="h1" className="font-serif text-4xl md:text-5xl mb-6 text-zinc-100">
+              Seasonal Menu
+            </Heading>
+            <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+              Our menu changes with the seasons, featuring the finest local ingredients and time-honored French techniques.
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {menuSections.map((section, sectionIndex) => (
+              <div key={section.title}>
+                <div className="mb-8">
+                  <h3 className="text-2xl font-serif text-amber-400 text-center mb-4">
+                    {section.title}
+                  </h3>
+                  <Separator className="bg-zinc-800 max-w-32 mx-auto" />
+                </div>
+
+                <div className="space-y-6">
+                  {section.items.map((item, itemIndex) => {
+                    if (item.featured) {
+                      return (
+                        <div key={item.name} className="bg-zinc-900 rounded-2xl p-8 border border-amber-400/20 relative overflow-hidden">
+                          <div className="grid lg:grid-cols-2 gap-8 items-center">
+                            <div>
+                              <div className="inline-block px-3 py-1 bg-amber-400/10 border border-amber-400/30 rounded-full text-xs uppercase tracking-wide text-amber-400 mb-4">
+                                Signature Dish
+                              </div>
+                              <h4 className="text-2xl font-serif text-zinc-100 mb-3">{item.name}</h4>
+                              <p className="text-zinc-300 leading-relaxed mb-4">{item.description}</p>
+                              <p className="text-xl font-semibold text-amber-400">${item.price}</p>
+                              <p className="text-sm text-zinc-400 mt-4 italic">
+                                "This dish represents everything we stand for at Maison Noir—tradition, innovation, and an unwavering commitment to excellence." — Chef Laurent
+                              </p>
+                            </div>
+                            <div>
+                              <img 
+                                src={projectImages.detail1} 
+                                alt={`${item.name} - signature dish at Maison Noir`}
+                                className="rounded-xl object-cover w-full aspect-square shadow-lg"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    }
+
+                    return (
+                      <div key={item.name} className="flex items-start justify-between border-b border-zinc-800 pb-6">
+                        <div className="flex-1">
+                          <h4 className="text-xl font-serif text-zinc-100 mb-2">{item.name}</h4>
+                          <p className="text-zinc-400 leading-relaxed">{item.description}</p>
+                        </div>
+                        <div className="ml-8 text-right">
+                          <p className="text-lg font-semibold text-amber-400">${item.price}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <p className="text-zinc-400 mb-6">Wine pairings available for each course</p>
+            <div className="inline-flex items-center space-x-2 text-sm text-zinc-500">
+              <span>Menu updated seasonally</span>
+              <span>•</span>
+              <span>Dietary accommodations available</span>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Gallery.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+import projectImages from '@/assets/generated-images';
+
+export default function Gallery() {
+  return (
+    <Section id="gallery" className="bg-zinc-900 py-24">
+      <Container>
+        <div className="text-center mb-16">
+          <Heading as="h2" size="h1" className="font-serif text-4xl md:text-5xl mb-6 text-zinc-100">
+            Experience
+          </Heading>
+          <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+            Step into our world of culinary artistry and intimate hospitality.
+          </p>
+        </div>
+
+        {/* Asymmetric Gallery Layout */}
+        <div className="grid grid-cols-4 gap-6 h-[600px]">
+          {/* Large Feature Image */}
+          <div className="col-span-4  row-span-2">
+            <div className="relative h-full group">
+              <img 
+                src={projectImages.gallery1} 
+                alt="Elegant dining room interior at Maison Noir"
+                className="rounded-2xl object-cover w-full h-full shadow-xl transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/40 via-transparent to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute bottom-6 left-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-xl font-serif mb-1">Main Dining Room</h3>
+                <p className="text-sm text-zinc-300">Intimate seating for 32 guests</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Top Right Image */}
+          <div className="col-span-4  h-[285px]">
+            <div className="relative h-full group">
+              <img 
+                src={projectImages.gallery2} 
+                alt="Artfully plated signature dish"
+                className="rounded-2xl object-cover w-full h-full shadow-xl transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/40 via-transparent to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-lg font-serif mb-1">Culinary Artistry</h3>
+                <p className="text-xs text-zinc-300">Every plate tells a story</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Right Image */}
+          <div className="col-span-4  h-[285px]">
+            <div className="relative h-full group">
+              <img 
+                src={projectImages.gallery3} 
+                alt="Wine service and bar area"
+                className="rounded-2xl object-cover w-full h-full shadow-xl transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/40 via-transparent to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 className="text-lg font-serif mb-1">Wine Program</h3>
+                <p className="text-xs text-zinc-300">400+ carefully curated bottles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-zinc-400 text-sm">
+            Private dining room available for special occasions and corporate events
+          </p>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/PressProof.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+
+export default function PressProof() {
+  return (
+    <Section className="bg-zinc-950 py-24 border-t border-zinc-800">
+      <Container>
+        <div className="max-w-5xl mx-auto">
+          {/* Main Quote */}
+          <div className="text-center mb-16">
+            <blockquote className="text-3xl md:text-4xl font-serif italic text-amber-400 leading-relaxed mb-8">
+              "Maison Noir delivers an extraordinary culinary experience that rivals the finest establishments in Paris. Chef Dubois has created something truly special—a restaurant where every detail serves the greater symphony of flavor and hospitality."
+            </blockquote>
+            <div className="flex items-start justify-center space-x-4">
+              <div className="text-lg font-medium text-zinc-200">James Mitchell</div>
+              <div className="w-px h-6 bg-zinc-600"></div>
+              <div className="text-sm uppercase tracking-[0.2em] text-zinc-400">The New York Times</div>
+            </div>
+          </div>
+
+          {/* Secondary Quotes */}
+          <div className="grid grid-cols-1 gap-12">
+            <div className="text-center">
+              <p className="text-xl text-zinc-300 italic mb-4 leading-relaxed">
+                "A masterclass in French cuisine with impeccable service. The duck breast alone is worth the journey."
+              </p>
+              <div className="text-sm">
+                <div className="text-zinc-200 font-medium">Sarah Chen</div>
+                <div className="text-zinc-500 uppercase tracking-wide">Food & Wine Magazine</div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <p className="text-xl text-zinc-300 italic mb-4 leading-relaxed">
+                "Dubois has achieved that rare balance of innovation and tradition that defines truly great restaurants."
+              </p>
+              <div className="text-sm">
+                <div className="text-zinc-200 font-medium">Marcus Williams</div>
+                <div className="text-zinc-500 uppercase tracking-wide">Bon Appétit</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Awards Strip */}
+          <div className="mt-16 pt-12 border-t border-zinc-800">
+            <div className="flex flex-wrap items-start justify-center gap-8 opacity-60">
+              <div className="text-center">
+                <div className="text-2xl font-serif text-amber-400 mb-1">★</div>
+                <div className="text-xs uppercase tracking-wide text-zinc-500">Michelin Guide</div>
+              </div>
+              <div className="text-center">
+                <div className="text-sm font-medium text-zinc-400 mb-1">James Beard</div>
+                <div className="text-xs uppercase tracking-wide text-zinc-500">Semifinalist</div>
+              </div>
+              <div className="text-center">
+                <div className="text-sm font-medium text-zinc-400 mb-1">Wine Spectator</div>
+                <div className="text-xs uppercase tracking-wide text-zinc-500">Award of Excellence</div>
+              </div>
+              <div className="text-center">
+                <div className="text-sm font-medium text-zinc-400 mb-1">AAA</div>
+                <div className="text-xs uppercase tracking-wide text-zinc-500">Four Diamond</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Reservation.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Card } from '@/components/ui/card';
+
+export default function Reservation() {
+  return (
+    <Section id="reservation" className="bg-zinc-900 py-24">
+      <Container>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <Heading as="h2" size="h1" className="font-serif text-4xl md:text-5xl mb-6 text-zinc-100">
+              Make a Reservation
+            </Heading>
+            <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+              Join us for an unforgettable culinary experience. Reservations are highly recommended.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-16 items-start">
+            {/* Booking Details */}
+            <div>
+              <div className="mb-8">
+                <h3 className="text-2xl font-serif text-amber-400 mb-6">Dining Hours</h3>
+                
+                <div className="space-y-4 mb-8">
+                  <div className="flex justify-between items-start py-3 border-b border-zinc-800">
+                    <span className="text-zinc-300 font-medium">Dinner Service</span>
+                    <span className="text-zinc-400">5:30 PM - 10:00 PM</span>
+                  </div>
+                  <div className="flex justify-between items-start py-3 border-b border-zinc-800">
+                    <span className="text-zinc-300 font-medium">Weekend Lunch</span>
+                    <span className="text-zinc-400">12:00 PM - 3:00 PM</span>
+                  </div>
+                  <div className="flex justify-between items-start py-3">
+                    <span className="text-zinc-300 font-medium">Closed</span>
+                    <span className="text-zinc-400">Mondays</span>
+                  </div>
+                </div>
+
+                <div className="bg-zinc-950 rounded-xl p-6 border border-zinc-800">
+                  <h4 className="text-lg font-serif text-amber-400 mb-4">Private Dining</h4>
+                  <p className="text-zinc-300 text-sm leading-relaxed mb-4">
+                    Our intimate private dining room accommodates up to 12 guests for special occasions, business dinners, and celebrations.
+                  </p>
+                  <Button variant="outline" className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-zinc-950">
+                    Inquire About Private Events
+                  </Button>
+                </div>
+
+                <div className="mt-6 text-sm text-zinc-400">
+                  <p className="mb-2">
+                    <strong className="text-zinc-300">Dress Code:</strong> Business casual or cocktail attire preferred
+                  </p>
+                  <p>
+                    <strong className="text-zinc-300">Cancellation:</strong> 24-hour notice required
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Reservation Form */}
+            <Card className="bg-zinc-950 border-zinc-800 p-8">
+              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                <div className="grid grid-cols-1 gap-4">
+                  <Input 
+                    label="Date" 
+                    type="date" 
+                    className="bg-zinc-900 border-zinc-700 text-zinc-100"
+                  />
+                  <Input 
+                    label="Time" 
+                    type="time" 
+                    className="bg-zinc-900 border-zinc-700 text-zinc-100"
+                  />
+                </div>
+                
+                <div className="grid grid-cols-1 gap-4">
+                  <Input 
+                    label="Party Size" 
+                    type="number" 
+                    min="1" 
+                    max="8"
+                    placeholder="2"
+                    className="bg-zinc-900 border-zinc-700 text-zinc-100"
+                  />
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-300 mb-2">Occasion</label>
+                    <select className="w-full px-3 py-2 bg-zinc-900 border border-zinc-700 rounded-lg text-zinc-100 focus:ring-2 focus:ring-amber-400 focus:border-transparent">
+                      <option value="">Select an occasion</option>
+                      <option value="dinner">Regular Dinner</option>
+                      <option value="anniversary">Anniversary</option>
+                      <option value="birthday">Birthday</option>
+                      <option value="business">Business Dinner</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <Input 
+                  label="Name" 
+                  placeholder="Full name"
+                  className="bg-zinc-900 border-zinc-700 text-zinc-100"
+                />
+                
+                <Input 
+                  label="Phone" 
+                  type="tel" 
+                  placeholder="(555) 123-4567"
+                  className="bg-zinc-900 border-zinc-700 text-zinc-100"
+                />
+                
+                <Input 
+                  label="Email" 
+                  type="email" 
+                  placeholder="your.email@example.com"
+                  className="bg-zinc-900 border-zinc-700 text-zinc-100"
+                />
+
+                <Textarea 
+                  label="Special Requests" 
+                  placeholder="Dietary restrictions, allergies, seating preferences..."
+                  className="bg-zinc-900 border-zinc-700 text-zinc-100"
+                />
+
+                <Button size="lg" className="w-full bg-amber-600 text-zinc-950 hover:bg-amber-500 font-medium">
+                  Request Reservation
+                </Button>
+
+                <p className="text-xs text-zinc-500 text-center">
+                  Reservations will be confirmed within 24 hours. For immediate assistance, call (555) 123-4567.
+                </p>
+              </form>
+            </Card>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Location.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+
+export default function Location() {
+  return (
+    <Section id="location" className="bg-zinc-950 py-24">
+      <Container>
+        <div className="max-w-4xl mx-auto text-center">
+          <Heading as="h2" size="h1" className="font-serif text-4xl md:text-5xl mb-6 text-zinc-100">
+            Visit Us
+          </Heading>
+          
+          <div className="mb-12">
+            <div className="text-2xl font-serif text-amber-400 mb-4">Maison Noir</div>
+            <div className="text-lg text-zinc-300 space-y-2">
+              <p>425 Park Avenue South</p>
+              <p>New York, NY 10016</p>
+              <p className="text-zinc-400">Between 29th & 30th Street</p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div>
+              <h3 className="text-lg font-serif text-amber-400 mb-3">Reservations</h3>
+              <p className="text-zinc-300">(212) 555-0123</p>
+              <p className="text-sm text-zinc-400">Daily 10 AM - 6 PM</p>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-serif text-amber-400 mb-3">Getting Here</h3>
+              <p className="text-zinc-300 text-sm">
+                Subway: 6 train to 28th Street<br/>
+                Bus: M101, M102, M103<br/>
+                Parking: Valet available
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-serif text-amber-400 mb-3">Private Events</h3>
+              <p className="text-zinc-300">(212) 555-0124</p>
+              <p className="text-sm text-zinc-400">events@maisonnoir.com</p>
+            </div>
+          </div>
+
+          <div className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800">
+            <h3 className="text-xl font-serif text-amber-400 mb-4">Hours of Operation</h3>
+            <div className="grid md:grid-cols-2 gap-6 text-sm">
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-zinc-300">Tuesday - Thursday</span>
+                  <span className="text-zinc-400">5:30 PM - 10:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-zinc-300">Friday - Saturday</span>
+                  <span className="text-zinc-400">5:30 PM - 11:00 PM</span>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-zinc-300">Sunday</span>
+                  <span className="text-zinc-400">12:00 PM - 9:00 PM</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-zinc-300">Monday</span>
+                  <span className="text-zinc-400">Closed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Footer.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Separator } from '@/components/ui/separator';
+
+export default function Footer() {
+  return (
+    <Section className="bg-black py-16 border-t border-zinc-800">
+      <Container>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="font-serif text-3xl text-amber-400 mb-4">Maison Noir</div>
+            <p className="text-zinc-400 italic">A culinary journey since 2018</p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-12 mb-12">
+            {/* Contact Information */}
+            <div>
+              <h3 className="text-lg font-serif text-amber-400 mb-4">Visit</h3>
+              <div className="space-y-2 text-zinc-300">
+                <p>425 Park Avenue South</p>
+                <p>New York, NY 10016</p>
+                <p className="text-zinc-400">Between 29th & 30th Street</p>
+              </div>
+              
+              <div className="mt-6">
+                <h4 className="text-sm font-medium text-zinc-300 mb-2">Hours</h4>
+                <div className="text-sm text-zinc-400 space-y-1">
+                  <p>Tue-Thu: 5:30 PM - 10:00 PM</p>
+                  <p>Fri-Sat: 5:30 PM - 11:00 PM</p>
+                  <p>Sun: 12:00 PM - 9:00 PM</p>
+                  <p>Mon: Closed</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Reservations & Contact */}
+            <div>
+              <h3 className="text-lg font-serif text-amber-400 mb-4">Reserve</h3>
+              <div className="space-y-3 text-zinc-300">
+                <div>
+                  <p className="font-medium">Reservations</p>
+                  <p className="text-zinc-400">(212) 555-0123</p>
+                </div>
+                
+                <div>
+                  <p className="font-medium">Private Dining</p>
+                  <p className="text-zinc-400">(212) 555-0124</p>
+                  <p className="text-zinc-400 text-sm">events@maisonnoir.com</p>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h4 className="text-sm font-medium text-zinc-300 mb-2">Dress Code</h4>
+                <p className="text-sm text-zinc-400">Business casual or cocktail attire preferred</p>
+              </div>
+            </div>
+          </div>
+
+          <Separator className="bg-zinc-800 mb-8" />
+
+          <div className="flex flex-col md:flex-row justify-between items-start space-y-4 md:space-y-0">
+            <div className="flex items-start space-x-6 text-sm text-zinc-400">
+              <span>© 2024 Maison Noir. All rights reserved.</span>
+            </div>
+            
+            <div className="flex items-start space-x-6">
+              <a href="#" className="text-zinc-400 hover:text-amber-400 transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                </svg>
+              </a>
+              <a href="#" className="text-zinc-400 hover:text-amber-400 transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.219-.359-1.219c0-1.142.662-1.995 1.488-1.995.219 0 .359.041.469.114.219.146.359.406.359.719 0 .437-.219 1.099-.359 1.708-.125.573-.041 1.234.359 1.609.406.359.906.437 1.406.281.5-.156.906-.437 1.219-.844.344-.437.531-.984.531-1.609 0-1.391-1.016-2.516-2.641-2.516-1.828 0-3.297 1.328-3.297 3.141 0 .625.234 1.297.641 1.734.094.109.125.25.094.375-.047.188-.156.594-.188.719-.047.156-.172.188-.297.125-1.031-.406-1.672-1.672-1.672-2.703 0-2.172 1.578-4.172 4.547-4.172 2.391 0 4.25 1.703 4.25 3.984 0 2.375-1.5 4.297-3.578 4.297-.703 0-1.359-.375-1.594-.812 0 0-.359 1.375-.438 1.688-.156.594-.578 1.344-.859 1.797.656.203 1.359.313 2.094.313 6.625 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+                </svg>
+              </a>
+              <a href="#" className="text-zinc-400 hover:text-amber-400 transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===

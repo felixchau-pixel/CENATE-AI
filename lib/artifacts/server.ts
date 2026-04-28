@@ -19,9 +19,11 @@ export type SaveDocumentProps = {
 export type CreateDocumentCallbackProps = {
   id: string;
   title: string;
+  description?: string;
   dataStream: UIMessageStreamWriter<ChatMessage>;
   session: Session;
   modelId: string;
+  uploadedImageUrls?: string[];
 };
 
 export type UpdateDocumentCallbackProps = {
@@ -34,8 +36,8 @@ export type UpdateDocumentCallbackProps = {
 
 export type DocumentHandler<T = ArtifactKind> = {
   kind: T;
-  onCreateDocument: (args: CreateDocumentCallbackProps) => Promise<void>;
-  onUpdateDocument: (args: UpdateDocumentCallbackProps) => Promise<void>;
+  onCreateDocument: (args: CreateDocumentCallbackProps) => Promise<string>;
+  onUpdateDocument: (args: UpdateDocumentCallbackProps) => Promise<string>;
 };
 
 export function createDocumentHandler<T extends ArtifactKind>(config: {
@@ -49,22 +51,36 @@ export function createDocumentHandler<T extends ArtifactKind>(config: {
       const draftContent = await config.onCreateDocument({
         id: args.id,
         title: args.title,
+        description: args.description,
         dataStream: args.dataStream,
         session: args.session,
         modelId: args.modelId,
+        uploadedImageUrls: args.uploadedImageUrls,
       });
 
-      if (args.session?.user?.id) {
-        await saveDocument({
-          id: args.id,
-          title: args.title,
-          content: draftContent,
-          kind: config.kind,
-          userId: args.session.user.id,
-        });
+      console.log("[save-guard:create]", {
+        userId: args.session?.user?.id ?? "MISSING",
+        docId: args.id,
+      });
+
+      if (!args.session?.user?.id) {
+        // This should never fire for authenticated users — the chat route already
+        // guards on session.user. If it does fire, it means the JWT was issued
+        // without a user id and the auth.ts fallback didn't catch it.
+        throw new Error(
+          "Cannot save document: session user ID is not available. The user may need to sign out and back in."
+        );
       }
 
-      return;
+      await saveDocument({
+        id: args.id,
+        title: args.title,
+        content: draftContent,
+        kind: config.kind,
+        userId: args.session.user.id,
+      });
+
+      return draftContent;
     },
     onUpdateDocument: async (args: UpdateDocumentCallbackProps) => {
       const draftContent = await config.onUpdateDocument({
@@ -75,17 +91,26 @@ export function createDocumentHandler<T extends ArtifactKind>(config: {
         modelId: args.modelId,
       });
 
-      if (args.session?.user?.id) {
-        await saveDocument({
-          id: args.document.id,
-          title: args.document.title,
-          content: draftContent,
-          kind: config.kind,
-          userId: args.session.user.id,
-        });
+      console.log("[save-guard:update]", {
+        userId: args.session?.user?.id ?? "MISSING",
+        docId: args.document.id,
+      });
+
+      if (!args.session?.user?.id) {
+        throw new Error(
+          "Cannot save document: session user ID is not available. The user may need to sign out and back in."
+        );
       }
 
-      return;
+      await saveDocument({
+        id: args.document.id,
+        title: args.document.title,
+        content: draftContent,
+        kind: config.kind,
+        userId: args.session.user.id,
+      });
+
+      return draftContent;
     },
   };
 }

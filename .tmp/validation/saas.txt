@@ -1,0 +1,2258 @@
+===PROJECT_MANIFEST===
+{
+  "type": "project",
+  "framework": "vite-react-ts",
+  "title": "FlowSync - Workflow Automation Platform",
+  "entryFile": "src/main.tsx",
+  "previewEntryFile": "src/App.tsx",
+  "siteType": "saas",
+  "designFamily": "modern_minimal",
+  "designDirection": "Dark product-grade interface with crisp hierarchy and electric blue accents",
+  "colorStrategy": "Deep ink (#0a0a0a) background, surface (#111111), electric blue (#3B82F6) accent, white text",
+  "typography": "Inter Display for headings, Inter for body text",
+  "sectionOrder": [
+    "Navbar",
+    "Hero",
+    "ProductDemo",
+    "Capabilities",
+    "Metrics",
+    "Testimonial",
+    "Pricing",
+    "Conversion",
+    "Footer"
+  ],
+  "assets": [
+    {
+      "path": "generated/hero.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmhlcm88L3RleHQ+Cjwvc3ZnPg==",
+      "prompt": "Project brief: build me a saas landing page. Create the hero image for a saas website in the Modern Minimal family. Subject: high-fidelity product UI inside a real application shell, not a stock photo. Style: Modern Minimal. Framed UI or documentary imagery with simple chrome, clean aspect ratios, restrained overlays, and utility-first support blocks. Grid texture, status dots, clean stat rails, subtle panel strokes, sharp footer closure. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/support.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPnN1cHBvcnQ8L3RleHQ+Cjwvc3ZnPg==",
+      "prompt": "Project brief: build me a saas landing page. Create a supporting image for a saas website in the Modern Minimal family. Subject: product workflow, analytics panel, or automation interface detail. Style must match the hero image. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/gallery-1.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkxPC90ZXh0Pgo8L3N2Zz4=",
+      "prompt": "Project brief: build me a saas landing page. Create gallery image 1 for a saas website in the Modern Minimal family. Subject: distinct product views, dashboards, workflows, or customer proof screens. Match the same palette and framing language. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/gallery-2.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkyPC90ZXh0Pgo8L3N2Zz4=",
+      "prompt": "Project brief: build me a saas landing page. Create gallery image 2 for a saas website in the Modern Minimal family. Subject: distinct product views, dashboards, workflows, or customer proof screens. Keep the same visual grammar but vary the scene. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/gallery-3.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkzPC90ZXh0Pgo8L3N2Zz4=",
+      "prompt": "Project brief: build me a saas landing page. Create gallery image 3 for a saas website in the Modern Minimal family. Subject: distinct product views, dashboards, workflows, or customer proof screens. Keep the same visual grammar but vary the crop and distance. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    },
+    {
+      "path": "generated/detail-1.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmRldGFpbDE8L3RleHQ+Cjwvc3ZnPg==",
+      "prompt": "Project brief: build me a saas landing page. Create a detail image for a saas website in the Modern Minimal family. Subject: close-up product workflow or team-in-context supporting visual. Keep the same palette and motif language. No text, no logos, no watermarks, no UI chrome unless the niche is SaaS, no collage borders unless requested, and maintain one coherent art direction."
+    }
+  ]
+}
+===END_MANIFEST===
+===FILE:package.json===
+{
+  "name": "cenate-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:dev": "vite build --mode development",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.2",
+    "@radix-ui/react-alert-dialog": "^1.1.4",
+    "@radix-ui/react-aspect-ratio": "^1.1.1",
+    "@radix-ui/react-avatar": "^1.1.2",
+    "@radix-ui/react-checkbox": "^1.1.3",
+    "@radix-ui/react-collapsible": "^1.1.2",
+    "@radix-ui/react-context-menu": "^2.2.4",
+    "@radix-ui/react-dialog": "^1.1.4",
+    "@radix-ui/react-dropdown-menu": "^2.1.4",
+    "@radix-ui/react-hover-card": "^1.1.4",
+    "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-menubar": "^1.1.4",
+    "@radix-ui/react-navigation-menu": "^1.2.3",
+    "@radix-ui/react-popover": "^1.1.4",
+    "@radix-ui/react-progress": "^1.1.1",
+    "@radix-ui/react-radio-group": "^1.2.2",
+    "@radix-ui/react-scroll-area": "^1.2.2",
+    "@radix-ui/react-select": "^2.1.4",
+    "@radix-ui/react-separator": "^1.1.1",
+    "@radix-ui/react-slider": "^1.2.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.2",
+    "@radix-ui/react-tabs": "^1.1.2",
+    "@radix-ui/react-toast": "^1.2.4",
+    "@radix-ui/react-toggle": "^1.1.1",
+    "@radix-ui/react-toggle-group": "^1.1.1",
+    "@radix-ui/react-tooltip": "^1.1.6",
+    "@hookform/resolvers": "^3.9.1",
+    "@tanstack/react-query": "^5.62.8",
+    "@radix-ui/react-visually-hidden": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.0.4",
+    "date-fns": "^4.1.0",
+    "embla-carousel-react": "^8.5.1",
+    "input-otp": "^1.4.1",
+    "lucide-react": "^0.468.0",
+    "next-themes": "^0.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-day-picker": "^9.4.3",
+    "react-hook-form": "^7.54.2",
+    "react-resizable-panels": "^2.1.7",
+    "react-router-dom": "^7.1.1",
+    "recharts": "^2.15.0",
+    "sonner": "^1.7.1",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript-eslint": "^8.18.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.1",
+    "vitest": "^2.1.8"
+  }
+}
+===END_FILE===
+===FILE:bun.lock===
+# bun lockfile generated by Cenate
+[install]
+saveTextLockfile = true
+
+[packages]
+
+===END_FILE===
+===FILE:index.html===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cenate Website</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+===END_FILE===
+===FILE:tsconfig.json===
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
+===END_FILE===
+===FILE:tsconfig.app.json===
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}
+===END_FILE===
+===FILE:tsconfig.node.json===
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "vitest.config.ts", "eslint.config.js"]
+}
+===END_FILE===
+===FILE:vite.config.ts===
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
+===END_FILE===
+===FILE:postcss.config.js===
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+===END_FILE===
+===FILE:tailwind.config.ts===
+import type { Config } from "tailwindcss";
+
+export default {
+  darkMode: ["class"],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}", "./index.html"],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      fontFamily: {
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+      },
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "count-up": {
+          from: { opacity: "0", transform: "scale(0.8)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "count-up": "count-up 0.5s ease-out forwards",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config;
+===END_FILE===
+===FILE:eslint.config.js===
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+  { ignores: ["dist"] },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+    },
+  }
+);
+===END_FILE===
+===FILE:vitest.config.ts===
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: "./src/test/setup.ts",
+  },
+});
+===END_FILE===
+===FILE:components.json===
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "src/index.css",
+    "baseColor": "zinc",
+    "cssVariables": false
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "hooks": "@/hooks",
+    "lib": "@/lib"
+  }
+}
+===END_FILE===
+===FILE:README.md===
+# Cenate Website
+
+This project was generated by Cenate with a fixed Lovable-style Vite + React + TypeScript scaffold.
+
+## Scripts
+
+- `npm run dev`
+- `npm run build`
+- `npm run build:dev`
+- `npm run lint`
+- `npm run preview`
+- `npm run test`
+- `npm run test:watch`
+
+===END_FILE===
+===FILE:.gitignore===
+node_modules
+dist
+.DS_Store
+.env
+.env.local
+coverage
+*.log
+===END_FILE===
+===FILE:public/robots.txt===
+User-agent: *
+Allow: /
+===END_FILE===
+===FILE:public/placeholder.svg===
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="24" fill="#F4F4F5"/>
+  <path d="M120 210L180 150L225 195L290 125L340 210H120Z" fill="#D4D4D8"/>
+  <circle cx="160" cy="110" r="24" fill="#A1A1AA"/>
+</svg>
+===END_FILE===
+===FILE:public/favicon.ico===
+placeholder favicon
+===END_FILE===
+===FILE:src/main.tsx===
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import "./App.css";
+
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { error: Error | null }
+> {
+  state: { error: Error | null } = { error: null };
+  static getDerivedStateFromError(error: Error) {
+    return { error };
+  }
+  componentDidCatch(error: Error) {
+    const el = document.getElementById("cenate-error");
+    if (el) {
+      el.style.display = "block";
+      el.textContent = "Render error: " + error.message;
+    }
+  }
+  render() {
+    if (this.state.error) {
+      return React.createElement(
+        "div",
+        {
+          style: {
+            padding: 32,
+            color: "#b91c1c",
+            fontFamily: "ui-monospace, monospace",
+            fontSize: 13,
+            whiteSpace: "pre-wrap" as const,
+            background: "#fff5f5",
+            minHeight: "100vh",
+          },
+        },
+        "Render error: " + this.state.error.message
+      );
+    }
+    return this.props.children;
+  }
+}
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </React.StrictMode>
+);
+===END_FILE===
+===FILE:src/index.css===
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 1rem;
+
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.14), hsl(var(--background)) 55%, hsl(var(--accent) / 0.22));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.92) 100%);
+    --shadow-soft: 0 20px 45px -30px rgb(15 23 42 / 0.28);
+    --shadow-card: 0 18px 40px -28px rgb(15 23 42 / 0.22);
+    --shadow-card-hover: 0 24px 60px -32px rgb(15 23 42 / 0.32);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 47.4% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 47.4% 8.6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 47.4% 8.6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --gradient-hero: linear-gradient(140deg, hsl(var(--primary) / 0.12), hsl(var(--background)) 52%, hsl(217.2 91.2% 59.8% / 0.28));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    background-image:
+      radial-gradient(circle at top, hsl(var(--primary) / 0.06), transparent 28%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 100%);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--primary) / 0.72));
+  }
+
+  .surface-card {
+    background-image: linear-gradient(180deg, hsl(var(--card) / 0.98), hsl(var(--card) / 0.92));
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-panel {
+    background: hsl(var(--card) / 0.82);
+    backdrop-filter: blur(14px);
+    border: 1px solid hsl(var(--border) / 0.7);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .section-shell {
+    position: relative;
+  }
+
+  .section-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, hsl(var(--background) / 0), hsl(var(--primary) / 0.03));
+    opacity: 0.8;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-count-up {
+  animation: count-up 0.5s ease-out forwards;
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+
+:root {
+  --background: 0 0% 99%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 224 76% 54%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 220 20% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 220 20% 96%;
+  --muted-foreground: 220 9% 42%;
+  --accent: 214 78% 96%;
+  --accent-foreground: 224 76% 36%;
+  --border: 220 14% 90%;
+  --input: 220 14% 90%;
+  --ring: 224 76% 54%;
+  --radius: 1rem;
+  --font-heading: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 30% 98%) 58%, hsl(224 76% 54% / 0.12));
+  --gradient-surface: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 20% 97%) 100%);
+  --shadow-soft: 0 16px 38px -30px rgb(15 23 42 / 0.14);
+  --shadow-card: 0 16px 42px -28px rgb(15 23 42 / 0.12);
+  --shadow-card-hover: 0 22px 50px -26px rgb(15 23 42 / 0.18);
+}
+body {
+  background-image:
+    linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 23% 98%) 100%);
+}
+
+@layer utilities {
+
+.surface-card {
+  border-color: hsl(var(--border));
+  background-image: linear-gradient(180deg, hsl(var(--card)), hsl(var(--secondary) / 0.78));
+}
+
+.surface-panel {
+  background: hsl(var(--card) / 0.86);
+  border: 1px solid hsl(var(--border));
+}
+
+.eyebrow {
+  color: hsl(var(--primary));
+  letter-spacing: 0.22em;
+}
+
+.family-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+}
+
+.family-grid {
+  background-image:
+    linear-gradient(hsl(var(--border) / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.35) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+}
+===END_FILE===
+===FILE:src/App.css===
+#root {
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+===END_FILE===
+===FILE:src/vite-env.d.ts===
+/// <reference types="vite/client" />
+===END_FILE===
+===FILE:src/assets/.gitkeep===
+
+===END_FILE===
+===FILE:src/hooks/use-mobile.ts===
+import { useEffect, useState } from "react";
+
+export function useMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    const update = () => setIsMobile(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+===END_FILE===
+===FILE:src/pages/Home.tsx===
+import App from "../App";
+
+export default function HomePage() {
+  return <App />;
+}
+===END_FILE===
+===FILE:src/test/setup.ts===
+import "@testing-library/jest-dom";
+===END_FILE===
+===FILE:src/test/App.test.tsx===
+import { render, screen } from "@testing-library/react";
+import App from "../App";
+
+describe("App", () => {
+  it("renders without crashing", () => {
+    render(<App />);
+    expect(screen.getByRole("main")).toBeInTheDocument();
+  });
+});
+===END_FILE===
+===FILE:src/lib/utils.ts===
+import { clsx, type ClassValue } from "clsx";
+
+export function cn(...inputs: ClassValue[]) {
+  return clsx(inputs);
+}
+===END_FILE===
+===FILE:src/components/ui/button.tsx===
+import React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };
+export default Button;
+===END_FILE===
+===FILE:src/components/ui/accordion.tsx===
+import React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { cn } from "@/lib/utils";
+
+const Accordion = AccordionPrimitive.Root;
+
+const AccordionItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <AccordionPrimitive.Item ref={ref} className={cn("border-b", className)} {...props} />
+  )
+);
+AccordionItem.displayName = "AccordionItem";
+
+const AccordionTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        ref={ref}
+        className={cn(
+          "flex flex-1 items-center justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
+          className
+        )}
+        {...props}
+      >
+        {children}
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6" /></svg>
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  )
+);
+AccordionTrigger.displayName = "AccordionTrigger";
+
+const AccordionContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Content ref={ref} className="overflow-hidden text-sm" {...props}>
+      <div className={cn("pb-4 pt-0", className)}>{children}</div>
+    </AccordionPrimitive.Content>
+  )
+);
+AccordionContent.displayName = "AccordionContent";
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+===END_FILE===
+===FILE:src/components/ui/tabs.tsx===
+import React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { cn } from "@/lib/utils";
+
+const Tabs = TabsPrimitive.Root;
+
+const TabsList = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.List
+      ref={ref}
+      className={cn(
+        "inline-flex h-10 items-center justify-center rounded-lg bg-zinc-100 p-1 text-zinc-500",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsList.displayName = "TabsList";
+
+const TabsTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-all",
+        "data-[state=active]:bg-white data-[state=active]:text-zinc-950 data-[state=active]:shadow-sm",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsTrigger.displayName = "TabsTrigger";
+
+const TabsContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Content
+      ref={ref}
+      className={cn("mt-2", className)}
+      {...props}
+    />
+  )
+);
+TabsContent.displayName = "TabsContent";
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+===END_FILE===
+===FILE:src/components/ui/dialog.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Dialog = DialogPrimitive.Root;
+const DialogTrigger = DialogPrimitive.Trigger;
+const DialogClose = DialogPrimitive.Close;
+const DialogPortal = DialogPrimitive.Portal;
+
+const DialogOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn(
+        "fixed inset-0 z-50 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+DialogOverlay.displayName = "DialogOverlay";
+
+const DialogContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <DialogPortal>
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed left-[50%] top-[50%] z-50 w-full max-w-lg translate-x-[-50%] translate-y-[-50%] rounded-xl border bg-white p-6 shadow-xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  )
+);
+DialogContent.displayName = "DialogContent";
+
+const DialogTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Title ref={ref} className={cn("text-lg font-semibold", className)} {...props} />
+  )
+);
+DialogTitle.displayName = "DialogTitle";
+
+const DialogDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Description ref={ref} className={cn("text-sm text-zinc-500", className)} {...props} />
+  )
+);
+DialogDescription.displayName = "DialogDescription";
+
+export { Dialog, DialogTrigger, DialogContent, DialogClose, DialogOverlay, DialogTitle, DialogDescription };
+===END_FILE===
+===FILE:src/components/ui/sheet.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Sheet = DialogPrimitive.Root;
+const SheetTrigger = DialogPrimitive.Trigger;
+const SheetClose = DialogPrimitive.Close;
+
+const SheetOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn("fixed inset-0 z-50 bg-black/60 backdrop-blur-sm", className)}
+      {...props}
+    />
+  )
+);
+SheetOverlay.displayName = "SheetOverlay";
+
+type SheetContentProps = React.HTMLAttributes<HTMLDivElement> & {
+  side?: "left" | "right" | "top" | "bottom";
+};
+
+const sideStyles: Record<string, string> = {
+  right: "inset-y-0 right-0 h-full w-3/4 max-w-sm border-l translate-x-0",
+  left: "inset-y-0 left-0 h-full w-3/4 max-w-sm border-r translate-x-0",
+  top: "inset-x-0 top-0 border-b",
+  bottom: "inset-x-0 bottom-0 border-t",
+};
+
+const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
+  ({ side = "right", className, children, ...props }, ref) => (
+    <DialogPrimitive.Portal>
+      <SheetOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed z-50 bg-white p-6 shadow-xl transition-transform duration-300",
+          sideStyles[side],
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPrimitive.Portal>
+  )
+);
+SheetContent.displayName = "SheetContent";
+
+export { Sheet, SheetTrigger, SheetContent, SheetClose };
+===END_FILE===
+===FILE:src/components/ui/input.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+  error?: string;
+};
+
+export default function Input({ label, error, className, id, ...props }: InputProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <input
+        id={inputId}
+        className={cn(
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          error && "border-destructive focus-visible:ring-destructive",
+          className
+        )}
+        {...props}
+      />
+      {error && <p className="mt-1 text-sm text-destructive">{error}</p>}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/textarea.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  label?: string;
+};
+
+export default function Textarea({ label, className, id, ...props }: TextareaProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <textarea
+        id={inputId}
+        rows={4}
+        className={cn(
+          "w-full rounded-lg border px-4 py-2.5 text-base outline-none transition-colors resize-none",
+          className
+        )}
+        {...props}
+      />
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/badge.tsx===
+import React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const badgeVariants = cva(
+  "inline-flex items-center rounded-full font-medium",
+  {
+    variants: {
+      size: {
+        sm: "px-2 py-0.5 text-[10px]",
+        md: "px-2.5 py-0.5 text-xs",
+        lg: "px-3 py-1 text-sm",
+      },
+    },
+    defaultVariants: {
+      size: "md",
+    },
+  }
+);
+
+type BadgeProps = React.HTMLAttributes<HTMLSpanElement> &
+  VariantProps<typeof badgeVariants>;
+
+export default function Badge({ className, size, ...props }: BadgeProps) {
+  return (
+    <span className={cn(badgeVariants({ size }), className)} {...props} />
+  );
+}
+
+export { badgeVariants };
+===END_FILE===
+===FILE:src/components/ui/card.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type CardProps = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Card({ className, children }: CardProps) {
+  return (
+    <div className={cn("surface-card rounded-[calc(var(--radius)+6px)] border bg-card text-card-foreground shadow-sm p-6", className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/section.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SectionProps = {
+  id?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Section({ id, className, children }: SectionProps) {
+  return (
+    <section id={id} className={cn("py-16 md:py-24", className)}>
+      {children}
+    </section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/container.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type ContainerProps = {
+  size?: "sm" | "md" | "lg" | "xl" | "full";
+  className?: string;
+  children: React.ReactNode;
+};
+
+const maxWidths: Record<string, string> = {
+  sm: "max-w-3xl",
+  md: "max-w-5xl",
+  lg: "max-w-6xl",
+  xl: "max-w-7xl",
+  full: "max-w-full",
+};
+
+export default function Container({ size = "xl", className, children }: ContainerProps) {
+  return (
+    <div className={cn("mx-auto px-4 sm:px-6 lg:px-8", maxWidths[size], className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/heading.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type HeadingProps = {
+  as?: "h1" | "h2" | "h3" | "h4";
+  size?: "display" | "h1" | "h2" | "h3";
+  eyebrow?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+const sizeStyles: Record<string, string> = {
+  display: "text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]",
+  h1: "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight",
+  h2: "text-3xl md:text-4xl font-semibold tracking-tight",
+  h3: "text-xl md:text-2xl font-semibold",
+};
+
+export default function Heading({
+  as: Tag = "h2",
+  size = "h2",
+  eyebrow,
+  className,
+  children,
+}: HeadingProps) {
+  return (
+    <div>
+      {eyebrow && (
+        <span className="block text-xs uppercase tracking-widest font-medium mb-3 opacity-60">
+          {eyebrow}
+        </span>
+      )}
+      <Tag className={cn(sizeStyles[size], className)}>{children}</Tag>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/separator.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SeparatorProps = {
+  orientation?: "horizontal" | "vertical";
+  className?: string;
+};
+
+export default function Separator({ orientation = "horizontal", className }: SeparatorProps) {
+  return (
+    <div
+      role="separator"
+      className={cn(
+        "shrink-0 bg-current opacity-10",
+        orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
+        className
+      )}
+    />
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/aspect-ratio.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type AspectRatioProps = {
+  ratio?: number;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function AspectRatio({ ratio = 16 / 9, className, children }: AspectRatioProps) {
+  return (
+    <div className={cn("relative w-full overflow-hidden", className)} style={{ paddingBottom: (1 / ratio) * 100 + "%" }}>
+      <div className="absolute inset-0">{children}</div>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/testimonial.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TestimonialProps = {
+  quote: string;
+  author: string;
+  role?: string;
+  avatar?: string;
+  className?: string;
+};
+
+export default function Testimonial({ quote, author, role, avatar, className }: TestimonialProps) {
+  return (
+    <figure className={cn("space-y-4", className)}>
+      <blockquote className="text-lg md:text-xl leading-relaxed italic">
+        &ldquo;{quote}&rdquo;
+      </blockquote>
+      <figcaption className="flex items-center gap-3">
+        {avatar && (
+          <img src={avatar} alt={author} className="w-10 h-10 rounded-full object-cover" />
+        )}
+        <div>
+          <p className="font-medium text-sm">{author}</p>
+          {role && <p className="text-xs opacity-60">{role}</p>}
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/stats-band.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import { cn } from "@/lib/utils";
+
+type Stat = {
+  value: string;
+  label: string;
+};
+
+type StatsBandProps = {
+  stats: Stat[];
+  className?: string;
+};
+
+export default function StatsBand({ stats, className }: StatsBandProps) {
+  return (
+    <Section className={cn("py-12", className)}>
+      <Container>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <p className="text-3xl md:text-5xl font-bold">{s.value}</p>
+              <p className="text-sm mt-1 opacity-60">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/gallery.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type GalleryImage = {
+  src: string;
+  alt: string;
+  span?: "normal" | "wide" | "tall";
+};
+
+type GalleryProps = {
+  images: GalleryImage[];
+  className?: string;
+};
+
+const spanClasses: Record<string, string> = {
+  normal: "",
+  wide: "md:col-span-2",
+  tall: "md:row-span-2",
+};
+
+export default function Gallery({ images, className }: GalleryProps) {
+  return (
+    <div className={cn("grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4", className)}>
+      {images.map((img, i) => (
+        <div key={i} className={cn("overflow-hidden rounded-lg", spanClasses[img.span || "normal"])}>
+          <img
+            src={img.src}
+            alt={img.alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/mobile-nav.tsx===
+import React from "react";
+import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/ui/sheet";
+import Button from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+type MobileNavProps = {
+  links: { label: string; href: string }[];
+  brandName: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  className?: string;
+};
+
+export default function MobileNav({ links, brandName, ctaLabel, ctaHref, className }: MobileNavProps) {
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <button className={cn("md:hidden p-2", className)} aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </SheetTrigger>
+      <SheetContent side="right" className="flex flex-col pt-16">
+        <p className="text-lg font-semibold mb-8">{brandName}</p>
+        <nav className="flex flex-col gap-4">
+          {links.map((link) => (
+            <SheetClose key={link.href} asChild>
+              <a href={link.href} className="text-lg py-2 border-b border-zinc-100 hover:text-zinc-600 transition-colors">
+                {link.label}
+              </a>
+            </SheetClose>
+          ))}
+        </nav>
+        {ctaLabel && ctaHref && (
+          <div className="mt-auto pt-8">
+            <SheetClose asChild>
+              <Button asChild size="lg" className="w-full">
+                <a href={ctaHref}>{ctaLabel}</a>
+              </Button>
+            </SheetClose>
+          </div>
+        )}
+      </SheetContent>
+    </Sheet>
+  );
+}
+===END_FILE===
+===FILE:src/assets/generated-images.ts===
+export const projectImages = {
+  hero: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmhlcm88L3RleHQ+Cjwvc3ZnPg==`,
+  support: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPnN1cHBvcnQ8L3RleHQ+Cjwvc3ZnPg==`,
+  gallery1: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkxPC90ZXh0Pgo8L3N2Zz4=`,
+  gallery2: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkyPC90ZXh0Pgo8L3N2Zz4=`,
+  gallery3: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmdhbGxlcnkzPC90ZXh0Pgo8L3N2Zz4=`,
+  detail1: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxyZWN0IHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIGZpbGw9IiNGOEZBRkYiLz4KICA8cmVjdCB4PSI4MCIgeT0iODAiIHdpZHRoPSIxNDQwIiBoZWlnaHQ9Ijg0MCIgcng9IjM2IiBmaWxsPSIjRjhGQUZGIiBzdHJva2U9IiM0MDY2RjUiIHN0cm9rZS1vcGFjaXR5PSIwLjM1Ii8+CiAgPHBhdGggZD0iTTE2MCA3NDBDMzQwIDU2MCA0NzAgNDgwIDYzMiA1MjBDNzk0IDU2MCA4NjIgNzEyIDEwMTggNzA2QzExNTIgNzAwIDEyMzggNTk0IDE0NDAgNDAwVjkyMEgxNjBWNzQwWiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPGNpcmNsZSBjeD0iMzAwIiBjeT0iMjYwIiByPSI5NiIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjIwMiIgd2lkdGg9IjQyMCIgaGVpZ2h0PSIyOCIgcng9IjE0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuMjQiLz4KICA8cmVjdCB4PSI2MTAiIHk9IjI1NiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxOCIgcng9IjkiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC4xNiIvPgogIDxyZWN0IHg9IjYxMCIgeT0iMjk4IiB3aWR0aD0iMzQwIiBoZWlnaHQ9IjE4IiByeD0iOSIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjE2Ii8+CiAgPHJlY3QgeD0iNjEwIiB5PSIzNzAiIHdpZHRoPSIyMzAiIGhlaWdodD0iNjQiIHJ4PSIxOCIgZmlsbD0iIzQwNjZGNSIgZmlsbC1vcGFjaXR5PSIwLjg0Ii8+CiAgPHRleHQgeD0iNjEwIiB5PSI1NDAiIGZpbGw9IiM0MDY2RjUiIGZpbGwtb3BhY2l0eT0iMC43OCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0NCIgbGV0dGVyLXNwYWNpbmc9IjgiPk1PREVSTiBNSU5JTUFMPC90ZXh0PgogIDx0ZXh0IHg9IjYxMCIgeT0iNjA0IiBmaWxsPSIjNDA2NkY1IiBmaWxsLW9wYWNpdHk9IjAuOTYiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNzIiIGZvbnQtd2VpZ2h0PSI3MDAiPmRldGFpbDE8L3RleHQ+Cjwvc3ZnPg==`,
+} as const;
+
+export type ProjectImageKey = keyof typeof projectImages;
+
+export default projectImages;
+===END_FILE===
+===FILE:src/App.tsx===
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import ProductDemo from './components/ProductDemo';
+import Capabilities from './components/Capabilities';
+import Metrics from './components/Metrics';
+import Testimonial from './components/Testimonial';
+import Pricing from './components/Pricing';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <main role="main" className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <Hero />
+      <ProductDemo />
+      <Capabilities />
+      <Metrics />
+      <Testimonial />
+      <Pricing />
+<Footer />
+    </main>
+  );
+}
+
+export default App;
+===END_FILE===
+===FILE:src/components/Navbar.tsx===
+import React from 'react';
+import Container from '@/components/ui/container';
+import Button from '@/components/ui/button';
+import MobileNav from '@/components/ui/mobile-nav';
+
+const Navbar = () => {
+  const navLinks = [
+    { label: 'Features', href: '#features' },
+    { label: 'Pricing', href: '#pricing' },
+    { label: 'About', href: '#about' },
+    { label: 'Contact', href: '#contact' }
+  ];
+
+  return (
+    <nav className="sticky top-0 z-50 bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800">
+      <Container>
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center">
+            <a href="/" className="text-xl font-bold text-white">
+              FlowSync
+            </a>
+          </div>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-zinc-300 hover:text-white transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+              Start Free Trial
+            </Button>
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden">
+            <MobileNav
+              links={navLinks}
+              brandName="FlowSync"
+              ctaLabel="Start Free Trial"
+              ctaHref="#signup"
+              className="bg-zinc-900"
+            />
+          </div>
+        </div>
+      </Container>
+    </nav>
+  );
+};
+
+export default Navbar;
+===END_FILE===
+===FILE:src/components/Hero.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import Button from '@/components/ui/button';
+import { projectImages } from '@/assets/generated-images';
+
+const Hero = () => {
+  return (
+    <Section className="min-h-[85vh] flex items-center bg-zinc-950 text-white relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-grid-zinc-800/20 bg-[size:40px_40px]" />
+      
+      <Container>
+        <div className="grid lg:grid-cols-5 gap-12 items-center">
+          {/* Left column - Content */}
+          <div className="lg:col-span-2 max-w-xl">
+            <Heading as="h1" size="display" className="font-heading text-white leading-[1.1]">
+              Automate Your Workflow in Minutes
+            </Heading>
+            <p className="mt-6 text-lg text-zinc-300 max-w-lg leading-relaxed">
+              Connect your favorite tools, automate repetitive tasks, and focus on what matters most. No coding required.
+            </p>
+            <div className="mt-8">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                Start Free Trial
+              </Button>
+            </div>
+            
+            {/* Credibility rail */}
+            <div className="mt-12 flex items-center space-x-8">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full" />
+                <span className="text-sm text-zinc-400">10,000+ active teams</span>
+              </div>
+              <div className="text-sm text-zinc-400">SOC 2 Certified</div>
+              <div className="text-sm text-zinc-400">99.9% Uptime</div>
+            </div>
+          </div>
+
+          {/* Right column - Product window */}
+          <div className="lg:col-span-3 relative">
+            <div className="bg-zinc-900 rounded-t-xl border border-zinc-700 shadow-2xl overflow-hidden">
+              {/* Browser chrome */}
+              <div className="bg-zinc-800 px-4 py-3 flex items-center space-x-2 border-b border-zinc-700">
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 bg-red-500 rounded-full" />
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full" />
+                  <div className="w-3 h-3 bg-green-500 rounded-full" />
+                </div>
+                <div className="flex-1 mx-4">
+                  <div className="bg-zinc-700 rounded px-3 py-1 text-xs text-zinc-400">
+                    app.flowsync.com/dashboard
+                  </div>
+                </div>
+              </div>
+              
+              {/* Product interface */}
+              <div className="aspect-[16/10]">
+                <img 
+                  src={projectImages.hero} 
+                  alt="FlowSync dashboard interface showing workflow automation tools"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Subtle glow effect */}
+            <div className="absolute -inset-4 bg-blue-500/10 blur-3xl -z-10" />
+          </div>
+        </div>
+      
+            <div className="mt-8 grid max-w-xl grid-cols-3 gap-3 text-left sm:gap-4">
+              {[
+                { value: "120+", label: "Projects shipped" },
+                { value: "24/7", label: "Response coverage" },
+                { value: "4.9/5", label: "Client rating" },
+              ].map((item) => (
+                <div key={item.label} className="surface-card rounded-2xl border px-4 py-3">
+                  <p className="text-lg font-semibold">{item.value}</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">{item.label}</p>
+                </div>
+              ))}
+            </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default Hero;
+===END_FILE===
+===FILE:src/components/ProductDemo.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import { projectImages } from '@/assets/generated-images';
+
+const ProductDemo = () => {
+  const callouts = [
+    { number: 1, label: "Choose your trigger", x: "15%", y: "25%" },
+    { number: 2, label: "Add conditions", x: "35%", y: "45%" },
+    { number: 3, label: "Set up actions", x: "55%", y: "35%" },
+    { number: 4, label: "Test & deploy", x: "75%", y: "55%" },
+    { number: 5, label: "Monitor performance", x: "85%", y: "20%" }
+  ];
+
+  return (
+    <Section className="bg-zinc-900 py-24">
+      <Container>
+        <div className="text-center mb-16">
+          <Heading size="h2" className="text-white">
+            Build Workflows in 5 Simple Steps
+          </Heading>
+          <p className="mt-4 text-lg text-zinc-400 max-w-2xl mx-auto">
+            Our visual workflow builder makes automation accessible to everyone on your team
+          </p>
+        </div>
+
+        <div className="relative">
+          {/* Product screenshot */}
+          <div className="bg-zinc-800 rounded-xl border border-zinc-700 overflow-hidden shadow-2xl">
+            <img 
+              src={projectImages.support}
+              alt="Workflow builder interface showing drag-and-drop automation steps"
+              className="w-full min-h-[260px] object-cover"
+            />
+          </div>
+
+          {/* Callout labels */}
+          {callouts.map((callout, index) => (
+            <div 
+              key={callout.number}
+              className="absolute animate-fade-in"
+              style={{ 
+                left: callout.x, 
+                top: callout.y,
+                animationDelay: `${index * 100}ms`,
+                opacity: 0
+              }}
+            >
+              <div className="flex items-center space-x-2 bg-blue-600 text-white px-3 py-2 rounded-full shadow-lg whitespace-nowrap">
+                <span className="w-5 h-5 bg-white text-blue-600 rounded-full flex items-center justify-center text-xs font-bold">
+                  {callout.number}
+                </span>
+                <span className="text-sm font-medium">{callout.label}</span>
+              </div>
+              <div className="w-px h-4 bg-blue-600 mx-auto" />
+            </div>
+          ))}
+        </div>
+
+        <style jsx>{`
+          @keyframes fade-in {
+            to {
+              opacity: 1;
+            }
+          }
+          .animate-fade-in {
+            animation: fade-in 0.5s ease-out forwards;
+          }
+        `}</style>
+      </Container>
+    </Section>
+  );
+};
+
+export default ProductDemo;
+===END_FILE===
+===FILE:src/components/Capabilities.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import { projectImages } from '@/assets/generated-images';
+
+const Capabilities = () => {
+  const capabilities = [
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+      title: "Lightning Fast Automation",
+      description: "Trigger workflows in milliseconds with our high-performance engine. Handle thousands of tasks simultaneously without breaking a sweat.",
+      image: projectImages.gallery1,
+      span: "large"
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.284-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.284.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+      ),
+      title: "Team Collaboration",
+      description: "Share workflows, assign tasks, and track progress across your entire organization.",
+      image: projectImages.gallery2,
+      span: "normal"
+    },
+    {
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+        </svg>
+      ),
+      title: "500+ Integrations",
+      description: "Connect with all your favorite tools and services through our extensive integration library.",
+      image: projectImages.gallery3,
+      span: "normal"
+    }
+  ];
+
+  return (
+    <Section className="bg-zinc-800 py-24">
+      <Container>
+        <div className="text-left mb-16">
+          <Heading size="h2" className="text-white">
+            Everything You Need to Scale
+          </Heading>
+          <p className="mt-4 text-lg text-zinc-400 max-w-2xl mx-auto">
+            Powerful automation capabilities designed for modern teams
+          </p>
+        </div>
+
+        <div className="space-y-8">
+          {capabilities.map((capability, index) => (
+            <div 
+              key={capability.title}
+              className={`flex flex-col lg:flex-row gap-8 items-center p-8 rounded-2xl border border-zinc-700 ${
+                index % 2 === 0 ? 'bg-zinc-900/50' : 'bg-zinc-850/50'
+              } ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+            >
+              <div className="flex-1 space-y-4">
+                <div className="flex items-center space-x-3">
+                  <div className="text-blue-400">{capability.icon}</div>
+                  <Heading as="h3" size="h3" className="text-white">
+                    {capability.title}
+                  </Heading>
+                </div>
+                <p className="text-zinc-400 leading-relaxed max-w-lg">
+                  {capability.description}
+                </p>
+              </div>
+              <div className="flex-shrink-0">
+                <div className="w-80 h-48 rounded-xl overflow-hidden border border-zinc-600">
+                  <img 
+                    src={capability.image}
+                    alt={`${capability.title} interface preview`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default Capabilities;
+===END_FILE===
+===FILE:src/components/Metrics.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+
+const Metrics = () => {
+  const metrics = [
+    { value: "99.99%", label: "Uptime SLA" },
+    { value: "50ms", label: "Avg Response" },
+    { value: "10K+", label: "Active Teams" },
+    { value: "500+", label: "Integrations" },
+    { value: "SOC 2", label: "Certified" }
+  ];
+
+  return (
+    <Section className="bg-gradient-to-r from-blue-950 to-blue-900 py-20">
+      <Container>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-left">
+          {metrics.map((metric, index) => (
+            <div 
+              key={metric.label}
+              className="animate-count-up"
+              style={{ 
+                animationDelay: `${index * 100}ms`,
+                opacity: 0
+              }}
+            >
+              <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2 font-heading">
+                {metric.value}
+              </div>
+              <div className="text-blue-200 text-sm font-medium uppercase tracking-wider">
+                {metric.label}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <style jsx>{`
+          @keyframes count-up {
+            to {
+              opacity: 1;
+            }
+          }
+          .animate-count-up {
+            animation: count-up 0.6s ease-out forwards;
+          }
+        `}</style>
+      </Container>
+    </Section>
+  );
+};
+
+export default Metrics;
+===END_FILE===
+===FILE:src/components/Testimonial.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+
+const TestimonialSection = () => {
+  const logos = [
+    { name: "TechCorp", width: "120px" },
+    { name: "DataFlow", width: "100px" },
+    { name: "CloudSync", width: "140px" },
+    { name: "AutoCorp", width: "110px" }
+  ];
+
+  return (
+    <Section className="bg-zinc-50 py-24">
+      <Container>
+        {/* Logo wall */}
+        <div className="text-left mb-16">
+          <p className="text-sm font-medium text-zinc-600 uppercase tracking-wider mb-8">
+            Trusted by leading companies
+          </p>
+          <div className="flex items-center justify-center space-x-12 opacity-60">
+            {logos.map((logo) => (
+              <div 
+                key={logo.name}
+                className="text-zinc-400 font-bold text-lg"
+                style={{ width: logo.width }}
+              >
+                {logo.name}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Main testimonial */}
+        <div className="max-w-4xl mx-auto">
+          <blockquote className="text-left">
+            <div className="text-4xl text-blue-600 mb-6">
+              <svg className="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+              </svg>
+            </div>
+            <p className="text-2xl md:text-3xl leading-relaxed text-zinc-700 font-light mb-8">
+              "FlowSync transformed our operations completely. What used to take our team hours of manual work now runs automatically. We've saved over 20 hours per week and reduced errors by 95%."
+            </p>
+            <footer className="flex items-center justify-center space-x-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">SJ</span>
+              </div>
+              <div className="text-left">
+                <div className="font-semibold text-zinc-900">Sarah Johnson</div>
+                <div className="text-zinc-600">VP of Operations</div>
+                <div className="flex items-center space-x-2 mt-1">
+                  <div className="text-blue-600 font-bold text-sm">TechCorp</div>
+                </div>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default TestimonialSection;
+===END_FILE===
+===FILE:src/components/Pricing.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import Button from '@/components/ui/button';
+import Badge from '@/components/ui/badge';
+
+const Pricing = () => {
+  const features = [
+    { name: "Unlimited workflows", essential: true, pro: true },
+    { name: "Basic integrations", essential: true, pro: true },
+    { name: "Email support", essential: true, pro: true },
+    { name: "Advanced integrations", essential: false, pro: true },
+    { name: "Priority support", essential: false, pro: true },
+    { name: "Custom connectors", essential: false, pro: true },
+    { name: "Advanced analytics", essential: false, pro: true },
+    { name: "Team collaboration", essential: false, pro: true }
+  ];
+
+  return (
+    <Section id="pricing" className="bg-zinc-900 py-24">
+      <Container>
+        <div className="text-center mb-16">
+          <Heading size="h2" className="text-white">
+            Simple, Transparent Pricing
+          </Heading>
+          <p className="mt-4 text-lg text-zinc-400">
+            Start free, scale as you grow
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {/* Essentials Plan */}
+          <div className="bg-zinc-800 border border-zinc-700 rounded-2xl p-8">
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold text-white mb-2">Essentials</h3>
+              <p className="text-zinc-400">Perfect for small teams getting started</p>
+            </div>
+            <div className="mb-6">
+              <div className="flex items-baseline">
+                <span className="text-4xl font-bold text-white">$0</span>
+                <span className="text-zinc-400 ml-2">/month</span>
+              </div>
+              <p className="text-sm text-zinc-500 mt-1">Up to 1,000 tasks/month</p>
+            </div>
+            <Button variant="outline" className="w-full mb-8 border-zinc-600 text-white hover:bg-zinc-700">
+              Get Started Free
+            </Button>
+            <ul className="space-y-3">
+              {features.map((feature) => (
+                <li key={feature.name} className="flex items-center">
+                  <div className={`w-5 h-5 rounded-full mr-3 flex items-center justify-center ${
+                    feature.essential ? 'bg-green-500' : 'bg-zinc-700'
+                  }`}>
+                    {feature.essential && (
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    )}
+                  </div>
+                  <span className={`text-sm ${feature.essential ? 'text-white' : 'text-zinc-500'}`}>
+                    {feature.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Pro Plan */}
+          <div className="bg-zinc-800 border-2 border-blue-500 rounded-2xl p-8 relative">
+            <Badge className="absolute -top-3 left-6 bg-blue-500 text-white">
+              Most Popular
+            </Badge>
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold text-white mb-2">Pro</h3>
+              <p className="text-zinc-400">Advanced features for growing businesses</p>
+            </div>
+            <div className="mb-6">
+              <div className="flex items-baseline">
+                <span className="text-4xl font-bold text-white">$29</span>
+                <span className="text-zinc-400 ml-2">/month</span>
+              </div>
+              <p className="text-sm text-zinc-500 mt-1">Up to 10,000 tasks/month</p>
+            </div>
+            <Button className="w-full mb-8 bg-blue-600 hover:bg-blue-700">
+              Start Free Trial
+            </Button>
+            <ul className="space-y-3">
+              {features.map((feature) => (
+                <li key={feature.name} className="flex items-center">
+                  <div className="w-5 h-5 rounded-full mr-3 flex items-center justify-center bg-green-500">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-white">{feature.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Enterprise */}
+        <div className="mt-12 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-zinc-800 to-zinc-700 border border-zinc-600 rounded-2xl p-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-semibold text-white mb-3">Enterprise</h3>
+                <p className="text-zinc-400 mb-4">
+                  Custom solutions for large organizations with advanced security and compliance needs.
+                </p>
+                <ul className="text-sm text-zinc-300 space-y-2">
+                  <li>• Unlimited tasks and workflows</li>
+                  <li>• Custom integrations and connectors</li>
+                  <li>• Dedicated success manager</li>
+                  <li>• Advanced security and compliance</li>
+                </ul>
+              </div>
+              <div className="text-center md:text-right">
+                <div className="text-2xl font-bold text-white mb-4">Custom Pricing</div>
+                <Button variant="outline" className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white">
+                  Contact Sales
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default Pricing;
+===END_FILE===
+===FILE:src/components/Conversion.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Heading from '@/components/ui/heading';
+import Button from '@/components/ui/button';
+import Input from '@/components/ui/input';
+
+const Conversion = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+  };
+
+  return (
+    <Section className="bg-zinc-800 py-24">
+      <Container>
+        <div className="grid grid-cols-1 gap-16 items-start">
+          {/* Left column - Copy */}
+          <div>
+            <Heading size="h2" className="text-white">
+              Ready to Transform Your Workflow?
+            </Heading>
+            <p className="mt-6 text-lg text-zinc-400 leading-relaxed max-w-lg">
+              Join thousands of teams who have automated their processes and saved countless hours with FlowSync.
+            </p>
+            
+            <div className="mt-8 space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full" />
+                <span className="text-zinc-300">No credit card required</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full" />
+                <span className="text-zinc-300">3-minute setup</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full" />
+                <span className="text-zinc-300">Cancel anytime</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right column - Form */}
+          <div className="bg-zinc-900 border border-zinc-700 rounded-2xl p-8">
+            <div className="mb-6">
+              <h3 className="text-xl font-semibold text-white mb-2">Start Your Free Trial</h3>
+              <p className="text-zinc-400">Get up and running in under 5 minutes</p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <Input
+                label="Work Email"
+                type="email"
+                placeholder="you@company.com"
+                className="bg-zinc-800 border-zinc-600 text-white"
+                required
+              />
+              
+              <Input
+                label="Company Name"
+                placeholder="Your Company"
+                className="bg-zinc-800 border-zinc-600 text-white"
+              />
+
+              <div>
+                <label className="block text-sm font-medium text-zinc-300 mb-2">
+                  Primary Use Case
+                </label>
+                <select className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                  <option value="">Select your main goal</option>
+                  <option value="data-sync">Data synchronization</option>
+                  <option value="task-automation">Task automation</option>
+                  <option value="notifications">Notifications & alerts</option>
+                  <option value="reporting">Automated reporting</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="w-full bg-blue-600 hover:bg-blue-700"
+              >
+                Start Free Trial
+              </Button>
+            </form>
+
+            <p className="text-xs text-zinc-500 mt-4 text-center">
+              By signing up, you agree to our Terms of Service and Privacy Policy
+            </p>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default Conversion;
+===END_FILE===
+===FILE:src/components/Footer.tsx===
+import React from 'react';
+import Section from '@/components/ui/section';
+import Container from '@/components/ui/container';
+import Input from '@/components/ui/input';
+import Button from '@/components/ui/button';
+
+const Footer = () => {
+  return (
+    <Section className="bg-zinc-950 pt-20 pb-8">
+      <Container>
+        <div className="grid md:grid-cols-3 gap-12 mb-16">
+          {/* Brand and closing line */}
+          <div className="md:col-span-1">
+            <div className="text-2xl font-bold text-white mb-4">FlowSync</div>
+            <p className="text-lg text-zinc-300 font-light leading-relaxed mb-6">
+              Built for teams that move fast and automate everything.
+            </p>
+            
+            {/* Status badge */}
+            <div className="flex items-center space-x-2 mb-6">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <span className="text-sm text-green-400">All systems operational</span>
+            </div>
+          </div>
+
+          {/* Product links */}
+          <div className="md:col-span-1">
+            <h4 className="font-semibold text-white mb-4">Product</h4>
+            <ul className="space-y-3">
+              <li><a href="#features" className="text-zinc-400 hover:text-white transition-colors">Features</a></li>
+              <li><a href="#integrations" className="text-zinc-400 hover:text-white transition-colors">Integrations</a></li>
+              <li><a href="#pricing" className="text-zinc-400 hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="#changelog" className="text-zinc-400 hover:text-white transition-colors">Changelog</a></li>
+              <li><a href="#status" className="text-zinc-400 hover:text-white transition-colors">Status Page</a></li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div className="md:col-span-1">
+            <h4 className="font-semibold text-white mb-4">Stay Updated</h4>
+            <p className="text-zinc-400 mb-4 text-sm">
+              Get the latest product updates and automation tips
+            </p>
+            <div className="flex space-x-2">
+              <Input
+                placeholder="Enter your email"
+                className="bg-zinc-900 border-zinc-700 text-white flex-1"
+              />
+              <Button variant="outline" className="border-zinc-600 text-zinc-300 hover:bg-zinc-700">
+                Subscribe
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom section */}
+        <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-zinc-500 text-sm">
+            © 2024 FlowSync. All rights reserved.
+          </div>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <a href="#privacy" className="text-zinc-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+            <a href="#terms" className="text-zinc-500 hover:text-white text-sm transition-colors">Terms of Service</a>
+            <a href="#contact" className="text-zinc-500 hover:text-white text-sm transition-colors">Contact</a>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default Footer;
+===END_FILE===

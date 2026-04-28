@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  MessageSquareIcon,
   PanelLeftIcon,
   PenSquareIcon,
   TrashIcon,
@@ -13,6 +12,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { useSWRConfig } from "swr";
 import { unstable_serialize } from "swr/infinite";
+import { CenateLogo } from "@/components/brand/cenate-logo";
 import {
   getChatHistoryPaginationKey,
   SidebarHistory,
@@ -76,8 +76,8 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                   className="size-8 !px-0 items-center justify-center group-data-[collapsible=icon]:group-hover/logo:opacity-0"
                   tooltip="Chatbot"
                 >
-                  <Link href="/" onClick={() => setOpenMobile(false)}>
-                    <MessageSquareIcon className="size-4 text-sidebar-foreground/50" />
+                  <Link href="/dashboard" onClick={() => setOpenMobile(false)}>
+                    <CenateLogo variant="mark" className="h-6 w-6 opacity-80" />
                   </Link>
                 </SidebarMenuButton>
                 <Tooltip>

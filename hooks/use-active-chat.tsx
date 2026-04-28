@@ -5,6 +5,7 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { usePathname } from "next/navigation";
 import {
+  useCallback,
   createContext,
   type Dispatch,
   type ReactNode,
@@ -26,7 +27,17 @@ import { DEFAULT_CHAT_MODEL } from "@/lib/ai/models";
 import type { Vote } from "@/lib/db/schema";
 import { ChatbotError } from "@/lib/errors";
 import type { ChatMessage } from "@/lib/types";
+import type { UIArtifact } from "@/components/chat/artifact";
 import { fetcher, fetchWithErrorHandlers, generateUUID } from "@/lib/utils";
+
+const HTML_TITLE_MARKERS = ["<!doctype", "<html", "<head>", "<head ", "<body>", "<body "];
+
+function sanitizeChatTitle(raw: string | undefined | null): string | null {
+  if (!raw) return null;
+  const probe = raw.slice(0, 200).toLowerCase();
+  if (HTML_TITLE_MARKERS.some((m) => probe.includes(m))) return null;
+  return raw;
+}
 
 type ActiveChatContextValue = {
   chatId: string;
@@ -47,6 +58,7 @@ type ActiveChatContextValue = {
   setCurrentModelId: (id: string) => void;
   showCreditCardAlert: boolean;
   setShowCreditCardAlert: Dispatch<SetStateAction<boolean>>;
+  chatTitle: string | null;
 };
 
 const ActiveChatContext = createContext<ActiveChatContextValue | null>(null);
@@ -81,6 +93,8 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
 
   const [input, setInput] = useState("");
   const [showCreditCardAlert, setShowCreditCardAlert] = useState(false);
+  const [pendingUserMessage, setPendingUserMessage] =
+    useState<ChatMessage | null>(null);
 
   const { data: chatData, isLoading } = useSWR(
     isNewChat
@@ -98,9 +112,9 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
     : (chatData?.visibility ?? "private");
 
   const {
-    messages,
+    messages: transportMessages,
     setMessages,
-    sendMessage,
+    sendMessage: transportSendMessage,
     status,
     stop,
     regenerate,
@@ -155,6 +169,7 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
       setDataStream((ds) => (ds ? [...ds, dataPart] : []));
     },
     onFinish: () => {
+      setPendingUserMessage(null);
       mutate(unstable_serialize(getChatHistoryPaginationKey));
     },
     onError: (error) => {
@@ -171,6 +186,90 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
     },
   });
 
+  useEffect(() => {
+    if (
+      pendingUserMessage &&
+      transportMessages.some((message) => message.id === pendingUserMessage.id)
+    ) {
+      setPendingUserMessage(null);
+    }
+  }, [pendingUserMessage, transportMessages]);
+
+  const messages = useMemo<ChatMessage[]>(() => {
+    if (
+      pendingUserMessage &&
+      !transportMessages.some((message) => message.id === pendingUserMessage.id)
+    ) {
+      return [...transportMessages, pendingUserMessage];
+    }
+
+    return transportMessages;
+  }, [pendingUserMessage, transportMessages]);
+
+  const sendMessage = useCallback<UseChatHelpers<ChatMessage>["sendMessage"]>(
+    (message, options) => {
+      const messageCandidate = message as Partial<ChatMessage> & {
+        text?: string;
+      };
+      const normalizedParts =
+        Array.isArray(messageCandidate.parts) && messageCandidate.parts.length > 0
+          ? messageCandidate.parts
+          : typeof messageCandidate.text === "string"
+            ? [{ type: "text" as const, text: messageCandidate.text }]
+            : [];
+      const normalizedMessage: ChatMessage = {
+        ...(messageCandidate as ChatMessage),
+        id:
+          typeof messageCandidate.id === "string" && messageCandidate.id.length > 0
+            ? messageCandidate.id
+            : generateUUID(),
+        role: messageCandidate.role ?? "user",
+        parts: normalizedParts,
+      };
+
+      if (normalizedMessage.role === "user") {
+        setPendingUserMessage(normalizedMessage);
+      }
+
+      return transportSendMessage(normalizedMessage, options);
+    },
+    [transportSendMessage]
+  );
+
+  // Force artifact out of "streaming" when chat request finishes.
+  // If the server stream closes before data-finish is sent (timeout,
+  // crash, error swallowed), the artifact stays stuck in "streaming"
+  // forever — blocking subsequent requests from rendering properly.
+  const prevChatStatusRef = useRef(status);
+  useEffect(() => {
+    const prev = prevChatStatusRef.current;
+    prevChatStatusRef.current = status;
+
+    if (
+      (prev === "streaming" || prev === "submitted") &&
+      (status === "ready" || status === "error")
+    ) {
+      mutate<UIArtifact>(
+        "artifact",
+        (current) => {
+          if (current && current.status === "streaming") {
+            return {
+              ...current,
+              status: "idle",
+              generationStage:
+                current.generationStage?.phase === "preview_ready" ||
+                current.generationStage?.phase === "hard_failed"
+                  ? current.generationStage
+                  : undefined,
+            };
+          }
+          return current;
+        },
+        { revalidate: false }
+      );
+    }
+  }, [status, mutate]);
+
   const loadedChatIds = useRef(new Set<string>());
 
   if (isNewChat && !loadedChatIds.current.has(newChatIdRef.current)) {
@@ -181,8 +280,14 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
     if (loadedChatIds.current.has(chatId)) {
       return;
     }
-    if (chatData?.messages) {
+    const hasPersistedChat =
+      Boolean(chatData?.userId) ||
+      Boolean(chatData?.title) ||
+      (chatData?.messages?.length ?? 0) > 0;
+
+    if (hasPersistedChat && chatData?.messages) {
       loadedChatIds.current.add(chatId);
+      setPendingUserMessage(null);
       setMessages(chatData.messages);
     }
   }, [chatId, chatData?.messages, setMessages]);
@@ -191,6 +296,7 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (prevChatIdRef.current !== chatId) {
       prevChatIdRef.current = chatId;
+      setPendingUserMessage(null);
       if (isNewChat) {
         setMessages([]);
       }
@@ -209,12 +315,14 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
     }
   }, [chatData, isNewChat]);
 
-  const hasAppendedQueryRef = useRef(false);
+  const lastBootstrappedQueryKeyRef = useRef<string | null>(null);
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const query = params.get("query");
-    if (query && !hasAppendedQueryRef.current) {
-      hasAppendedQueryRef.current = true;
+    const queryKey = query ? `${chatId}:${query}` : null;
+
+    if (query && queryKey && lastBootstrappedQueryKeyRef.current !== queryKey) {
+      lastBootstrappedQueryKeyRef.current = queryKey;
       window.history.replaceState(
         {},
         "",
@@ -264,6 +372,7 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
       setCurrentModelId,
       showCreditCardAlert,
       setShowCreditCardAlert,
+      chatTitle: isNewChat ? null : sanitizeChatTitle(chatData?.title),
     }),
     [
       chatId,
@@ -282,6 +391,7 @@ export function ActiveChatProvider({ children }: { children: ReactNode }) {
       votes,
       currentModelId,
       showCreditCardAlert,
+      chatData?.title,
     ]
   );
 

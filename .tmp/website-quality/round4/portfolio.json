@@ -1,0 +1,201 @@
+{
+  "slug": "portfolio",
+  "prompt": "Build a high-end creative portfolio website for Lina Moreau. Include hero, selected work, about, testimonials, process, contact CTA, and footer. Make it editorial, minimal, luxurious, and image-led.",
+  "durationMs": 131692,
+  "meta": {
+    "type": "project",
+    "framework": "vite-react-ts",
+    "title": "Lina Moreau - Creative Portfolio",
+    "entryFile": "src/main.tsx",
+    "previewEntryFile": "src/App.tsx",
+    "siteType": "portfolio",
+    "designDirection": "editorial luxury with serif display typography and high-contrast black/white photography",
+    "colorStrategy": "monochromatic black/white/gray with warm gold accents on dark background",
+    "typography": "Playfair Display serif for headlines, Inter for body text",
+    "sectionOrder": [
+      "Hero",
+      "SelectedWork",
+      "About",
+      "Process",
+      "Testimonials",
+      "Contact",
+      "Footer"
+    ],
+    "assets": [
+      {
+        "path": "public/images/hero.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=1200&h=800&fit=crop&q=80",
+        "prompt": "elegant portrait of creative professional in minimal studio"
+      },
+      {
+        "path": "public/images/work-1.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80",
+        "prompt": "luxury brand identity design mockup"
+      },
+      {
+        "path": "public/images/work-2.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=1000&fit=crop&q=80",
+        "prompt": "editorial magazine spread design"
+      },
+      {
+        "path": "public/images/work-3.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1607827448387-a67db1383b59?w=600&h=800&fit=crop&q=80",
+        "prompt": "minimal packaging design concept"
+      },
+      {
+        "path": "public/images/about.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&q=80",
+        "prompt": "creative workspace with design materials"
+      },
+      {
+        "path": "public/images/process.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&h=500&fit=crop&q=80",
+        "prompt": "design sketches and process documentation"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "package.json",
+      "language": "json",
+      "size": 547
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "size": 374
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "size": 626
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "size": 237
+    },
+    {
+      "path": "postcss.config.js",
+      "language": "javascript",
+      "size": 79
+    },
+    {
+      "path": "tailwind.config.ts",
+      "language": "typescript",
+      "size": 420
+    },
+    {
+      "path": "src/main.tsx",
+      "language": "tsx",
+      "size": 239
+    },
+    {
+      "path": "src/styles/globals.css",
+      "language": "css",
+      "size": 831
+    },
+    {
+      "path": "src/App.tsx",
+      "language": "tsx",
+      "size": 612
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "language": "tsx",
+      "size": 1292
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "language": "tsx",
+      "size": 3452
+    },
+    {
+      "path": "src/components/SelectedWork.tsx",
+      "language": "tsx",
+      "size": 4400
+    },
+    {
+      "path": "src/components/About.tsx",
+      "language": "tsx",
+      "size": 3719
+    },
+    {
+      "path": "src/components/Process.tsx",
+      "language": "tsx",
+      "size": 4815
+    },
+    {
+      "path": "src/components/Testimonials.tsx",
+      "language": "tsx",
+      "size": 2441
+    },
+    {
+      "path": "src/components/Contact.tsx",
+      "language": "tsx",
+      "size": 5512
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "language": "tsx",
+      "size": 2354
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/images/hero.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=1200&h=800&fit=crop&q=80",
+      "prompt": "elegant portrait of creative professional in minimal studio"
+    },
+    {
+      "path": "public/images/work-1.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80",
+      "prompt": "luxury brand identity design mockup"
+    },
+    {
+      "path": "public/images/work-2.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=1000&fit=crop&q=80",
+      "prompt": "editorial magazine spread design"
+    },
+    {
+      "path": "public/images/work-3.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1607827448387-a67db1383b59?w=600&h=800&fit=crop&q=80",
+      "prompt": "minimal packaging design concept"
+    },
+    {
+      "path": "public/images/about.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&q=80",
+      "prompt": "creative workspace with design materials"
+    },
+    {
+      "path": "public/images/process.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&h=500&fit=crop&q=80",
+      "prompt": "design sketches and process documentation"
+    }
+  ],
+  "isComplete": true
+}

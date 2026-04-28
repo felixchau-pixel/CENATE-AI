@@ -1,0 +1,220 @@
+{
+  "restaurant": {
+    "durationMs": 155087,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "Noma House - Culinary Excellence",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "restaurant",
+      "designDirection": "Dark editorial luxury with serif display typography and high-contrast culinary photography",
+      "colorStrategy": "Dark palette with rich blacks #0a0a0a, warm gold accents #d4af37, and muted text #999999",
+      "typography": "Playfair Display for headings, system serif for body text",
+      "sectionOrder": [
+        "Hero",
+        "MenuHighlights",
+        "ChefStory",
+        "Gallery",
+        "ReservationCTA",
+        "Testimonials",
+        "Location",
+        "Footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop&q=80",
+          "prompt": "elegant fine dining restaurant interior with warm lighting"
+        },
+        {
+          "path": "public/images/chef.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=1000&fit=crop&q=80",
+          "prompt": "professional chef in kitchen preparing haute cuisine"
+        },
+        {
+          "path": "public/images/dish1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=600&fit=crop&q=80",
+          "prompt": "artistic plated fine dining dish with microgreens"
+        },
+        {
+          "path": "public/images/dish2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600&h=600&fit=crop&q=80",
+          "prompt": "elegant seafood course with artistic presentation"
+        },
+        {
+          "path": "public/images/dish3.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&h=600&fit=crop&q=80",
+          "prompt": "sophisticated meat course with garnish and sauce"
+        },
+        {
+          "path": "public/images/gallery1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&h=600&fit=crop&q=80",
+          "prompt": "restaurant dining room with elegant table settings"
+        },
+        {
+          "path": "public/images/gallery2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=600&h=800&fit=crop&q=80",
+          "prompt": "chef hands carefully plating a dish"
+        },
+        {
+          "path": "public/images/gallery3.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=600&fit=crop&q=80",
+          "prompt": "wine cellar with premium bottles"
+        },
+        {
+          "path": "public/images/location.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop&q=80",
+          "prompt": "upscale restaurant exterior at evening with warm lighting"
+        }
+      ]
+    },
+    "fileCount": 18,
+    "assetCount": 9,
+    "isComplete": true
+  },
+  "saas": {
+    "durationMs": 151492,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "FlowState - AI Productivity Platform",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "saas",
+      "designDirection": "modern dark premium with sharp typography, electric accents, and dynamic visual hierarchy",
+      "colorStrategy": "dark charcoal backgrounds with electric blue accents (#3B82F6) and subtle gradients",
+      "typography": "Inter display and body with tight tracking for premium tech aesthetic",
+      "sectionOrder": [
+        "hero",
+        "features",
+        "workflow",
+        "testimonials",
+        "pricing",
+        "cta",
+        "footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=800&fit=crop&q=80",
+          "prompt": "Abstract AI neural network visualization with flowing data streams"
+        },
+        {
+          "path": "public/images/dashboard.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80",
+          "prompt": "Clean modern dashboard interface on laptop screen"
+        },
+        {
+          "path": "public/images/workflow.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&h=700&fit=crop&q=80",
+          "prompt": "Dynamic workflow visualization with connected nodes and data flow"
+        },
+        {
+          "path": "public/images/automation.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=600&h=400&fit=crop&q=80",
+          "prompt": "Futuristic automation interface with glowing elements"
+        }
+      ]
+    },
+    "fileCount": 17,
+    "assetCount": 4,
+    "isComplete": true
+  },
+  "portfolio": {
+    "durationMs": 147265,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "Lina Moreau - Creative Portfolio",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "portfolio",
+      "designDirection": "Editorial luxury with serif display typography, dark theme, high-contrast photography, and asymmetric layouts",
+      "colorStrategy": "Dark background (#0a0a0a), warm surface (#1a1a1a), muted text (#888), gold accent (#d4af37)",
+      "typography": "Playfair Display serif for headings, Inter for body text",
+      "sectionOrder": [
+        "hero",
+        "selectedWork",
+        "about",
+        "testimonials",
+        "process",
+        "contactCTA",
+        "footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1920&h=1080&fit=crop&q=80",
+          "prompt": "Elegant creative workspace with soft natural lighting"
+        },
+        {
+          "path": "public/images/work1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=1000&fit=crop&q=80",
+          "prompt": "Sophisticated brand identity design layout"
+        },
+        {
+          "path": "public/images/work2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop&q=80",
+          "prompt": "Minimalist editorial layout design"
+        },
+        {
+          "path": "public/images/work3.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800&h=800&fit=crop&q=80",
+          "prompt": "Luxury packaging design with elegant typography"
+        },
+        {
+          "path": "public/images/about.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&q=80",
+          "prompt": "Professional portrait of creative professional"
+        },
+        {
+          "path": "public/images/process.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=1200&h=800&fit=crop&q=80",
+          "prompt": "Creative process workspace with design materials"
+        }
+      ]
+    },
+    "fileCount": 17,
+    "assetCount": 6,
+    "isComplete": true
+  }
+}

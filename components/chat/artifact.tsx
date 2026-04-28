@@ -2,17 +2,20 @@ import type { UseChatHelpers } from "@ai-sdk/react";
 import { formatDistance } from "date-fns";
 import equal from "fast-deep-equal";
 import { AnimatePresence, motion } from "framer-motion";
+import { Code2, Eye } from "lucide-react";
 import {
   type Dispatch,
   memo,
   type SetStateAction,
   useCallback,
   useEffect,
+  useMemo,
   useRef,
   useState,
 } from "react";
 import useSWR, { useSWRConfig } from "swr";
 import { useWindowSize } from "usehooks-ts";
+import { getPreviewHtml, isProjectContent, parseProjectContent } from "@/lib/project-manifest";
 import { codeArtifact } from "@/artifacts/code/client";
 import { imageArtifact } from "@/artifacts/image/client";
 import { sheetArtifact } from "@/artifacts/sheet/client";
@@ -21,10 +24,10 @@ import { useArtifact } from "@/hooks/use-artifact";
 import type { Document, Vote } from "@/lib/db/schema";
 import type { Attachment, ChatMessage } from "@/lib/types";
 import { fetcher } from "@/lib/utils";
-import { useSidebar } from "../ui/sidebar";
 import { ArtifactActions } from "./artifact-actions";
 import { ArtifactCloseButton } from "./artifact-close-button";
 import { LoaderIcon } from "./icons";
+import { ProjectRuntimePreview } from "./project-runtime-preview";
 import { Toolbar } from "./toolbar";
 import { VersionFooter } from "./version-footer";
 import type { VisibilityType } from "./visibility-selector";
@@ -37,6 +40,17 @@ export const artifactDefinitions = [
 ];
 export type ArtifactKind = (typeof artifactDefinitions)[number]["kind"];
 
+export type ArtifactViewMode = "preview" | "code";
+
+export function useArtifactViewMode() {
+  const { data, mutate } = useSWR<ArtifactViewMode>(
+    "artifact-view-mode",
+    null,
+    { fallbackData: "preview" }
+  );
+  return { viewMode: data ?? "preview", setViewMode: mutate };
+}
+
 export type UIArtifact = {
   title: string;
   documentId: string;
@@ -44,6 +58,12 @@ export type UIArtifact = {
   content: string;
   isVisible: boolean;
   status: "streaming" | "idle";
+  generationStage?: {
+    phase: "generating" | "repairing" | "finalizing" | "preview_ready" | "hard_failed";
+    attempt: number;
+    maxAttempts: number;
+    message: string;
+  };
   boundingBox: {
     top: number;
     left: number;
@@ -52,9 +72,160 @@ export type UIArtifact = {
   };
 };
 
+function PreviewSurface({
+  raw,
+  isStreaming,
+  generationStage,
+}: {
+  raw: string;
+  isStreaming: boolean;
+  generationStage?: UIArtifact["generationStage"];
+}) {
+  const { data: viewport } = useSWR<'desktop' | 'tablet' | 'mobile'>(
+    'preview-viewport', null, { fallbackData: 'desktop' }
+  );
+  const { data: reloadCounter } = useSWR<number>(
+    'preview-reload-counter', null, { fallbackData: 0 }
+  );
+
+  const parsed = useMemo(() => {
+    if (isProjectContent(raw)) {
+      return parseProjectContent(raw);
+    }
+    return null;
+  }, [raw]);
+
+  // Project content path
+  if (parsed) {
+    console.debug("[preview-render]", {
+      isStreaming,
+      rawLength: raw.length,
+      files: parsed.files.length,
+      legacyHtmlLength: getPreviewHtml(raw)?.length ?? 0,
+    });
+
+    const stagePhase = generationStage?.phase;
+
+    // Detect if the content is scaffold fallback — must NEVER render as preview
+    const isFallbackContent = raw.includes("__CENATE_SCAFFOLD_FALLBACK__");
+
+    // Show failure state FIRST — before file-based preview rendering.
+    // This prevents fallback scaffold from appearing as the "generated site".
+    if (stagePhase === "hard_failed" || isFallbackContent) {
+      return (
+        <div className="flex h-full min-h-[200px] items-center justify-center bg-background px-6 text-center">
+          <div className="space-y-2">
+            <p className="text-sm font-medium text-foreground">
+              Preview unavailable
+            </p>
+            <p className="text-xs text-muted-foreground">
+              {isFallbackContent
+                ? "Generation did not produce a complete site. Your project files are available in the code panel."
+                : generationStage?.message ?? "Automatic repair exhausted."}
+            </p>
+          </div>
+        </div>
+      );
+    }
+
+    if (
+      parsed.files.length > 0 &&
+      stagePhase !== "generating" &&
+      stagePhase !== "repairing" &&
+      stagePhase !== "finalizing"
+    ) {
+      const isConstrained = viewport === 'mobile' || viewport === 'tablet';
+      const maxWidth =
+        viewport === 'mobile' ? 375 : viewport === 'tablet' ? 768 : null;
+      return (
+        <div
+          className={`flex h-full w-full items-start justify-center overflow-hidden ${
+            isConstrained ? 'bg-muted/40 p-4' : ''
+          }`}
+        >
+          <div
+            key={reloadCounter}
+            className={isConstrained ? 'overflow-hidden rounded-xl border border-border shadow-lg' : ''}
+            style={
+              maxWidth
+                ? { width: `${maxWidth}px`, maxWidth: '100%', height: '100%' }
+                : { width: '100%', height: '100%' }
+            }
+          >
+            <ProjectRuntimePreview files={parsed.files} />
+          </div>
+        </div>
+      );
+    }
+
+    if (isStreaming || generationStage) {
+      return (
+        <div className="flex h-full min-h-[200px] items-center justify-center">
+          <div className="flex flex-col items-center gap-3 text-center">
+            <div className="flex items-center gap-1.5">
+              <div
+                className="h-2 w-2 animate-pulse rounded-full bg-blue-500"
+                style={{ animationDelay: "0ms" }}
+              />
+              <div
+                className="h-2 w-2 animate-pulse rounded-full bg-blue-500"
+                style={{ animationDelay: "150ms" }}
+              />
+              <div
+                className="h-2 w-2 animate-pulse rounded-full bg-blue-500"
+                style={{ animationDelay: "300ms" }}
+              />
+            </div>
+            <p className="text-sm text-muted-foreground">
+              {generationStage?.message ?? "Building preview from project files..."}
+            </p>
+            {generationStage && (
+              <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                {generationStage.phase.replace("_", " ")}
+              </p>
+            )}
+            {parsed.files.length > 0 && (
+              <p className="text-xs text-muted-foreground">
+                {parsed.files.length} files ready
+              </p>
+            )}
+          </div>
+        </div>
+      );
+    }
+    // Legacy fallback: old artifacts that only have PREVIEW_HTML
+    const legacyHtml = getPreviewHtml(raw);
+    if (legacyHtml) {
+      return (
+        <iframe
+          className="h-full w-full border-0 bg-white"
+          sandbox="allow-scripts"
+          srcDoc={legacyHtml}
+          title="Live Preview"
+        />
+      );
+    }
+    return (
+      <div className="flex h-full min-h-[200px] items-center justify-center bg-background text-sm text-muted-foreground">
+        Preview failed to mount.
+      </div>
+    );
+  }
+
+  // Non-project code (single-file HTML scripts, etc.)
+  return (
+    <iframe
+      className="h-full w-full border-0 bg-white"
+      sandbox="allow-scripts"
+      srcDoc={raw}
+      title="Live Preview"
+    />
+  );
+}
+
 function PureArtifact({
   addToolApprovalResponse: _addToolApprovalResponse,
-  chatId: _chatId,
+  chatId,
   input: _input,
   setInput: _setInput,
   status,
@@ -88,6 +259,7 @@ function PureArtifact({
   selectedModelId: string;
 }) {
   const { artifact, setArtifact, metadata, setMetadata } = useArtifact();
+  const { viewMode, setViewMode } = useArtifactViewMode();
 
   const {
     data: documents,
@@ -104,10 +276,10 @@ function PureArtifact({
   const [document, setDocument] = useState<Document | null>(null);
   const [currentVersionIndex, setCurrentVersionIndex] = useState(-1);
 
-  const { state: sidebarState } = useSidebar();
   const artifactContentRef = useRef<HTMLDivElement>(null);
   const userScrolledArtifact = useRef(false);
   const [isContentDirty, setIsContentDirty] = useState(false);
+  const failureAutoSwitchedRef = useRef<string | null>(null);
 
   useEffect(() => {
     if (artifact.status !== "streaming") {
@@ -124,6 +296,54 @@ function PureArtifact({
     el.scrollTo({ top: el.scrollHeight });
   }, [artifact.status]);
 
+  // Reset to preview mode when a new generation starts (cleans up stale code-mode from prior hard_failed)
+  useEffect(() => {
+    if (
+      artifact.generationStage?.phase === "generating" &&
+      artifact.kind === "code"
+    ) {
+      failureAutoSwitchedRef.current = null;
+      if (viewMode === "code") {
+        setViewMode("preview");
+      }
+    }
+  }, [artifact.generationStage, artifact.kind, viewMode, setViewMode]);
+
+  // Auto-switch to code view ONCE when generation fails or fallback is active.
+  // Uses a ref guard so clicking the preview tab afterwards is not trapped —
+  // the user can freely toggle back to preview to see the error message.
+  useEffect(() => {
+    if (artifact.kind !== "code") return;
+
+    const isHardFailed = artifact.generationStage?.phase === "hard_failed";
+    const isFallback = artifact.content.includes("__CENATE_SCAFFOLD_FALLBACK__");
+
+    if ((isHardFailed || isFallback) && isProjectContent(artifact.content)) {
+      if (failureAutoSwitchedRef.current !== artifact.documentId) {
+        failureAutoSwitchedRef.current = artifact.documentId;
+        setViewMode("code");
+      }
+    }
+  }, [artifact.generationStage, artifact.kind, artifact.content, artifact.documentId, setViewMode]);
+
+  // Safety net: if the chat stream has finished ("ready") but the artifact
+  // is still stuck in "streaming" (e.g. data-finish was never received due
+  // to a dropped connection or server crash), force it to idle and clear
+  // non-terminal generationStage to prevent stuck loading/generating UI.
+  useEffect(() => {
+    if (status === "ready" && artifact.status === "streaming") {
+      setArtifact((current) => ({
+        ...current,
+        status: "idle",
+        generationStage:
+          current.generationStage?.phase === "preview_ready" ||
+          current.generationStage?.phase === "hard_failed"
+            ? current.generationStage
+            : undefined,
+      }));
+    }
+  }, [status, artifact.status, setArtifact]);
+
   useEffect(() => {
     if (documents && documents.length > 0) {
       const mostRecentDocument = documents.at(-1);
@@ -131,7 +351,12 @@ function PureArtifact({
       if (mostRecentDocument) {
         setDocument(mostRecentDocument);
         setCurrentVersionIndex(documents.length - 1);
-        if (artifact.status === "streaming" || !isContentDirty) {
+        // Don't overwrite content while streaming or during active generation
+        // (prevents stale SWR fetches from replacing pipeline output)
+        const isGenerating = artifact.generationStage &&
+          artifact.generationStage.phase !== "preview_ready" &&
+          artifact.generationStage.phase !== "hard_failed";
+        if (!isGenerating && (artifact.status === "streaming" || !isContentDirty)) {
           setArtifact((currentArtifact) => ({
             ...currentArtifact,
             content: mostRecentDocument.content ?? "",
@@ -139,7 +364,7 @@ function PureArtifact({
         }
       }
     }
-  }, [documents, setArtifact, artifact.status, isContentDirty]);
+  }, [documents, setArtifact, artifact.status, isContentDirty, artifact.generationStage]);
 
   useEffect(() => {
     mutateDocuments();
@@ -284,16 +509,7 @@ function PureArtifact({
     }
   }, [artifact.documentId, artifactDefinition, setMetadata]);
 
-  if (!artifact.isVisible && !isMobile) {
-    return (
-      <div
-        className="h-dvh w-0 shrink-0 overflow-hidden transition-[width] duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
-        data-testid="artifact"
-      />
-    );
-  }
-
-  if (!artifact.isVisible) {
+  if (!artifact.isVisible && artifact.content.length === 0 && artifact.documentId === "init") {
     return null;
   }
 
@@ -305,46 +521,84 @@ function PureArtifact({
       )
       .join("\n") || undefined;
 
+  const isCodeArtifact = artifact.kind === "code";
+
   const artifactPanel = (
     <>
-      {sidebarState !== "collapsed" && (
-        <div className="flex h-[calc(3.5rem+1px)] shrink-0 items-center justify-between border-b border-border/50 px-4">
-          <div className="flex items-center gap-3">
-            <ArtifactCloseButton />
-            <div className="flex flex-col gap-0.5">
-              <div className="text-sm font-semibold leading-tight tracking-tight">
-                {artifact.title}
-              </div>
-              <div className="flex items-center gap-2">
-                {isContentDirty ? (
-                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                    <div className="size-1.5 animate-pulse rounded-full bg-amber-500" />
-                    Saving...
-                  </div>
-                ) : document ? (
-                  <div className="text-xs text-muted-foreground">
-                    {`Updated ${formatDistance(new Date(document.createdAt), new Date(), { addSuffix: true })}`}
-                  </div>
-                ) : artifact.status === "streaming" ? (
-                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+      <div className="flex h-[calc(3.5rem+1px)] shrink-0 items-center justify-between border-b border-border/50 px-4">
+        <div className="flex items-center gap-3">
+          <ArtifactCloseButton />
+          <div className="flex flex-col gap-0.5">
+            <div className="text-sm font-semibold leading-tight tracking-tight">
+              {artifact.title}
+            </div>
+            <div className="flex items-center gap-2">
+              {isContentDirty ? (
+                <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                  <div className="size-1.5 animate-pulse rounded-full bg-amber-500" />
+                  Saving...
+                </div>
+              ) : document ? (
+                <div className="text-xs text-muted-foreground">
+                  {`Updated ${formatDistance(new Date(document.createdAt), new Date(), { addSuffix: true })}`}
+                </div>
+              ) : artifact.generationStage ? (
+                <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                  {artifact.generationStage.phase !== "hard_failed" &&
+                    artifact.generationStage.phase !== "preview_ready" && (
                     <div className="animate-spin">
                       <LoaderIcon size={12} />
                     </div>
-                    Generating...
+                  )}
+                  {artifact.generationStage.message}
+                </div>
+              ) : artifact.status === "streaming" ? (
+                <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                  <div className="animate-spin">
+                    <LoaderIcon size={12} />
                   </div>
-                ) : (
-                  <div className="h-3 w-24 animate-pulse rounded bg-muted-foreground/10" />
-                )}
-                {documents && documents.length > 1 && (
-                  <div className="rounded-md bg-muted px-1.5 py-0.5 text-[10px] font-medium tabular-nums text-muted-foreground">
-                    v{currentVersionIndex + 1}/{documents.length}
-                  </div>
-                )}
-              </div>
+                  Generating...
+                </div>
+              ) : (
+                <div className="h-3 w-24 animate-pulse rounded bg-muted-foreground/10" />
+              )}
+              {documents && documents.length > 1 && (
+                <div className="rounded-md bg-muted px-1.5 py-0.5 text-[10px] font-medium tabular-nums text-muted-foreground">
+                  v{currentVersionIndex + 1}/{documents.length}
+                </div>
+              )}
             </div>
           </div>
         </div>
-      )}
+        {isCodeArtifact && (
+          <div className="flex items-center gap-1 rounded-full border border-border bg-muted/50 p-0.5">
+            <button
+              type="button"
+              onClick={() => setViewMode("preview")}
+              className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium transition-colors ${
+                viewMode === "preview"
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Eye className="h-3 w-3" />
+              Preview
+            </button>
+            <button
+              type="button"
+              onClick={() => setViewMode("code")}
+              className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-medium transition-colors ${
+                viewMode === "code"
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Code2 className="h-3 w-3" />
+              Code
+            </button>
+          </div>
+        )}
+      </div>
       <div
         className="relative flex-1 overflow-y-auto bg-background"
         data-slot="artifact-content"
@@ -359,54 +613,68 @@ function PureArtifact({
         }}
         ref={artifactContentRef}
       >
-        <artifactDefinition.content
-          content={
-            isCurrentVersion
-              ? artifact.content
-              : getDocumentContentById(currentVersionIndex)
-          }
-          currentVersionIndex={currentVersionIndex}
-          getDocumentContentById={getDocumentContentById}
-          isCurrentVersion={isCurrentVersion}
-          isInline={false}
-          isLoading={isDocumentsFetching && !artifact.content}
-          metadata={metadata}
-          mode={mode}
-          onSaveContent={saveContent}
-          setMetadata={setMetadata}
-          status={artifact.status}
-          suggestions={[]}
-          title={artifact.title}
-        />
-        <AnimatePresence>
-          {isCurrentVersion && (
-            <Toolbar
-              artifactActions={
-                <ArtifactActions
-                  artifact={artifact}
-                  currentVersionIndex={currentVersionIndex}
-                  handleVersionChange={handleVersionChange}
-                  isCurrentVersion={isCurrentVersion}
-                  metadata={metadata}
-                  mode={mode}
-                  setMetadata={setMetadata}
-                />
+        {isCodeArtifact && viewMode === "preview" ? (
+          <PreviewSurface
+            generationStage={artifact.generationStage}
+            isStreaming={artifact.status === "streaming"}
+            raw={
+              isCurrentVersion
+                ? artifact.content
+                : getDocumentContentById(currentVersionIndex)
+            }
+          />
+        ) : (
+          <>
+            <artifactDefinition.content
+              content={
+                isCurrentVersion
+                  ? artifact.content
+                  : getDocumentContentById(currentVersionIndex)
               }
-              artifactKind={artifact.kind}
-              consoleError={consoleError}
-              documentId={artifact.documentId}
-              isToolbarVisible={isToolbarVisible}
-              onClose={() => {
-                setArtifact((prev) => ({ ...prev, isVisible: false }));
-              }}
-              sendMessage={sendMessage}
-              setIsToolbarVisible={setIsToolbarVisible}
-              setMessages={setMessages}
-              status={status}
-              stop={stop}
+              currentVersionIndex={currentVersionIndex}
+              getDocumentContentById={getDocumentContentById}
+              isCurrentVersion={isCurrentVersion}
+              isInline={false}
+              isLoading={isDocumentsFetching && !artifact.content}
+              metadata={metadata}
+              mode={mode}
+              onSaveContent={saveContent}
+              setMetadata={setMetadata}
+              status={artifact.status}
+              suggestions={[]}
+              title={artifact.title}
             />
-          )}
-        </AnimatePresence>
+            <AnimatePresence>
+              {isCurrentVersion && (
+                <Toolbar
+                  artifactActions={
+                    <ArtifactActions
+                      artifact={artifact}
+                      currentVersionIndex={currentVersionIndex}
+                      handleVersionChange={handleVersionChange}
+                      isCurrentVersion={isCurrentVersion}
+                      metadata={metadata}
+                      mode={mode}
+                      setMetadata={setMetadata}
+                    />
+                  }
+                  artifactKind={artifact.kind}
+                  consoleError={consoleError}
+                  documentId={artifact.documentId}
+                  isToolbarVisible={isToolbarVisible}
+                  onClose={() => {
+                    setArtifact((prev) => ({ ...prev, isVisible: false }));
+                  }}
+                  sendMessage={sendMessage}
+                  setIsToolbarVisible={setIsToolbarVisible}
+                  setMessages={setMessages}
+                  status={status}
+                  stop={stop}
+                />
+              )}
+            </AnimatePresence>
+          </>
+        )}
       </div>
       <AnimatePresence>
         {!isCurrentVersion && (
@@ -453,7 +721,7 @@ function PureArtifact({
 
   return (
     <div
-      className="flex h-dvh w-[60%] shrink-0 flex-col overflow-hidden border-l border-border/50 bg-sidebar transition-[width] duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
+      className="flex h-full w-full flex-col overflow-hidden bg-background"
       data-testid="artifact"
     >
       {artifactPanel}

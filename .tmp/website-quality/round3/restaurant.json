@@ -1,0 +1,221 @@
+{
+  "slug": "restaurant",
+  "prompt": "Build a premium restaurant website for Noma House. Include hero, menu highlights, chef story, reservation CTA, testimonials, gallery, location, and footer. Make it elegant, editorial, luxurious, and image-led with strong typography and a dark premium palette.",
+  "durationMs": 188900,
+  "meta": {
+    "type": "project",
+    "framework": "vite-react-ts",
+    "title": "Noma House - Nordic Contemporary Dining",
+    "entryFile": "src/main.tsx",
+    "previewEntryFile": "src/App.tsx",
+    "siteType": "restaurant",
+    "designDirection": "dark editorial luxury with serif display typography, high-contrast photography, and cinematic asymmetric compositions",
+    "colorStrategy": "dark palette with #0a0a0a background, #1a1a1a surface, #f5f5f5 text, #888888 muted, #d4af37 gold accent",
+    "typography": "Playfair Display for display headings, Inter for body text",
+    "sectionOrder": [
+      "hero",
+      "chef-story",
+      "menu-highlights",
+      "gallery",
+      "testimonials",
+      "reservation",
+      "location",
+      "footer"
+    ],
+    "assets": [
+      {
+        "path": "public/images/hero.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop&q=80",
+        "prompt": "elegant restaurant interior with dramatic lighting"
+      },
+      {
+        "path": "public/images/chef.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=1000&fit=crop&q=80",
+        "prompt": "professional chef in kitchen"
+      },
+      {
+        "path": "public/images/dish1.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop&q=80",
+        "prompt": "elegant plated dish"
+      },
+      {
+        "path": "public/images/dish2.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=400&fit=crop&q=80",
+        "prompt": "fine dining presentation"
+      },
+      {
+        "path": "public/images/gallery1.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop&q=80",
+        "prompt": "restaurant dining room atmosphere"
+      },
+      {
+        "path": "public/images/gallery2.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1551218372-a8789b81b253?w=800&h=600&fit=crop&q=80",
+        "prompt": "food preparation close-up"
+      },
+      {
+        "path": "public/images/gallery3.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&h=600&fit=crop&q=80",
+        "prompt": "wine and dining details"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "package.json",
+      "language": "json",
+      "size": 536
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "size": 414
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "size": 628
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "size": 236
+    },
+    {
+      "path": "postcss.config.js",
+      "language": "javascript",
+      "size": 79
+    },
+    {
+      "path": "tailwind.config.ts",
+      "language": "typescript",
+      "size": 355
+    },
+    {
+      "path": "src/main.tsx",
+      "language": "tsx",
+      "size": 239
+    },
+    {
+      "path": "src/styles/globals.css",
+      "language": "css",
+      "size": 963
+    },
+    {
+      "path": "src/App.tsx",
+      "language": "tsx",
+      "size": 736
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "language": "tsx",
+      "size": 3561
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "language": "tsx",
+      "size": 3809
+    },
+    {
+      "path": "src/components/ChefStory.tsx",
+      "language": "tsx",
+      "size": 3345
+    },
+    {
+      "path": "src/components/MenuHighlights.tsx",
+      "language": "tsx",
+      "size": 4686
+    },
+    {
+      "path": "src/components/Gallery.tsx",
+      "language": "tsx",
+      "size": 4753
+    },
+    {
+      "path": "src/components/Testimonials.tsx",
+      "language": "tsx",
+      "size": 4319
+    },
+    {
+      "path": "src/components/Reservation.tsx",
+      "language": "tsx",
+      "size": 6346
+    },
+    {
+      "path": "src/components/Location.tsx",
+      "language": "tsx",
+      "size": 6806
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "language": "tsx",
+      "size": 8690
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/images/hero.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop&q=80",
+      "prompt": "elegant restaurant interior with dramatic lighting"
+    },
+    {
+      "path": "public/images/chef.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=1000&fit=crop&q=80",
+      "prompt": "professional chef in kitchen"
+    },
+    {
+      "path": "public/images/dish1.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop&q=80",
+      "prompt": "elegant plated dish"
+    },
+    {
+      "path": "public/images/dish2.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=400&fit=crop&q=80",
+      "prompt": "fine dining presentation"
+    },
+    {
+      "path": "public/images/gallery1.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop&q=80",
+      "prompt": "restaurant dining room atmosphere"
+    },
+    {
+      "path": "public/images/gallery2.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1551218372-a8789b81b253?w=800&h=600&fit=crop&q=80",
+      "prompt": "food preparation close-up"
+    },
+    {
+      "path": "public/images/gallery3.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&h=600&fit=crop&q=80",
+      "prompt": "wine and dining details"
+    }
+  ],
+  "isComplete": true
+}

@@ -38,6 +38,7 @@ export async function GET(request: Request) {
   const [document] = documents;
 
   if (!document) {
+    console.log("[document-route] 404", { id, sessionUserId: session.user.id });
     return new ChatbotError("not_found:document").toResponse();
   }
 

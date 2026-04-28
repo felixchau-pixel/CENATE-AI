@@ -1,0 +1,1984 @@
+===PROJECT_MANIFEST===
+{
+  "type": "project",
+  "framework": "vite-react-ts",
+  "title": "Apex Construction - Premium General Contractor",
+  "entryFile": "src/main.tsx",
+  "previewEntryFile": "src/App.tsx",
+  "siteType": "other",
+  "designDirection": "Industrial confidence with real project photography, condensed display sans, and credential-first trust building",
+  "colorStrategy": "Deep slate backgrounds with steel surfaces, safety amber accent, off-white text for high-contrast industrial feel",
+  "typography": "Archivo Bold display with Inter body for technical credibility",
+  "sectionOrder": ["Hero", "Services", "ProjectGallery", "ProcessTimeline", "Credentials", "Testimonial", "EstimateForm", "Footer"],
+  "assets": [
+    { "path": "public/images/hero.jpg", "kind": "image", "source": "curated", "url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&h=1080&fit=crop&q=80", "prompt": "Modern commercial building under construction with crane and steel framework" },
+    { "path": "public/images/project1.jpg", "kind": "image", "source": "curated", "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop&q=80", "prompt": "Completed modern commercial building exterior" },
+    { "path": "public/images/project2.jpg", "kind": "image", "source": "curated", "url": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&h=800&fit=crop&q=80", "prompt": "Modern residential build completed exterior" },
+    { "path": "public/images/process.jpg", "kind": "image", "source": "curated", "url": "https://images.unsplash.com/photo-1504615755583-2916b52192a3?w=800&h=600&fit=crop&q=80", "prompt": "Construction workers on steel framework with safety gear" }
+  ]
+}
+===END_MANIFEST===
+===FILE:package.json===
+{
+  "name": "cenate-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:dev": "vite build --mode development",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.2",
+    "@radix-ui/react-alert-dialog": "^1.1.4",
+    "@radix-ui/react-aspect-ratio": "^1.1.1",
+    "@radix-ui/react-avatar": "^1.1.2",
+    "@radix-ui/react-checkbox": "^1.1.3",
+    "@radix-ui/react-collapsible": "^1.1.2",
+    "@radix-ui/react-context-menu": "^2.2.4",
+    "@radix-ui/react-dialog": "^1.1.4",
+    "@radix-ui/react-dropdown-menu": "^2.1.4",
+    "@radix-ui/react-hover-card": "^1.1.4",
+    "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-menubar": "^1.1.4",
+    "@radix-ui/react-navigation-menu": "^1.2.3",
+    "@radix-ui/react-popover": "^1.1.4",
+    "@radix-ui/react-progress": "^1.1.1",
+    "@radix-ui/react-radio-group": "^1.2.2",
+    "@radix-ui/react-scroll-area": "^1.2.2",
+    "@radix-ui/react-select": "^2.1.4",
+    "@radix-ui/react-separator": "^1.1.1",
+    "@radix-ui/react-slider": "^1.2.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.2",
+    "@radix-ui/react-tabs": "^1.1.2",
+    "@radix-ui/react-toast": "^1.2.4",
+    "@radix-ui/react-toggle": "^1.1.1",
+    "@radix-ui/react-toggle-group": "^1.1.1",
+    "@radix-ui/react-tooltip": "^1.1.6",
+    "@hookform/resolvers": "^3.9.1",
+    "@tanstack/react-query": "^5.62.8",
+    "@radix-ui/react-visually-hidden": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.0.4",
+    "date-fns": "^4.1.0",
+    "embla-carousel-react": "^8.5.1",
+    "input-otp": "^1.4.1",
+    "lucide-react": "^0.468.0",
+    "next-themes": "^0.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-day-picker": "^9.4.3",
+    "react-hook-form": "^7.54.2",
+    "react-resizable-panels": "^2.1.7",
+    "react-router-dom": "^7.1.1",
+    "recharts": "^2.15.0",
+    "sonner": "^1.7.1",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript-eslint": "^8.18.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.1",
+    "vitest": "^2.1.8"
+  }
+}
+===END_FILE===
+===FILE:index.html===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cenate Website</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+===END_FILE===
+===FILE:tsconfig.json===
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
+===END_FILE===
+===FILE:tsconfig.app.json===
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}
+===END_FILE===
+===FILE:tsconfig.node.json===
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "vitest.config.ts", "eslint.config.js"]
+}
+===END_FILE===
+===FILE:vite.config.ts===
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
+===END_FILE===
+===FILE:postcss.config.js===
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+===END_FILE===
+===FILE:tailwind.config.ts===
+import type { Config } from "tailwindcss";
+
+export default {
+  darkMode: ["class"],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}", "./index.html"],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      fontFamily: {
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+      },
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "count-up": {
+          from: { opacity: "0", transform: "scale(0.8)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "count-up": "count-up 0.5s ease-out forwards",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config;
+===END_FILE===
+===FILE:eslint.config.js===
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+  { ignores: ["dist"] },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+    },
+  }
+);
+===END_FILE===
+===FILE:vitest.config.ts===
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: "./src/test/setup.ts",
+  },
+});
+===END_FILE===
+===FILE:components.json===
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "src/index.css",
+    "baseColor": "zinc",
+    "cssVariables": false
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "hooks": "@/hooks",
+    "lib": "@/lib"
+  }
+}
+===END_FILE===
+===FILE:README.md===
+# Cenate Website
+
+This project was generated by Cenate with a fixed Lovable-style Vite + React + TypeScript scaffold.
+
+## Scripts
+
+- `npm run dev`
+- `npm run build`
+- `npm run build:dev`
+- `npm run lint`
+- `npm run preview`
+- `npm run test`
+- `npm run test:watch`
+
+===END_FILE===
+===FILE:.gitignore===
+node_modules
+dist
+.DS_Store
+.env
+.env.local
+coverage
+*.log
+===END_FILE===
+===FILE:public/robots.txt===
+User-agent: *
+Allow: /
+===END_FILE===
+===FILE:public/placeholder.svg===
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="24" fill="#F4F4F5"/>
+  <path d="M120 210L180 150L225 195L290 125L340 210H120Z" fill="#D4D4D8"/>
+  <circle cx="160" cy="110" r="24" fill="#A1A1AA"/>
+</svg>
+===END_FILE===
+===FILE:public/favicon.ico===
+placeholder favicon
+===END_FILE===
+===FILE:src/main.tsx===
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import "./App.css";
+
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { error: Error | null }
+> {
+  state: { error: Error | null } = { error: null };
+  static getDerivedStateFromError(error: Error) {
+    return { error };
+  }
+  componentDidCatch(error: Error) {
+    const el = document.getElementById("cenate-error");
+    if (el) {
+      el.style.display = "block";
+      el.textContent = "Render error: " + error.message;
+    }
+  }
+  render() {
+    if (this.state.error) {
+      return React.createElement(
+        "div",
+        {
+          style: {
+            padding: 32,
+            color: "#b91c1c",
+            fontFamily: "ui-monospace, monospace",
+            fontSize: 13,
+            whiteSpace: "pre-wrap" as const,
+            background: "#fff5f5",
+            minHeight: "100vh",
+          },
+        },
+        "Render error: " + this.state.error.message
+      );
+    }
+    return this.props.children;
+  }
+}
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </React.StrictMode>
+);
+===END_FILE===
+===FILE:src/index.css===
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 1rem;
+
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.14), hsl(var(--background)) 55%, hsl(var(--accent) / 0.22));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.92) 100%);
+    --shadow-soft: 0 20px 45px -30px rgb(15 23 42 / 0.28);
+    --shadow-card: 0 18px 40px -28px rgb(15 23 42 / 0.22);
+    --shadow-card-hover: 0 24px 60px -32px rgb(15 23 42 / 0.32);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 47.4% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 47.4% 8.6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 47.4% 8.6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --gradient-hero: linear-gradient(140deg, hsl(var(--primary) / 0.12), hsl(var(--background)) 52%, hsl(217.2 91.2% 59.8% / 0.28));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    background-image:
+      radial-gradient(circle at top, hsl(var(--primary) / 0.06), transparent 28%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 100%);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--primary) / 0.72));
+  }
+
+  .surface-card {
+    background-image: linear-gradient(180deg, hsl(var(--card) / 0.98), hsl(var(--card) / 0.92));
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-panel {
+    background: hsl(var(--card) / 0.82);
+    backdrop-filter: blur(14px);
+    border: 1px solid hsl(var(--border) / 0.7);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .section-shell {
+    position: relative;
+  }
+
+  .section-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, hsl(var(--background) / 0), hsl(var(--primary) / 0.03));
+    opacity: 0.8;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-count-up {
+  animation: count-up 0.5s ease-out forwards;
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+===END_FILE===
+===FILE:src/App.css===
+#root {
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+===END_FILE===
+===FILE:src/vite-env.d.ts===
+/// <reference types="vite/client" />
+===END_FILE===
+===FILE:src/assets/.gitkeep===
+
+===END_FILE===
+===FILE:src/hooks/use-mobile.ts===
+import { useEffect, useState } from "react";
+
+export function useMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    const update = () => setIsMobile(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+===END_FILE===
+===FILE:src/pages/Home.tsx===
+import App from "../App";
+
+export default function HomePage() {
+  return <App />;
+}
+===END_FILE===
+===FILE:src/test/setup.ts===
+import "@testing-library/jest-dom";
+===END_FILE===
+===FILE:src/test/App.test.tsx===
+import { render, screen } from "@testing-library/react";
+import App from "../App";
+
+describe("App", () => {
+  it("renders without crashing", () => {
+    render(<App />);
+    expect(screen.getByRole("main")).toBeInTheDocument();
+  });
+});
+===END_FILE===
+===FILE:src/lib/utils.ts===
+import { clsx, type ClassValue } from "clsx";
+
+export function cn(...inputs: ClassValue[]) {
+  return clsx(inputs);
+}
+===END_FILE===
+===FILE:src/components/ui/button.tsx===
+import React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };
+export default Button;
+===END_FILE===
+===FILE:src/components/ui/accordion.tsx===
+import React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { cn } from "@/lib/utils";
+
+const Accordion = AccordionPrimitive.Root;
+
+const AccordionItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <AccordionPrimitive.Item ref={ref} className={cn("border-b", className)} {...props} />
+  )
+);
+AccordionItem.displayName = "AccordionItem";
+
+const AccordionTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        ref={ref}
+        className={cn(
+          "flex flex-1 items-center justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
+          className
+        )}
+        {...props}
+      >
+        {children}
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6" /></svg>
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  )
+);
+AccordionTrigger.displayName = "AccordionTrigger";
+
+const AccordionContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Content ref={ref} className="overflow-hidden text-sm" {...props}>
+      <div className={cn("pb-4 pt-0", className)}>{children}</div>
+    </AccordionPrimitive.Content>
+  )
+);
+AccordionContent.displayName = "AccordionContent";
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+===END_FILE===
+===FILE:src/components/ui/tabs.tsx===
+import React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { cn } from "@/lib/utils";
+
+const Tabs = TabsPrimitive.Root;
+
+const TabsList = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.List
+      ref={ref}
+      className={cn(
+        "inline-flex h-10 items-center justify-center rounded-lg bg-zinc-100 p-1 text-zinc-500",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsList.displayName = "TabsList";
+
+const TabsTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-all",
+        "data-[state=active]:bg-white data-[state=active]:text-zinc-950 data-[state=active]:shadow-sm",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsTrigger.displayName = "TabsTrigger";
+
+const TabsContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Content
+      ref={ref}
+      className={cn("mt-2", className)}
+      {...props}
+    />
+  )
+);
+TabsContent.displayName = "TabsContent";
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+===END_FILE===
+===FILE:src/components/ui/dialog.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Dialog = DialogPrimitive.Root;
+const DialogTrigger = DialogPrimitive.Trigger;
+const DialogClose = DialogPrimitive.Close;
+const DialogPortal = DialogPrimitive.Portal;
+
+const DialogOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn(
+        "fixed inset-0 z-50 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+DialogOverlay.displayName = "DialogOverlay";
+
+const DialogContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <DialogPortal>
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed left-[50%] top-[50%] z-50 w-full max-w-lg translate-x-[-50%] translate-y-[-50%] rounded-xl border bg-white p-6 shadow-xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  )
+);
+DialogContent.displayName = "DialogContent";
+
+const DialogTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Title ref={ref} className={cn("text-lg font-semibold", className)} {...props} />
+  )
+);
+DialogTitle.displayName = "DialogTitle";
+
+const DialogDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Description ref={ref} className={cn("text-sm text-zinc-500", className)} {...props} />
+  )
+);
+DialogDescription.displayName = "DialogDescription";
+
+export { Dialog, DialogTrigger, DialogContent, DialogClose, DialogOverlay, DialogTitle, DialogDescription };
+===END_FILE===
+===FILE:src/components/ui/sheet.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Sheet = DialogPrimitive.Root;
+const SheetTrigger = DialogPrimitive.Trigger;
+const SheetClose = DialogPrimitive.Close;
+
+const SheetOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn("fixed inset-0 z-50 bg-black/60 backdrop-blur-sm", className)}
+      {...props}
+    />
+  )
+);
+SheetOverlay.displayName = "SheetOverlay";
+
+type SheetContentProps = React.HTMLAttributes<HTMLDivElement> & {
+  side?: "left" | "right" | "top" | "bottom";
+};
+
+const sideStyles: Record<string, string> = {
+  right: "inset-y-0 right-0 h-full w-3/4 max-w-sm border-l translate-x-0",
+  left: "inset-y-0 left-0 h-full w-3/4 max-w-sm border-r translate-x-0",
+  top: "inset-x-0 top-0 border-b",
+  bottom: "inset-x-0 bottom-0 border-t",
+};
+
+const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
+  ({ side = "right", className, children, ...props }, ref) => (
+    <DialogPrimitive.Portal>
+      <SheetOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed z-50 bg-white p-6 shadow-xl transition-transform duration-300",
+          sideStyles[side],
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPrimitive.Portal>
+  )
+);
+SheetContent.displayName = "SheetContent";
+
+export { Sheet, SheetTrigger, SheetContent, SheetClose };
+===END_FILE===
+===FILE:src/components/ui/input.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+  error?: string;
+};
+
+export default function Input({ label, error, className, id, ...props }: InputProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <input
+        id={inputId}
+        className={cn(
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          error && "border-destructive focus-visible:ring-destructive",
+          className
+        )}
+        {...props}
+      />
+      {error && <p className="mt-1 text-sm text-destructive">{error}</p>}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/textarea.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  label?: string;
+};
+
+export default function Textarea({ label, className, id, ...props }: TextareaProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <textarea
+        id={inputId}
+        rows={4}
+        className={cn(
+          "w-full rounded-lg border px-4 py-2.5 text-base outline-none transition-colors resize-none",
+          className
+        )}
+        {...props}
+      />
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/badge.tsx===
+import React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const badgeVariants = cva(
+  "inline-flex items-center rounded-full font-medium",
+  {
+    variants: {
+      size: {
+        sm: "px-2 py-0.5 text-[10px]",
+        md: "px-2.5 py-0.5 text-xs",
+        lg: "px-3 py-1 text-sm",
+      },
+    },
+    defaultVariants: {
+      size: "md",
+    },
+  }
+);
+
+type BadgeProps = React.HTMLAttributes<HTMLSpanElement> &
+  VariantProps<typeof badgeVariants>;
+
+export default function Badge({ className, size, ...props }: BadgeProps) {
+  return (
+    <span className={cn(badgeVariants({ size }), className)} {...props} />
+  );
+}
+
+export { badgeVariants };
+===END_FILE===
+===FILE:src/components/ui/card.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type CardProps = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Card({ className, children }: CardProps) {
+  return (
+    <div className={cn("surface-card rounded-[calc(var(--radius)+6px)] border bg-card text-card-foreground shadow-sm p-6", className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/section.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SectionProps = {
+  id?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Section({ id, className, children }: SectionProps) {
+  return (
+    <section id={id} className={cn("py-16 md:py-24", className)}>
+      {children}
+    </section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/container.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type ContainerProps = {
+  size?: "sm" | "md" | "lg" | "xl" | "full";
+  className?: string;
+  children: React.ReactNode;
+};
+
+const maxWidths: Record<string, string> = {
+  sm: "max-w-3xl",
+  md: "max-w-5xl",
+  lg: "max-w-6xl",
+  xl: "max-w-7xl",
+  full: "max-w-full",
+};
+
+export default function Container({ size = "xl", className, children }: ContainerProps) {
+  return (
+    <div className={cn("mx-auto px-4 sm:px-6 lg:px-8", maxWidths[size], className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/heading.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type HeadingProps = {
+  as?: "h1" | "h2" | "h3" | "h4";
+  size?: "display" | "h1" | "h2" | "h3";
+  eyebrow?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+const sizeStyles: Record<string, string> = {
+  display: "text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]",
+  h1: "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight",
+  h2: "text-3xl md:text-4xl font-semibold tracking-tight",
+  h3: "text-xl md:text-2xl font-semibold",
+};
+
+export default function Heading({
+  as: Tag = "h2",
+  size = "h2",
+  eyebrow,
+  className,
+  children,
+}: HeadingProps) {
+  return (
+    <div>
+      {eyebrow && (
+        <span className="block text-xs uppercase tracking-widest font-medium mb-3 opacity-60">
+          {eyebrow}
+        </span>
+      )}
+      <Tag className={cn(sizeStyles[size], className)}>{children}</Tag>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/separator.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SeparatorProps = {
+  orientation?: "horizontal" | "vertical";
+  className?: string;
+};
+
+export default function Separator({ orientation = "horizontal", className }: SeparatorProps) {
+  return (
+    <div
+      role="separator"
+      className={cn(
+        "shrink-0 bg-current opacity-10",
+        orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
+        className
+      )}
+    />
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/aspect-ratio.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type AspectRatioProps = {
+  ratio?: number;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function AspectRatio({ ratio = 16 / 9, className, children }: AspectRatioProps) {
+  return (
+    <div className={cn("relative w-full overflow-hidden", className)} style={{ paddingBottom: (1 / ratio) * 100 + "%" }}>
+      <div className="absolute inset-0">{children}</div>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/testimonial.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TestimonialProps = {
+  quote: string;
+  author: string;
+  role?: string;
+  avatar?: string;
+  className?: string;
+};
+
+export default function Testimonial({ quote, author, role, avatar, className }: TestimonialProps) {
+  return (
+    <figure className={cn("space-y-4", className)}>
+      <blockquote className="text-lg md:text-xl leading-relaxed italic">
+        &ldquo;{quote}&rdquo;
+      </blockquote>
+      <figcaption className="flex items-center gap-3">
+        {avatar && (
+          <img src={avatar} alt={author} className="w-10 h-10 rounded-full object-cover" />
+        )}
+        <div>
+          <p className="font-medium text-sm">{author}</p>
+          {role && <p className="text-xs opacity-60">{role}</p>}
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/stats-band.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import { cn } from "@/lib/utils";
+
+type Stat = {
+  value: string;
+  label: string;
+};
+
+type StatsBandProps = {
+  stats: Stat[];
+  className?: string;
+};
+
+export default function StatsBand({ stats, className }: StatsBandProps) {
+  return (
+    <Section className={cn("py-12", className)}>
+      <Container>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <p className="text-3xl md:text-5xl font-bold">{s.value}</p>
+              <p className="text-sm mt-1 opacity-60">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/gallery.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type GalleryImage = {
+  src: string;
+  alt: string;
+  span?: "normal" | "wide" | "tall";
+};
+
+type GalleryProps = {
+  images: GalleryImage[];
+  className?: string;
+};
+
+const spanClasses: Record<string, string> = {
+  normal: "",
+  wide: "md:col-span-2",
+  tall: "md:row-span-2",
+};
+
+export default function Gallery({ images, className }: GalleryProps) {
+  return (
+    <div className={cn("grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4", className)}>
+      {images.map((img, i) => (
+        <div key={i} className={cn("overflow-hidden rounded-lg", spanClasses[img.span || "normal"])}>
+          <img
+            src={img.src}
+            alt={img.alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/mobile-nav.tsx===
+import React from "react";
+import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/ui/sheet";
+import Button from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+type MobileNavProps = {
+  links: { label: string; href: string }[];
+  brandName: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  className?: string;
+};
+
+export default function MobileNav({ links, brandName, ctaLabel, ctaHref, className }: MobileNavProps) {
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <button className={cn("md:hidden p-2", className)} aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </SheetTrigger>
+      <SheetContent side="right" className="flex flex-col pt-16">
+        <p className="text-lg font-semibold mb-8">{brandName}</p>
+        <nav className="flex flex-col gap-4">
+          {links.map((link) => (
+            <SheetClose key={link.href} asChild>
+              <a href={link.href} className="text-lg py-2 border-b border-zinc-100 hover:text-zinc-600 transition-colors">
+                {link.label}
+              </a>
+            </SheetClose>
+          ))}
+        </nav>
+        {ctaLabel && ctaHref && (
+          <div className="mt-auto pt-8">
+            <SheetClose asChild>
+              <Button asChild size="lg" className="w-full">
+                <a href={ctaHref}>{ctaLabel}</a>
+              </Button>
+            </SheetClose>
+          </div>
+        )}
+      </SheetContent>
+    </Sheet>
+  );
+}
+===END_FILE===
+
+===FILE:src/App.tsx===
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import ProjectGallery from "./components/ProjectGallery";
+import ProcessTimeline from "./components/ProcessTimeline";
+import Credentials from "./components/Credentials";
+import Testimonial from "./components/Testimonial";
+import EstimateForm from "./components/EstimateForm";
+import Footer from "./components/Footer";
+
+export default function App() {
+  return (
+    <main role="main" className="min-h-screen bg-slate-950 text-slate-50">
+      <Navbar />
+      <Hero />
+      <Services />
+      <ProjectGallery />
+      <ProcessTimeline />
+      <Credentials />
+      <Testimonial />
+      <EstimateForm />
+      <Footer />
+    </main>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Navbar.tsx===
+import React from "react";
+import Container from "@/components/ui/container";
+import Button from "@/components/ui/button";
+import MobileNav from "@/components/ui/mobile-nav";
+
+const links = [
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
+  { label: "Process", href: "#process" },
+  { label: "About", href: "#about" },
+];
+
+export default function Navbar() {
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/95 backdrop-blur-sm border-b border-slate-800/50">
+      <Container>
+        <div className="flex items-center justify-between h-16">
+          <a href="#" className="text-xl font-bold text-white font-heading">
+            Apex Construction
+          </a>
+          <nav className="hidden md:flex items-center gap-8">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm text-slate-400 hover:text-white transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Button size="sm" className="bg-amber-500 text-slate-950 hover:bg-amber-400 font-semibold">
+              Free Estimate
+            </Button>
+          </nav>
+          <MobileNav
+            links={links}
+            brandName="Apex Construction"
+            ctaLabel="Free Estimate"
+            ctaHref="#estimate"
+          />
+        </div>
+      </Container>
+    </header>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Hero.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+import Button from "@/components/ui/button";
+
+export default function Hero() {
+  return (
+    <Section className="relative min-h-[90vh] flex items-center bg-slate-950 text-white overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&h=1080&fit=crop&q=80"
+          alt="Modern commercial construction project with crane and steel framework"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/90 to-slate-950/60" />
+      </div>
+      <Container className="relative z-10">
+        <div className="max-w-2xl">
+          <Heading as="h1" size="display" className="text-white font-heading font-bold text-5xl md:text-6xl">
+            Built to Last
+          </Heading>
+          <p className="mt-6 text-lg text-slate-300 max-w-xl leading-relaxed">
+            Premier general contractor serving the tri-state area for over 25 years. 
+            From custom homes to commercial developments, we deliver quality construction on time and within budget.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <Button size="lg" className="bg-amber-500 text-slate-950 hover:bg-amber-400 font-semibold">
+              Request Free Estimate
+            </Button>
+            <Button size="lg" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800">
+              View Our Work
+            </Button>
+          </div>
+        </div>
+      </Container>
+      <div className="absolute bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-sm border-t border-slate-700/50 -mb-px">
+        <Container>
+          <div className="flex flex-wrap items-center justify-between gap-4 py-4 text-sm">
+            <span className="text-slate-400">License #CC-2847561</span>
+            <span className="text-amber-400 font-medium">25+ Years Experience</span>
+            <span className="text-slate-400">Fully Insured & Bonded</span>
+            <span className="text-slate-400">BBB A+ Rated</span>
+          </div>
+        </Container>
+      </div>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Services.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+import Card from "@/components/ui/card";
+
+const services = [
+  {
+    title: "Residential Construction",
+    description: "Custom homes, additions, and full renovations. From foundation to finish carpentry.",
+    capabilities: ["Custom Home Builds", "Home Additions", "Kitchen & Bath Renovation", "Basement Finishing"],
+    featured: true,
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=400&fit=crop&q=80"
+  },
+  {
+    title: "Commercial Projects",
+    description: "Office build-outs, retail spaces, and warehouse construction for businesses.",
+    capabilities: ["Office Interiors", "Retail Build-outs", "Warehouse Construction", "Tenant Improvements"],
+    featured: false,
+  },
+  {
+    title: "Renovation & Restoration",
+    description: "Historic preservation, structural repairs, and modernization projects.",
+    capabilities: ["Historic Restoration", "Structural Repairs", "Building Modernization", "ADA Compliance"],
+    featured: false,
+  },
+];
+
+export default function Services() {
+  return (
+    <Section id="services" className="bg-slate-900 text-white py-24">
+      <Container>
+        <Heading as="h2" size="h2" eyebrow="Our Services" className="text-white mb-16">
+          What We Build
+        </Heading>
+        <div className="grid lg:grid-cols-5 gap-6">
+          <Card className="lg:col-span-3 bg-slate-800 border border-slate-700 p-8 relative overflow-hidden">
+            <div className="relative z-10">
+              <p className="text-xs uppercase tracking-widest text-amber-400 font-medium mb-3">
+                {services[0].title}
+              </p>
+              <p className="text-xl font-semibold text-white mb-4">
+                {services[0].description}
+              </p>
+              <ul className="space-y-2 text-slate-400 text-sm mb-6">
+                {services[0].capabilities.map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-amber-400 font-semibold">Starting at $150/sq ft</p>
+            </div>
+            <div className="absolute top-4 right-4 w-20 h-16 rounded-lg overflow-hidden opacity-60">
+              <img
+                src={services[0].image}
+                alt="Residential construction example"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </Card>
+          
+          <div className="lg:col-span-2 space-y-6">
+            {services.slice(1).map((service) => (
+              <Card key={service.title} className="bg-slate-800 border border-slate-700 p-6">
+                <p className="text-xs uppercase tracking-widest text-amber-400 font-medium mb-2">
+                  {service.title}
+                </p>
+                <p className="text-sm text-slate-300 mb-3">
+                  {service.description}
+                </p>
+                <ul className="space-y-1 text-slate-400 text-xs">
+                  {service.capabilities.map((item) => (
+                    <li key={item}>&bull; {item}</li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/ProjectGallery.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+
+const projects = [
+  {
+    title: "Harbor District Office Tower",
+    location: "Downtown Seattle",
+    year: "2023",
+    scope: "45,000 sq ft",
+    value: "$12M",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop&q=80",
+    featured: true
+  },
+  {
+    title: "Westfield Custom Residence",
+    location: "Bellevue, WA",
+    year: "2024",
+    scope: "8,200 sq ft",
+    value: "$2.4M",
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop&q=80",
+    featured: false
+  },
+  {
+    title: "Pine Ridge Medical Center",
+    location: "Tacoma, WA",
+    year: "2023",
+    scope: "22,000 sq ft",
+    value: "$7.8M",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&q=80",
+    featured: false
+  },
+  {
+    title: "Riverside Commerce Hub",
+    location: "Portland, OR",
+    year: "2024",
+    scope: "60,000 sq ft",
+    value: "$18M",
+    image: "https://images.unsplash.com/photo-1590486145612-17e984b2abb2?w=800&h=600&fit=crop&q=80",
+    featured: false
+  }
+];
+
+export default function ProjectGallery() {
+  return (
+    <Section id="projects" className="bg-slate-950 text-white py-24">
+      <Container>
+        <div className="mb-16">
+          <Heading as="h2" size="h2" eyebrow="Recent Projects" className="text-white text-left">
+            Featured Work
+          </Heading>
+        </div>
+        <div className="grid md:grid-cols-12 gap-4">
+          <div className="md:col-span-8">
+            <div className="group relative overflow-hidden rounded-xl aspect-[4/3]">
+              <img
+                src={projects[0].image}
+                alt={projects[0].title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8">
+                <p className="text-xs uppercase tracking-widest text-amber-400 mb-2">
+                  {projects[0].location} • {projects[0].year}
+                </p>
+                <p className="text-2xl font-bold text-white mb-2">{projects[0].title}</p>
+                <div className="flex gap-6 text-sm text-slate-400">
+                  <span>{projects[0].scope}</span>
+                  <span>{projects[0].value}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="md:col-span-4 space-y-4">
+            {projects.slice(1).map((project, index) => (
+              <div key={index} className="group relative overflow-hidden rounded-xl aspect-[4/3]">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-xs uppercase tracking-widest text-amber-400 mb-1">
+                    {project.year}
+                  </p>
+                  <p className="text-lg font-semibold text-white mb-1">{project.title}</p>
+                  <p className="text-xs text-slate-400">{project.scope} • {project.value}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/ProcessTimeline.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+
+const steps = [
+  {
+    num: "01",
+    title: "Consultation & Planning",
+    description: "Free on-site assessment where we review scope, constraints, timeline, and budget requirements.",
+    image: "https://images.unsplash.com/photo-1504615755583-2916b52192a3?w=400&h=300&fit=crop&q=80"
+  },
+  {
+    num: "02",
+    title: "Design & Permits",
+    description: "Architectural plans, engineering review, and all municipal permits handled by our team.",
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400&h=300&fit=crop&q=80"
+  },
+  {
+    num: "03",
+    title: "Construction Phase",
+    description: "Dedicated project manager, weekly progress reports, and transparent scheduling throughout build.",
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop&q=80"
+  },
+  {
+    num: "04",
+    title: "Final Walkthrough",
+    description: "Comprehensive punch-list review, quality inspection, and full warranty documentation delivery.",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop&q=80"
+  }
+];
+
+export default function ProcessTimeline() {
+  return (
+    <Section id="process" className="bg-slate-900 text-white py-24">
+      <Container>
+        <Heading as="h2" size="h2" eyebrow="Our Process" className="text-white mb-16 text-center">
+          How We Work
+        </Heading>
+        <div className="relative max-w-6xl mx-auto">
+          <div className="hidden md:block absolute top-32 left-0 right-0 h-px bg-amber-500/30" />
+          <div className="grid md:grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <div key={step.num} className="relative">
+                <div className={`mb-6 ${index % 2 === 0 ? 'md:mb-16' : 'md:mt-16'}`}>
+                  <div className="aspect-[4/3] rounded-lg overflow-hidden mb-4">
+                    <img
+                      src={step.image}
+                      alt={`${step.title} process stage`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 rounded-full bg-amber-500 text-slate-950 font-bold flex items-center justify-center text-lg mb-4 mx-auto md:mx-0">
+                    {step.num}
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-3 text-center md:text-left">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-slate-400 leading-relaxed text-center md:text-left">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Credentials.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+
+const metrics = [
+  { value: "25+", label: "Years Experience" },
+  { value: "500+", label: "Projects Completed" },
+  { value: "$75M+", label: "Total Value Built" },
+  { value: "100%", label: "Licensed & Insured" }
+];
+
+export default function Credentials() {
+  return (
+    <Section className="bg-amber-500 text-slate-950 py-16">
+      <Container>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {metrics.map((metric) => (
+            <div key={metric.label}>
+              <p className="text-4xl md:text-5xl font-bold font-heading mb-2">
+                {metric.value}
+              </p>
+              <p className="text-sm uppercase tracking-widest font-medium opacity-80">
+                {metric.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Testimonial.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+import Card from "@/components/ui/card";
+
+export default function Testimonial() {
+  return (
+    <Section className="bg-slate-950 text-white py-24">
+      <Container size="lg">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <Heading as="h2" size="h2" eyebrow="Client Testimonials" className="text-white mb-8">
+              What Our Clients Say
+            </Heading>
+            <Card className="bg-slate-900 border border-slate-700 p-8">
+              <div className="mb-6">
+                <svg className="w-8 h-8 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+                </svg>
+              </div>
+              <blockquote className="text-lg text-slate-200 leading-relaxed mb-6">
+                "Apex Construction completed our office renovation two weeks ahead of schedule and under budget. 
+                The project manager kept us informed every step of the way, and the quality of work exceeded our expectations. 
+                We've already recommended them to three other businesses."
+              </blockquote>
+              <div className="border-t border-slate-700 pt-6">
+                <p className="font-semibold text-white">Sarah Chen</p>
+                <p className="text-sm text-slate-400">CEO, Pacific Northwest Medical Group</p>
+                <p className="text-xs text-amber-400 mt-1">22,000 sq ft Office Build-out • $1.8M Project</p>
+              </div>
+            </Card>
+          </div>
+          <div className="rounded-xl overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=700&h=500&fit=crop&q=80"
+              alt="Completed commercial construction project"
+              className="w-full aspect-[4/3] object-cover"
+            />
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/EstimateForm.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import Heading from "@/components/ui/heading";
+import Input from "@/components/ui/input";
+import Textarea from "@/components/ui/textarea";
+import Button from "@/components/ui/button";
+import Card from "@/components/ui/card";
+
+export default function EstimateForm() {
+  return (
+    <Section id="estimate" className="bg-slate-900 text-white py-24">
+      <Container>
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <Heading as="h2" size="h2" className="text-white mb-6">
+              Request a Free Estimate
+            </Heading>
+            <p className="text-slate-400 max-w-md mb-8 leading-relaxed">
+              Ready to start your project? Tell us about your construction needs and we'll provide 
+              a detailed estimate within 48 hours.
+            </p>
+            <div className="space-y-6">
+              <div>
+                <p className="text-3xl font-bold text-amber-400 mb-2">(555) 234-5678</p>
+                <p className="text-slate-500 text-sm mb-1">Monday–Friday: 7:00 AM – 6:00 PM</p>
+                <p className="text-slate-500 text-sm">Saturday: 8:00 AM – 4:00 PM</p>
+              </div>
+              <div>
+                <p className="text-slate-300 font-semibold mb-2">Service Areas:</p>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Greater Seattle, Bellevue, Tacoma, Everett, and surrounding King County communities
+                </p>
+              </div>
+              <div>
+                <p className="text-slate-300 font-semibold mb-2">Emergency Services:</p>
+                <p className="text-slate-400 text-sm">24/7 availability for structural emergencies</p>
+              </div>
+            </div>
+          </div>
+          <Card className="bg-slate-800 border border-slate-700 p-8">
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div className="grid md:grid-cols-2 gap-4">
+                <Input
+                  label="Full Name"
+                  placeholder="Your name"
+                  className="bg-slate-700 border-slate-600 text-white placeholder-slate-400"
+                />
+                <Input
+                  label="Phone Number"
+                  type="tel"
+                  placeholder="(555) 000-0000"
+                  className="bg-slate-700 border-slate-600 text-white placeholder-slate-400"
+                />
+              </div>
+              <Input
+                label="Email Address"
+                type="email"
+                placeholder="you@company.com"
+                className="bg-slate-700 border-slate-600 text-white placeholder-slate-400"
+              />
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-2">
+                    Project Type
+                  </label>
+                  <select className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white">
+                    <option>Select project type</option>
+                    <option>Residential Construction</option>
+                    <option>Commercial Build-out</option>
+                    <option>Renovation/Remodel</option>
+                    <option>Addition</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-300 mb-2">
+                    Timeline
+                  </label>
+                  <select className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white">
+                    <option>Select timeline</option>
+                    <option>ASAP</option>
+                    <option>Within 3 months</option>
+                    <option>3-6 months</option>
+                    <option>6+ months</option>
+                  </select>
+                </div>
+              </div>
+              <Textarea
+                label="Project Description"
+                placeholder="Please describe your project scope, square footage, special requirements, and any other relevant details..."
+                rows={5}
+                className="bg-slate-700 border-slate-600 text-white placeholder-slate-400"
+              />
+              <Button
+                size="lg"
+                className="w-full bg-amber-500 text-slate-950 hover:bg-amber-400 font-semibold"
+              >
+                Submit Request
+              </Button>
+              <p className="text-xs text-slate-500 text-center">
+                We'll review your request and contact you within 24 hours to schedule a consultation.
+              </p>
+            </form>
+          </Card>
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+
+===FILE:src/components/Footer.tsx===
+import React from "react";
+import Container from "@/components/ui/container";
+
+export default function Footer() {
+  return (
+    <footer className="bg-slate-950 text-slate-400 border-t border-slate-800 py-16">
+      <Container>
+        <div className="grid md:grid-cols-2 gap-12">
+          <div>
+            <p className="text-2xl font-bold text-white font-heading mb-2">Apex Construction</p>
+            <p className="text-slate-400 mb-4">General Contractor • Established 1999</p>
+            <div className="space-y-2 text-sm">
+              <p className="text-slate-500">License #CC-2847561</p>
+              <p className="text-slate-500">Fully Licensed, Bonded & Insured</p>
+              <p className="text-slate-500">Washington State General Contractor</p>
+              <p className="text-slate-500">BBB A+ Rating • 25+ Years Experience</p>
+            </div>
+          </div>
+          <div className="text-sm space-y-3 md:text-right">
+            <div>
+              <p className="text-white font-semibold mb-1">Headquarters</p>
+              <p>1247 Industrial Boulevard, Suite 200</p>
+              <p>Seattle, WA 98108</p>
+            </div>
+            <div>
+              <p className="text-white font-semibold mb-1">Contact</p>
+              <p className="text-amber-400 font-semibold">(555) 234-5678</p>
+              <p>info@apexconstruction.com</p>
+            </div>
+            <div>
+              <p className="text-white font-semibold mb-1">Business Hours</p>
+              <p>Monday–Friday: 7:00 AM – 6:00 PM</p>
+              <p>Saturday: 8:00 AM – 4:00 PM</p>
+              <p>Sunday: Emergency calls only</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-slate-500">
+            &copy; {new Date().getFullYear()} Apex Construction LLC. All rights reserved.
+          </p>
+          <p className="text-xs text-slate-500">
+            Serving Greater Seattle • King County • Pierce County • Snohomish County
+          </p>
+        </div>
+      </Container>
+    </footer>
+  );
+}
+===END_FILE===

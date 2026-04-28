@@ -1,0 +1,788 @@
+{
+  "runAt": "2026-04-25T17:39:51.562Z",
+  "baseURL": "http://localhost:3000",
+  "email": "preview-final-1777138791562@cenate-test.com",
+  "chatId": "5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db",
+  "documentRequestUrl": "http://localhost:3000/api/document?id=c4dde1ad-7ebf-4e13-a28d-1fa41921e8d5",
+  "effectTrueLog": "[cenate-capture-rnp] effect {captureReady: true, chatId: 5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db, already: false}",
+  "captureEvents": [
+    {
+      "type": "cenate-capture-result",
+      "chatId": "5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db",
+      "hasDataUrl": true,
+      "error": null,
+      "dataUrlPrefix": "data:image/jpeg;base64,/9j/4AAQS",
+      "ts": 1777138970963
+    }
+  ],
+  "previewApi": {
+    "status": 200,
+    "url": "http://localhost:3000/api/preview",
+    "body": {
+      "url": "https://zc7zszfsvgv8jtuw.public.blob.vercel-storage.com/previews/5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db-cU9wvlIyaeUo0qfoUVCyKSOZWwiLc3.jpg"
+    }
+  },
+  "blobUrl": "https://zc7zszfsvgv8jtuw.public.blob.vercel-storage.com/previews/5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db-cU9wvlIyaeUo0qfoUVCyKSOZWwiLc3.jpg",
+  "dbPreviewUrl": "https://zc7zszfsvgv8jtuw.public.blob.vercel-storage.com/previews/5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db-cU9wvlIyaeUo0qfoUVCyKSOZWwiLc3.jpg",
+  "dashboardImgSrc": "https://zc7zszfsvgv8jtuw.public.blob.vercel-storage.com/previews/5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db-cU9wvlIyaeUo0qfoUVCyKSOZWwiLc3.jpg",
+  "checkpointStatusText": "Generating website…",
+  "consoleRelevant": [
+    {
+      "type": "log",
+      "text": "[cenate-capture-rnp] effect {captureReady: false, chatId: d0b6a054-6dd7-4fa3-9eaa-5afd9d9dc8e7, already: false}"
+    },
+    {
+      "type": "log",
+      "text": "[cenate-capture-rnp] effect {captureReady: false, chatId: d0b6a054-6dd7-4fa3-9eaa-5afd9d9dc8e7, already: false}"
+    },
+    {
+      "type": "log",
+      "text": "[cenate-capture-rnp] effect {captureReady: false, chatId: 5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db, already: false}"
+    },
+    {
+      "type": "log",
+      "text": "[cenate-capture-rnp] effect {captureReady: false, chatId: 5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db, already: false}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-payload] {exists: true, length: 30204}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: true, rawLength: 30204, files: 7, legacyHtmlLength: 0}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: true, rawLength: 30204, files: 7, legacyHtmlLength: 0}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-payload] {exists: true, length: 234822}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: true, rawLength: 234822, files: 53, legacyHtmlLength: 0}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: true, rawLength: 234822, files: 53, legacyHtmlLength: 0}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-payload] {exists: true, length: 2456105}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: true, rawLength: 2456105, files: 59, legacyHtmlLength: 0}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: true, rawLength: 2456105, files: 59, legacyHtmlLength: 0}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] globals-ready"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-loader-start {fileCount: 59, hasMainTsx: true, hasAppTsx: true}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] shim-loaded"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] builtins [react, react-dom, react-dom/client, clsx, class-variance-authority, tailwind-merge, @radix-ui/react-slot, @radix-ui/react-accordion, @radix-ui/react-tabs, @radix-ui/react-dialog, @radix-ui/react-visually-hidden, @radix-ui/react-navigation-menu, @radix-ui/react-alert-dialog, @radix-ui/react-aspect-ratio, @radix-ui/react-avatar, @radix-ui/react-checkbox, @radix-ui/react-collapsible, @radix-ui/react-context-menu, @radix-ui/react-dropdown-menu, @radix-ui/react-hover-card, @radix-ui/react-label, @radix-ui/react-menubar, @radix-ui/react-popover, @radix-ui/react-progress, @radix-ui/react-radio-group, @radix-ui/react-scroll-area, @radix-ui/react-select, @radix-ui/react-separator, @radix-ui/react-slider, @radix-ui/react-switch, @radix-ui/react-toast, @radix-ui/react-toggle, @radix-ui/react-toggle-group, @radix-ui/react-tooltip, lucide-react, sonner, react-router-dom, vaul, date-fns, recharts]"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] mounting-entry src/main.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: entry, target: src/main.tsx, basePath: src/main.tsx, candidates: Array(9), chosen: src/main.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/main.tsx, target: ./App, basePath: src/App, candidates: Array(9), chosen: src/App.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/Navbar, basePath: src/components/Navbar, candidates: Array(9), chosen: src/components/Navbar.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Navbar.tsx, target: @/components/ui/button, basePath: src/components/ui/button, candidates: Array(9), chosen: src/components/ui/button.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/button.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/lib/utils.ts"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/button.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Navbar.tsx, target: @/components/ui/mobile-nav, basePath: src/components/ui/mobile-nav, candidates: Array(9), chosen: src/components/ui/mobile-nav.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/mobile-nav.tsx, target: @/components/ui/sheet, basePath: src/components/ui/sheet, candidates: Array(9), chosen: src/components/ui/sheet.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/sheet.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/sheet.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/mobile-nav.tsx, target: @/components/ui/button, basePath: src/components/ui/button, candidates: Array(9), chosen: src/components/ui/button.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/mobile-nav.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/mobile-nav.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/Navbar.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/Hero, basePath: src/components/Hero, candidates: Array(9), chosen: src/components/Hero.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/components/ui/section, basePath: src/components/ui/section, candidates: Array(9), chosen: src/components/ui/section.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/section.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/section.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/components/ui/container, basePath: src/components/ui/container, candidates: Array(9), chosen: src/components/ui/container.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/container.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/container.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/components/ui/heading, basePath: src/components/ui/heading, candidates: Array(9), chosen: src/components/ui/heading.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/heading.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/heading.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/components/ui/button, basePath: src/components/ui/button, candidates: Array(9), chosen: src/components/ui/button.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/components/ui/badge, basePath: src/components/ui/badge, candidates: Array(9), chosen: src/components/ui/badge.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/badge.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/badge.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/assets/generated-images, basePath: src/assets/generated-images, candidates: Array(9), chosen: src/assets/generated-images.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/assets/generated-images.ts"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/Hero.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/ChefStory, basePath: src/components/ChefStory, candidates: Array(9), chosen: src/components/ChefStory.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ChefStory.tsx, target: @/components/ui/section, basePath: src/components/ui/section, candidates: Array(9), chosen: src/components/ui/section.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ChefStory.tsx, target: @/components/ui/container, basePath: src/components/ui/container, candidates: Array(9), chosen: src/components/ui/container.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ChefStory.tsx, target: @/components/ui/heading, basePath: src/components/ui/heading, candidates: Array(9), chosen: src/components/ui/heading.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ChefStory.tsx, target: @/assets/generated-images, basePath: src/assets/generated-images, candidates: Array(9), chosen: src/assets/generated-images.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ChefStory.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/MenuHighlights, basePath: src/components/MenuHighlights, candidates: Array(9), chosen: src/components/MenuHighlights.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/MenuHighlights.tsx, target: @/components/ui/section, basePath: src/components/ui/section, candidates: Array(9), chosen: src/components/ui/section.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/MenuHighlights.tsx, target: @/components/ui/container, basePath: src/components/ui/container, candidates: Array(9), chosen: src/components/ui/container.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/MenuHighlights.tsx, target: @/components/ui/heading, basePath: src/components/ui/heading, candidates: Array(9), chosen: src/components/ui/heading.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/MenuHighlights.tsx, target: @/components/ui/badge, basePath: src/components/ui/badge, candidates: Array(9), chosen: src/components/ui/badge.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/MenuHighlights.tsx, target: @/assets/generated-images, basePath: src/assets/generated-images, candidates: Array(9), chosen: src/assets/generated-images.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/MenuHighlights.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/Gallery, basePath: src/components/Gallery, candidates: Array(9), chosen: src/components/Gallery.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Gallery.tsx, target: @/components/ui/section, basePath: src/components/ui/section, candidates: Array(9), chosen: src/components/ui/section.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Gallery.tsx, target: @/components/ui/container, basePath: src/components/ui/container, candidates: Array(9), chosen: src/components/ui/container.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Gallery.tsx, target: @/components/ui/heading, basePath: src/components/ui/heading, candidates: Array(9), chosen: src/components/ui/heading.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Gallery.tsx, target: @/assets/generated-images, basePath: src/assets/generated-images, candidates: Array(9), chosen: src/assets/generated-images.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/Gallery.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/Footer, basePath: src/components/Footer, candidates: Array(9), chosen: src/components/Footer.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/section, basePath: src/components/ui/section, candidates: Array(9), chosen: src/components/ui/section.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/container, basePath: src/components/ui/container, candidates: Array(9), chosen: src/components/ui/container.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/button, basePath: src/components/ui/button, candidates: Array(9), chosen: src/components/ui/button.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/input, basePath: src/components/ui/input, candidates: Array(9), chosen: src/components/ui/input.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/input.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/input.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/textarea, basePath: src/components/ui/textarea, candidates: Array(9), chosen: src/components/ui/textarea.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/textarea.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/textarea.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/separator, basePath: src/components/ui/separator, candidates: Array(9), chosen: src/components/ui/separator.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/separator.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/separator.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/Footer.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/App.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/main.tsx, target: ./index.css, basePath: src/index.css, candidates: Array(9), chosen: src/index.css}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/main.tsx, target: ./App.css, basePath: src/App.css, candidates: Array(9), chosen: src/App.css}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/main.tsx"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: false, rawLength: 2456105, files: 59, legacyHtmlLength: 0}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: false, rawLength: 2456105, files: 59, legacyHtmlLength: 0}"
+    },
+    {
+      "type": "log",
+      "text": "[cenate-capture-rnp] effect {captureReady: true, chatId: 5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db, already: false}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: false, rawLength: 2456105, files: 59, legacyHtmlLength: 0}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: false, rawLength: 2456105, files: 59, legacyHtmlLength: 0}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] globals-ready"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-loader-start {fileCount: 59, hasMainTsx: true, hasAppTsx: true}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] shim-loaded"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] builtins [react, react-dom, react-dom/client, clsx, class-variance-authority, tailwind-merge, @radix-ui/react-slot, @radix-ui/react-accordion, @radix-ui/react-tabs, @radix-ui/react-dialog, @radix-ui/react-visually-hidden, @radix-ui/react-navigation-menu, @radix-ui/react-alert-dialog, @radix-ui/react-aspect-ratio, @radix-ui/react-avatar, @radix-ui/react-checkbox, @radix-ui/react-collapsible, @radix-ui/react-context-menu, @radix-ui/react-dropdown-menu, @radix-ui/react-hover-card, @radix-ui/react-label, @radix-ui/react-menubar, @radix-ui/react-popover, @radix-ui/react-progress, @radix-ui/react-radio-group, @radix-ui/react-scroll-area, @radix-ui/react-select, @radix-ui/react-separator, @radix-ui/react-slider, @radix-ui/react-switch, @radix-ui/react-toast, @radix-ui/react-toggle, @radix-ui/react-toggle-group, @radix-ui/react-tooltip, lucide-react, sonner, react-router-dom, vaul, date-fns, recharts]"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] mounting-entry src/main.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: entry, target: src/main.tsx, basePath: src/main.tsx, candidates: Array(9), chosen: src/main.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/main.tsx, target: ./App, basePath: src/App, candidates: Array(9), chosen: src/App.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/Navbar, basePath: src/components/Navbar, candidates: Array(9), chosen: src/components/Navbar.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Navbar.tsx, target: @/components/ui/button, basePath: src/components/ui/button, candidates: Array(9), chosen: src/components/ui/button.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/button.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/lib/utils.ts"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/button.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Navbar.tsx, target: @/components/ui/mobile-nav, basePath: src/components/ui/mobile-nav, candidates: Array(9), chosen: src/components/ui/mobile-nav.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/mobile-nav.tsx, target: @/components/ui/sheet, basePath: src/components/ui/sheet, candidates: Array(9), chosen: src/components/ui/sheet.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/sheet.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/sheet.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/mobile-nav.tsx, target: @/components/ui/button, basePath: src/components/ui/button, candidates: Array(9), chosen: src/components/ui/button.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/mobile-nav.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/mobile-nav.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/Navbar.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/Hero, basePath: src/components/Hero, candidates: Array(9), chosen: src/components/Hero.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/components/ui/section, basePath: src/components/ui/section, candidates: Array(9), chosen: src/components/ui/section.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/section.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/section.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/components/ui/container, basePath: src/components/ui/container, candidates: Array(9), chosen: src/components/ui/container.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/container.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/container.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/components/ui/heading, basePath: src/components/ui/heading, candidates: Array(9), chosen: src/components/ui/heading.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/heading.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/heading.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/components/ui/button, basePath: src/components/ui/button, candidates: Array(9), chosen: src/components/ui/button.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/components/ui/badge, basePath: src/components/ui/badge, candidates: Array(9), chosen: src/components/ui/badge.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/badge.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/badge.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Hero.tsx, target: @/assets/generated-images, basePath: src/assets/generated-images, candidates: Array(9), chosen: src/assets/generated-images.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/assets/generated-images.ts"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/Hero.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/ChefStory, basePath: src/components/ChefStory, candidates: Array(9), chosen: src/components/ChefStory.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ChefStory.tsx, target: @/components/ui/section, basePath: src/components/ui/section, candidates: Array(9), chosen: src/components/ui/section.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ChefStory.tsx, target: @/components/ui/container, basePath: src/components/ui/container, candidates: Array(9), chosen: src/components/ui/container.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ChefStory.tsx, target: @/components/ui/heading, basePath: src/components/ui/heading, candidates: Array(9), chosen: src/components/ui/heading.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ChefStory.tsx, target: @/assets/generated-images, basePath: src/assets/generated-images, candidates: Array(9), chosen: src/assets/generated-images.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ChefStory.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/MenuHighlights, basePath: src/components/MenuHighlights, candidates: Array(9), chosen: src/components/MenuHighlights.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/MenuHighlights.tsx, target: @/components/ui/section, basePath: src/components/ui/section, candidates: Array(9), chosen: src/components/ui/section.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/MenuHighlights.tsx, target: @/components/ui/container, basePath: src/components/ui/container, candidates: Array(9), chosen: src/components/ui/container.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/MenuHighlights.tsx, target: @/components/ui/heading, basePath: src/components/ui/heading, candidates: Array(9), chosen: src/components/ui/heading.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/MenuHighlights.tsx, target: @/components/ui/badge, basePath: src/components/ui/badge, candidates: Array(9), chosen: src/components/ui/badge.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/MenuHighlights.tsx, target: @/assets/generated-images, basePath: src/assets/generated-images, candidates: Array(9), chosen: src/assets/generated-images.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/MenuHighlights.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/Gallery, basePath: src/components/Gallery, candidates: Array(9), chosen: src/components/Gallery.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Gallery.tsx, target: @/components/ui/section, basePath: src/components/ui/section, candidates: Array(9), chosen: src/components/ui/section.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Gallery.tsx, target: @/components/ui/container, basePath: src/components/ui/container, candidates: Array(9), chosen: src/components/ui/container.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Gallery.tsx, target: @/components/ui/heading, basePath: src/components/ui/heading, candidates: Array(9), chosen: src/components/ui/heading.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Gallery.tsx, target: @/assets/generated-images, basePath: src/assets/generated-images, candidates: Array(9), chosen: src/assets/generated-images.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/Gallery.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/App.tsx, target: ./components/Footer, basePath: src/components/Footer, candidates: Array(9), chosen: src/components/Footer.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/section, basePath: src/components/ui/section, candidates: Array(9), chosen: src/components/ui/section.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/container, basePath: src/components/ui/container, candidates: Array(9), chosen: src/components/ui/container.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/button, basePath: src/components/ui/button, candidates: Array(9), chosen: src/components/ui/button.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/input, basePath: src/components/ui/input, candidates: Array(9), chosen: src/components/ui/input.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/input.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/input.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/textarea, basePath: src/components/ui/textarea, candidates: Array(9), chosen: src/components/ui/textarea.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/textarea.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/textarea.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/Footer.tsx, target: @/components/ui/separator, basePath: src/components/ui/separator, candidates: Array(9), chosen: src/components/ui/separator.tsx}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/components/ui/separator.tsx, target: @/lib/utils, basePath: src/lib/utils, candidates: Array(9), chosen: src/lib/utils.ts}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/ui/separator.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/components/Footer.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/App.tsx"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/main.tsx, target: ./index.css, basePath: src/index.css, candidates: Array(9), chosen: src/index.css}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] local-import-resolution {importer: src/main.tsx, target: ./App.css, basePath: src/App.css, candidates: Array(9), chosen: src/App.css}"
+    },
+    {
+      "type": "log",
+      "text": "[preview-runtime] module-load-success src/main.tsx"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: false, rawLength: 2456105, files: 59, legacyHtmlLength: 0}"
+    },
+    {
+      "type": "debug",
+      "text": "[preview-render] {isStreaming: false, rawLength: 2456105, files: 59, legacyHtmlLength: 0}"
+    }
+  ],
+  "networkRelevant": [
+    {
+      "status": 200,
+      "url": "http://localhost:3000/api/chat"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost:3000/api/document?id=c4dde1ad-7ebf-4e13-a28d-1fa41921e8d5"
+    },
+    {
+      "status": 200,
+      "url": "http://localhost:3000/api/preview"
+    }
+  ],
+  "error": null,
+  "checkpoints": {
+    "A": {
+      "pass": true,
+      "proof": "http://localhost:3000/api/document?id=c4dde1ad-7ebf-4e13-a28d-1fa41921e8d5"
+    },
+    "B": {
+      "pass": true,
+      "proof": "http://localhost:3000/api/document?id=c4dde1ad-7ebf-4e13-a28d-1fa41921e8d5"
+    },
+    "C": {
+      "pass": true,
+      "proof": "[cenate-capture-rnp] effect {captureReady: true, chatId: 5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db, already: false}"
+    },
+    "D": {
+      "pass": true,
+      "proof": "[cenate-capture-rnp] effect {captureReady: true, chatId: 5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db, already: false}"
+    },
+    "E": {
+      "pass": true,
+      "proof": "[cenate-capture-rnp] effect {captureReady: true, chatId: 5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db, already: false}"
+    },
+    "F": {
+      "pass": true,
+      "proof": {
+        "type": "cenate-capture-result",
+        "chatId": "5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db",
+        "hasDataUrl": true,
+        "error": null,
+        "dataUrlPrefix": "data:image/jpeg;base64,/9j/4AAQS",
+        "ts": 1777138970963
+      }
+    },
+    "G": {
+      "pass": true,
+      "proof": {
+        "type": "cenate-capture-result",
+        "chatId": "5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db",
+        "hasDataUrl": true,
+        "error": null,
+        "dataUrlPrefix": "data:image/jpeg;base64,/9j/4AAQS",
+        "ts": 1777138970963
+      }
+    },
+    "H": {
+      "pass": true,
+      "proof": {
+        "status": 200,
+        "url": "http://localhost:3000/api/preview",
+        "body": {
+          "url": "https://zc7zszfsvgv8jtuw.public.blob.vercel-storage.com/previews/5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db-cU9wvlIyaeUo0qfoUVCyKSOZWwiLc3.jpg"
+        }
+      }
+    },
+    "I": {
+      "pass": true,
+      "proof": "https://zc7zszfsvgv8jtuw.public.blob.vercel-storage.com/previews/5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db-cU9wvlIyaeUo0qfoUVCyKSOZWwiLc3.jpg"
+    },
+    "J": {
+      "pass": true,
+      "proof": "https://zc7zszfsvgv8jtuw.public.blob.vercel-storage.com/previews/5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db-cU9wvlIyaeUo0qfoUVCyKSOZWwiLc3.jpg"
+    },
+    "K": {
+      "pass": true,
+      "proof": "refreshed /dashboard after DB verification"
+    },
+    "L": {
+      "pass": true,
+      "proof": "https://zc7zszfsvgv8jtuw.public.blob.vercel-storage.com/previews/5bee8ee1-16eb-4a5d-85bd-65f5fdf9a1db-cU9wvlIyaeUo0qfoUVCyKSOZWwiLc3.jpg"
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "slug": "portfolio",
+  "prompt": "Build a high-end creative portfolio website for Lina Moreau. Include hero, selected work, about, testimonials, process, contact CTA, and footer. Make it editorial, minimal, luxurious, and image-led.",
+  "durationMs": 115862,
+  "meta": {
+    "type": "project",
+    "framework": "vite-react-ts",
+    "title": "Lina Moreau - Creative Portfolio",
+    "entryFile": "src/main.tsx",
+    "previewEntryFile": "src/App.tsx",
+    "siteType": "portfolio",
+    "designDirection": "Editorial luxury with dark tones, serif display typography, and asymmetric image-led compositions",
+    "colorStrategy": "Dark primary (#0a0a0a), warm surface (#1a1a1a), gold accent (#d4af37), high contrast white text",
+    "typography": "Playfair Display for headings, Inter for body text",
+    "sectionOrder": [
+      "hero",
+      "selectedWork",
+      "about",
+      "process",
+      "testimonials",
+      "contactCTA",
+      "footer"
+    ],
+    "assets": [
+      {
+        "path": "public/images/hero.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1920&h=1080&fit=crop&q=80",
+        "prompt": "Minimalist artistic workspace with dramatic lighting"
+      },
+      {
+        "path": "public/images/work1.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=1000&fit=crop&q=80",
+        "prompt": "Editorial magazine layout design"
+      },
+      {
+        "path": "public/images/work2.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&h=600&fit=crop&q=80",
+        "prompt": "Brand identity design mockup"
+      },
+      {
+        "path": "public/images/work3.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=1200&fit=crop&q=80",
+        "prompt": "Art book cover design"
+      },
+      {
+        "path": "public/images/process.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=1200&h=800&fit=crop&q=80",
+        "prompt": "Design sketches and process materials"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "package.json",
+      "language": "json",
+      "size": 844
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "size": 436
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "size": 626
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "size": 189
+    },
+    {
+      "path": "postcss.config.js",
+      "language": "javascript",
+      "size": 79
+    },
+    {
+      "path": "tailwind.config.ts",
+      "language": "typescript",
+      "size": 372
+    },
+    {
+      "path": "src/main.tsx",
+      "language": "tsx",
+      "size": 240
+    },
+    {
+      "path": "src/styles/globals.css",
+      "language": "css",
+      "size": 557
+    },
+    {
+      "path": "src/App.tsx",
+      "language": "tsx",
+      "size": 639
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "language": "tsx",
+      "size": 2193
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "language": "tsx",
+      "size": 2643
+    },
+    {
+      "path": "src/components/SelectedWork.tsx",
+      "language": "tsx",
+      "size": 3685
+    },
+    {
+      "path": "src/components/About.tsx",
+      "language": "tsx",
+      "size": 3211
+    },
+    {
+      "path": "src/components/Process.tsx",
+      "language": "tsx",
+      "size": 3220
+    },
+    {
+      "path": "src/components/Testimonials.tsx",
+      "language": "tsx",
+      "size": 2396
+    },
+    {
+      "path": "src/components/ContactCTA.tsx",
+      "language": "tsx",
+      "size": 2370
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "language": "tsx",
+      "size": 6108
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/images/hero.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1920&h=1080&fit=crop&q=80",
+      "prompt": "Minimalist artistic workspace with dramatic lighting"
+    },
+    {
+      "path": "public/images/work1.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=1000&fit=crop&q=80",
+      "prompt": "Editorial magazine layout design"
+    },
+    {
+      "path": "public/images/work2.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&h=600&fit=crop&q=80",
+      "prompt": "Brand identity design mockup"
+    },
+    {
+      "path": "public/images/work3.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=1200&fit=crop&q=80",
+      "prompt": "Art book cover design"
+    },
+    {
+      "path": "public/images/process.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=1200&h=800&fit=crop&q=80",
+      "prompt": "Design sketches and process materials"
+    }
+  ],
+  "isComplete": true
+}

@@ -1,0 +1,2433 @@
+===PROJECT_MANIFEST===
+{
+  "type": "project",
+  "framework": "vite-react-ts",
+  "title": "Premier Construction Solutions",
+  "entryFile": "src/main.tsx",
+  "previewEntryFile": "src/App.tsx",
+  "siteType": "other",
+  "designFamily": "bold_commercial",
+  "designDirection": "Industrial confidence with condensed display typography, dark surfaces, and safety orange accents for project-focused credibility",
+  "colorStrategy": "Dark charcoal backgrounds with steel surfaces, safety orange primary accent, off-white text for high contrast industrial aesthetic",
+  "typography": "Bebas Neue display font with Inter body text",
+  "sectionOrder": [
+    "Hero",
+    "Services",
+    "ProjectGallery",
+    "ProcessTimeline",
+    "Credentials",
+    "Testimonial",
+    "EstimateForm",
+    "Footer"
+  ],
+  "assets": [
+    {
+      "path": "generated/hero.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8L3N2Zz4=",
+      "prompt": "Project brief: build me a construction website professional orange theme. Create the hero image for a construction website in the Bold Commercial family. Subject: active construction project, commercial build, or completed structure with real scale. Style: Bold Commercial. Large proof-led visuals, diagonal or staggered framing, industrial or commercial realism, stat overlays. Metric bands, contrast stripes, heavy dividers, badge clusters, blocky footers. This must feel like finished hero photography or a finished product render, not a placeholder panel. Leave intentional negative space for adjacent headline copy. No text, no logos, no watermarks, no empty stage-set compositions, and maintain one coherent art direction. Deliver complete, art-directed imagery with strong focal hierarchy and usable crop space."
+    },
+    {
+      "path": "generated/support.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8L3N2Zz4=",
+      "prompt": "Project brief: build me a construction website professional orange theme. Create a supporting image for a construction website in the Bold Commercial family. Subject: crew process, site planning, or material/progress detail. Style must match the hero image, but use a distinct composition and crop. This image should carry a story/about/process section, not repeat the hero framing. No text, no logos, no watermarks, no empty stage-set compositions, and maintain one coherent art direction. Deliver complete, art-directed imagery with strong focal hierarchy and usable crop space."
+    },
+    {
+      "path": "generated/gallery-1.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8cmVjdCB4PSIxMTUwIiB5PSIxNDAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMjIwIiByeD0iMjYiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xNCIvPjxyZWN0IHg9IjEyMCIgeT0iMTgwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE0MCIgcng9IjI0IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==",
+      "prompt": "Project brief: build me a construction website professional orange theme. Create gallery image 1 for a construction website in the Bold Commercial family. Subject: completed projects, build phases, site documentation, or trade detail. Match the same palette and framing language. This should be the strongest proof/showcase image after the hero. No text, no logos, no watermarks, no empty stage-set compositions, and maintain one coherent art direction. Deliver complete, art-directed imagery with strong focal hierarchy and usable crop space."
+    },
+    {
+      "path": "generated/gallery-2.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8cmVjdCB4PSIxMTUwIiB5PSIxNDAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMjIwIiByeD0iMjYiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xNCIvPjxyZWN0IHg9IjEyMCIgeT0iMTgwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE0MCIgcng9IjI0IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==",
+      "prompt": "Project brief: build me a construction website professional orange theme. Create gallery image 2 for a construction website in the Bold Commercial family. Subject: completed projects, build phases, site documentation, or trade detail. Keep the same visual grammar but vary the scene, distance, and angle. No text, no logos, no watermarks, no empty stage-set compositions, and maintain one coherent art direction. Deliver complete, art-directed imagery with strong focal hierarchy and usable crop space."
+    },
+    {
+      "path": "generated/gallery-3.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8cmVjdCB4PSIxMTUwIiB5PSIxNDAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMjIwIiByeD0iMjYiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xNCIvPjxyZWN0IHg9IjEyMCIgeT0iMTgwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE0MCIgcng9IjI0IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==",
+      "prompt": "Project brief: build me a construction website professional orange theme. Create gallery image 3 for a construction website in the Bold Commercial family. Subject: completed projects, build phases, site documentation, or trade detail. Keep the same visual grammar but vary the crop and distance. This should work as a secondary supporting proof image, not another hero. No text, no logos, no watermarks, no empty stage-set compositions, and maintain one coherent art direction. Deliver complete, art-directed imagery with strong focal hierarchy and usable crop space."
+    },
+    {
+      "path": "generated/detail-1.png",
+      "kind": "image",
+      "source": "fallback",
+      "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8cmVjdCB4PSIxMTgwIiB5PSI2ODAiIHdpZHRoPSIxODAiIGhlaWdodD0iMTIwIiByeD0iMjQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yMiIvPjwvc3ZnPg==",
+      "prompt": "Project brief: build me a construction website professional orange theme. Create a detail image for a construction website in the Bold Commercial family. Subject: architectural or materials detail shot with commercial realism. Keep the same palette and motif language. This should be a tactile close-up or focused inset that enriches a section, not a generic filler crop. No text, no logos, no watermarks, no empty stage-set compositions, and maintain one coherent art direction. Deliver complete, art-directed imagery with strong focal hierarchy and usable crop space."
+    }
+  ]
+}
+===END_MANIFEST===
+===FILE:package.json===
+{
+  "name": "cenate-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:dev": "vite build --mode development",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.2",
+    "@radix-ui/react-alert-dialog": "^1.1.4",
+    "@radix-ui/react-aspect-ratio": "^1.1.1",
+    "@radix-ui/react-avatar": "^1.1.2",
+    "@radix-ui/react-checkbox": "^1.1.3",
+    "@radix-ui/react-collapsible": "^1.1.2",
+    "@radix-ui/react-context-menu": "^2.2.4",
+    "@radix-ui/react-dialog": "^1.1.4",
+    "@radix-ui/react-dropdown-menu": "^2.1.4",
+    "@radix-ui/react-hover-card": "^1.1.4",
+    "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-menubar": "^1.1.4",
+    "@radix-ui/react-navigation-menu": "^1.2.3",
+    "@radix-ui/react-popover": "^1.1.4",
+    "@radix-ui/react-progress": "^1.1.1",
+    "@radix-ui/react-radio-group": "^1.2.2",
+    "@radix-ui/react-scroll-area": "^1.2.2",
+    "@radix-ui/react-select": "^2.1.4",
+    "@radix-ui/react-separator": "^1.1.1",
+    "@radix-ui/react-slider": "^1.2.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-switch": "^1.1.2",
+    "@radix-ui/react-tabs": "^1.1.2",
+    "@radix-ui/react-toast": "^1.2.4",
+    "@radix-ui/react-toggle": "^1.1.1",
+    "@radix-ui/react-toggle-group": "^1.1.1",
+    "@radix-ui/react-tooltip": "^1.1.6",
+    "@hookform/resolvers": "^3.9.1",
+    "@tanstack/react-query": "^5.62.8",
+    "@radix-ui/react-visually-hidden": "^1.1.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cmdk": "^1.0.4",
+    "date-fns": "^4.1.0",
+    "embla-carousel-react": "^8.5.1",
+    "input-otp": "^1.4.1",
+    "lucide-react": "^0.468.0",
+    "next-themes": "^0.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-day-picker": "^9.4.3",
+    "react-hook-form": "^7.54.2",
+    "react-resizable-panels": "^2.1.7",
+    "react-router-dom": "^7.1.1",
+    "recharts": "^2.15.0",
+    "sonner": "^1.7.1",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.7.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript-eslint": "^8.18.1",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.1",
+    "vitest": "^2.1.8"
+  }
+}
+===END_FILE===
+===FILE:bun.lock===
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "cenate-website",
+      "dependencies": {
+        "@radix-ui/react-accordion": "^1.2.2",
+        "@radix-ui/react-alert-dialog": "^1.1.4",
+        "@radix-ui/react-aspect-ratio": "^1.1.1",
+        "@radix-ui/react-avatar": "^1.1.2",
+        "@radix-ui/react-checkbox": "^1.1.3",
+        "@radix-ui/react-collapsible": "^1.1.2",
+        "@radix-ui/react-context-menu": "^2.2.4",
+        "@radix-ui/react-dialog": "^1.1.4",
+        "@radix-ui/react-dropdown-menu": "^2.1.4",
+        "@radix-ui/react-hover-card": "^1.1.4",
+        "@radix-ui/react-label": "^2.1.1",
+        "@radix-ui/react-menubar": "^1.1.4",
+        "@radix-ui/react-navigation-menu": "^1.2.3",
+        "@radix-ui/react-popover": "^1.1.4",
+        "@radix-ui/react-progress": "^1.1.1",
+        "@radix-ui/react-radio-group": "^1.2.2",
+        "@radix-ui/react-scroll-area": "^1.2.2",
+        "@radix-ui/react-select": "^2.1.4",
+        "@radix-ui/react-separator": "^1.1.1",
+        "@radix-ui/react-slider": "^1.2.2",
+        "@radix-ui/react-slot": "^1.1.0",
+        "@radix-ui/react-switch": "^1.1.2",
+        "@radix-ui/react-tabs": "^1.1.2",
+        "@radix-ui/react-toast": "^1.2.4",
+        "@radix-ui/react-toggle": "^1.1.1",
+        "@radix-ui/react-toggle-group": "^1.1.1",
+        "@radix-ui/react-tooltip": "^1.1.6",
+        "@radix-ui/react-visually-hidden": "^1.1.1",
+        "@hookform/resolvers": "^3.9.1",
+        "@tanstack/react-query": "^5.62.8",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "cmdk": "^1.0.4",
+        "date-fns": "^4.1.0",
+        "embla-carousel-react": "^8.5.1",
+        "input-otp": "^1.4.1",
+        "lucide-react": "^0.468.0",
+        "next-themes": "^0.4.4",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-day-picker": "^9.4.3",
+        "react-hook-form": "^7.54.2",
+        "react-resizable-panels": "^2.1.7",
+        "react-router-dom": "^7.1.1",
+        "recharts": "^2.15.0",
+        "sonner": "^1.7.1",
+        "tailwind-merge": "^2.6.0",
+        "tailwindcss-animate": "^1.0.7",
+        "vaul": "^1.1.2",
+        "zod": "^3.24.1"
+      },
+      "devDependencies": {
+        "@eslint/js": "^9.17.0",
+        "@tailwindcss/typography": "^0.5.16",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.1.0",
+        "@types/node": "^22.10.2",
+        "@types/react": "^18.3.12",
+        "@types/react-dom": "^18.3.1",
+        "@vitejs/plugin-react-swc": "^3.7.2",
+        "autoprefixer": "^10.4.20",
+        "eslint": "^9.17.0",
+        "eslint-plugin-react-hooks": "^5.1.0",
+        "eslint-plugin-react-refresh": "^0.4.16",
+        "globals": "^15.14.0",
+        "jsdom": "^25.0.1",
+        "postcss": "^8.4.49",
+        "tailwindcss": "^3.4.15",
+        "typescript-eslint": "^8.18.1",
+        "typescript": "^5.6.3",
+        "vite": "^6.0.1",
+        "vitest": "^2.1.8"
+      }
+    }
+  },
+  "packages": {}
+}
+===END_FILE===
+===FILE:index.html===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cenate Website</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+===END_FILE===
+===FILE:tsconfig.json===
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
+===END_FILE===
+===FILE:tsconfig.app.json===
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}
+===END_FILE===
+===FILE:tsconfig.node.json===
+{
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
+  },
+  "include": ["vite.config.ts", "vitest.config.ts", "eslint.config.js"]
+}
+===END_FILE===
+===FILE:vite.config.ts===
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
+===END_FILE===
+===FILE:postcss.config.js===
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+===END_FILE===
+===FILE:tailwind.config.ts===
+import type { Config } from "tailwindcss";
+
+export default {
+  darkMode: ["class"],
+  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}", "./index.html"],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      fontFamily: {
+        heading: ["var(--font-heading)", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+      },
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "count-up": {
+          from: { opacity: "0", transform: "scale(0.8)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in-up": "fade-in-up 0.6s ease-out forwards",
+        "count-up": "count-up 0.5s ease-out forwards",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config;
+===END_FILE===
+===FILE:eslint.config.js===
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config(
+  { ignores: ["dist"] },
+  {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    files: ["**/*.{ts,tsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+    },
+  }
+);
+===END_FILE===
+===FILE:vitest.config.ts===
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react-swc";
+import path from "path";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: "./src/test/setup.ts",
+  },
+});
+===END_FILE===
+===FILE:components.json===
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "default",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "src/index.css",
+    "baseColor": "zinc",
+    "cssVariables": false
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "hooks": "@/hooks",
+    "lib": "@/lib"
+  }
+}
+===END_FILE===
+===FILE:README.md===
+# Cenate Website
+
+This project was generated by Cenate with a fixed Lovable-style Vite + React + TypeScript scaffold.
+
+## Scripts
+
+- `npm run dev`
+- `npm run build`
+- `npm run build:dev`
+- `npm run lint`
+- `npm run preview`
+- `npm run test`
+- `npm run test:watch`
+
+===END_FILE===
+===FILE:.gitignore===
+node_modules
+dist
+.DS_Store
+.env
+.env.local
+coverage
+*.log
+===END_FILE===
+===FILE:public/robots.txt===
+User-agent: *
+Allow: /
+===END_FILE===
+===FILE:public/placeholder.svg===
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="24" fill="#F4F4F5"/>
+  <path d="M120 210L180 150L225 195L290 125L340 210H120Z" fill="#D4D4D8"/>
+  <circle cx="160" cy="110" r="24" fill="#A1A1AA"/>
+</svg>
+===END_FILE===
+===FILE:public/favicon.ico===
+placeholder favicon
+===END_FILE===
+===FILE:src/main.tsx===
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
+import "./App.css";
+
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { error: Error | null }
+> {
+  state: { error: Error | null } = { error: null };
+  static getDerivedStateFromError(error: Error) {
+    return { error };
+  }
+  componentDidCatch(error: Error) {
+    const el = document.getElementById("cenate-error");
+    if (el) {
+      el.style.display = "block";
+      el.textContent = "Render error: " + error.message;
+    }
+  }
+  render() {
+    if (this.state.error) {
+      return React.createElement(
+        "div",
+        {
+          style: {
+            padding: 32,
+            color: "#b91c1c",
+            fontFamily: "ui-monospace, monospace",
+            fontSize: 13,
+            whiteSpace: "pre-wrap" as const,
+            background: "#fff5f5",
+            minHeight: "100vh",
+          },
+        },
+        "Render error: " + this.state.error.message
+      );
+    }
+    return this.props.children;
+  }
+}
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
+  </React.StrictMode>
+);
+===END_FILE===
+===FILE:src/index.css===
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 1rem;
+
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.14), hsl(var(--background)) 55%, hsl(var(--accent) / 0.22));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.92) 100%);
+    --shadow-soft: 0 20px 45px -30px rgb(15 23 42 / 0.28);
+    --shadow-card: 0 18px 40px -28px rgb(15 23 42 / 0.22);
+    --shadow-card-hover: 0 24px 60px -32px rgb(15 23 42 / 0.32);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 47.4% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 47.4% 8.6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 47.4% 8.6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --gradient-hero: linear-gradient(140deg, hsl(var(--primary) / 0.12), hsl(var(--background)) 52%, hsl(217.2 91.2% 59.8% / 0.28));
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    background-image:
+      radial-gradient(circle at top, hsl(var(--primary) / 0.06), transparent 28%),
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 100%);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--primary) / 0.72));
+  }
+
+  .surface-card {
+    background-image: linear-gradient(180deg, hsl(var(--card) / 0.98), hsl(var(--card) / 0.92));
+    box-shadow: var(--shadow-card);
+  }
+
+  .surface-panel {
+    background: hsl(var(--card) / 0.82);
+    backdrop-filter: blur(14px);
+    border: 1px solid hsl(var(--border) / 0.7);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .section-shell {
+    position: relative;
+  }
+
+  .section-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, hsl(var(--background) / 0), hsl(var(--primary) / 0.03));
+    opacity: 0.8;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--primary));
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-count-up {
+  animation: count-up 0.5s ease-out forwards;
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+
+:root {
+  --background: 222 29% 8%;
+  --foreground: 210 40% 98%;
+  --card: 222 26% 12%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222 26% 11%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 28 94% 57%;
+  --primary-foreground: 222 29% 8%;
+  --secondary: 220 19% 18%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 220 19% 18%;
+  --muted-foreground: 215 16% 70%;
+  --accent: 18 86% 52%;
+  --accent-foreground: 210 40% 98%;
+  --border: 217 15% 24%;
+  --input: 217 15% 24%;
+  --ring: 28 94% 57%;
+  --radius: 0.9rem;
+  --font-heading: "Bebas Neue", "Barlow", system-ui, sans-serif;
+  --font-body: "Barlow", system-ui, sans-serif;
+  --gradient-hero: linear-gradient(125deg, hsl(222 29% 8%), hsl(222 24% 10%) 54%, hsl(28 94% 57% / 0.18));
+  --gradient-surface: linear-gradient(180deg, hsl(222 26% 12%) 0%, hsl(222 29% 8%) 100%);
+  --shadow-soft: 0 20px 52px -32px rgb(0 0 0 / 0.42);
+  --shadow-card: 0 18px 48px -28px rgb(0 0 0 / 0.5);
+  --shadow-card-hover: 0 26px 64px -28px rgb(0 0 0 / 0.66);
+}
+body {
+  background-image:
+    radial-gradient(circle at top right, hsl(var(--primary) / 0.12), transparent 22%),
+    linear-gradient(180deg, hsl(222 29% 8%) 0%, hsl(222 31% 7%) 100%);
+}
+h1, h2, h3, h4 {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@layer utilities {
+
+.surface-card {
+  background-image: linear-gradient(180deg, hsl(var(--card)), hsl(222 24% 10%));
+  border-color: hsl(var(--border));
+}
+
+.surface-panel {
+  background: hsl(222 26% 11% / 0.9);
+  border: 1px solid hsl(var(--border));
+}
+
+.eyebrow {
+  color: hsl(var(--primary));
+  letter-spacing: 0.24em;
+}
+
+.family-divider {
+  height: 2px;
+  background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
+}
+
+.family-band {
+  background-image: linear-gradient(90deg, hsl(var(--primary) / 0.16), transparent 42%);
+}
+
+}
+===END_FILE===
+===FILE:src/App.css===
+#root {
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+===END_FILE===
+===FILE:src/vite-env.d.ts===
+/// <reference types="vite/client" />
+===END_FILE===
+===FILE:src/assets/.gitkeep===
+
+===END_FILE===
+===FILE:src/hooks/use-mobile.ts===
+import { useEffect, useState } from "react";
+
+export function useMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+    const update = () => setIsMobile(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+===END_FILE===
+===FILE:src/pages/Home.tsx===
+import App from "../App";
+
+export default function HomePage() {
+  return <App />;
+}
+===END_FILE===
+===FILE:src/test/setup.ts===
+import "@testing-library/jest-dom";
+===END_FILE===
+===FILE:src/test/App.test.tsx===
+import { render, screen } from "@testing-library/react";
+import App from "../App";
+
+describe("App", () => {
+  it("renders without crashing", () => {
+    render(<App />);
+    expect(screen.getByRole("main")).toBeInTheDocument();
+  });
+});
+===END_FILE===
+===FILE:src/lib/utils.ts===
+import { clsx, type ClassValue } from "clsx";
+
+export function cn(...inputs: ClassValue[]) {
+  return clsx(inputs);
+}
+===END_FILE===
+===FILE:src/components/ui/button.tsx===
+import React from "react";
+import { Slot } from "@radix-ui/react-slot";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+  };
+
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button";
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    );
+  }
+);
+Button.displayName = "Button";
+
+export { Button, buttonVariants };
+export default Button;
+===END_FILE===
+===FILE:src/components/ui/accordion.tsx===
+import React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { cn } from "@/lib/utils";
+
+const Accordion = AccordionPrimitive.Root;
+
+const AccordionItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <AccordionPrimitive.Item ref={ref} className={cn("border-b", className)} {...props} />
+  )
+);
+AccordionItem.displayName = "AccordionItem";
+
+const AccordionTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Header className="flex">
+      <AccordionPrimitive.Trigger
+        ref={ref}
+        className={cn(
+          "flex flex-1 items-center justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180",
+          className
+        )}
+        {...props}
+      >
+        {children}
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6" /></svg>
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  )
+);
+AccordionTrigger.displayName = "AccordionTrigger";
+
+const AccordionContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <AccordionPrimitive.Content ref={ref} className="overflow-hidden text-sm" {...props}>
+      <div className={cn("pb-4 pt-0", className)}>{children}</div>
+    </AccordionPrimitive.Content>
+  )
+);
+AccordionContent.displayName = "AccordionContent";
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
+===END_FILE===
+===FILE:src/components/ui/tabs.tsx===
+import React from "react";
+import * as TabsPrimitive from "@radix-ui/react-tabs";
+import { cn } from "@/lib/utils";
+
+const Tabs = TabsPrimitive.Root;
+
+const TabsList = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.List
+      ref={ref}
+      className={cn(
+        "inline-flex h-10 items-center justify-center rounded-lg bg-zinc-100 p-1 text-zinc-500",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsList.displayName = "TabsList";
+
+const TabsTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-all",
+        "data-[state=active]:bg-white data-[state=active]:text-zinc-950 data-[state=active]:shadow-sm",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+TabsTrigger.displayName = "TabsTrigger";
+
+const TabsContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(
+  ({ className, ...props }, ref) => (
+    <TabsPrimitive.Content
+      ref={ref}
+      className={cn("mt-2", className)}
+      {...props}
+    />
+  )
+);
+TabsContent.displayName = "TabsContent";
+
+export { Tabs, TabsList, TabsTrigger, TabsContent };
+===END_FILE===
+===FILE:src/components/ui/dialog.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Dialog = DialogPrimitive.Root;
+const DialogTrigger = DialogPrimitive.Trigger;
+const DialogClose = DialogPrimitive.Close;
+const DialogPortal = DialogPrimitive.Portal;
+
+const DialogOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn(
+        "fixed inset-0 z-50 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+        className
+      )}
+      {...props}
+    />
+  )
+);
+DialogOverlay.displayName = "DialogOverlay";
+
+const DialogContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, children, ...props }, ref) => (
+    <DialogPortal>
+      <DialogOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed left-[50%] top-[50%] z-50 w-full max-w-lg translate-x-[-50%] translate-y-[-50%] rounded-xl border bg-white p-6 shadow-xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPortal>
+  )
+);
+DialogContent.displayName = "DialogContent";
+
+const DialogTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Title ref={ref} className={cn("text-lg font-semibold", className)} {...props} />
+  )
+);
+DialogTitle.displayName = "DialogTitle";
+
+const DialogDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Description ref={ref} className={cn("text-sm text-zinc-500", className)} {...props} />
+  )
+);
+DialogDescription.displayName = "DialogDescription";
+
+export { Dialog, DialogTrigger, DialogContent, DialogClose, DialogOverlay, DialogTitle, DialogDescription };
+===END_FILE===
+===FILE:src/components/ui/sheet.tsx===
+import React from "react";
+import * as DialogPrimitive from "@radix-ui/react-dialog";
+import { cn } from "@/lib/utils";
+
+const Sheet = DialogPrimitive.Root;
+const SheetTrigger = DialogPrimitive.Trigger;
+const SheetClose = DialogPrimitive.Close;
+
+const SheetOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => (
+    <DialogPrimitive.Overlay
+      ref={ref}
+      className={cn("fixed inset-0 z-50 bg-black/60 backdrop-blur-sm", className)}
+      {...props}
+    />
+  )
+);
+SheetOverlay.displayName = "SheetOverlay";
+
+type SheetContentProps = React.HTMLAttributes<HTMLDivElement> & {
+  side?: "left" | "right" | "top" | "bottom";
+};
+
+const sideStyles: Record<string, string> = {
+  right: "inset-y-0 right-0 h-full w-3/4 max-w-sm border-l translate-x-0",
+  left: "inset-y-0 left-0 h-full w-3/4 max-w-sm border-r translate-x-0",
+  top: "inset-x-0 top-0 border-b",
+  bottom: "inset-x-0 bottom-0 border-t",
+};
+
+const SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(
+  ({ side = "right", className, children, ...props }, ref) => (
+    <DialogPrimitive.Portal>
+      <SheetOverlay />
+      <DialogPrimitive.Content
+        ref={ref}
+        className={cn(
+          "fixed z-50 bg-white p-6 shadow-xl transition-transform duration-300",
+          sideStyles[side],
+          className
+        )}
+        {...props}
+      >
+        {children}
+      </DialogPrimitive.Content>
+    </DialogPrimitive.Portal>
+  )
+);
+SheetContent.displayName = "SheetContent";
+
+export { Sheet, SheetTrigger, SheetContent, SheetClose };
+===END_FILE===
+===FILE:src/components/ui/input.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+  error?: string;
+};
+
+export default function Input({ label, error, className, id, ...props }: InputProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <input
+        id={inputId}
+        className={cn(
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+          error && "border-destructive focus-visible:ring-destructive",
+          className
+        )}
+        {...props}
+      />
+      {error && <p className="mt-1 text-sm text-destructive">{error}</p>}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/textarea.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
+  label?: string;
+};
+
+export default function Textarea({ label, className, id, ...props }: TextareaProps) {
+  const inputId = id || (label ? label.toLowerCase().replace(/\s+/g, "-") : undefined);
+  return (
+    <div>
+      {label && (
+        <label htmlFor={inputId} className="block text-sm font-medium mb-1.5">
+          {label}
+        </label>
+      )}
+      <textarea
+        id={inputId}
+        rows={4}
+        className={cn(
+          "w-full rounded-lg border px-4 py-2.5 text-base outline-none transition-colors resize-none",
+          className
+        )}
+        {...props}
+      />
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/badge.tsx===
+import React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+
+const badgeVariants = cva(
+  "inline-flex items-center rounded-full font-medium",
+  {
+    variants: {
+      size: {
+        sm: "px-2 py-0.5 text-[10px]",
+        md: "px-2.5 py-0.5 text-xs",
+        lg: "px-3 py-1 text-sm",
+      },
+    },
+    defaultVariants: {
+      size: "md",
+    },
+  }
+);
+
+type BadgeProps = React.HTMLAttributes<HTMLSpanElement> &
+  VariantProps<typeof badgeVariants>;
+
+export default function Badge({ className, size, ...props }: BadgeProps) {
+  return (
+    <span className={cn(badgeVariants({ size }), className)} {...props} />
+  );
+}
+
+export { badgeVariants };
+===END_FILE===
+===FILE:src/components/ui/card.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type CardProps = {
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Card({ className, children }: CardProps) {
+  return (
+    <div className={cn("surface-card rounded-[calc(var(--radius)+6px)] border bg-card text-card-foreground shadow-sm p-6", className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/section.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SectionProps = {
+  id?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function Section({ id, className, children }: SectionProps) {
+  return (
+    <section id={id} className={cn("py-16 md:py-24", className)}>
+      {children}
+    </section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/container.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type ContainerProps = {
+  size?: "sm" | "md" | "lg" | "xl" | "full";
+  className?: string;
+  children: React.ReactNode;
+};
+
+const maxWidths: Record<string, string> = {
+  sm: "max-w-3xl",
+  md: "max-w-5xl",
+  lg: "max-w-6xl",
+  xl: "max-w-7xl",
+  full: "max-w-full",
+};
+
+export default function Container({ size = "xl", className, children }: ContainerProps) {
+  return (
+    <div className={cn("mx-auto px-4 sm:px-6 lg:px-8", maxWidths[size], className)}>
+      {children}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/heading.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type HeadingProps = {
+  as?: "h1" | "h2" | "h3" | "h4";
+  size?: "display" | "h1" | "h2" | "h3";
+  eyebrow?: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+const sizeStyles: Record<string, string> = {
+  display: "text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]",
+  h1: "text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight",
+  h2: "text-3xl md:text-4xl font-semibold tracking-tight",
+  h3: "text-xl md:text-2xl font-semibold",
+};
+
+export default function Heading({
+  as: Tag = "h2",
+  size = "h2",
+  eyebrow,
+  className,
+  children,
+}: HeadingProps) {
+  return (
+    <div>
+      {eyebrow && (
+        <span className="block text-xs uppercase tracking-widest font-medium mb-3 opacity-60">
+          {eyebrow}
+        </span>
+      )}
+      <Tag className={cn(sizeStyles[size], className)}>{children}</Tag>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/separator.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type SeparatorProps = {
+  orientation?: "horizontal" | "vertical";
+  className?: string;
+};
+
+export default function Separator({ orientation = "horizontal", className }: SeparatorProps) {
+  return (
+    <div
+      role="separator"
+      className={cn(
+        "shrink-0 bg-current opacity-10",
+        orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
+        className
+      )}
+    />
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/aspect-ratio.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type AspectRatioProps = {
+  ratio?: number;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function AspectRatio({ ratio = 16 / 9, className, children }: AspectRatioProps) {
+  return (
+    <div className={cn("relative w-full overflow-hidden", className)} style={{ paddingBottom: (1 / ratio) * 100 + "%" }}>
+      <div className="absolute inset-0">{children}</div>
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/testimonial.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type TestimonialProps = {
+  quote: string;
+  author: string;
+  role?: string;
+  avatar?: string;
+  className?: string;
+};
+
+export default function Testimonial({ quote, author, role, avatar, className }: TestimonialProps) {
+  return (
+    <figure className={cn("space-y-4", className)}>
+      <blockquote className="text-lg md:text-xl leading-relaxed italic">
+        &ldquo;{quote}&rdquo;
+      </blockquote>
+      <figcaption className="flex items-center gap-3">
+        {avatar && (
+          <img src={avatar} alt={author} className="w-10 h-10 rounded-full object-cover" />
+        )}
+        <div>
+          <p className="font-medium text-sm">{author}</p>
+          {role && <p className="text-xs opacity-60">{role}</p>}
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/stats-band.tsx===
+import React from "react";
+import Section from "@/components/ui/section";
+import Container from "@/components/ui/container";
+import { cn } from "@/lib/utils";
+
+type Stat = {
+  value: string;
+  label: string;
+};
+
+type StatsBandProps = {
+  stats: Stat[];
+  className?: string;
+};
+
+export default function StatsBand({ stats, className }: StatsBandProps) {
+  return (
+    <Section className={cn("py-12", className)}>
+      <Container>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {stats.map((s) => (
+            <div key={s.label}>
+              <p className="text-3xl md:text-5xl font-bold">{s.value}</p>
+              <p className="text-sm mt-1 opacity-60">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/gallery.tsx===
+import React from "react";
+import { cn } from "@/lib/utils";
+
+type GalleryImage = {
+  src: string;
+  alt: string;
+  span?: "normal" | "wide" | "tall";
+};
+
+type GalleryProps = {
+  images: GalleryImage[];
+  className?: string;
+};
+
+const spanClasses: Record<string, string> = {
+  normal: "",
+  wide: "md:col-span-2",
+  tall: "md:row-span-2",
+};
+
+export default function Gallery({ images, className }: GalleryProps) {
+  return (
+    <div className={cn("grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4", className)}>
+      {images.map((img, i) => (
+        <div key={i} className={cn("overflow-hidden rounded-lg", spanClasses[img.span || "normal"])}>
+          <img
+            src={img.src}
+            alt={img.alt}
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+===END_FILE===
+===FILE:src/components/ui/mobile-nav.tsx===
+import React from "react";
+import { Sheet, SheetTrigger, SheetContent, SheetClose } from "@/components/ui/sheet";
+import Button from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+type MobileNavProps = {
+  links: { label: string; href: string }[];
+  brandName: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  className?: string;
+};
+
+export default function MobileNav({ links, brandName, ctaLabel, ctaHref, className }: MobileNavProps) {
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <button className={cn("md:hidden p-2", className)} aria-label="Open menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </SheetTrigger>
+      <SheetContent side="right" className="flex flex-col pt-16">
+        <p className="text-lg font-semibold mb-8">{brandName}</p>
+        <nav className="flex flex-col gap-4">
+          {links.map((link) => (
+            <SheetClose key={link.href} asChild>
+              <a href={link.href} className="text-lg py-2 border-b border-zinc-100 hover:text-zinc-600 transition-colors">
+                {link.label}
+              </a>
+            </SheetClose>
+          ))}
+        </nav>
+        {ctaLabel && ctaHref && (
+          <div className="mt-auto pt-8">
+            <SheetClose asChild>
+              <Button asChild size="lg" className="w-full">
+                <a href={ctaHref}>{ctaLabel}</a>
+              </Button>
+            </SheetClose>
+          </div>
+        )}
+      </SheetContent>
+    </Sheet>
+  );
+}
+===END_FILE===
+===FILE:src/assets/generated-images.ts===
+export const projectImages = {
+  hero: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8L3N2Zz4=`,
+  support: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8L3N2Zz4=`,
+  gallery1: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8cmVjdCB4PSIxMTUwIiB5PSIxNDAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMjIwIiByeD0iMjYiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xNCIvPjxyZWN0IHg9IjEyMCIgeT0iMTgwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE0MCIgcng9IjI0IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==`,
+  gallery2: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8cmVjdCB4PSIxMTUwIiB5PSIxNDAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMjIwIiByeD0iMjYiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xNCIvPjxyZWN0IHg9IjEyMCIgeT0iMTgwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE0MCIgcng9IjI0IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==`,
+  gallery3: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8cmVjdCB4PSIxMTUwIiB5PSIxNDAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMjIwIiByeD0iMjYiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xNCIvPjxyZWN0IHg9IjEyMCIgeT0iMTgwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjE0MCIgcng9IjI0IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==`,
+  detail1: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNjAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAgMCAxNjAwIDEwMDAiIGZpbGw9Im5vbmUiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMTYwMCIgeTI9IjEwMDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzBGMTQxRCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGNzk4MkEiIHN0b3Atb3BhY2l0eT0iMC4xNiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iMTAwMCIgZmlsbD0idXJsKCNiZykiLz4KICA8cmVjdCB4PSI1NiIgeT0iNTYiIHdpZHRoPSIxNDg4IiBoZWlnaHQ9Ijg4OCIgcng9IjM0IiBmaWxsPSIjMEYxNDFEIiBmaWxsLW9wYWNpdHk9IjAuNzIiIHN0cm9rZT0iI0Y3OTgyQSIgc3Ryb2tlLW9wYWNpdHk9IjAuMjIiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEwMCIgd2lkdGg9IjE0MDAiIGhlaWdodD0iODAwIiByeD0iMjgiIGZpbGw9IiMwRjE0MUQiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgoKICA8cmVjdCB4PSIxMjAiIHk9IjY1MCIgd2lkdGg9IjEzNjAiIGhlaWdodD0iMTgwIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIyMjAiIHk9IjQ3MCIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNzAiIHJ4PSIxOCIgZmlsbD0iI0Y3OTgyQSIgZmlsbC1vcGFjaXR5PSIwLjE4Ii8+CiAgPHJlY3QgeD0iNTEwIiB5PSIzNjAiIHdpZHRoPSIyMjAiIGhlaWdodD0iMzgwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxyZWN0IHg9Ijc2MCIgeT0iNDIwIiB3aWR0aD0iMjgwIiBoZWlnaHQ9IjMyMCIgcng9IjE4IiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMTgiLz4KICA8cmVjdCB4PSIxMDgwIiB5PSIzMDAiIHdpZHRoPSIyMTAiIGhlaWdodD0iNDQwIiByeD0iMTgiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4xMiIvPgogIDxwYXRoIGQ9Ik0xMDMwIDE4MEgxMzEwTDExODAgMzIwSDEwNTBMMTAzMCAxODBaIiBmaWxsPSIjRjc5ODJBIiBmaWxsLW9wYWNpdHk9IjAuMjgiLz4KICA8cGF0aCBkPSJNMTE4MCAxODBWNTIwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xMTgwIDI0MEw4NDAgNDQwIiBzdHJva2U9IiNGNzk4MkEiIHN0cm9rZS13aWR0aD0iMTgiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg3MCIgY3k9IjQ1NSIgcj0iMzQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC40NCIvPgogIDxyZWN0IHg9IjIzMCIgeT0iNzcwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4zMiIvPgogIDxyZWN0IHg9IjUxMCIgeT0iNzcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgogIDxyZWN0IHg9Ijc4MCIgeT0iNzcwIiB3aWR0aD0iMjIwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yOCIvPgo8cmVjdCB4PSIxMTgwIiB5PSI2ODAiIHdpZHRoPSIxODAiIGhlaWdodD0iMTIwIiByeD0iMjQiIGZpbGw9IiNGNzk4MkEiIGZpbGwtb3BhY2l0eT0iMC4yMiIvPjwvc3ZnPg==`,
+} as const;
+
+export type ProjectImageKey = keyof typeof projectImages;
+
+export default projectImages;
+===END_FILE===
+
+===FILE:src/App.tsx===
+import React from 'react';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import ProjectGallery from './components/ProjectGallery';
+import ProcessTimeline from './components/ProcessTimeline';
+import Credentials from './components/Credentials';
+import Testimonial from './components/Testimonial';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <main role="main" className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <Hero />
+      <Services />
+      <ProjectGallery />
+      <ProcessTimeline />
+      <Credentials />
+      <Testimonial />
+<Footer />
+    </main>
+  );
+}
+
+export default App;
+===END_FILE===
+
+===FILE:src/components/Navbar.tsx===
+import React from 'react';
+import { Container } from '@/components/ui/container';
+import { Button } from '@/components/ui/button';
+import MobileNav from '@/components/ui/mobile-nav';
+
+const Navbar = () => {
+  const links = [
+    { label: 'Services', href: '#services' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Process', href: '#process' },
+    { label: 'About', href: '#credentials' }
+  ];
+
+  return (
+    <nav className="sticky top-0 z-50 bg-zinc-950/90 backdrop-blur-md border-b border-zinc-800">
+      <Container>
+        <div className="flex items-center justify-between h-16">
+          <div className="font-heading font-bold text-xl text-white">
+            PREMIER
+            <span className="text-orange-500 ml-1">BUILD</span>
+          </div>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-zinc-300 hover:text-orange-500 transition-colors duration-200 font-medium"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+
+          <div className="hidden md:block">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold">
+              Free Estimate
+            </Button>
+          </div>
+
+          <MobileNav
+            links={links}
+            brandName="PREMIER BUILD"
+            ctaLabel="Free Estimate"
+            ctaHref="#estimate"
+            className="md:hidden"
+          />
+        </div>
+      </Container>
+    </nav>
+  );
+};
+
+export default Navbar;
+===END_FILE===
+
+===FILE:src/components/Hero.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { projectImages } from '@/assets/generated-images';
+
+const Hero = () => {
+  return (
+    <Section className="relative min-h-[85vh] flex items-center">
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${projectImages.hero})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/60 via-zinc-900/70 to-zinc-900/90" />
+      
+      <Container className="relative z-10">
+        <div className="max-w-2xl">
+          <p className="text-xs uppercase tracking-[0.24em] text-orange-500 font-medium mb-6">
+            Licensed • Bonded • Insured
+          </p>
+          
+          <Heading 
+            as="h1" 
+            size="display" 
+            className="font-heading text-white font-bold tracking-wide leading-none mb-6"
+          >
+            BUILDING EXCELLENCE
+            <br />
+            <span className="text-orange-500">SINCE 1997</span>
+          </Heading>
+          
+          <p className="text-lg text-zinc-300 leading-relaxed max-w-xl mb-8">
+            Premier commercial and residential construction serving the Greater Metro area. 
+            From ground-breaking to final inspection, we deliver projects on time and on budget.
+          </p>
+          
+          <div className="flex flex-wrap gap-4 mb-12">
+            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8">
+              Request Estimate
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-zinc-400 text-zinc-300 hover:bg-zinc-800 hover:border-orange-500"
+            >
+              View Projects
+            </Button>
+          </div>
+        </div>
+      
+      <div className="mt-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
+        <div className="surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3">
+          <p className="text-lg font-semibold">25+</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">Years delivered</p>
+        </div>
+<div className="surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3">
+          <p className="text-lg font-semibold">500+</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">Projects built</p>
+        </div>
+<div className="surface-card rounded-[calc(var(--radius)+4px)] border px-4 py-3">
+          <p className="text-lg font-semibold">24/7</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">Crew response</p>
+        </div>
+      </div>
+      <div className="family-divider mt-6 max-w-2xl"></div>
+      <p className="mt-4 max-w-xl text-sm text-muted-foreground">Buttons are aggressive and direct. Labels are short. Action surfaces feel sales-ready, not ornamental.</p>
+      </Container>
+      
+      {/* Credential bar overlapping hero/services boundary */}
+      <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-20">
+        <Container>
+          <div className="bg-zinc-800 border-2 border-orange-500 rounded-xl p-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              <div>
+                <p className="text-2xl font-heading font-bold text-orange-500">#LC-789456</p>
+                <p className="text-xs text-zinc-400 mt-1">Licensed Contractor</p>
+              </div>
+              <div>
+                <p className="text-2xl font-heading font-bold text-white">27+ Years</p>
+                <p className="text-xs text-zinc-400 mt-1">In Business</p>
+              </div>
+              <div>
+                <p className="text-2xl font-heading font-bold text-white">Fully Insured</p>
+                <p className="text-xs text-zinc-400 mt-1">Liability & Workers</p>
+              </div>
+              <div>
+                <p className="text-2xl font-heading font-bold text-orange-500">A+ Rating</p>
+                <p className="text-xs text-zinc-400 mt-1">Better Business</p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+    </Section>
+  );
+};
+
+export default Hero;
+===END_FILE===
+
+===FILE:src/components/Services.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { projectImages } from '@/assets/generated-images';
+
+const Services = () => {
+  return (
+    <Section id="services" className="py-20 bg-zinc-900">
+      <Container>
+        <div className="pt-12 mb-16">
+          <Heading 
+            as="h2" 
+            size="h2" 
+            eyebrow="Our Services"
+            className="font-heading text-white text-left"
+          >
+            CONSTRUCTION SOLUTIONS
+            <br />
+            FOR EVERY PROJECT
+          </Heading>
+        </div>
+
+        {/* Asymmetric layout: one featured lane + two secondary */}
+        <div className="grid lg:grid-cols-5 gap-8">
+          {/* Featured Commercial Lane */}
+          <Card className="lg:col-span-3 bg-zinc-800 border-orange-500/20 p-8">
+            <div className="grid md:grid-cols-2 gap-6 h-full">
+              <div>
+                <Badge className="bg-orange-500/10 text-orange-500 border border-orange-500/20 mb-4">
+                  COMMERCIAL
+                </Badge>
+                <h3 className="text-2xl font-heading font-bold text-white mb-4">
+                  Large-Scale Commercial Projects
+                </h3>
+                <ul className="space-y-2 mb-6">
+                  <li className="text-zinc-300 flex items-center">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                    Office buildings & retail centers
+                  </li>
+                  <li className="text-zinc-300 flex items-center">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                    Warehouse & industrial facilities
+                  </li>
+                  <li className="text-zinc-300 flex items-center">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                    Multi-tenant developments
+                  </li>
+                </ul>
+                <p className="text-orange-500 font-semibold">Starting at $500K</p>
+              </div>
+              <div className="hidden md:block">
+                <img 
+                  src={projectImages.support} 
+                  alt="Commercial construction project" 
+                  className="w-full h-48 object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </Card>
+
+          {/* Two secondary lanes stacked */}
+          <div className="lg:col-span-2 space-y-6">
+            <Card className="bg-zinc-800 border-zinc-700 p-6">
+              <Badge className="bg-zinc-700 text-zinc-300 mb-3">
+                RESIDENTIAL
+              </Badge>
+              <h3 className="text-xl font-heading font-bold text-white mb-3">
+                Custom Homes & Additions
+              </h3>
+              <ul className="space-y-1 mb-4 text-sm">
+                <li className="text-zinc-300">• New home construction</li>
+                <li className="text-zinc-300">• Home additions & renovations</li>
+                <li className="text-zinc-300">• Luxury custom builds</li>
+              </ul>
+              <p className="text-zinc-400 font-medium">Starting at $150K</p>
+            </Card>
+
+            <Card className="bg-zinc-800 border-zinc-700 p-6">
+              <Badge className="bg-zinc-700 text-zinc-300 mb-3">
+                RENOVATION
+              </Badge>
+              <h3 className="text-xl font-heading font-bold text-white mb-3">
+                Restoration & Remodeling
+              </h3>
+              <ul className="space-y-1 mb-4 text-sm">
+                <li className="text-zinc-300">• Historic building restoration</li>
+                <li className="text-zinc-300">• Interior remodeling</li>
+                <li className="text-zinc-300">• Code compliance upgrades</li>
+              </ul>
+              <p className="text-zinc-400 font-medium">Starting at $50K</p>
+            </Card>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default Services;
+===END_FILE===
+
+===FILE:src/components/ProjectGallery.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+import { projectImages } from '@/assets/generated-images';
+
+const ProjectGallery = () => {
+  const projects = [
+    {
+      image: projectImages.gallery1,
+      title: "Metro Office Complex",
+      location: "Downtown District",
+      year: "2024",
+      scope: "125,000 sq ft"
+    },
+    {
+      image: projectImages.gallery2,
+      title: "Residential Development",
+      location: "Westside",
+      year: "2023",
+      scope: "$2.8M Project"
+    },
+    {
+      image: projectImages.gallery3,
+      title: "Industrial Warehouse",
+      location: "Commerce Park",
+      year: "2023",
+      scope: "85,000 sq ft"
+    },
+    {
+      image: projectImages.detail1,
+      title: "Historic Renovation",
+      location: "Arts District",
+      year: "2022",
+      scope: "$1.2M Restoration"
+    }
+  ];
+
+  return (
+    <Section id="projects" className="py-16 bg-background">
+      <Container>
+        <div className="mb-12">
+          <Heading 
+            as="h2" 
+            size="h2" 
+            eyebrow="Recent Projects"
+            className="font-heading text-left"
+          >
+            PROVEN TRACK RECORD
+          </Heading>
+        </div>
+
+        {/* Asymmetric grid: one large + 3 smaller thumbnails */}
+        <div className="grid md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {/* Large featured project */}
+          <div className="md:col-span-2 lg:col-span-4 md:row-span-2 group cursor-pointer">
+            <div className="relative overflow-hidden rounded-xl bg-zinc-800 h-full min-h-[400px]">
+              <img 
+                src={projects[0].image} 
+                alt={projects[0].title}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <h3 className="text-2xl font-heading font-bold mb-2">{projects[0].title}</h3>
+                <div className="flex flex-wrap gap-4 text-sm text-zinc-300">
+                  <span className="flex items-center">
+                    <svg className="w-4 h-4 mr-1 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                    {projects[0].location}
+                  </span>
+                  <span>{projects[0].year}</span>
+                  <span className="text-orange-500 font-semibold">{projects[0].scope}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Three smaller project cards */}
+          {projects.slice(1).map((project, index) => (
+            <div key={index} className="md:col-span-2 lg:col-span-2 group cursor-pointer">
+              <div className="relative overflow-hidden rounded-xl bg-zinc-800 aspect-[4/3]">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/70 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <h4 className="font-heading font-semibold mb-1 text-sm">{project.title}</h4>
+                  <div className="text-xs text-zinc-300 space-x-2">
+                    <span>{project.location}</span>
+                    <span>•</span>
+                    <span>{project.year}</span>
+                  </div>
+                  <p className="text-xs text-orange-500 font-medium mt-1">{project.scope}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default ProjectGallery;
+===END_FILE===
+
+===FILE:src/components/ProcessTimeline.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+import { projectImages } from '@/assets/generated-images';
+
+const ProcessTimeline = () => {
+  const stages = [
+    {
+      number: "01",
+      title: "Initial Consultation",
+      description: "Site assessment and project planning",
+      image: projectImages.support
+    },
+    {
+      number: "02", 
+      title: "Permits & Planning",
+      description: "Documentation and approvals",
+      image: projectImages.detail1
+    },
+    {
+      number: "03",
+      title: "Construction Phase",
+      description: "Building with precision and care",
+      image: projectImages.gallery2
+    },
+    {
+      number: "04",
+      title: "Final Inspection",
+      description: "Quality assurance and handover",
+      image: projectImages.gallery3
+    }
+  ];
+
+  return (
+    <Section id="process" className="py-20 bg-zinc-950">
+      <Container>
+        <div className="mb-16">
+          <Heading 
+            as="h2" 
+            size="h2" 
+            eyebrow="Our Process"
+            className="font-heading text-white text-center"
+          >
+            FROM CONCEPT TO COMPLETION
+          </Heading>
+        </div>
+
+        {/* Horizontal timeline with alternating images */}
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-orange-500 via-orange-500 to-zinc-700 transform -translate-y-1/2 z-0" />
+          
+          <div className="grid md:grid-cols-4 gap-8 relative z-10">
+            {stages.map((stage, index) => (
+              <div key={index} className="text-center">
+                {/* Image positioned alternating above/below timeline */}
+                <div className={`mb-8 ${index % 2 === 0 ? 'order-1' : 'order-3 mt-16'}`}>
+                  <div className="relative mx-auto w-24 h-24 rounded-full overflow-hidden border-4 border-orange-500 bg-zinc-800">
+                    <img 
+                      src={stage.image} 
+                      alt={stage.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                
+                {/* Timeline dot */}
+                <div className="relative mx-auto w-6 h-6 bg-orange-500 rounded-full border-4 border-zinc-950 z-20 order-2" />
+                
+                {/* Content */}
+                <div className={`mt-8 ${index % 2 === 0 ? 'order-3' : 'order-1 mb-16'}`}>
+                  <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-800">
+                    <span className="inline-block text-xs font-mono text-orange-500 bg-orange-500/10 px-2 py-1 rounded mb-3">
+                      {stage.number}
+                    </span>
+                    <h3 className="text-lg font-heading font-bold text-white mb-2">
+                      {stage.title}
+                    </h3>
+                    <p className="text-sm text-zinc-400">
+                      {stage.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default ProcessTimeline;
+===END_FILE===
+
+===FILE:src/components/Credentials.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+
+const Credentials = () => {
+  const credentials = [
+    {
+      number: "27+",
+      label: "Years Experience",
+      description: "Building Excellence"
+    },
+    {
+      number: "500+",
+      label: "Projects Completed",
+      description: "On Time & Budget"
+    },
+    {
+      number: "$50M+",
+      label: "Total Project Value",
+      description: "Successfully Built"
+    },
+    {
+      number: "100%",
+      label: "Licensed & Insured",
+      description: "Full Compliance"
+    }
+  ];
+
+  return (
+    <Section id="credentials" className="py-14 bg-gradient-to-r from-orange-600 to-orange-500">
+      <Container>
+        <div className="grid grid-cols-2 lg:grid-cols-2 gap-8 text-center">
+          {credentials.map((credential, index) => (
+            <div key={index} className="text-white">
+              <div className="mb-3">
+                <span className="text-4xl md:text-6xl font-heading font-bold leading-none tracking-tight">
+                  {credential.number}
+                </span>
+              </div>
+              <h3 className="text-lg md:text-xl font-heading font-bold mb-1">
+                {credential.label}
+              </h3>
+              <p className="text-sm text-orange-100 font-medium">
+                {credential.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default Credentials;
+===END_FILE===
+
+===FILE:src/components/Testimonial.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+import { projectImages } from '@/assets/generated-images';
+
+const Testimonial = () => {
+  return (
+    <Section className="py-20 bg-card">
+      <Container>
+        <div className="grid lg:grid-cols-1 sm:grid-cols-2 gap-16 items-center">
+          <div>
+            <img 
+              src={projectImages.gallery1} 
+              alt="Completed Metro Office Complex project"
+              className="w-full min-h-[260px] object-cover rounded-2xl"
+            />
+          </div>
+          
+          <div>
+            <div className="mb-8">
+              <svg className="w-16 h-16 text-orange-500 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+              </svg>
+              
+              <blockquote className="text-xl md:text-2xl font-heading leading-relaxed text-foreground mb-6">
+                "Premier Build transformed our vision into reality. Their attention to detail and 
+                commitment to quality is unmatched. The Metro Office Complex project was completed 
+                on schedule and exceeded our expectations."
+              </blockquote>
+            </div>
+            
+            <div className="border-l-4 border-orange-500 pl-6">
+              <cite className="not-italic">
+                <p className="font-heading font-bold text-lg text-foreground">Sarah Mitchell</p>
+                <p className="text-muted-foreground">Development Director</p>
+                <p className="text-sm text-orange-600 font-semibold mt-1">
+                  Metro Office Complex • $3.2M Project
+                </p>
+              </cite>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default Testimonial;
+===END_FILE===
+
+===FILE:src/components/EstimateForm.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+import { Heading } from '@/components/ui/heading';
+import { Card } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { projectImages } from "@/assets/generated-images";
+
+const EstimateForm = () => {
+  const projectTypes = [
+    "Commercial Construction",
+    "Residential Construction", 
+    "Renovation/Remodeling",
+    "Industrial/Warehouse",
+    "Multi-Family Development"
+  ];
+
+  const timelines = [
+    "Less than 3 months",
+    "3-6 months",
+    "6-12 months", 
+    "12+ months",
+    "Planning phase"
+  ];
+
+  return (
+    <Section id="estimate" className="py-24 bg-zinc-950">
+      <Container>
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          {/* Contact Info Panel */}
+          <div>
+            <Heading 
+              as="h2" 
+              size="h2" 
+              eyebrow="Get Started"
+              className="font-heading text-white mb-8"
+            >
+              REQUEST YOUR FREE
+              <br />
+              <span className="text-orange-500">PROJECT ESTIMATE</span>
+            </Heading>
+            
+            <div className="grid gap-6 md:grid-cols-3">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-2xl font-heading font-bold text-white">(555) 123-4567</p>
+                  <p className="text-zinc-400">Call for immediate assistance</p>
+                </div>
+              </div>
+              
+              <div className="bg-zinc-900 rounded-xl p-6 border border-zinc-800">
+                <h3 className="font-heading font-bold text-white mb-4">Business Hours</h3>
+                <div className="space-y-2 text-zinc-300">
+                  <div className="flex justify-between">
+                    <span>Monday - Friday:</span>
+                    <span>7:00 AM - 6:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Saturday:</span>
+                    <span>8:00 AM - 4:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Sunday:</span>
+                    <span>Emergency Only</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="font-heading font-bold text-white mb-2">Service Area</h3>
+                <p className="text-zinc-400">
+                  Greater Metro Area and surrounding counties. We travel up to 50 miles 
+                  for qualified commercial projects.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Estimate Form */}
+          <Card className="bg-zinc-900 border-2 border-orange-500/20 p-8">
+            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <div>
+                <label className="block text-sm font-medium text-white mb-2">
+                  Project Type *
+                </label>
+                <select className="w-full h-11 px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                  <option value="">Select project type...</option>
+                  {projectTypes.map((type) => (
+                    <option key={type} value={type}>{type}</option>
+                  ))}
+                </select>
+              </div>
+
+              <Textarea 
+                label="Project Scope & Description *"
+                placeholder="Please describe your project in detail. Include square footage, special requirements, and any specific materials or features you're considering..."
+                className="min-h-[100px] bg-zinc-800 border-zinc-700 text-white placeholder:text-zinc-500"
+              />
+
+              <div>
+                <label className="block text-sm font-medium text-white mb-2">
+                  Desired Timeline
+                </label>
+                <select className="w-full h-11 px-3 py-2 bg-zinc-800 border border-zinc-700 rounded-lg text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                  <option value="">Select timeline...</option>
+                  {timelines.map((timeline) => (
+                    <option key={timeline} value={timeline}>{timeline}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-4">
+                <Input 
+                  label="Full Name *" 
+                  placeholder="Your name"
+                  className="bg-zinc-800 border-zinc-700 text-white placeholder:text-zinc-500"
+                />
+                <Input 
+                  label="Phone Number *" 
+                  type="tel"
+                  placeholder="(555) 123-4567"
+                  className="bg-zinc-800 border-zinc-700 text-white placeholder:text-zinc-500"
+                />
+              </div>
+
+              <Input 
+                label="Email Address *" 
+                type="email"
+                placeholder="your@email.com"
+                className="bg-zinc-800 border-zinc-700 text-white placeholder:text-zinc-500"
+              />
+
+              <Button 
+                size="lg" 
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4"
+              >
+                Submit Estimate Request
+              </Button>
+              
+              <p className="text-xs text-zinc-500 text-center">
+                * Required fields. We'll respond within 24 hours with your detailed estimate.
+              </p>
+            </form>
+          </Card>
+        </div>
+      
+      <div className="mt-10">
+        <div className="relative overflow-hidden rounded-[calc(var(--radius)+8px)] border bg-card/70 shadow-[var(--shadow-card)]">
+          <img
+            src={projectImages.gallery3}
+            alt="Art-directed supporting visual"
+            className="h-full w-full aspect-[4/3] min-h-[260px] object-cover"
+          />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/80 via-background/15 to-transparent p-5">
+            <div className="inline-flex rounded-full border border-border/70 bg-background/80 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+              Art-directed supporting visual
+            </div>
+          </div>
+        </div>
+      </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default EstimateForm;
+===END_FILE===
+
+===FILE:src/components/Footer.tsx===
+import React from 'react';
+import { Section } from '@/components/ui/section';
+import { Container } from '@/components/ui/container';
+
+const Footer = () => {
+  return (
+    <Section className="py-16 bg-zinc-950 border-t border-zinc-800">
+      <Container>
+        <div className="grid grid-cols-1 gap-12 mb-8">
+          {/* Brand & Company Info */}
+          <div>
+            <div className="font-heading font-bold text-2xl text-white mb-4">
+              PREMIER
+              <span className="text-orange-500 ml-1">BUILD</span>
+            </div>
+            <p className="text-zinc-400 mb-6 max-w-md">
+              Building excellence through precision, integrity, and innovation. 
+              Your trusted construction partner for over two decades.
+            </p>
+            <div className="space-y-2 text-sm text-zinc-400">
+              <p><span className="text-orange-500">License:</span> #LC-789456</p>
+              <p><span className="text-orange-500">Bonded & Insured:</span> $2M Liability</p>
+              <p><span className="text-orange-500">Workers Comp:</span> Fully Covered</p>
+            </div>
+          </div>
+
+          {/* Contact & Location */}
+          <div>
+            <h3 className="font-heading font-bold text-white mb-6">Office & Contact</h3>
+            <div className="space-y-4">
+              <div>
+                <p className="text-white font-semibold">Main Office</p>
+                <p className="text-zinc-400">
+                  1247 Industrial Blvd, Suite 200<br />
+                  Metro City, ST 12345
+                </p>
+              </div>
+              
+              <div>
+                <p className="text-white font-semibold">Phone & Email</p>
+                <p className="text-orange-500 font-semibold text-lg">(555) 123-4567</p>
+                <p className="text-zinc-400">info@premierbuild.com</p>
+              </div>
+              
+              <div>
+                <p className="text-white font-semibold">Business Hours</p>
+                <p className="text-zinc-400">
+                  Mon-Fri: 7:00 AM - 6:00 PM<br />
+                  Sat: 8:00 AM - 4:00 PM
+                </p>
+              </div>
+              
+              <div>
+                <p className="text-white font-semibold">Service Area</p>
+                <p className="text-zinc-400">
+                  Greater Metro Area • 50-mile radius for commercial projects
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="pt-8 border-t border-zinc-800">
+          <div className="flex flex-col md:flex-row justify-between items-start">
+            <p className="text-zinc-500 text-sm mb-4 md:mb-0">
+              © 2024 Premier Build Construction. All rights reserved.
+            </p>
+            <div className="flex space-x-6">
+              <a href="#" className="text-zinc-500 hover:text-orange-500 transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-zinc-500 hover:text-orange-500 transition-colors">
+                Terms of Service
+              </a>
+              <a href="#estimate" className="text-orange-500 hover:text-orange-400 transition-colors font-semibold">
+                Get Estimate
+              </a>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+export default Footer;
+===END_FILE===

@@ -1,0 +1,187 @@
+{
+  "slug": "saas",
+  "prompt": "Build a premium AI productivity SaaS landing page for FlowState. Include hero, feature grid, workflow section, testimonials, pricing teaser, CTA, and footer. Make it modern, sharp, premium, and visually dynamic.",
+  "durationMs": 153681,
+  "meta": {
+    "type": "project",
+    "framework": "vite-react-ts",
+    "title": "FlowState - AI Productivity Platform",
+    "entryFile": "src/main.tsx",
+    "previewEntryFile": "src/App.tsx",
+    "siteType": "saas",
+    "designDirection": "dark modern premium with sharp gradients, high-contrast typography, and dynamic AI-themed visuals",
+    "colorStrategy": "dark backgrounds (#0a0a0a to #111111) with electric blue accent (#3b82f6) and subtle surfaces (#1a1a1a)",
+    "typography": "Inter display and body with sharp tracking and bold weights",
+    "sectionOrder": [
+      "hero",
+      "features",
+      "workflow",
+      "testimonials",
+      "pricing",
+      "cta",
+      "footer"
+    ],
+    "assets": [
+      {
+        "path": "public/images/hero.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop&q=80",
+        "prompt": "futuristic workspace with multiple monitors and code"
+      },
+      {
+        "path": "public/images/workflow.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop&q=80",
+        "prompt": "abstract data visualization and analytics dashboard"
+      },
+      {
+        "path": "public/images/testimonial1.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&q=80",
+        "prompt": "professional headshot of a tech executive"
+      },
+      {
+        "path": "public/images/testimonial2.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1494790108755-2616b612b494?w=120&h=120&fit=crop&q=80",
+        "prompt": "professional headshot of a female startup founder"
+      },
+      {
+        "path": "public/images/testimonial3.jpg",
+        "kind": "image",
+        "source": "fallback",
+        "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&q=80",
+        "prompt": "professional headshot of a product manager"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "package.json",
+      "language": "json",
+      "size": 840
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "size": 713
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "size": 693
+    },
+    {
+      "path": "vite.config.ts",
+      "language": "typescript",
+      "size": 216
+    },
+    {
+      "path": "postcss.config.js",
+      "language": "javascript",
+      "size": 79
+    },
+    {
+      "path": "tailwind.config.ts",
+      "language": "typescript",
+      "size": 267
+    },
+    {
+      "path": "src/main.tsx",
+      "language": "tsx",
+      "size": 240
+    },
+    {
+      "path": "src/styles/globals.css",
+      "language": "css",
+      "size": 824
+    },
+    {
+      "path": "src/App.tsx",
+      "language": "tsx",
+      "size": 623
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "language": "tsx",
+      "size": 3849
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "language": "tsx",
+      "size": 3383
+    },
+    {
+      "path": "src/components/Features.tsx",
+      "language": "tsx",
+      "size": 5092
+    },
+    {
+      "path": "src/components/Workflow.tsx",
+      "language": "tsx",
+      "size": 3967
+    },
+    {
+      "path": "src/components/Testimonials.tsx",
+      "language": "tsx",
+      "size": 4528
+    },
+    {
+      "path": "src/components/Pricing.tsx",
+      "language": "tsx",
+      "size": 6036
+    },
+    {
+      "path": "src/components/CTA.tsx",
+      "language": "tsx",
+      "size": 2953
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "language": "tsx",
+      "size": 5073
+    }
+  ],
+  "assets": [
+    {
+      "path": "public/images/hero.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&h=800&fit=crop&q=80",
+      "prompt": "futuristic workspace with multiple monitors and code"
+    },
+    {
+      "path": "public/images/workflow.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop&q=80",
+      "prompt": "abstract data visualization and analytics dashboard"
+    },
+    {
+      "path": "public/images/testimonial1.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&q=80",
+      "prompt": "professional headshot of a tech executive"
+    },
+    {
+      "path": "public/images/testimonial2.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1494790108755-2616b612b494?w=120&h=120&fit=crop&q=80",
+      "prompt": "professional headshot of a female startup founder"
+    },
+    {
+      "path": "public/images/testimonial3.jpg",
+      "kind": "image",
+      "source": "fallback",
+      "url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&q=80",
+      "prompt": "professional headshot of a product manager"
+    }
+  ],
+  "isComplete": true
+}

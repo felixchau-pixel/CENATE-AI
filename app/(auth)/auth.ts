@@ -1,9 +1,8 @@
 import { compare } from "bcrypt-ts";
 import NextAuth, { type DefaultSession } from "next-auth";
-import type { DefaultJWT } from "next-auth/jwt";
 import Credentials from "next-auth/providers/credentials";
 import { DUMMY_PASSWORD } from "@/lib/constants";
-import { createGuestUser, getUser } from "@/lib/db/queries";
+import { createGuestUser, getUser, upsertOAuthUser } from "@/lib/db/queries";
 import { authConfig } from "./auth.config";
 
 export type UserType = "guest" | "regular";
@@ -24,7 +23,7 @@ declare module "next-auth" {
 }
 
 declare module "next-auth/jwt" {
-  interface JWT extends DefaultJWT {
+  interface JWT {
     id: string;
     type: UserType;
   }
@@ -38,6 +37,7 @@ export const {
 } = NextAuth({
   ...authConfig,
   providers: [
+    ...authConfig.providers,
     Credentials({
       credentials: {
         email: { label: "Email", type: "email" },
@@ -79,8 +79,35 @@ export const {
     }),
   ],
   callbacks: {
-    jwt({ token, user }) {
+    async signIn({ user, account }) {
+      if (account?.provider === "google") {
+        return Boolean(user.email);
+      }
+
+      return true;
+    },
+    async jwt({ token, user, account }) {
       if (user) {
+        if (account?.provider === "google") {
+          if (!user.email) {
+            return token;
+          }
+
+          const dbUser = await upsertOAuthUser({
+            email: user.email,
+            name: user.name ?? null,
+            image: user.image ?? null,
+          });
+
+          token.id = dbUser.id;
+          token.type = "regular";
+          token.name = dbUser.name ?? user.name ?? token.name;
+          token.email = dbUser.email ?? user.email ?? token.email;
+          token.picture = dbUser.image ?? user.image ?? token.picture;
+
+          return token;
+        }
+
         token.id = user.id as string;
         token.type = user.type;
       }
@@ -91,6 +118,9 @@ export const {
       if (session.user) {
         session.user.id = token.id;
         session.user.type = token.type;
+        if (typeof token.picture === "string") {
+          session.user.image = token.picture;
+        }
       }
 
       return session;

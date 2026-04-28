@@ -3,6 +3,7 @@ import type { UseChatHelpers } from "@ai-sdk/react";
 import type { Vote } from "@/lib/db/schema";
 import type { ChatMessage } from "@/lib/types";
 import { cn, sanitizeText } from "@/lib/utils";
+import { CenateLogo } from "../brand/cenate-logo";
 import { MessageContent, MessageResponse } from "../ai-elements/message";
 import { Shimmer } from "../ai-elements/shimmer";
 import {
@@ -13,13 +14,21 @@ import {
   ToolOutput,
 } from "../ai-elements/tool";
 import { useDataStream } from "./data-stream-provider";
-import { DocumentToolResult } from "./document";
-import { DocumentPreview } from "./document-preview";
-import { SparklesIcon } from "./icons";
+import { DocumentToolCall, DocumentToolResult } from "./document";
 import { MessageActions } from "./message-actions";
 import { MessageReasoning } from "./message-reasoning";
 import { PreviewAttachment } from "./preview-attachment";
 import { Weather } from "./weather";
+
+function stripLargeCodeBlocks(text: string): string {
+  return text.replace(/```[\w]*\n[\s\S]*?```/g, (match) => {
+    const lines = match.split("\n").length;
+    if (lines > 4) {
+      return "\n\n*Code generated — see Preview panel →*\n\n";
+    }
+    return match;
+  });
+}
 
 const PurePreviewMessage = ({
   addToolApprovalResponse,
@@ -114,6 +123,10 @@ const PurePreviewMessage = ({
     }
 
     if (type === "text") {
+      const displayText = isAssistant
+        ? stripLargeCodeBlocks(part.text)
+        : part.text;
+
       return (
         <MessageContent
           className={cn("text-[13px] leading-[1.65]", {
@@ -123,7 +136,7 @@ const PurePreviewMessage = ({
           data-testid="message-content"
           key={key}
         >
-          <MessageResponse>{sanitizeText(part.text)}</MessageResponse>
+          <MessageResponse>{sanitizeText(displayText)}</MessageResponse>
         </MessageContent>
       );
     }
@@ -219,7 +232,7 @@ const PurePreviewMessage = ({
     }
 
     if (type === "tool-createDocument") {
-      const { toolCallId } = part;
+      const { toolCallId, state } = part;
 
       if (part.output && "error" in part.output) {
         return (
@@ -232,17 +245,29 @@ const PurePreviewMessage = ({
         );
       }
 
-      return (
-        <DocumentPreview
+      if (state === "output-available" && part.output) {
+        return (
+          <DocumentToolResult
+            isReadonly={isReadonly}
+            key={toolCallId}
+            result={part.output}
+            type="create"
+          />
+        );
+      }
+
+      return part.input ? (
+        <DocumentToolCall
           isReadonly={isReadonly}
           key={toolCallId}
-          result={part.output}
+          args={part.input as { title: string; kind: "text" | "code" | "image" | "sheet" }}
+          type="create"
         />
-      );
+      ) : null;
     }
 
     if (type === "tool-updateDocument") {
-      const { toolCallId } = part;
+      const { toolCallId, state } = part;
 
       if (part.output && "error" in part.output) {
         return (
@@ -255,15 +280,25 @@ const PurePreviewMessage = ({
         );
       }
 
-      return (
-        <div className="relative" key={toolCallId}>
-          <DocumentPreview
-            args={{ ...part.output, isUpdate: true }}
+      if (state === "output-available" && part.output) {
+        return (
+          <DocumentToolResult
             isReadonly={isReadonly}
+            key={toolCallId}
             result={part.output}
+            type="update"
           />
-        </div>
-      );
+        );
+      }
+
+      return part.input ? (
+        <DocumentToolCall
+          isReadonly={isReadonly}
+          key={toolCallId}
+          args={part.input as { id: string; description: string }}
+          type="update"
+        />
+      ) : null;
     }
 
     if (type === "tool-requestSuggestions") {
@@ -346,7 +381,7 @@ const PurePreviewMessage = ({
         {isAssistant && (
           <div className="flex h-[calc(13px*1.65)] shrink-0 items-center">
             <div className="flex size-7 items-center justify-center rounded-lg bg-muted/60 text-muted-foreground ring-1 ring-border/50">
-              <SparklesIcon size={13} />
+              <CenateLogo variant="mark" className="h-5 w-5" />
             </div>
           </div>
         )}
@@ -372,7 +407,7 @@ export const ThinkingMessage = () => {
       <div className="flex items-start gap-3">
         <div className="flex h-[calc(13px*1.65)] shrink-0 items-center">
           <div className="flex size-7 items-center justify-center rounded-lg bg-muted/60 text-muted-foreground ring-1 ring-border/50">
-            <SparklesIcon size={13} />
+            <CenateLogo variant="mark" className="h-5 w-5" />
           </div>
         </div>
 

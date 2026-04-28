@@ -1,0 +1,466 @@
+{
+  "slug": "saas6",
+  "brief": "build me a saas landing page",
+  "niche": "saas",
+  "durationMs": 95443,
+  "fileCount": 54,
+  "isComplete": true,
+  "critic": {
+    "niche": "saas",
+    "passed": false,
+    "issues": [
+      {
+        "rule": "App must render a real page composition",
+        "detail": "App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=true, bodySectionCount=6.",
+        "severity": "hard",
+        "hint": "Wrap src/App.tsx in a <main role=\"main\"> and render Navbar, Hero, 3-5 body sections, and Footer in order."
+      },
+      {
+        "rule": "hero must include a supporting structure beyond headline and CTA",
+        "detail": "Hero lacks a supporting trust/stat/meta/media structure beyond headline/body/button.",
+        "severity": "hard",
+        "hint": "Add a trust row, stats rail, credential strip, supporting meta panel, or structured media frame to the hero."
+      },
+      {
+        "rule": "body sections must not exceed five",
+        "detail": "App renders 6 body sections (maximum 5).",
+        "severity": "hard",
+        "hint": "Render 3 to 5 body sections total. Merge related content instead of adding a sixth section."
+      },
+      {
+        "rule": "body sections must not repeat the same dominant layout type",
+        "detail": "Repeated layout signatures detected: grid x2.",
+        "severity": "hard",
+        "hint": "Mix layout signatures across sections. Do not repeat grid, split, centered-stack, timeline, or gallery structures across body sections."
+      },
+      {
+        "rule": "CTA must include a real action surface",
+        "detail": "CTA/conversion section has no form fields and no real contact info. It's just buttons.",
+        "severity": "soft",
+        "hint": "Add a real form (email, fields), real contact info (email, phone), or a booking interface. A headline + buttons alone is not a conversion surface."
+      }
+    ]
+  },
+  "packageJson": {
+    "name": "cenate-website",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc -b && vite build",
+      "build:dev": "vite build --mode development",
+      "lint": "eslint .",
+      "preview": "vite preview",
+      "test": "vitest run",
+      "test:watch": "vitest"
+    },
+    "dependencies": {
+      "@radix-ui/react-accordion": "^1.2.2",
+      "@radix-ui/react-alert-dialog": "^1.1.4",
+      "@radix-ui/react-aspect-ratio": "^1.1.1",
+      "@radix-ui/react-avatar": "^1.1.2",
+      "@radix-ui/react-checkbox": "^1.1.3",
+      "@radix-ui/react-collapsible": "^1.1.2",
+      "@radix-ui/react-context-menu": "^2.2.4",
+      "@radix-ui/react-dialog": "^1.1.4",
+      "@radix-ui/react-dropdown-menu": "^2.1.4",
+      "@radix-ui/react-hover-card": "^1.1.4",
+      "@radix-ui/react-label": "^2.1.1",
+      "@radix-ui/react-menubar": "^1.1.4",
+      "@radix-ui/react-navigation-menu": "^1.2.3",
+      "@radix-ui/react-popover": "^1.1.4",
+      "@radix-ui/react-progress": "^1.1.1",
+      "@radix-ui/react-radio-group": "^1.2.2",
+      "@radix-ui/react-scroll-area": "^1.2.2",
+      "@radix-ui/react-select": "^2.1.4",
+      "@radix-ui/react-separator": "^1.1.1",
+      "@radix-ui/react-slider": "^1.2.2",
+      "@radix-ui/react-slot": "^1.1.0",
+      "@radix-ui/react-switch": "^1.1.2",
+      "@radix-ui/react-tabs": "^1.1.2",
+      "@radix-ui/react-toast": "^1.2.4",
+      "@radix-ui/react-toggle": "^1.1.1",
+      "@radix-ui/react-toggle-group": "^1.1.1",
+      "@radix-ui/react-tooltip": "^1.1.6",
+      "@hookform/resolvers": "^3.9.1",
+      "@tanstack/react-query": "^5.62.8",
+      "@radix-ui/react-visually-hidden": "^1.1.1",
+      "class-variance-authority": "^0.7.1",
+      "clsx": "^2.1.1",
+      "cmdk": "^1.0.4",
+      "date-fns": "^4.1.0",
+      "embla-carousel-react": "^8.5.1",
+      "input-otp": "^1.4.1",
+      "lucide-react": "^0.468.0",
+      "next-themes": "^0.4.4",
+      "react": "^18.3.1",
+      "react-dom": "^18.3.1",
+      "react-day-picker": "^9.4.3",
+      "react-hook-form": "^7.54.2",
+      "react-resizable-panels": "^2.1.7",
+      "react-router-dom": "^7.1.1",
+      "recharts": "^2.15.0",
+      "sonner": "^1.7.1",
+      "tailwind-merge": "^2.6.0",
+      "tailwindcss-animate": "^1.0.7",
+      "vaul": "^1.1.2",
+      "zod": "^3.24.1"
+    },
+    "devDependencies": {
+      "@eslint/js": "^9.17.0",
+      "@tailwindcss/typography": "^0.5.16",
+      "@testing-library/jest-dom": "^6.6.3",
+      "@testing-library/react": "^16.1.0",
+      "@types/node": "^22.10.2",
+      "@types/react": "^18.3.12",
+      "@types/react-dom": "^18.3.1",
+      "@vitejs/plugin-react-swc": "^3.7.2",
+      "autoprefixer": "^10.4.20",
+      "eslint": "^9.17.0",
+      "eslint-plugin-react-hooks": "^5.1.0",
+      "eslint-plugin-react-refresh": "^0.4.16",
+      "globals": "^15.14.0",
+      "jsdom": "^25.0.1",
+      "postcss": "^8.4.49",
+      "tailwindcss": "^3.4.15",
+      "typescript-eslint": "^8.18.1",
+      "typescript": "^5.6.3",
+      "vite": "^6.0.1",
+      "vitest": "^2.1.8"
+    }
+  },
+  "requiredScaffold": {
+    "missingFiles": [],
+    "missingDirectories": []
+  },
+  "packageBaseline": {
+    "missingDependencies": [],
+    "missingDevDependencies": []
+  },
+  "appStructure": {
+    "hasMainLandmark": true,
+    "renderedComponents": [
+      "Navbar",
+      "Hero",
+      "ProductDemo",
+      "Capabilities",
+      "Metrics",
+      "Testimonial",
+      "Pricing",
+      "Conversion",
+      "Footer"
+    ],
+    "bodySectionCount": 6
+  },
+  "actionSurfaceButtonUsage": [
+    {
+      "path": "src/components/Navbar.tsx",
+      "requiresButton": true,
+      "usesButton": true
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "requiresButton": true,
+      "usesButton": true
+    },
+    {
+      "path": "src/components/Conversion.tsx",
+      "requiresButton": true,
+      "usesButton": true
+    }
+  ],
+  "scaffoldPresent": {
+    "button": true,
+    "buttonHasRadix": true,
+    "buttonHasCva": true,
+    "utils": true,
+    "utilsHasClsx": true,
+    "accordion": true,
+    "accordionHasRadix": true,
+    "tabs": true,
+    "tabsHasRadix": true
+  },
+  "sectionFiles": [
+    "src/components/Navbar.tsx",
+    "src/components/Hero.tsx",
+    "src/components/ProductDemo.tsx",
+    "src/components/Capabilities.tsx",
+    "src/components/Metrics.tsx",
+    "src/components/Testimonial.tsx",
+    "src/components/Pricing.tsx",
+    "src/components/Conversion.tsx",
+    "src/components/Footer.tsx"
+  ],
+  "sectionImports": {
+    "src/components/Navbar.tsx": [
+      "import Container from \"@/components/ui/container\";",
+      "import Button from \"@/components/ui/button\";",
+      "import MobileNav from \"@/components/ui/mobile-nav\";"
+    ],
+    "src/components/Hero.tsx": [
+      "import Section from \"@/components/ui/section\";",
+      "import Container from \"@/components/ui/container\";",
+      "import Heading from \"@/components/ui/heading\";",
+      "import Button from \"@/components/ui/button\";"
+    ],
+    "src/components/ProductDemo.tsx": [
+      "import Section from \"@/components/ui/section\";",
+      "import Container from \"@/components/ui/container\";",
+      "import Heading from \"@/components/ui/heading\";"
+    ],
+    "src/components/Capabilities.tsx": [
+      "import Section from \"@/components/ui/section\";",
+      "import Container from \"@/components/ui/container\";",
+      "import Heading from \"@/components/ui/heading\";"
+    ],
+    "src/components/Metrics.tsx": [
+      "import Section from \"@/components/ui/section\";",
+      "import Container from \"@/components/ui/container\";"
+    ],
+    "src/components/Testimonial.tsx": [
+      "import Section from \"@/components/ui/section\";",
+      "import Container from \"@/components/ui/container\";",
+      "import Heading from \"@/components/ui/heading\";"
+    ],
+    "src/components/Pricing.tsx": [
+      "import Section from \"@/components/ui/section\";",
+      "import Container from \"@/components/ui/container\";",
+      "import Heading from \"@/components/ui/heading\";",
+      "import Button from \"@/components/ui/button\";",
+      "import Badge from \"@/components/ui/badge\";",
+      "import Card from \"@/components/ui/card\";"
+    ],
+    "src/components/Conversion.tsx": [
+      "import Section from \"@/components/ui/section\";",
+      "import Container from \"@/components/ui/container\";",
+      "import Heading from \"@/components/ui/heading\";",
+      "import Input from \"@/components/ui/input\";",
+      "import Button from \"@/components/ui/button\";",
+      "import Card from \"@/components/ui/card\";"
+    ],
+    "src/components/Footer.tsx": [
+      "import Container from \"@/components/ui/container\";",
+      "import Input from \"@/components/ui/input\";",
+      "import Button from \"@/components/ui/button\";"
+    ]
+  },
+  "allFiles": [
+    {
+      "path": "package.json",
+      "size": 2902
+    },
+    {
+      "path": "index.html",
+      "size": 300
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 118
+    },
+    {
+      "path": "tsconfig.app.json",
+      "size": 506
+    },
+    {
+      "path": "tsconfig.node.json",
+      "size": 275
+    },
+    {
+      "path": "vite.config.ts",
+      "size": 247
+    },
+    {
+      "path": "postcss.config.js",
+      "size": 80
+    },
+    {
+      "path": "tailwind.config.ts",
+      "size": 2772
+    },
+    {
+      "path": "eslint.config.js",
+      "size": 738
+    },
+    {
+      "path": "vitest.config.ts",
+      "size": 355
+    },
+    {
+      "path": "components.json",
+      "size": 395
+    },
+    {
+      "path": "README.md",
+      "size": 263
+    },
+    {
+      "path": ".gitignore",
+      "size": 58
+    },
+    {
+      "path": "public/robots.txt",
+      "size": 22
+    },
+    {
+      "path": "public/placeholder.svg",
+      "size": 291
+    },
+    {
+      "path": "public/favicon.ico",
+      "size": 19
+    },
+    {
+      "path": "src/main.tsx",
+      "size": 1234
+    },
+    {
+      "path": "src/index.css",
+      "size": 5479
+    },
+    {
+      "path": "src/App.css",
+      "size": 101
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "size": 37
+    },
+    {
+      "path": "src/assets/.gitkeep",
+      "size": 0
+    },
+    {
+      "path": "src/hooks/use-mobile.ts",
+      "size": 453
+    },
+    {
+      "path": "src/pages/Home.tsx",
+      "size": 83
+    },
+    {
+      "path": "src/test/setup.ts",
+      "size": 35
+    },
+    {
+      "path": "src/test/App.test.tsx",
+      "size": 237
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "size": 117
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "size": 1884
+    },
+    {
+      "path": "src/components/ui/accordion.tsx",
+      "size": 1815
+    },
+    {
+      "path": "src/components/ui/tabs.tsx",
+      "size": 1445
+    },
+    {
+      "path": "src/components/ui/dialog.tsx",
+      "size": 2263
+    },
+    {
+      "path": "src/components/ui/sheet.tsx",
+      "size": 1588
+    },
+    {
+      "path": "src/components/ui/input.tsx",
+      "size": 1082
+    },
+    {
+      "path": "src/components/ui/textarea.tsx",
+      "size": 751
+    },
+    {
+      "path": "src/components/ui/badge.tsx",
+      "size": 717
+    },
+    {
+      "path": "src/components/ui/card.tsx",
+      "size": 384
+    },
+    {
+      "path": "src/components/ui/section.tsx",
+      "size": 346
+    },
+    {
+      "path": "src/components/ui/container.tsx",
+      "size": 552
+    },
+    {
+      "path": "src/components/ui/heading.tsx",
+      "size": 944
+    },
+    {
+      "path": "src/components/ui/separator.tsx",
+      "size": 466
+    },
+    {
+      "path": "src/components/ui/aspect-ratio.tsx",
+      "size": 465
+    },
+    {
+      "path": "src/components/ui/testimonial.tsx",
+      "size": 842
+    },
+    {
+      "path": "src/components/ui/stats-band.tsx",
+      "size": 798
+    },
+    {
+      "path": "src/components/ui/gallery.tsx",
+      "size": 868
+    },
+    {
+      "path": "src/components/ui/mobile-nav.tsx",
+      "size": 1750
+    },
+    {
+      "path": "src/App.tsx",
+      "size": 758
+    },
+    {
+      "path": "src/components/Navbar.tsx",
+      "size": 1178
+    },
+    {
+      "path": "src/components/Hero.tsx",
+      "size": 2642
+    },
+    {
+      "path": "src/components/ProductDemo.tsx",
+      "size": 2173
+    },
+    {
+      "path": "src/components/Capabilities.tsx",
+      "size": 2324
+    },
+    {
+      "path": "src/components/Metrics.tsx",
+      "size": 881
+    },
+    {
+      "path": "src/components/Testimonial.tsx",
+      "size": 1927
+    },
+    {
+      "path": "src/components/Pricing.tsx",
+      "size": 6785
+    },
+    {
+      "path": "src/components/Conversion.tsx",
+      "size": 3588
+    },
+    {
+      "path": "src/components/Footer.tsx",
+      "size": 2836
+    }
+  ]
+}

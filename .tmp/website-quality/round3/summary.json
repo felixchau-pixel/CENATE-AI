@@ -1,0 +1,192 @@
+{
+  "restaurant": {
+    "durationMs": 188900,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "Noma House - Nordic Contemporary Dining",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "restaurant",
+      "designDirection": "dark editorial luxury with serif display typography, high-contrast photography, and cinematic asymmetric compositions",
+      "colorStrategy": "dark palette with #0a0a0a background, #1a1a1a surface, #f5f5f5 text, #888888 muted, #d4af37 gold accent",
+      "typography": "Playfair Display for display headings, Inter for body text",
+      "sectionOrder": [
+        "hero",
+        "chef-story",
+        "menu-highlights",
+        "gallery",
+        "testimonials",
+        "reservation",
+        "location",
+        "footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop&q=80",
+          "prompt": "elegant restaurant interior with dramatic lighting"
+        },
+        {
+          "path": "public/images/chef.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=1000&fit=crop&q=80",
+          "prompt": "professional chef in kitchen"
+        },
+        {
+          "path": "public/images/dish1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop&q=80",
+          "prompt": "elegant plated dish"
+        },
+        {
+          "path": "public/images/dish2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=600&h=400&fit=crop&q=80",
+          "prompt": "fine dining presentation"
+        },
+        {
+          "path": "public/images/gallery1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop&q=80",
+          "prompt": "restaurant dining room atmosphere"
+        },
+        {
+          "path": "public/images/gallery2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1551218372-a8789b81b253?w=800&h=600&fit=crop&q=80",
+          "prompt": "food preparation close-up"
+        },
+        {
+          "path": "public/images/gallery3.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&h=600&fit=crop&q=80",
+          "prompt": "wine and dining details"
+        }
+      ]
+    },
+    "fileCount": 18,
+    "assetCount": 7,
+    "isComplete": true
+  },
+  "saas": {
+    "durationMs": 144859,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "FlowState - AI Productivity Platform",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "saas",
+      "designDirection": "Modern premium SaaS with dark editorial foundation, strong product framing, and dynamic visual hierarchy through typography and structured content",
+      "colorStrategy": "Dark theme with #0a0a0a background, #1a1a1a surfaces, #3B82F6 blue accent for CTAs and highlights, high contrast white text with #888 muted",
+      "typography": "Inter for display and body with tight tracking for headlines, medium weights for hierarchy",
+      "sectionOrder": [
+        "hero",
+        "features",
+        "workflow",
+        "testimonials",
+        "pricing",
+        "cta",
+        "footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero-dashboard.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop&q=80",
+          "prompt": "Modern dark computer screen showing analytics dashboard"
+        },
+        {
+          "path": "public/images/workflow-automation.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80",
+          "prompt": "Connected workflow diagram with nodes and connections"
+        },
+        {
+          "path": "public/images/ai-visualization.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&q=80",
+          "prompt": "AI neural network visualization with glowing connections"
+        }
+      ]
+    },
+    "fileCount": 17,
+    "assetCount": 3,
+    "isComplete": true
+  },
+  "portfolio": {
+    "durationMs": 115862,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "Lina Moreau - Creative Portfolio",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "portfolio",
+      "designDirection": "Editorial luxury with dark tones, serif display typography, and asymmetric image-led compositions",
+      "colorStrategy": "Dark primary (#0a0a0a), warm surface (#1a1a1a), gold accent (#d4af37), high contrast white text",
+      "typography": "Playfair Display for headings, Inter for body text",
+      "sectionOrder": [
+        "hero",
+        "selectedWork",
+        "about",
+        "process",
+        "testimonials",
+        "contactCTA",
+        "footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1920&h=1080&fit=crop&q=80",
+          "prompt": "Minimalist artistic workspace with dramatic lighting"
+        },
+        {
+          "path": "public/images/work1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=1000&fit=crop&q=80",
+          "prompt": "Editorial magazine layout design"
+        },
+        {
+          "path": "public/images/work2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=800&h=600&fit=crop&q=80",
+          "prompt": "Brand identity design mockup"
+        },
+        {
+          "path": "public/images/work3.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=1200&fit=crop&q=80",
+          "prompt": "Art book cover design"
+        },
+        {
+          "path": "public/images/process.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=1200&h=800&fit=crop&q=80",
+          "prompt": "Design sketches and process materials"
+        }
+      ]
+    },
+    "fileCount": 17,
+    "assetCount": 5,
+    "isComplete": true
+  }
+}

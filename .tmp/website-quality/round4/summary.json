@@ -1,0 +1,200 @@
+{
+  "restaurant": {
+    "durationMs": 144041,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "Noma House - Fine Dining Restaurant",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "restaurant",
+      "designDirection": "Dark editorial luxury with serif display typography and cinematic food photography",
+      "colorStrategy": "Dark background (#0a0a0a), warm surface (#1a1612), gold accent (#d4af37), warm white text (#faf8f5)",
+      "typography": "Playfair Display serif for display and headings, Inter for body text",
+      "sectionOrder": [
+        "Hero",
+        "ChefStory",
+        "MenuHighlights",
+        "Gallery",
+        "Testimonials",
+        "ReservationCTA",
+        "Location",
+        "Footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&h=1080&fit=crop&q=80",
+          "prompt": "Elegant fine dining restaurant interior with warm lighting"
+        },
+        {
+          "path": "public/images/chef.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&h=1000&fit=crop&q=80",
+          "prompt": "Professional chef portrait in kitchen"
+        },
+        {
+          "path": "public/images/signature-dish.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop&q=80",
+          "prompt": "Artfully plated signature dish"
+        },
+        {
+          "path": "public/images/gallery-1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop&q=80",
+          "prompt": "Restaurant interior dining room"
+        },
+        {
+          "path": "public/images/gallery-2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&h=600&fit=crop&q=80",
+          "prompt": "Wine cellar or bar area"
+        },
+        {
+          "path": "public/images/gallery-3.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&h=400&fit=crop&q=80",
+          "prompt": "Kitchen in action during service"
+        }
+      ]
+    },
+    "fileCount": 18,
+    "assetCount": 6,
+    "isComplete": true
+  },
+  "saas": {
+    "durationMs": 156591,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "FlowState - AI Productivity Platform",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "saas",
+      "designDirection": "modern technical premium with dark theme, high-contrast typography, and product-surface focus",
+      "colorStrategy": "dark background (#0a0a0a), blue accent (#3B82F6), surface layers (#1a1a1a), white text with muted grays",
+      "typography": "Inter display and body with technical precision",
+      "sectionOrder": [
+        "Hero",
+        "ProductShowcase",
+        "WorkflowSection",
+        "CapabilitiesGrid",
+        "TestimonialsBand",
+        "PricingTeaser",
+        "ConversionPanel",
+        "Footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero-dashboard.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&q=80",
+          "prompt": "modern dashboard interface on computer screen"
+        },
+        {
+          "path": "public/images/workflow-automation.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop&q=80",
+          "prompt": "automated workflow visualization"
+        },
+        {
+          "path": "public/images/analytics-charts.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
+          "prompt": "data analytics charts and graphs"
+        },
+        {
+          "path": "public/images/team-collaboration.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop&q=80",
+          "prompt": "team collaboration workspace"
+        }
+      ]
+    },
+    "fileCount": 18,
+    "assetCount": 4,
+    "isComplete": true
+  },
+  "portfolio": {
+    "durationMs": 131692,
+    "meta": {
+      "type": "project",
+      "framework": "vite-react-ts",
+      "title": "Lina Moreau - Creative Portfolio",
+      "entryFile": "src/main.tsx",
+      "previewEntryFile": "src/App.tsx",
+      "siteType": "portfolio",
+      "designDirection": "editorial luxury with serif display typography and high-contrast black/white photography",
+      "colorStrategy": "monochromatic black/white/gray with warm gold accents on dark background",
+      "typography": "Playfair Display serif for headlines, Inter for body text",
+      "sectionOrder": [
+        "Hero",
+        "SelectedWork",
+        "About",
+        "Process",
+        "Testimonials",
+        "Contact",
+        "Footer"
+      ],
+      "assets": [
+        {
+          "path": "public/images/hero.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=1200&h=800&fit=crop&q=80",
+          "prompt": "elegant portrait of creative professional in minimal studio"
+        },
+        {
+          "path": "public/images/work-1.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80",
+          "prompt": "luxury brand identity design mockup"
+        },
+        {
+          "path": "public/images/work-2.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=1000&fit=crop&q=80",
+          "prompt": "editorial magazine spread design"
+        },
+        {
+          "path": "public/images/work-3.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1607827448387-a67db1383b59?w=600&h=800&fit=crop&q=80",
+          "prompt": "minimal packaging design concept"
+        },
+        {
+          "path": "public/images/about.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&q=80",
+          "prompt": "creative workspace with design materials"
+        },
+        {
+          "path": "public/images/process.jpg",
+          "kind": "image",
+          "source": "fallback",
+          "url": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&h=500&fit=crop&q=80",
+          "prompt": "design sketches and process documentation"
+        }
+      ]
+    },
+    "fileCount": 17,
+    "assetCount": 6,
+    "isComplete": true
+  }
+}

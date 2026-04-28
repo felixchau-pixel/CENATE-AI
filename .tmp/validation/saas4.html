@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generated Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class'],
+      theme: {
+        container: { center: true, padding: '2rem', screens: { '2xl': '1400px' } },
+        extend: {
+          fontFamily: {
+            heading: ['var(--font-heading)', 'system-ui', 'sans-serif'],
+            body: ['var(--font-body)', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            border: 'hsl(var(--border))',
+            input: 'hsl(var(--input))',
+            ring: 'hsl(var(--ring))',
+            background: 'hsl(var(--background))',
+            foreground: 'hsl(var(--foreground))',
+            primary: { DEFAULT: 'hsl(var(--primary))', foreground: 'hsl(var(--primary-foreground))' },
+            secondary: { DEFAULT: 'hsl(var(--secondary))', foreground: 'hsl(var(--secondary-foreground))' },
+            destructive: { DEFAULT: 'hsl(var(--destructive))', foreground: 'hsl(var(--destructive-foreground))' },
+            muted: { DEFAULT: 'hsl(var(--muted))', foreground: 'hsl(var(--muted-foreground))' },
+            accent: { DEFAULT: 'hsl(var(--accent))', foreground: 'hsl(var(--accent-foreground))' },
+            popover: { DEFAULT: 'hsl(var(--popover))', foreground: 'hsl(var(--popover-foreground))' },
+            card: { DEFAULT: 'hsl(var(--card))', foreground: 'hsl(var(--card-foreground))' },
+          },
+          borderRadius: { lg: 'var(--radius)', md: 'calc(var(--radius) - 2px)', sm: 'calc(var(--radius) - 4px)' },
+          keyframes: {
+            'fade-in-up': { from: { opacity: '0', transform: 'translateY(20px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+            'count-up': { from: { opacity: '0', transform: 'scale(0.8)' }, to: { opacity: '1', transform: 'scale(1)' } },
+            'accordion-down': { from: { height: '0' }, to: { height: 'var(--radix-accordion-content-height)' } },
+            'accordion-up': { from: { height: 'var(--radix-accordion-content-height)' }, to: { height: '0' } },
+          },
+          animation: {
+            'fade-in-up': 'fade-in-up 0.6s ease-out forwards',
+            'count-up': 'count-up 0.5s ease-out forwards',
+            'accordion-down': 'accordion-down 0.2s ease-out',
+            'accordion-up': 'accordion-up 0.2s ease-out',
+          },
+        },
+      },
+    }
+  </script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; background: #0a0a0a; }
+    #root { min-height: 100vh; }
+    #cenate-error {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999999;
+      max-height: 45vh;
+      overflow: auto;
+      white-space: pre-wrap;
+      background: #fff1f2;
+      color: #9f1239;
+      padding: 16px;
+      font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+      border-top: 2px solid #fb7185;
+    }
+  </style>
+</head>
+<body data-hash="-1321744426">
+  <div id="root"></div>
+  <pre id="cenate-error"></pre>
+  <script>
+    (function () {
+      const FILES = {"package.json":"{\n  \"name\": \"cenate-website\",\n  \"private\": true,\n  \"version\": \"1.0.0\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"tsc -b && vite build\",\n    \"build:dev\": \"vite build --mode development\",\n    \"lint\": \"eslint .\",\n    \"preview\": \"vite preview\",\n    \"test\": \"vitest run\",\n    \"test:watch\": \"vitest\"\n  },\n  \"dependencies\": {\n    \"@radix-ui/react-accordion\": \"^1.2.2\",\n    \"@radix-ui/react-alert-dialog\": \"^1.1.4\",\n    \"@radix-ui/react-aspect-ratio\": \"^1.1.1\",\n    \"@radix-ui/react-avatar\": \"^1.1.2\",\n    \"@radix-ui/react-checkbox\": \"^1.1.3\",\n    \"@radix-ui/react-collapsible\": \"^1.1.2\",\n    \"@radix-ui/react-context-menu\": \"^2.2.4\",\n    \"@radix-ui/react-dialog\": \"^1.1.4\",\n    \"@radix-ui/react-dropdown-menu\": \"^2.1.4\",\n    \"@radix-ui/react-hover-card\": \"^1.1.4\",\n    \"@radix-ui/react-label\": \"^2.1.1\",\n    \"@radix-ui/react-menubar\": \"^1.1.4\",\n    \"@radix-ui/react-navigation-menu\": \"^1.2.3\",\n    \"@radix-ui/react-popover\": \"^1.1.4\",\n    \"@radix-ui/react-progress\": \"^1.1.1\",\n    \"@radix-ui/react-radio-group\": \"^1.2.2\",\n    \"@radix-ui/react-scroll-area\": \"^1.2.2\",\n    \"@radix-ui/react-select\": \"^2.1.4\",\n    \"@radix-ui/react-separator\": \"^1.1.1\",\n    \"@radix-ui/react-slider\": \"^1.2.2\",\n    \"@radix-ui/react-slot\": \"^1.1.0\",\n    \"@radix-ui/react-switch\": \"^1.1.2\",\n    \"@radix-ui/react-tabs\": \"^1.1.2\",\n    \"@radix-ui/react-toast\": \"^1.2.4\",\n    \"@radix-ui/react-toggle\": \"^1.1.1\",\n    \"@radix-ui/react-toggle-group\": \"^1.1.1\",\n    \"@radix-ui/react-tooltip\": \"^1.1.6\",\n    \"@hookform/resolvers\": \"^3.9.1\",\n    \"@tanstack/react-query\": \"^5.62.8\",\n    \"@radix-ui/react-visually-hidden\": \"^1.1.1\",\n    \"class-variance-authority\": \"^0.7.1\",\n    \"clsx\": \"^2.1.1\",\n    \"cmdk\": \"^1.0.4\",\n    \"date-fns\": \"^4.1.0\",\n    \"embla-carousel-react\": \"^8.5.1\",\n    \"input-otp\": \"^1.4.1\",\n    \"lucide-react\": \"^0.468.0\",\n    \"next-themes\": \"^0.4.4\",\n    \"react\": \"^18.3.1\",\n    \"react-dom\": \"^18.3.1\",\n    \"react-day-picker\": \"^9.4.3\",\n    \"react-hook-form\": \"^7.54.2\",\n    \"react-resizable-panels\": \"^2.1.7\",\n    \"react-router-dom\": \"^7.1.1\",\n    \"recharts\": \"^2.15.0\",\n    \"sonner\": \"^1.7.1\",\n    \"tailwind-merge\": \"^2.6.0\",\n    \"tailwindcss-animate\": \"^1.0.7\",\n    \"vaul\": \"^1.1.2\",\n    \"zod\": \"^3.24.1\"\n  },\n  \"devDependencies\": {\n    \"@eslint/js\": \"^9.17.0\",\n    \"@tailwindcss/typography\": \"^0.5.16\",\n    \"@testing-library/jest-dom\": \"^6.6.3\",\n    \"@testing-library/react\": \"^16.1.0\",\n    \"@types/node\": \"^22.10.2\",\n    \"@types/react\": \"^18.3.12\",\n    \"@types/react-dom\": \"^18.3.1\",\n    \"@vitejs/plugin-react-swc\": \"^3.7.2\",\n    \"autoprefixer\": \"^10.4.20\",\n    \"eslint\": \"^9.17.0\",\n    \"eslint-plugin-react-hooks\": \"^5.1.0\",\n    \"eslint-plugin-react-refresh\": \"^0.4.16\",\n    \"globals\": \"^15.14.0\",\n    \"jsdom\": \"^25.0.1\",\n    \"postcss\": \"^8.4.49\",\n    \"tailwindcss\": \"^3.4.15\",\n    \"typescript-eslint\": \"^8.18.1\",\n    \"typescript\": \"^5.6.3\",\n    \"vite\": \"^6.0.1\",\n    \"vitest\": \"^2.1.8\"\n  }\n}","index.html":"<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Cenate Website</title>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script type=\"module\" src=\"/src/main.tsx\"><\/script>\n  </body>\n</html>","tsconfig.json":"{\n  \"files\": [],\n  \"references\": [\n    { \"path\": \"./tsconfig.app.json\" },\n    { \"path\": \"./tsconfig.node.json\" }\n  ]\n}","tsconfig.app.json":"{\n  \"compilerOptions\": {\n    \"target\": \"ES2020\",\n    \"useDefineForClassFields\": true,\n    \"lib\": [\"ES2020\", \"DOM\", \"DOM.Iterable\"],\n    \"module\": \"ESNext\",\n    \"skipLibCheck\": true,\n    \"moduleResolution\": \"bundler\",\n    \"allowImportingTsExtensions\": true,\n    \"resolveJsonModule\": true,\n    \"isolatedModules\": true,\n    \"moduleDetection\": \"force\",\n    \"noEmit\": true,\n    \"jsx\": \"react-jsx\",\n    \"strict\": true,\n    \"baseUrl\": \".\",\n    \"paths\": {\n      \"@/*\": [\"./src/*\"]\n    }\n  },\n  \"include\": [\"src\"]\n}","tsconfig.node.json":"{\n  \"compilerOptions\": {\n    \"composite\": true,\n    \"skipLibCheck\": true,\n    \"module\": \"ESNext\",\n    \"moduleResolution\": \"bundler\",\n    \"allowSyntheticDefaultImports\": true,\n    \"types\": [\"node\"]\n  },\n  \"include\": [\"vite.config.ts\", \"vitest.config.ts\", \"eslint.config.js\"]\n}","vite.config.ts":"import { defineConfig } from \"vite\";\nimport react from \"@vitejs/plugin-react-swc\";\nimport path from \"path\";\n\nexport default defineConfig({\n  plugins: [react()],\n  resolve: {\n    alias: {\n      \"@\": path.resolve(__dirname, \"./src\"),\n    },\n  },\n});","postcss.config.js":"export default {\n  plugins: {\n    tailwindcss: {},\n    autoprefixer: {},\n  },\n};","tailwind.config.ts":"import type { Config } from \"tailwindcss\";\n\nexport default {\n  darkMode: [\"class\"],\n  content: [\"./pages/**/*.{ts,tsx}\", \"./components/**/*.{ts,tsx}\", \"./app/**/*.{ts,tsx}\", \"./src/**/*.{ts,tsx}\", \"./index.html\"],\n  prefix: \"\",\n  theme: {\n    container: {\n      center: true,\n      padding: \"2rem\",\n      screens: {\n        \"2xl\": \"1400px\",\n      },\n    },\n    extend: {\n      fontFamily: {\n        heading: [\"var(--font-heading)\", \"system-ui\", \"sans-serif\"],\n        body: [\"var(--font-body)\", \"system-ui\", \"sans-serif\"],\n      },\n      colors: {\n        border: \"hsl(var(--border))\",\n        input: \"hsl(var(--input))\",\n        ring: \"hsl(var(--ring))\",\n        background: \"hsl(var(--background))\",\n        foreground: \"hsl(var(--foreground))\",\n        primary: {\n          DEFAULT: \"hsl(var(--primary))\",\n          foreground: \"hsl(var(--primary-foreground))\",\n        },\n        secondary: {\n          DEFAULT: \"hsl(var(--secondary))\",\n          foreground: \"hsl(var(--secondary-foreground))\",\n        },\n        destructive: {\n          DEFAULT: \"hsl(var(--destructive))\",\n          foreground: \"hsl(var(--destructive-foreground))\",\n        },\n        muted: {\n          DEFAULT: \"hsl(var(--muted))\",\n          foreground: \"hsl(var(--muted-foreground))\",\n        },\n        accent: {\n          DEFAULT: \"hsl(var(--accent))\",\n          foreground: \"hsl(var(--accent-foreground))\",\n        },\n        popover: {\n          DEFAULT: \"hsl(var(--popover))\",\n          foreground: \"hsl(var(--popover-foreground))\",\n        },\n        card: {\n          DEFAULT: \"hsl(var(--card))\",\n          foreground: \"hsl(var(--card-foreground))\",\n        },\n      },\n      borderRadius: {\n        lg: \"var(--radius)\",\n        md: \"calc(var(--radius) - 2px)\",\n        sm: \"calc(var(--radius) - 4px)\",\n      },\n      keyframes: {\n        \"accordion-down\": {\n          from: { height: \"0\" },\n          to: { height: \"var(--radix-accordion-content-height)\" },\n        },\n        \"accordion-up\": {\n          from: { height: \"var(--radix-accordion-content-height)\" },\n          to: { height: \"0\" },\n        },\n        \"fade-in-up\": {\n          from: { opacity: \"0\", transform: \"translateY(20px)\" },\n          to: { opacity: \"1\", transform: \"translateY(0)\" },\n        },\n        \"count-up\": {\n          from: { opacity: \"0\", transform: \"scale(0.8)\" },\n          to: { opacity: \"1\", transform: \"scale(1)\" },\n        },\n      },\n      animation: {\n        \"accordion-down\": \"accordion-down 0.2s ease-out\",\n        \"accordion-up\": \"accordion-up 0.2s ease-out\",\n        \"fade-in-up\": \"fade-in-up 0.6s ease-out forwards\",\n        \"count-up\": \"count-up 0.5s ease-out forwards\",\n      },\n    },\n  },\n  plugins: [require(\"tailwindcss-animate\"), require(\"@tailwindcss/typography\")],\n} satisfies Config;","eslint.config.js":"import js from \"@eslint/js\";\nimport globals from \"globals\";\nimport reactHooks from \"eslint-plugin-react-hooks\";\nimport reactRefresh from \"eslint-plugin-react-refresh\";\nimport tseslint from \"typescript-eslint\";\n\nexport default tseslint.config(\n  { ignores: [\"dist\"] },\n  {\n    extends: [js.configs.recommended, ...tseslint.configs.recommended],\n    files: [\"**/*.{ts,tsx}\"],\n    languageOptions: {\n      ecmaVersion: 2020,\n      globals: globals.browser,\n    },\n    plugins: {\n      \"react-hooks\": reactHooks,\n      \"react-refresh\": reactRefresh,\n    },\n    rules: {\n      ...reactHooks.configs.recommended.rules,\n      \"react-refresh/only-export-components\": [\n        \"warn\",\n        { allowConstantExport: true },\n      ],\n    },\n  }\n);","vitest.config.ts":"import { defineConfig } from \"vitest/config\";\nimport react from \"@vitejs/plugin-react-swc\";\nimport path from \"path\";\n\nexport default defineConfig({\n  plugins: [react()],\n  resolve: {\n    alias: {\n      \"@\": path.resolve(__dirname, \"./src\"),\n    },\n  },\n  test: {\n    environment: \"jsdom\",\n    globals: true,\n    setupFiles: \"./src/test/setup.ts\",\n  },\n});","components.json":"{\n  \"$schema\": \"https://ui.shadcn.com/schema.json\",\n  \"style\": \"default\",\n  \"rsc\": false,\n  \"tsx\": true,\n  \"tailwind\": {\n    \"config\": \"tailwind.config.ts\",\n    \"css\": \"src/index.css\",\n    \"baseColor\": \"zinc\",\n    \"cssVariables\": false\n  },\n  \"aliases\": {\n    \"components\": \"@/components\",\n    \"utils\": \"@/lib/utils\",\n    \"ui\": \"@/components/ui\",\n    \"hooks\": \"@/hooks\",\n    \"lib\": \"@/lib\"\n  }\n}","README.md":"# Cenate Website\n\nThis project was generated by Cenate with a fixed Lovable-style Vite + React + TypeScript scaffold.\n\n## Scripts\n\n- `npm run dev`\n- `npm run build`\n- `npm run build:dev`\n- `npm run lint`\n- `npm run preview`\n- `npm run test`\n- `npm run test:watch`",".gitignore":"node_modules\ndist\n.DS_Store\n.env\n.env.local\ncoverage\n*.log","public/robots.txt":"User-agent: *\nAllow: /","public/placeholder.svg":"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"400\" height=\"300\" viewBox=\"0 0 400 300\" fill=\"none\">\n  <rect width=\"400\" height=\"300\" rx=\"24\" fill=\"#F4F4F5\"/>\n  <path d=\"M120 210L180 150L225 195L290 125L340 210H120Z\" fill=\"#D4D4D8\"/>\n  <circle cx=\"160\" cy=\"110\" r=\"24\" fill=\"#A1A1AA\"/>\n</svg>","public/favicon.ico":"placeholder favicon","src/main.tsx":"import React from \"react\";\nimport ReactDOM from \"react-dom/client\";\nimport App from \"./App\";\nimport \"./index.css\";\nimport \"./App.css\";\n\nclass ErrorBoundary extends React.Component<\n  { children: React.ReactNode },\n  { error: Error | null }\n> {\n  state: { error: Error | null } = { error: null };\n  static getDerivedStateFromError(error: Error) {\n    return { error };\n  }\n  componentDidCatch(error: Error) {\n    const el = document.getElementById(\"cenate-error\");\n    if (el) {\n      el.style.display = \"block\";\n      el.textContent = \"Render error: \" + error.message;\n    }\n  }\n  render() {\n    if (this.state.error) {\n      return React.createElement(\n        \"div\",\n        {\n          style: {\n            padding: 32,\n            color: \"#b91c1c\",\n            fontFamily: \"ui-monospace, monospace\",\n            fontSize: 13,\n            whiteSpace: \"pre-wrap\" as const,\n            background: \"#fff5f5\",\n            minHeight: \"100vh\",\n          },\n        },\n        \"Render error: \" + this.state.error.message\n      );\n    }\n    return this.props.children;\n  }\n}\n\nReactDOM.createRoot(document.getElementById(\"root\")!).render(\n  <React.StrictMode>\n    <ErrorBoundary>\n      <App />\n    </ErrorBoundary>\n  </React.StrictMode>\n);","src/index.css":"@import url(\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap\");\n\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n@layer base {\n  :root {\n    --background: 0 0% 100%;\n    --foreground: 222.2 47.4% 11.2%;\n    --card: 0 0% 100%;\n    --card-foreground: 222.2 47.4% 11.2%;\n    --popover: 0 0% 100%;\n    --popover-foreground: 222.2 47.4% 11.2%;\n    --primary: 222.2 47.4% 11.2%;\n    --primary-foreground: 210 40% 98%;\n    --secondary: 210 40% 96.1%;\n    --secondary-foreground: 222.2 47.4% 11.2%;\n    --muted: 210 40% 96.1%;\n    --muted-foreground: 215.4 16.3% 46.9%;\n    --accent: 210 40% 96.1%;\n    --accent-foreground: 222.2 47.4% 11.2%;\n    --destructive: 0 72.2% 50.6%;\n    --destructive-foreground: 210 40% 98%;\n    --border: 214.3 31.8% 91.4%;\n    --input: 214.3 31.8% 91.4%;\n    --ring: 221.2 83.2% 53.3%;\n    --radius: 1rem;\n\n    --font-heading: 'Inter', system-ui, sans-serif;\n    --font-body: 'Inter', system-ui, sans-serif;\n\n    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.14), hsl(var(--background)) 55%, hsl(var(--accent) / 0.22));\n    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--secondary) / 0.92) 100%);\n    --shadow-soft: 0 20px 45px -30px rgb(15 23 42 / 0.28);\n    --shadow-card: 0 18px 40px -28px rgb(15 23 42 / 0.22);\n    --shadow-card-hover: 0 24px 60px -32px rgb(15 23 42 / 0.32);\n\n    --sidebar-background: 0 0% 98%;\n    --sidebar-foreground: 240 5.3% 26.1%;\n    --sidebar-primary: 240 5.9% 10%;\n    --sidebar-primary-foreground: 0 0% 98%;\n    --sidebar-accent: 240 4.8% 95.9%;\n    --sidebar-accent-foreground: 240 5.9% 10%;\n    --sidebar-border: 220 13% 91%;\n    --sidebar-ring: 217.2 91.2% 59.8%;\n  }\n\n  .dark {\n    --background: 222.2 47.4% 6%;\n    --foreground: 210 40% 98%;\n    --card: 222.2 47.4% 8.6%;\n    --card-foreground: 210 40% 98%;\n    --popover: 222.2 47.4% 8.6%;\n    --popover-foreground: 210 40% 98%;\n    --primary: 210 40% 98%;\n    --primary-foreground: 222.2 47.4% 11.2%;\n    --secondary: 217.2 32.6% 17.5%;\n    --secondary-foreground: 210 40% 98%;\n    --muted: 217.2 32.6% 17.5%;\n    --muted-foreground: 215 20.2% 65.1%;\n    --accent: 217.2 32.6% 17.5%;\n    --accent-foreground: 210 40% 98%;\n    --destructive: 0 62.8% 40.6%;\n    --destructive-foreground: 210 40% 98%;\n    --border: 217.2 32.6% 17.5%;\n    --input: 217.2 32.6% 17.5%;\n    --ring: 212.7 26.8% 83.9%;\n    --gradient-hero: linear-gradient(140deg, hsl(var(--primary) / 0.12), hsl(var(--background)) 52%, hsl(217.2 91.2% 59.8% / 0.28));\n    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--card)) 100%);\n  }\n}\n\n@layer base {\n  * {\n    border-color: hsl(var(--border));\n  }\n\n  body {\n    background-color: hsl(var(--background));\n    color: hsl(var(--foreground));\n    font-family: var(--font-body);\n    background-image:\n      radial-gradient(circle at top, hsl(var(--primary) / 0.06), transparent 28%),\n      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background)) 100%);\n    line-height: 1.6;\n    text-rendering: optimizeLegibility;\n    -webkit-font-smoothing: antialiased;\n  }\n\n  h1, h2, h3, h4, h5, h6 {\n    font-family: var(--font-heading);\n    letter-spacing: -0.03em;\n    line-height: 1.05;\n    text-wrap: balance;\n  }\n\n  p {\n    text-wrap: pretty;\n  }\n\n  ::selection {\n    background: hsl(var(--primary) / 0.16);\n  }\n\n  :focus-visible {\n    outline: 2px solid hsl(var(--ring));\n    outline-offset: 2px;\n  }\n}\n\n@layer utilities {\n  .text-gradient {\n    background-clip: text;\n    -webkit-background-clip: text;\n    -webkit-text-fill-color: transparent;\n    background-image: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--primary) / 0.72));\n  }\n\n  .surface-card {\n    background-image: linear-gradient(180deg, hsl(var(--card) / 0.98), hsl(var(--card) / 0.92));\n    box-shadow: var(--shadow-card);\n  }\n\n  .surface-panel {\n    background: hsl(var(--card) / 0.82);\n    backdrop-filter: blur(14px);\n    border: 1px solid hsl(var(--border) / 0.7);\n    box-shadow: var(--shadow-soft);\n  }\n\n  .section-shell {\n    position: relative;\n  }\n\n  .section-shell::before {\n    content: \"\";\n    position: absolute;\n    inset: 0;\n    pointer-events: none;\n    background: linear-gradient(180deg, hsl(var(--background) / 0), hsl(var(--primary) / 0.03));\n    opacity: 0.8;\n  }\n\n  .eyebrow {\n    display: inline-flex;\n    align-items: center;\n    gap: 0.5rem;\n    font-size: 0.75rem;\n    font-weight: 700;\n    letter-spacing: 0.22em;\n    text-transform: uppercase;\n    color: hsl(var(--primary));\n  }\n}\n\nhtml {\n  scroll-behavior: smooth;\n}\n\n* {\n  box-sizing: border-box;\n}\n\n@keyframes fade-in-up {\n  from { opacity: 0; transform: translateY(20px); }\n  to { opacity: 1; transform: translateY(0); }\n}\n\n@keyframes count-up {\n  from { opacity: 0; transform: scale(0.8); }\n  to { opacity: 1; transform: scale(1); }\n}\n\n@keyframes accordion-down {\n  from { height: 0; }\n  to { height: var(--radix-accordion-content-height); }\n}\n\n@keyframes accordion-up {\n  from { height: var(--radix-accordion-content-height); }\n  to { height: 0; }\n}\n\n.animate-fade-in-up {\n  animation: fade-in-up 0.6s ease-out forwards;\n}\n\n.animate-count-up {\n  animation: count-up 0.5s ease-out forwards;\n}\n\n.animate-accordion-down {\n  animation: accordion-down 0.2s ease-out;\n}\n\n.animate-accordion-up {\n  animation: accordion-up 0.2s ease-out;\n}","src/App.css":"#root {\n  min-height: 100vh;\n  background: hsl(var(--background));\n  color: hsl(var(--foreground));\n}","src/vite-env.d.ts":"/// <reference types=\"vite/client\" />","src/assets/.gitkeep":"","src/hooks/use-mobile.ts":"import { useEffect, useState } from \"react\";\n\nexport function useMobile(breakpoint = 768) {\n  const [isMobile, setIsMobile] = useState(false);\n\n  useEffect(() => {\n    const media = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);\n    const update = () => setIsMobile(media.matches);\n    update();\n    media.addEventListener(\"change\", update);\n    return () => media.removeEventListener(\"change\", update);\n  }, [breakpoint]);\n\n  return isMobile;\n}","src/pages/Home.tsx":"import App from \"../App\";\n\nexport default function HomePage() {\n  return <App />;\n}","src/test/setup.ts":"import \"@testing-library/jest-dom\";","src/test/App.test.tsx":"import { render, screen } from \"@testing-library/react\";\nimport App from \"../App\";\n\ndescribe(\"App\", () => {\n  it(\"renders without crashing\", () => {\n    render(<App />);\n    expect(screen.getByRole(\"main\")).toBeInTheDocument();\n  });\n});","src/lib/utils.ts":"import { clsx, type ClassValue } from \"clsx\";\n\nexport function cn(...inputs: ClassValue[]) {\n  return clsx(inputs);\n}","src/components/ui/button.tsx":"import React from \"react\";\nimport { Slot } from \"@radix-ui/react-slot\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst buttonVariants = cva(\n  \"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-primary text-primary-foreground hover:bg-primary/90\",\n        destructive: \"bg-destructive text-destructive-foreground hover:bg-destructive/90\",\n        outline: \"border border-input bg-background hover:bg-accent hover:text-accent-foreground\",\n        secondary: \"bg-secondary text-secondary-foreground hover:bg-secondary/80\",\n        ghost: \"hover:bg-accent hover:text-accent-foreground\",\n        link: \"text-primary underline-offset-4 hover:underline\",\n      },\n      size: {\n        default: \"h-10 px-4 py-2\",\n        sm: \"h-9 rounded-md px-3\",\n        lg: \"h-11 rounded-md px-8\",\n        icon: \"h-10 w-10\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      size: \"default\",\n    },\n  }\n);\n\ntype ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> &\n  VariantProps<typeof buttonVariants> & {\n    asChild?: boolean;\n  };\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n  ({ className, variant, size, asChild = false, ...props }, ref) => {\n    const Comp = asChild ? Slot : \"button\";\n    return (\n      <Comp\n        className={cn(buttonVariants({ variant, size, className }))}\n        ref={ref}\n        {...props}\n      />\n    );\n  }\n);\nButton.displayName = \"Button\";\n\nexport { Button, buttonVariants };\nexport default Button;","src/components/ui/accordion.tsx":"import React from \"react\";\nimport * as AccordionPrimitive from \"@radix-ui/react-accordion\";\nimport { cn } from \"@/lib/utils\";\n\nconst Accordion = AccordionPrimitive.Root;\n\nconst AccordionItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(\n  ({ className, ...props }, ref) => (\n    <AccordionPrimitive.Item ref={ref} className={cn(\"border-b\", className)} {...props} />\n  )\n);\nAccordionItem.displayName = \"AccordionItem\";\n\nconst AccordionTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement>>(\n  ({ className, children, ...props }, ref) => (\n    <AccordionPrimitive.Header className=\"flex\">\n      <AccordionPrimitive.Trigger\n        ref={ref}\n        className={cn(\n          \"flex flex-1 items-center justify-between py-4 font-medium transition-all [&[data-state=open]>svg]:rotate-180\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\" className=\"shrink-0 transition-transform duration-200\"><path d=\"m6 9 6 6 6-6\" /></svg>\n      </AccordionPrimitive.Trigger>\n    </AccordionPrimitive.Header>\n  )\n);\nAccordionTrigger.displayName = \"AccordionTrigger\";\n\nconst AccordionContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, children, ...props }, ref) => (\n    <AccordionPrimitive.Content ref={ref} className=\"overflow-hidden text-sm\" {...props}>\n      <div className={cn(\"pb-4 pt-0\", className)}>{children}</div>\n    </AccordionPrimitive.Content>\n  )\n);\nAccordionContent.displayName = \"AccordionContent\";\n\nexport { Accordion, AccordionItem, AccordionTrigger, AccordionContent };","src/components/ui/tabs.tsx":"import React from \"react\";\nimport * as TabsPrimitive from \"@radix-ui/react-tabs\";\nimport { cn } from \"@/lib/utils\";\n\nconst Tabs = TabsPrimitive.Root;\n\nconst TabsList = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <TabsPrimitive.List\n      ref={ref}\n      className={cn(\n        \"inline-flex h-10 items-center justify-center rounded-lg bg-zinc-100 p-1 text-zinc-500\",\n        className\n      )}\n      {...props}\n    />\n  )\n);\nTabsList.displayName = \"TabsList\";\n\nconst TabsTrigger = React.forwardRef<HTMLButtonElement, React.ButtonHTMLAttributes<HTMLButtonElement> & { value: string }>(\n  ({ className, ...props }, ref) => (\n    <TabsPrimitive.Trigger\n      ref={ref}\n      className={cn(\n        \"inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium transition-all\",\n        \"data-[state=active]:bg-white data-[state=active]:text-zinc-950 data-[state=active]:shadow-sm\",\n        className\n      )}\n      {...props}\n    />\n  )\n);\nTabsTrigger.displayName = \"TabsTrigger\";\n\nconst TabsContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { value: string }>(\n  ({ className, ...props }, ref) => (\n    <TabsPrimitive.Content\n      ref={ref}\n      className={cn(\"mt-2\", className)}\n      {...props}\n    />\n  )\n);\nTabsContent.displayName = \"TabsContent\";\n\nexport { Tabs, TabsList, TabsTrigger, TabsContent };","src/components/ui/dialog.tsx":"import React from \"react\";\nimport * as DialogPrimitive from \"@radix-ui/react-dialog\";\nimport { cn } from \"@/lib/utils\";\n\nconst Dialog = DialogPrimitive.Root;\nconst DialogTrigger = DialogPrimitive.Trigger;\nconst DialogClose = DialogPrimitive.Close;\nconst DialogPortal = DialogPrimitive.Portal;\n\nconst DialogOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Overlay\n      ref={ref}\n      className={cn(\n        \"fixed inset-0 z-50 bg-black/60 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0\",\n        className\n      )}\n      {...props}\n    />\n  )\n);\nDialogOverlay.displayName = \"DialogOverlay\";\n\nconst DialogContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, children, ...props }, ref) => (\n    <DialogPortal>\n      <DialogOverlay />\n      <DialogPrimitive.Content\n        ref={ref}\n        className={cn(\n          \"fixed left-[50%] top-[50%] z-50 w-full max-w-lg translate-x-[-50%] translate-y-[-50%] rounded-xl border bg-white p-6 shadow-xl duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n      </DialogPrimitive.Content>\n    </DialogPortal>\n  )\n);\nDialogContent.displayName = \"DialogContent\";\n\nconst DialogTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTMLHeadingElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Title ref={ref} className={cn(\"text-lg font-semibold\", className)} {...props} />\n  )\n);\nDialogTitle.displayName = \"DialogTitle\";\n\nconst DialogDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Description ref={ref} className={cn(\"text-sm text-zinc-500\", className)} {...props} />\n  )\n);\nDialogDescription.displayName = \"DialogDescription\";\n\nexport { Dialog, DialogTrigger, DialogContent, DialogClose, DialogOverlay, DialogTitle, DialogDescription };","src/components/ui/sheet.tsx":"import React from \"react\";\nimport * as DialogPrimitive from \"@radix-ui/react-dialog\";\nimport { cn } from \"@/lib/utils\";\n\nconst Sheet = DialogPrimitive.Root;\nconst SheetTrigger = DialogPrimitive.Trigger;\nconst SheetClose = DialogPrimitive.Close;\n\nconst SheetOverlay = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(\n  ({ className, ...props }, ref) => (\n    <DialogPrimitive.Overlay\n      ref={ref}\n      className={cn(\"fixed inset-0 z-50 bg-black/60 backdrop-blur-sm\", className)}\n      {...props}\n    />\n  )\n);\nSheetOverlay.displayName = \"SheetOverlay\";\n\ntype SheetContentProps = React.HTMLAttributes<HTMLDivElement> & {\n  side?: \"left\" | \"right\" | \"top\" | \"bottom\";\n};\n\nconst sideStyles: Record<string, string> = {\n  right: \"inset-y-0 right-0 h-full w-3/4 max-w-sm border-l translate-x-0\",\n  left: \"inset-y-0 left-0 h-full w-3/4 max-w-sm border-r translate-x-0\",\n  top: \"inset-x-0 top-0 border-b\",\n  bottom: \"inset-x-0 bottom-0 border-t\",\n};\n\nconst SheetContent = React.forwardRef<HTMLDivElement, SheetContentProps>(\n  ({ side = \"right\", className, children, ...props }, ref) => (\n    <DialogPrimitive.Portal>\n      <SheetOverlay />\n      <DialogPrimitive.Content\n        ref={ref}\n        className={cn(\n          \"fixed z-50 bg-white p-6 shadow-xl transition-transform duration-300\",\n          sideStyles[side],\n          className\n        )}\n        {...props}\n      >\n        {children}\n      </DialogPrimitive.Content>\n    </DialogPrimitive.Portal>\n  )\n);\nSheetContent.displayName = \"SheetContent\";\n\nexport { Sheet, SheetTrigger, SheetContent, SheetClose };","src/components/ui/input.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype InputProps = React.InputHTMLAttributes<HTMLInputElement> & {\n  label?: string;\n  error?: string;\n};\n\nexport default function Input({ label, error, className, id, ...props }: InputProps) {\n  const inputId = id || (label ? label.toLowerCase().replace(/\\s+/g, \"-\") : undefined);\n  return (\n    <div>\n      {label && (\n        <label htmlFor={inputId} className=\"block text-sm font-medium mb-1.5\">\n          {label}\n        </label>\n      )}\n      <input\n        id={inputId}\n        className={cn(\n          \"flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\",\n          error && \"border-destructive focus-visible:ring-destructive\",\n          className\n        )}\n        {...props}\n      />\n      {error && <p className=\"mt-1 text-sm text-destructive\">{error}</p>}\n    </div>\n  );\n}","src/components/ui/textarea.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {\n  label?: string;\n};\n\nexport default function Textarea({ label, className, id, ...props }: TextareaProps) {\n  const inputId = id || (label ? label.toLowerCase().replace(/\\s+/g, \"-\") : undefined);\n  return (\n    <div>\n      {label && (\n        <label htmlFor={inputId} className=\"block text-sm font-medium mb-1.5\">\n          {label}\n        </label>\n      )}\n      <textarea\n        id={inputId}\n        rows={4}\n        className={cn(\n          \"w-full rounded-lg border px-4 py-2.5 text-base outline-none transition-colors resize-none\",\n          className\n        )}\n        {...props}\n      />\n    </div>\n  );\n}","src/components/ui/badge.tsx":"import React from \"react\";\nimport { cva, type VariantProps } from \"class-variance-authority\";\nimport { cn } from \"@/lib/utils\";\n\nconst badgeVariants = cva(\n  \"inline-flex items-center rounded-full font-medium\",\n  {\n    variants: {\n      size: {\n        sm: \"px-2 py-0.5 text-[10px]\",\n        md: \"px-2.5 py-0.5 text-xs\",\n        lg: \"px-3 py-1 text-sm\",\n      },\n    },\n    defaultVariants: {\n      size: \"md\",\n    },\n  }\n);\n\ntype BadgeProps = React.HTMLAttributes<HTMLSpanElement> &\n  VariantProps<typeof badgeVariants>;\n\nexport default function Badge({ className, size, ...props }: BadgeProps) {\n  return (\n    <span className={cn(badgeVariants({ size }), className)} {...props} />\n  );\n}\n\nexport { badgeVariants };","src/components/ui/card.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype CardProps = {\n  className?: string;\n  children: React.ReactNode;\n};\n\nexport default function Card({ className, children }: CardProps) {\n  return (\n    <div className={cn(\"surface-card rounded-[calc(var(--radius)+6px)] border bg-card text-card-foreground shadow-sm p-6\", className)}>\n      {children}\n    </div>\n  );\n}","src/components/ui/section.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype SectionProps = {\n  id?: string;\n  className?: string;\n  children: React.ReactNode;\n};\n\nexport default function Section({ id, className, children }: SectionProps) {\n  return (\n    <section id={id} className={cn(\"py-16 md:py-24\", className)}>\n      {children}\n    </section>\n  );\n}","src/components/ui/container.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype ContainerProps = {\n  size?: \"sm\" | \"md\" | \"lg\" | \"xl\" | \"full\";\n  className?: string;\n  children: React.ReactNode;\n};\n\nconst maxWidths: Record<string, string> = {\n  sm: \"max-w-3xl\",\n  md: \"max-w-5xl\",\n  lg: \"max-w-6xl\",\n  xl: \"max-w-7xl\",\n  full: \"max-w-full\",\n};\n\nexport default function Container({ size = \"xl\", className, children }: ContainerProps) {\n  return (\n    <div className={cn(\"mx-auto px-4 sm:px-6 lg:px-8\", maxWidths[size], className)}>\n      {children}\n    </div>\n  );\n}","src/components/ui/heading.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype HeadingProps = {\n  as?: \"h1\" | \"h2\" | \"h3\" | \"h4\";\n  size?: \"display\" | \"h1\" | \"h2\" | \"h3\";\n  eyebrow?: string;\n  className?: string;\n  children: React.ReactNode;\n};\n\nconst sizeStyles: Record<string, string> = {\n  display: \"text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]\",\n  h1: \"text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight\",\n  h2: \"text-3xl md:text-4xl font-semibold tracking-tight\",\n  h3: \"text-xl md:text-2xl font-semibold\",\n};\n\nexport default function Heading({\n  as: Tag = \"h2\",\n  size = \"h2\",\n  eyebrow,\n  className,\n  children,\n}: HeadingProps) {\n  return (\n    <div>\n      {eyebrow && (\n        <span className=\"block text-xs uppercase tracking-widest font-medium mb-3 opacity-60\">\n          {eyebrow}\n        </span>\n      )}\n      <Tag className={cn(sizeStyles[size], className)}>{children}</Tag>\n    </div>\n  );\n}","src/components/ui/separator.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype SeparatorProps = {\n  orientation?: \"horizontal\" | \"vertical\";\n  className?: string;\n};\n\nexport default function Separator({ orientation = \"horizontal\", className }: SeparatorProps) {\n  return (\n    <div\n      role=\"separator\"\n      className={cn(\n        \"shrink-0 bg-current opacity-10\",\n        orientation === \"horizontal\" ? \"h-px w-full\" : \"h-full w-px\",\n        className\n      )}\n    />\n  );\n}","src/components/ui/aspect-ratio.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype AspectRatioProps = {\n  ratio?: number;\n  className?: string;\n  children: React.ReactNode;\n};\n\nexport default function AspectRatio({ ratio = 16 / 9, className, children }: AspectRatioProps) {\n  return (\n    <div className={cn(\"relative w-full overflow-hidden\", className)} style={{ paddingBottom: (1 / ratio) * 100 + \"%\" }}>\n      <div className=\"absolute inset-0\">{children}</div>\n    </div>\n  );\n}","src/components/ui/testimonial.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype TestimonialProps = {\n  quote: string;\n  author: string;\n  role?: string;\n  avatar?: string;\n  className?: string;\n};\n\nexport default function Testimonial({ quote, author, role, avatar, className }: TestimonialProps) {\n  return (\n    <figure className={cn(\"space-y-4\", className)}>\n      <blockquote className=\"text-lg md:text-xl leading-relaxed italic\">\n        &ldquo;{quote}&rdquo;\n      </blockquote>\n      <figcaption className=\"flex items-center gap-3\">\n        {avatar && (\n          <img src={avatar} alt={author} className=\"w-10 h-10 rounded-full object-cover\" />\n        )}\n        <div>\n          <p className=\"font-medium text-sm\">{author}</p>\n          {role && <p className=\"text-xs opacity-60\">{role}</p>}\n        </div>\n      </figcaption>\n    </figure>\n  );\n}","src/components/ui/stats-band.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport { cn } from \"@/lib/utils\";\n\ntype Stat = {\n  value: string;\n  label: string;\n};\n\ntype StatsBandProps = {\n  stats: Stat[];\n  className?: string;\n};\n\nexport default function StatsBand({ stats, className }: StatsBandProps) {\n  return (\n    <Section className={cn(\"py-12\", className)}>\n      <Container>\n        <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8 text-center\">\n          {stats.map((s) => (\n            <div key={s.label}>\n              <p className=\"text-3xl md:text-5xl font-bold\">{s.value}</p>\n              <p className=\"text-sm mt-1 opacity-60\">{s.label}</p>\n            </div>\n          ))}\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/ui/gallery.tsx":"import React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\ntype GalleryImage = {\n  src: string;\n  alt: string;\n  span?: \"normal\" | \"wide\" | \"tall\";\n};\n\ntype GalleryProps = {\n  images: GalleryImage[];\n  className?: string;\n};\n\nconst spanClasses: Record<string, string> = {\n  normal: \"\",\n  wide: \"md:col-span-2\",\n  tall: \"md:row-span-2\",\n};\n\nexport default function Gallery({ images, className }: GalleryProps) {\n  return (\n    <div className={cn(\"grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4\", className)}>\n      {images.map((img, i) => (\n        <div key={i} className={cn(\"overflow-hidden rounded-lg\", spanClasses[img.span || \"normal\"])}>\n          <img\n            src={img.src}\n            alt={img.alt}\n            className=\"w-full h-full object-cover transition-transform duration-500 hover:scale-105\"\n          />\n        </div>\n      ))}\n    </div>\n  );\n}","src/components/ui/mobile-nav.tsx":"import React from \"react\";\nimport { Sheet, SheetTrigger, SheetContent, SheetClose } from \"@/components/ui/sheet\";\nimport Button from \"@/components/ui/button\";\nimport { cn } from \"@/lib/utils\";\n\ntype MobileNavProps = {\n  links: { label: string; href: string }[];\n  brandName: string;\n  ctaLabel?: string;\n  ctaHref?: string;\n  className?: string;\n};\n\nexport default function MobileNav({ links, brandName, ctaLabel, ctaHref, className }: MobileNavProps) {\n  return (\n    <Sheet>\n      <SheetTrigger asChild>\n        <button className={cn(\"md:hidden p-2\", className)} aria-label=\"Open menu\">\n          <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" strokeWidth=\"2\" strokeLinecap=\"round\" strokeLinejoin=\"round\">\n            <line x1=\"3\" y1=\"6\" x2=\"21\" y2=\"6\" /><line x1=\"3\" y1=\"12\" x2=\"21\" y2=\"12\" /><line x1=\"3\" y1=\"18\" x2=\"21\" y2=\"18\" />\n          </svg>\n        </button>\n      </SheetTrigger>\n      <SheetContent side=\"right\" className=\"flex flex-col pt-16\">\n        <p className=\"text-lg font-semibold mb-8\">{brandName}</p>\n        <nav className=\"flex flex-col gap-4\">\n          {links.map((link) => (\n            <SheetClose key={link.href} asChild>\n              <a href={link.href} className=\"text-lg py-2 border-b border-zinc-100 hover:text-zinc-600 transition-colors\">\n                {link.label}\n              </a>\n            </SheetClose>\n          ))}\n        </nav>\n        {ctaLabel && ctaHref && (\n          <div className=\"mt-auto pt-8\">\n            <SheetClose asChild>\n              <Button asChild size=\"lg\" className=\"w-full\">\n                <a href={ctaHref}>{ctaLabel}</a>\n              </Button>\n            </SheetClose>\n          </div>\n        )}\n      </SheetContent>\n    </Sheet>\n  );\n}","src/App.tsx":"import React from \"react\";\nimport Navbar from \"./components/Navbar\";\nimport Hero from \"./components/Hero\";\nimport ProductDemo from \"./components/ProductDemo\";\nimport Capabilities from \"./components/Capabilities\";\nimport Metrics from \"./components/Metrics\";\nimport Testimonial from \"./components/Testimonial\";\nimport Pricing from \"./components/Pricing\";\nimport Conversion from \"./components/Conversion\";\nimport Footer from \"./components/Footer\";\n\nexport default function App() {\n  return (\n    <main role=\"main\" className=\"min-h-screen bg-background text-foreground\">\n      <Navbar />\n      <Hero />\n      <ProductDemo />\n      <Capabilities />\n      <Metrics />\n      <Testimonial />\n      <Pricing />\n      <Conversion />\n      <Footer />\n    </main>\n  );\n}","src/components/Navbar.tsx":"import React from \"react\";\nimport Container from \"@/components/ui/container\";\nimport Button from \"@/components/ui/button\";\nimport MobileNav from \"@/components/ui/mobile-nav\";\n\nconst links = [\n  { label: \"Features\", href: \"#features\" },\n  { label: \"Pricing\", href: \"#pricing\" },\n  { label: \"Customers\", href: \"#testimonials\" },\n  { label: \"Docs\", href: \"#docs\" },\n];\n\nexport default function Navbar() {\n  return (\n    <header className=\"fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-sm border-b border-zinc-800/50\">\n      <Container>\n        <div className=\"flex items-center justify-between h-16\">\n          <a href=\"#\" className=\"text-lg font-semibold text-white\">FlowSync</a>\n          <nav className=\"hidden md:flex items-center gap-8\">\n            {links.map((link) => (\n              <a key={link.href} href={link.href} className=\"text-sm text-zinc-400 hover:text-white transition-colors\">\n                {link.label}\n              </a>\n            ))}\n            <Button size=\"sm\" className=\"bg-blue-600 text-white hover:bg-blue-700\">\n              Start Free Trial\n            </Button>\n          </nav>\n          <MobileNav links={links} brandName=\"FlowSync\" ctaLabel=\"Start Free Trial\" ctaHref=\"#pricing\" />\n        </div>\n      </Container>\n    </header>\n  );\n}","src/components/Hero.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\nimport Button from \"@/components/ui/button\";\n\nexport default function Hero() {\n  return (\n    <Section className=\"min-h-[90vh] flex items-center bg-[#0a0a0a] text-white overflow-hidden pt-16\">\n      <Container>\n        <div className=\"grid lg:grid-cols-2 gap-12 items-center\">\n          <div className=\"max-w-xl\">\n            <Heading as=\"h1\" size=\"display\" className=\"text-white font-bold\">\n              Automate workflows, not people\n            </Heading>\n            <p className=\"mt-6 text-lg text-zinc-400 max-w-md leading-relaxed\">\n              Connect your tools, define your processes, and let FlowSync handle the repetitive work so your team can focus on what matters.\n            </p>\n            <div className=\"mt-8 flex gap-4 items-center\">\n              <Button size=\"lg\" className=\"bg-blue-600 text-white hover:bg-blue-700\">\n                Start Free Trial\n              </Button>\n              <span className=\"text-sm text-zinc-500\">14-day free trial</span>\n            </div>\n            <div className=\"mt-8 flex items-center gap-6 text-sm text-zinc-500\">\n              <div className=\"flex items-center gap-2\">\n                <div className=\"w-6 h-4 bg-zinc-700 rounded-sm flex items-center justify-center\">\n                  <span className=\"text-xs text-zinc-400\">G</span>\n                </div>\n                <span>Google</span>\n              </div>\n              <div className=\"flex items-center gap-2\">\n                <div className=\"w-6 h-4 bg-zinc-700 rounded-sm flex items-center justify-center\">\n                  <span className=\"text-xs text-zinc-400\">S</span>\n                </div>\n                <span>Spotify</span>\n              </div>\n              <div className=\"flex items-center gap-2\">\n                <div className=\"w-6 h-4 bg-zinc-700 rounded-sm flex items-center justify-center\">\n                  <span className=\"text-xs text-zinc-400\">A</span>\n                </div>\n                <span>Airbnb</span>\n              </div>\n            </div>\n          </div>\n          <div className=\"relative\">\n            <div className=\"bg-zinc-900 rounded-xl border border-zinc-700 shadow-2xl overflow-hidden\">\n              <div className=\"flex items-center gap-1.5 px-4 py-3 bg-zinc-800 border-b border-zinc-700\">\n                <div className=\"w-2.5 h-2.5 rounded-full bg-red-500\" />\n                <div className=\"w-2.5 h-2.5 rounded-full bg-yellow-500\" />\n                <div className=\"w-2.5 h-2.5 rounded-full bg-green-500\" />\n                <div className=\"flex-1 mx-4 h-5 rounded bg-zinc-700\" />\n              </div>\n              <img \n                src=\"https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&q=80\" \n                alt=\"FlowSync dashboard interface showing workflow automation\" \n                className=\"w-full h-64 object-cover\"\n              />\n            </div>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/ProductDemo.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\n\nexport default function ProductDemo() {\n  const callouts = [\n    { number: \"01\", label: \"Trigger Events\", desc: \"Define what starts your workflow\" },\n    { number: \"02\", label: \"Process Logic\", desc: \"Add conditions and decision points\" },\n    { number: \"03\", label: \"Connect Tools\", desc: \"Integrate with your existing stack\" },\n    { number: \"04\", label: \"Auto Actions\", desc: \"Execute tasks automatically\" },\n    { number: \"05\", label: \"Track Results\", desc: \"Monitor performance in real-time\" }\n  ];\n\n  return (\n    <Section id=\"features\" className=\"bg-zinc-900 text-white py-24\">\n      <Container>\n        <div className=\"text-center mb-16\">\n          <Heading as=\"h2\" size=\"h2\" eyebrow=\"How it works\" className=\"text-white\">\n            Build workflows visually, deploy instantly\n          </Heading>\n          <p className=\"mt-4 text-zinc-400 max-w-2xl mx-auto\">\n            Our drag-and-drop interface makes complex automation simple. No coding required.\n          </p>\n        </div>\n        <div className=\"relative\">\n          <img \n            src=\"https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200&h=800&fit=crop&q=80\" \n            alt=\"Visual workflow builder interface with connected automation nodes\" \n            className=\"w-full rounded-2xl border border-zinc-700\"\n          />\n          <div className=\"absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent rounded-2xl\" />\n          <div className=\"absolute bottom-8 left-8 right-8\">\n            <div className=\"grid grid-cols-2 md:grid-cols-5 gap-4\">\n              {callouts.map((item) => (\n                <div key={item.number} className=\"bg-zinc-800/90 backdrop-blur border border-zinc-600 rounded-lg p-4\">\n                  <div className=\"text-blue-400 text-xs font-mono mb-1\">{item.number}</div>\n                  <div className=\"text-white font-medium text-sm mb-1\">{item.label}</div>\n                  <div className=\"text-zinc-400 text-xs\">{item.desc}</div>\n                </div>\n              ))}\n            </div>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Capabilities.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\n\nconst capabilities = [\n  { \n    title: \"Smart Integrations\", \n    desc: \"Connect 500+ apps and services with pre-built connectors. From Slack to Salesforce, GitHub to Google Workspace.\", \n    icon: \"M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z\" \n  },\n  { \n    title: \"Real-time Processing\", \n    desc: \"Sub-second response times with 99.99% uptime. Your workflows run when they need to, every time.\", \n    icon: \"M13 10V3L4 14h7v7l9-11h-7z\" \n  },\n  { \n    title: \"Advanced Logic\", \n    desc: \"Build complex decision trees with conditional branching, loops, and custom variables. No limits on sophistication.\", \n    icon: \"M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z\" \n  },\n];\n\nexport default function Capabilities() {\n  return (\n    <Section className=\"bg-[#0a0a0a] text-white py-24\">\n      <Container>\n        <Heading as=\"h2\" size=\"h2\" eyebrow=\"Capabilities\" className=\"text-white mb-16 text-center\">\n          Everything you need to automate at scale\n        </Heading>\n        <div className=\"grid lg:grid-cols-3 gap-8\">\n          {capabilities.map((cap, index) => (\n            <div key={cap.title} className={`p-8 rounded-2xl ${index === 1 ? 'bg-zinc-800 border border-zinc-700' : 'bg-zinc-900/50'}`}>\n              <div className=\"w-12 h-12 rounded-xl bg-blue-600/10 flex items-center justify-center mb-6\">\n                <svg className=\"w-6 h-6 text-blue-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" strokeWidth={2} strokeLinecap=\"round\" strokeLinejoin=\"round\">\n                  <path d={cap.icon} />\n                </svg>\n              </div>\n              <h3 className=\"text-xl font-semibold text-white mb-3\">{cap.title}</h3>\n              <p className=\"text-zinc-400 leading-relaxed\">{cap.desc}</p>\n            </div>\n          ))}\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Metrics.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\n\nconst metrics = [\n  { value: \"99.99%\", label: \"Uptime SLA\" },\n  { value: \"<50ms\", label: \"Response Time\" },\n  { value: \"25K+\", label: \"Active Teams\" },\n  { value: \"500M+\", label: \"Tasks Automated\" },\n  { value: \"SOC 2\", label: \"Type II Certified\" },\n];\n\nexport default function Metrics() {\n  return (\n    <Section className=\"bg-gradient-to-r from-blue-600 to-blue-700 text-white py-16\">\n      <Container>\n        <div className=\"grid grid-cols-2 md:grid-cols-5 gap-8 text-center\">\n          {metrics.map((metric) => (\n            <div key={metric.label}>\n              <p className=\"text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2\">{metric.value}</p>\n              <p className=\"text-blue-100 text-sm font-medium\">{metric.label}</p>\n            </div>\n          ))}\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Testimonial.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\nimport Testimonial from \"@/components/ui/testimonial\";\n\nexport default function TestimonialSection() {\n  return (\n    <Section id=\"testimonials\" className=\"bg-zinc-50 text-zinc-900 py-24\">\n      <Container size=\"lg\">\n        <div className=\"text-center mb-16\">\n          <Heading as=\"h2\" size=\"h2\" eyebrow=\"Customer Stories\">\n            Trusted by teams that ship fast\n          </Heading>\n        </div>\n        <div className=\"bg-white rounded-2xl border border-zinc-200 p-8 md:p-12\">\n          <Testimonial \n            quote=\"FlowSync eliminated 15 hours of manual work per week for our team. We went from reactive fire-fighting to proactive building. The ROI was immediate and the setup took less than a day.\"\n            author=\"Sarah Chen\"\n            role=\"VP Engineering at TechFlow\"\n            avatar=\"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=600&fit=crop&q=80\"\n            className=\"text-zinc-700 text-lg max-w-4xl mx-auto\"\n          />\n          <div className=\"flex items-center justify-center gap-8 mt-12 pt-8 border-t border-zinc-200\">\n            <div className=\"flex items-center gap-3 text-zinc-600\">\n              <div className=\"w-8 h-6 bg-zinc-800 rounded flex items-center justify-center\">\n                <span className=\"text-white text-xs font-bold\">TF</span>\n              </div>\n              <span className=\"text-sm font-medium\">TechFlow</span>\n            </div>\n            <div className=\"flex items-center gap-3 text-zinc-600\">\n              <div className=\"w-8 h-6 bg-blue-600 rounded flex items-center justify-center\">\n                <span className=\"text-white text-xs font-bold\">DS</span>\n              </div>\n              <span className=\"text-sm font-medium\">DataSync</span>\n            </div>\n            <div className=\"flex items-center gap-3 text-zinc-600\">\n              <div className=\"w-8 h-6 bg-green-600 rounded flex items-center justify-center\">\n                <span className=\"text-white text-xs font-bold\">BL</span>\n              </div>\n              <span className=\"text-sm font-medium\">BuildLab</span>\n            </div>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Pricing.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\nimport Button from \"@/components/ui/button\";\nimport Badge from \"@/components/ui/badge\";\n\nexport default function Pricing() {\n  return (\n    <Section id=\"pricing\" className=\"bg-zinc-900 text-white py-24\">\n      <Container size=\"lg\">\n        <div className=\"text-center mb-16\">\n          <Heading as=\"h2\" size=\"h2\" className=\"text-white\">\n            Start free, scale when ready\n          </Heading>\n          <p className=\"mt-4 text-zinc-400 max-w-md mx-auto\">No hidden fees. No lock-in contracts. Cancel anytime.</p>\n        </div>\n        <div className=\"grid lg:grid-cols-3 gap-8 max-w-5xl mx-auto\">\n          {/* Starter */}\n          <div className=\"bg-zinc-800 border border-zinc-700 rounded-2xl p-8\">\n            <div className=\"mb-8\">\n              <h3 className=\"text-lg font-semibold text-white mb-2\">Starter</h3>\n              <div className=\"flex items-baseline gap-1\">\n                <span className=\"text-3xl font-bold text-white\">$0</span>\n                <span className=\"text-zinc-500\">/month</span>\n              </div>\n              <p className=\"text-sm text-zinc-400 mt-2\">Perfect for trying FlowSync</p>\n            </div>\n            <ul className=\"space-y-3 mb-8 text-sm text-zinc-300\">\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                5 workflows\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                1,000 tasks/month\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                Basic integrations\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                Email support\n              </li>\n            </ul>\n            <Button className=\"w-full bg-zinc-700 text-white hover:bg-zinc-600\">\n              Get Started Free\n            </Button>\n          </div>\n\n          {/* Pro */}\n          <div className=\"bg-blue-600/10 border-2 border-blue-500 rounded-2xl p-8 relative\">\n            <Badge className=\"absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white\">Most Popular</Badge>\n            <div className=\"mb-8\">\n              <h3 className=\"text-lg font-semibold text-white mb-2\">Pro</h3>\n              <div className=\"flex items-baseline gap-1\">\n                <span className=\"text-3xl font-bold text-white\">$49</span>\n                <span className=\"text-zinc-500\">/month</span>\n              </div>\n              <p className=\"text-sm text-zinc-400 mt-2\">For growing teams</p>\n            </div>\n            <ul className=\"space-y-3 mb-8 text-sm text-zinc-300\">\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                Unlimited workflows\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                50,000 tasks/month\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                All integrations\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                Priority support\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                Advanced analytics\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                Team collaboration\n              </li>\n            </ul>\n            <Button className=\"w-full bg-blue-600 text-white hover:bg-blue-700\">\n              Start 14-Day Trial\n            </Button>\n          </div>\n\n          {/* Enterprise */}\n          <div className=\"bg-zinc-800 border border-zinc-700 rounded-2xl p-8\">\n            <div className=\"mb-8\">\n              <h3 className=\"text-lg font-semibold text-white mb-2\">Enterprise</h3>\n              <div className=\"flex items-baseline gap-1\">\n                <span className=\"text-2xl font-bold text-white\">Custom</span>\n              </div>\n              <p className=\"text-sm text-zinc-400 mt-2\">For large organizations</p>\n            </div>\n            <ul className=\"space-y-3 mb-8 text-sm text-zinc-300\">\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                Everything in Pro\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                Unlimited tasks\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                Custom integrations\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                Dedicated support\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                SLA guarantee\n              </li>\n              <li className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                SSO & SAML\n              </li>\n            </ul>\n            <Button className=\"w-full bg-zinc-700 text-white hover:bg-zinc-600\">\n              Contact Sales\n            </Button>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Conversion.tsx":"import React from \"react\";\nimport Section from \"@/components/ui/section\";\nimport Container from \"@/components/ui/container\";\nimport Heading from \"@/components/ui/heading\";\nimport Input from \"@/components/ui/input\";\nimport Textarea from \"@/components/ui/textarea\";\nimport Button from \"@/components/ui/button\";\n\nexport default function Conversion() {\n  return (\n    <Section className=\"bg-[#0a0a0a] text-white py-24\">\n      <Container size=\"lg\">\n        <div className=\"grid lg:grid-cols-2 gap-16 items-start\">\n          <div>\n            <Heading as=\"h2\" size=\"h2\" className=\"text-white\">\n              Ready to automate your workflows?\n            </Heading>\n            <p className=\"mt-4 text-zinc-400 max-w-md leading-relaxed\">\n              Join 25,000+ teams already using FlowSync to eliminate manual work and ship faster. Start your free trial today.\n            </p>\n            <div className=\"mt-8 space-y-4 text-sm text-zinc-500\">\n              <div className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                No credit card required\n              </div>\n              <div className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                14-day free trial\n              </div>\n              <div className=\"flex items-center gap-2\">\n                <svg className=\"w-4 h-4 text-green-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\"><path strokeLinecap=\"round\" strokeLinejoin=\"round\" strokeWidth={2} d=\"M5 13l4 4L19 7\" /></svg>\n                Setup in under 5 minutes\n              </div>\n            </div>\n          </div>\n          <div className=\"bg-zinc-900 border border-zinc-700 rounded-2xl p-8\">\n            <form className=\"space-y-6\" onSubmit={(e) => e.preventDefault()}>\n              <Input \n                label=\"Work Email\" \n                type=\"email\" \n                placeholder=\"you@company.com\" \n                className=\"bg-zinc-800 border-zinc-600 text-white placeholder-zinc-400\"\n              />\n              <Input \n                label=\"Company Name\" \n                placeholder=\"Your company\" \n                className=\"bg-zinc-800 border-zinc-600 text-white placeholder-zinc-400\"\n              />\n              <div className=\"space-y-2\">\n                <label className=\"text-sm font-medium text-zinc-300\">Team Size</label>\n                <select className=\"w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500\">\n                  <option value=\"\">Select team size</option>\n                  <option value=\"1-5\">1-5 people</option>\n                  <option value=\"6-20\">6-20 people</option>\n                  <option value=\"21-100\">21-100 people</option>\n                  <option value=\"100+\">100+ people</option>\n                </select>\n              </div>\n              <Textarea \n                label=\"What workflows do you want to automate? (Optional)\"\n                placeholder=\"Tell us about your current process...\"\n                className=\"bg-zinc-800 border-zinc-600 text-white placeholder-zinc-400\"\n              />\n              <Button size=\"lg\" className=\"w-full bg-blue-600 text-white hover:bg-blue-700\">\n                Start Free Trial\n              </Button>\n            </form>\n          </div>\n        </div>\n      </Container>\n    </Section>\n  );\n}","src/components/Footer.tsx":"import React from \"react\";\nimport Container from \"@/components/ui/container\";\nimport Input from \"@/components/ui/input\";\nimport Button from \"@/components/ui/button\";\n\nexport default function Footer() {\n  return (\n    <footer className=\"bg-[#0a0a0a] text-zinc-400 border-t border-zinc-800 py-16\">\n      <Container>\n        <div className=\"grid md:grid-cols-4 gap-12\">\n          <div className=\"md:col-span-2\">\n            <p className=\"text-xl font-semibold text-white mb-3\">FlowSync</p>\n            <p className=\"text-zinc-400 max-w-md leading-relaxed mb-6\">\n              The workflow automation platform that eliminates manual work so teams can focus on building great products.\n            </p>\n            <div className=\"flex items-center gap-2 text-sm\">\n              <div className=\"w-2 h-2 rounded-full bg-green-500\" />\n              <span className=\"text-green-400\">All systems operational</span>\n            </div>\n          </div>\n          <div className=\"space-y-4\">\n            <p className=\"text-white font-medium\">Product</p>\n            <div className=\"space-y-3 text-sm\">\n              <a href=\"#features\" className=\"block hover:text-white transition-colors\">Features</a>\n              <a href=\"#pricing\" className=\"block hover:text-white transition-colors\">Pricing</a>\n              <a href=\"#integrations\" className=\"block hover:text-white transition-colors\">Integrations</a>\n              <a href=\"#changelog\" className=\"block hover:text-white transition-colors\">Changelog</a>\n              <a href=\"#docs\" className=\"block hover:text-white transition-colors\">Documentation</a>\n            </div>\n          </div>\n          <div className=\"space-y-4\">\n            <p className=\"text-white font-medium\">Product Updates</p>\n            <p className=\"text-sm text-zinc-500 mb-3\">Get notified about new features and improvements</p>\n            <form className=\"space-y-3\" onSubmit={(e) => e.preventDefault()}>\n              <Input \n                type=\"email\" \n                placeholder=\"your@email.com\" \n                className=\"bg-zinc-800 border-zinc-700 text-white placeholder-zinc-500 text-sm\"\n              />\n              <Button size=\"sm\" className=\"w-full bg-blue-600 text-white hover:bg-blue-700\">\n                Subscribe\n              </Button>\n            </form>\n          </div>\n        </div>\n        <div className=\"mt-12 pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4\">\n          <div className=\"text-xs text-zinc-600\">\n            &copy; {new Date().getFullYear()} FlowSync Inc. All rights reserved.\n          </div>\n          <div className=\"flex items-center gap-6 text-xs text-zinc-600\">\n            <a href=\"#privacy\" className=\"hover:text-zinc-400 transition-colors\">Privacy Policy</a>\n            <a href=\"#terms\" className=\"hover:text-zinc-400 transition-colors\">Terms of Service</a>\n            <a href=\"#security\" className=\"hover:text-zinc-400 transition-colors\">Security</a>\n          </div>\n        </div>\n      </Container>\n    </footer>\n  );\n}"};
+
+      function showError(message) {
+        const error = document.getElementById("cenate-error");
+        if (error) {
+          error.style.display = "block";
+          error.textContent = message;
+        }
+        console.error(message);
+      }
+
+      function normalizePath(value) {
+        const parts = value.split("/");
+        const next = [];
+        for (const part of parts) {
+          if (part === "..") {
+            next.pop();
+          } else if (part && part !== ".") {
+            next.push(part);
+          }
+        }
+        return next.join("/");
+      }
+
+      function resolvePath(importerPath, target) {
+        if (target.startsWith("@/")) {
+          return "src/" + target.slice(2);
+        }
+        if (target.startsWith("src/")) {
+          return target;
+        }
+        if (target.startsWith(".")) {
+          const base = importerPath.split("/").slice(0, -1);
+          const parts = target.split("/");
+          for (const part of parts) {
+            if (part === ".") continue;
+            if (part === "..") base.pop();
+            else base.push(part);
+          }
+          return normalizePath(base.join("/"));
+        }
+        return target;
+      }
+
+      function resolveWithExtensions(value, fileMap) {
+        const candidates = [
+          value,
+          value + ".tsx",
+          value + ".ts",
+          value + ".jsx",
+          value + ".js",
+          value + "/index.tsx",
+          value + "/index.ts",
+          value + "/index.jsx",
+          value + "/index.js",
+        ];
+        for (const candidate of candidates) {
+          if (fileMap[candidate] !== undefined) {
+            return candidate;
+          }
+        }
+        return value;
+      }
+
+      function compile(source, filename) {
+        return window.Babel.transform(source, {
+          presets: [
+            ["env", { modules: "commonjs", loose: true }],
+            "react",
+            ["typescript", { allExtensions: true, isTSX: true, onlyRemoveTypeImports: false }],
+          ],
+          filename,
+          sourceType: "module",
+          compact: false,
+          comments: false,
+        }).code;
+      }
+
+      function run() {
+        const fileMap = FILES;
+        const moduleCache = Object.create(null);
+        console.log("[preview-runtime] module-loader-start", {
+          fileCount: Object.keys(fileMap).length,
+          hasMainTsx: !!fileMap[resolveWithExtensions("src/main", fileMap)],
+          hasAppTsx:
+            !!fileMap[resolveWithExtensions("src/App", fileMap)] ||
+            !!fileMap[resolveWithExtensions("App", fileMap)],
+        });
+        const reactModule = Object.assign({ default: window.React, __esModule: true }, window.React);
+        const reactDomModule = Object.assign({ default: window.ReactDOM, __esModule: true }, window.ReactDOM);
+        const reactDomClientModule = Object.assign(
+          {
+            default: window.ReactDOM,
+            __esModule: true,
+            createRoot: window.ReactDOM.createRoot,
+            hydrateRoot: window.ReactDOM.hydrateRoot,
+          },
+          window.ReactDOM
+        );
+
+        // ── clsx: class name utility (inline implementation) ──
+        var __ClsxModule = (function () {
+          function clsx() {
+            var classes = [];
+            for (var i = 0; i < arguments.length; i++) {
+              var arg = arguments[i];
+              if (!arg) continue;
+              if (typeof arg === 'string' || typeof arg === 'number') {
+                classes.push(arg);
+              } else if (Array.isArray(arg)) {
+                var inner = clsx.apply(null, arg);
+                if (inner) classes.push(inner);
+              } else if (typeof arg === 'object') {
+                for (var key in arg) {
+                  if (Object.prototype.hasOwnProperty.call(arg, key) && arg[key]) {
+                    classes.push(key);
+                  }
+                }
+              }
+            }
+            return classes.join(' ');
+          }
+          return { __esModule: true, default: clsx, clsx: clsx };
+        })();
+
+        // ── class-variance-authority: variant-based class generation ──
+        var __CvaModule = (function () {
+          function cva(base, config) {
+            var fn = function (props) {
+              props = props || {};
+              if (!config) return base || '';
+              var variants = config.variants || {};
+              var defaultVariants = config.defaultVariants || {};
+              var compoundVariants = config.compoundVariants || [];
+              var resolved = Object.assign({}, defaultVariants);
+              for (var k in props) {
+                if (k !== 'className' && k !== 'class' && props[k] != null) {
+                  resolved[k] = props[k];
+                }
+              }
+              var classes = [base];
+              for (var vKey in variants) {
+                var value = resolved[vKey];
+                if (value != null && variants[vKey] && variants[vKey][value] != null) {
+                  classes.push(variants[vKey][value]);
+                }
+              }
+              for (var ci = 0; ci < compoundVariants.length; ci++) {
+                var cv = compoundVariants[ci];
+                var match = true;
+                for (var ck in cv) {
+                  if (ck === 'class' || ck === 'className') continue;
+                  if (resolved[ck] !== cv[ck]) { match = false; break; }
+                }
+                if (match) classes.push(cv['class'] || cv.className);
+              }
+              return classes.filter(Boolean).join(' ');
+            };
+            return fn;
+          }
+          return { __esModule: true, default: cva, cva: cva };
+        })();
+
+        // ── @radix-ui/react-slot: polymorphic Slot component ──
+        var __RadixSlotModule = (function () {
+          var R = window.React;
+          function composeHandlers(a, b) {
+            return function () { b.apply(this, arguments); a.apply(this, arguments); };
+          }
+          function mergeProps(slotProps, childProps) {
+            var result = {};
+            var key;
+            for (key in slotProps) { result[key] = slotProps[key]; }
+            for (key in childProps) {
+              var sv = slotProps[key];
+              var cv = childProps[key];
+              if (/^on[A-Z]/.test(key) && typeof sv === 'function' && typeof cv === 'function') {
+                result[key] = composeHandlers(sv, cv);
+              } else if (key === 'style') {
+                result[key] = Object.assign({}, sv || {}, cv || {});
+              } else if (key === 'className') {
+                result[key] = [sv, cv].filter(Boolean).join(' ');
+              } else {
+                result[key] = cv !== undefined ? cv : sv;
+              }
+            }
+            return result;
+          }
+          var Slot = R.forwardRef(function (props, ref) {
+            var children = props.children;
+            var slotProps = {};
+            for (var key in props) { if (key !== 'children') slotProps[key] = props[key]; }
+            if (R.isValidElement(children)) {
+              var merged = mergeProps(slotProps, children.props);
+              merged.ref = ref;
+              return R.cloneElement(children, merged);
+            }
+            if (R.Children.count(children) > 1) {
+              throw new Error('Slot: expected a single child element');
+            }
+            return null;
+          });
+          Slot.displayName = 'Slot';
+          return { __esModule: true, default: Slot, Slot: Slot };
+        })();
+
+        // ── @radix-ui/react-accordion: collapsible content sections ──
+        var __RadixAccordionModule = (function () {
+          var R = window.React;
+          var AccCtx = R.createContext({ value: '', onToggle: function(){}, type: 'single', isOpen: function(){ return false; } });
+          var ItemCtx = R.createContext({ value: '', disabled: false, open: false });
+
+          function Root(props) {
+            var type = props.type || 'single';
+            var children = props.children;
+            var className = props.className;
+            var stateHook = R.useState(function() {
+              if (type === 'multiple') return props.defaultValue || [];
+              return props.defaultValue || '';
+            });
+            var val = props.value !== undefined ? props.value : stateHook[0];
+            var setVal = stateHook[1];
+            function onToggle(itemValue) {
+              if (type === 'multiple') {
+                var arr = Array.isArray(val) ? val : [];
+                var next = arr.indexOf(itemValue) > -1
+                  ? arr.filter(function(v) { return v !== itemValue; })
+                  : arr.concat([itemValue]);
+                setVal(next);
+                if (props.onValueChange) props.onValueChange(next);
+              } else {
+                var next2 = val === itemValue ? '' : itemValue;
+                setVal(next2);
+                if (props.onValueChange) props.onValueChange(next2);
+              }
+            }
+            var isOpen = function(v) {
+              if (type === 'multiple') return Array.isArray(val) && val.indexOf(v) > -1;
+              return val === v;
+            };
+            return R.createElement(AccCtx.Provider, {
+              value: { value: val, onToggle: onToggle, type: type, isOpen: isOpen }
+            }, R.createElement('div', { className: className, 'data-orientation': 'vertical' }, children));
+          }
+
+          var Item = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(AccCtx);
+            var open = ctx.isOpen(props.value);
+            return R.createElement(ItemCtx.Provider, {
+              value: { value: props.value, disabled: props.disabled || false, open: open }
+            }, R.createElement('div', {
+              ref: ref, className: props.className,
+              'data-state': open ? 'open' : 'closed',
+              'data-disabled': props.disabled ? '' : undefined
+            }, props.children));
+          });
+          Item.displayName = 'AccordionItem';
+
+          var Header = R.forwardRef(function(props, ref) {
+            return R.createElement('h3', { ref: ref, className: props.className }, props.children);
+          });
+          Header.displayName = 'AccordionHeader';
+
+          var Trigger = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(AccCtx);
+            var itemCtx = R.useContext(ItemCtx);
+            return R.createElement('button', {
+              ref: ref, type: 'button',
+              'aria-expanded': itemCtx.open,
+              'data-state': itemCtx.open ? 'open' : 'closed',
+              'data-disabled': itemCtx.disabled ? '' : undefined,
+              disabled: itemCtx.disabled,
+              className: props.className,
+              onClick: function() { if (!itemCtx.disabled) ctx.onToggle(itemCtx.value); }
+            }, props.children);
+          });
+          Trigger.displayName = 'AccordionTrigger';
+
+          var Content = R.forwardRef(function(props, ref) {
+            var itemCtx = R.useContext(ItemCtx);
+            if (!itemCtx.open) return null;
+            return R.createElement('div', {
+              ref: ref, 'data-state': 'open', className: props.className, role: 'region'
+            }, props.children);
+          });
+          Content.displayName = 'AccordionContent';
+
+          return { __esModule: true, Root: Root, Item: Item, Header: Header, Trigger: Trigger, Content: Content, default: Root };
+        })();
+
+        // ── @radix-ui/react-tabs: tabbed content switcher ──
+        var __RadixTabsModule = (function () {
+          var R = window.React;
+          var TabsCtx = R.createContext({ value: '', onValueChange: function(){} });
+
+          function Root(props) {
+            var stateHook = R.useState(props.defaultValue || '');
+            var val = props.value !== undefined ? props.value : stateHook[0];
+            var setVal = stateHook[1];
+            function onChange(v) { setVal(v); if (props.onValueChange) props.onValueChange(v); }
+            return R.createElement(TabsCtx.Provider, {
+              value: { value: val, onValueChange: onChange }
+            }, R.createElement('div', { className: props.className }, props.children));
+          }
+
+          var List = R.forwardRef(function(props, ref) {
+            return R.createElement('div', { ref: ref, role: 'tablist', className: props.className }, props.children);
+          });
+          List.displayName = 'TabsList';
+
+          var Trigger = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(TabsCtx);
+            var isActive = ctx.value === props.value;
+            return R.createElement('button', {
+              ref: ref, type: 'button', role: 'tab',
+              'aria-selected': isActive,
+              'data-state': isActive ? 'active' : 'inactive',
+              className: props.className,
+              onClick: function() { ctx.onValueChange(props.value); }
+            }, props.children);
+          });
+          Trigger.displayName = 'TabsTrigger';
+
+          var Content = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(TabsCtx);
+            if (ctx.value !== props.value) return null;
+            return R.createElement('div', {
+              ref: ref, role: 'tabpanel', 'data-state': 'active', className: props.className
+            }, props.children);
+          });
+          Content.displayName = 'TabsContent';
+
+          return { __esModule: true, Root: Root, List: List, Trigger: Trigger, Content: Content, default: Root };
+        })();
+
+        // ── @radix-ui/react-dialog: modal/sheet dialog ──
+        var __RadixDialogModule = (function () {
+          var R = window.React;
+          var RD = window.ReactDOM;
+          var DialogCtx = R.createContext({ open: false, onOpenChange: function(){} });
+
+          function Root(props) {
+            var stateHook = R.useState(props.defaultOpen || false);
+            var open = props.open !== undefined ? props.open : stateHook[0];
+            var setOpen = stateHook[1];
+            function onOpenChange(v) {
+              setOpen(v);
+              if (props.onOpenChange) props.onOpenChange(v);
+            }
+            return R.createElement(DialogCtx.Provider, {
+              value: { open: open, onOpenChange: onOpenChange }
+            }, props.children);
+          }
+
+          var Trigger = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            var child = props.children;
+            var asChild = props.asChild;
+            if (asChild && R.isValidElement(child)) {
+              return R.cloneElement(child, {
+                ref: ref,
+                onClick: function(e) {
+                  ctx.onOpenChange(!ctx.open);
+                  if (child.props && child.props.onClick) child.props.onClick(e);
+                }
+              });
+            }
+            return R.createElement('button', {
+              ref: ref, type: 'button', className: props.className,
+              onClick: function() { ctx.onOpenChange(!ctx.open); }
+            }, child);
+          });
+          Trigger.displayName = 'DialogTrigger';
+
+          var Close = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            var child = props.children;
+            var asChild = props.asChild;
+            if (asChild && R.isValidElement(child)) {
+              return R.cloneElement(child, {
+                ref: ref,
+                onClick: function(e) {
+                  ctx.onOpenChange(false);
+                  if (child.props && child.props.onClick) child.props.onClick(e);
+                }
+              });
+            }
+            return R.createElement('button', {
+              ref: ref, type: 'button', 'aria-label': 'Close', className: props.className,
+              onClick: function() { ctx.onOpenChange(false); }
+            }, child || 'X');
+          });
+          Close.displayName = 'DialogClose';
+
+          function Portal(props) {
+            var ctx = R.useContext(DialogCtx);
+            if (!ctx.open) return null;
+            var container = props.container || document.body;
+            return RD.createPortal(
+              R.createElement(DialogCtx.Provider, { value: ctx }, props.children),
+              container
+            );
+          }
+
+          var Overlay = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            return R.createElement('div', {
+              ref: ref,
+              'data-state': ctx.open ? 'open' : 'closed',
+              className: props.className,
+              style: Object.assign({ position: 'fixed', inset: 0, zIndex: 50 }, props.style || {}),
+              onClick: function(e) {
+                if (e.target === e.currentTarget) ctx.onOpenChange(false);
+              }
+            });
+          });
+          Overlay.displayName = 'DialogOverlay';
+
+          var Content = R.forwardRef(function(props, ref) {
+            var ctx = R.useContext(DialogCtx);
+            if (!ctx.open) return null;
+            return R.createElement('div', {
+              ref: ref, role: 'dialog', 'aria-modal': true,
+              'data-state': ctx.open ? 'open' : 'closed',
+              className: props.className,
+              style: props.style
+            }, props.children);
+          });
+          Content.displayName = 'DialogContent';
+
+          var Title = R.forwardRef(function(props, ref) {
+            return R.createElement('h2', { ref: ref, className: props.className }, props.children);
+          });
+          Title.displayName = 'DialogTitle';
+
+          var Description = R.forwardRef(function(props, ref) {
+            return R.createElement('p', { ref: ref, className: props.className }, props.children);
+          });
+          Description.displayName = 'DialogDescription';
+
+          return {
+            __esModule: true, Root: Root, Trigger: Trigger, Close: Close,
+            Portal: Portal, Overlay: Overlay, Content: Content,
+            Title: Title, Description: Description, default: Root
+          };
+        })();
+
+        // ── @radix-ui/react-visually-hidden ──
+        var __RadixVisuallyHiddenModule = (function () {
+          var R = window.React;
+          var VisuallyHidden = R.forwardRef(function(props, ref) {
+            return R.createElement('span', {
+              ref: ref,
+              style: {
+                position: 'absolute', border: 0, width: 1, height: 1,
+                padding: 0, margin: -1, overflow: 'hidden',
+                clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', wordWrap: 'normal'
+              }
+            }, props.children);
+          });
+          VisuallyHidden.displayName = 'VisuallyHidden';
+          return { __esModule: true, Root: VisuallyHidden, default: VisuallyHidden };
+        })();
+
+        // ── @radix-ui/react-navigation-menu (stub) ──
+        var __RadixNavMenuModule = (function () {
+          var R = window.React;
+          function Root(props) { return R.createElement('nav', { className: props.className }, props.children); }
+          var List = R.forwardRef(function(p, r) { return R.createElement('ul', { ref: r, className: p.className }, p.children); });
+          var Item = R.forwardRef(function(p, r) { return R.createElement('li', { ref: r, className: p.className }, p.children); });
+          var Link = R.forwardRef(function(p, r) {
+            var child = p.children;
+            if (p.asChild && R.isValidElement(child)) return R.cloneElement(child, { ref: r });
+            return R.createElement('a', { ref: r, className: p.className, href: p.href }, child);
+          });
+          return { __esModule: true, Root: Root, List: List, Item: Item, Link: Link, default: Root };
+        })();
+
+        const builtins = {
+          react: reactModule,
+          "react-dom": reactDomModule,
+          "react-dom/client": reactDomClientModule,
+
+          'clsx': __ClsxModule,
+          'class-variance-authority': __CvaModule,
+          '@radix-ui/react-slot': __RadixSlotModule,
+          '@radix-ui/react-accordion': __RadixAccordionModule,
+          '@radix-ui/react-tabs': __RadixTabsModule,
+          '@radix-ui/react-dialog': __RadixDialogModule,
+          '@radix-ui/react-visually-hidden': __RadixVisuallyHiddenModule,
+          '@radix-ui/react-navigation-menu': __RadixNavMenuModule,
+
+        };
+        console.log("[preview-runtime] shim-loaded");
+        console.log("[preview-runtime] builtins", Object.keys(builtins));
+
+        function loadModule(importerPath, target) {
+          if (builtins[target]) {
+            return builtins[target];
+          }
+          const resolved = resolvePath(importerPath, target);
+          const found = resolveWithExtensions(resolved, fileMap);
+          if (!fileMap[found]) {
+            throw new Error("Module not found: " + target + " → " + found);
+          }
+          if (moduleCache[found]) {
+            return moduleCache[found];
+          }
+          if (found.endsWith(".css")) {
+            let css = fileMap[found] || "";
+            css = css.replace(/@tailwind\s+[^;]+;/g, "");
+            css = css.replace(/@apply\s+[^;]+;/g, "");
+            const style = document.createElement("style");
+            style.setAttribute("data-source", found);
+            style.textContent = css;
+            document.head.appendChild(style);
+            const empty = { __esModule: true, default: {} };
+            moduleCache[found] = empty;
+            return empty;
+          }
+          const compiled = compile(fileMap[found], found);
+          const moduleObject = { exports: {} };
+          moduleCache[found] = moduleObject.exports;
+          const requireFunction = function (nextTarget) {
+            return loadModule(found, nextTarget);
+          };
+          const fn = new Function("require", "module", "exports", "React", "ReactDOM", compiled);
+          fn(requireFunction, moduleObject, moduleObject.exports, window.React, window.ReactDOM);
+          moduleCache[found] = moduleObject.exports;
+          console.log("[preview-runtime] module-load-success", found);
+          return moduleObject.exports;
+        }
+
+        const entryModule = resolveWithExtensions("src/main", fileMap);
+        if (!builtins.react || !builtins["react-dom"]) {
+          throw new Error("Missing React builtins");
+        }
+        if (!fileMap[entryModule]) {
+          throw new Error("Missing entry module");
+        }
+        loadModule("", entryModule);
+        console.log("[preview-runtime] mount-success", entryModule);
+      }
+
+      function waitForGlobals(attempt) {
+        if (window.React && window.ReactDOM && window.Babel) {
+          try {
+            console.log("[preview-runtime] globals-ready");
+            run();
+          } catch (error) {
+            console.error("[preview-runtime-error]", error);
+            showError(String(error && error.stack ? error.stack : error));
+          }
+          return;
+        }
+        if (attempt > 200) {
+          showError("Preview runtime failed to initialize within 10 seconds.");
+          return;
+        }
+        setTimeout(function () {
+          waitForGlobals(attempt + 1);
+        }, 50);
+      }
+
+      waitForGlobals(0);
+    })();
+  </script>
+</body>
+</html>

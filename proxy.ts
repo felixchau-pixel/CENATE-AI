@@ -1,51 +1,45 @@
-import { type NextRequest, NextResponse } from "next/server";
-import { getToken } from "next-auth/jwt";
-import { guestRegex, isDevelopmentEnvironment } from "./lib/constants";
+import NextAuth from "next-auth";
+import { authConfig } from "@/app/(auth)/auth.config";
 
-export async function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+const { auth } = NextAuth(authConfig);
 
-  if (pathname.startsWith("/ping")) {
-    return new Response("pong", { status: 200 });
+const PUBLIC_PATHS = ["/early-access", "/login", "/register"];
+const PUBLIC_API_PREFIXES = ["/api/auth", "/api/waitlist"];
+
+export default auth((req) => {
+  const { pathname } = req.nextUrl;
+  const isAuthed = !!req.auth;
+
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/favicon") ||
+    pathname.startsWith("/ping")
+  ) {
+    return;
   }
 
-  if (pathname.startsWith("/api/auth")) {
-    return NextResponse.next();
+  if (PUBLIC_API_PREFIXES.some((prefix) => pathname.startsWith(prefix))) {
+    return;
   }
 
-  const token = await getToken({
-    req: request,
-    secret: process.env.AUTH_SECRET,
-    secureCookie: !isDevelopmentEnvironment,
-  });
+  const isPublicPage = PUBLIC_PATHS.some(
+    (p) => pathname === p || pathname.startsWith(`${p}/`)
+  );
 
-  const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
-  if (!token) {
-    const redirectUrl = encodeURIComponent(new URL(request.url).pathname);
-
-    return NextResponse.redirect(
-      new URL(`${base}/api/auth/guest?redirectUrl=${redirectUrl}`, request.url)
-    );
+  if (isPublicPage) {
+    if (isAuthed && pathname === "/early-access") {
+      return Response.redirect(new URL("/", req.url));
+    }
+    return;
   }
 
-  const isGuest = guestRegex.test(token?.email ?? "");
-
-  if (token && !isGuest && ["/login", "/register"].includes(pathname)) {
-    return NextResponse.redirect(new URL(`${base}/`, request.url));
+  if (!isAuthed) {
+    return Response.redirect(new URL("/early-access", req.url));
   }
-
-  return NextResponse.next();
-}
+});
 
 export const config = {
   matcher: [
-    "/",
-    "/chat/:id",
-    "/api/:path*",
-    "/login",
-    "/register",
-
-    "/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)",
+    "/((?!_next/static|_next/image|favicon\\.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };

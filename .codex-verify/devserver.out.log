@@ -1,0 +1,2125 @@
+
+> chatbot@3.1.0 dev C:\Users\Felix\Cenate-Demo\cenate-demo
+> next dev --turbo
+
+▲ Next.js 16.2.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.31.192.1:3000
+- Environments: .env.local
+✓ Ready in 469ms
+- Cache Components enabled
+- Experiments (use with caution):
+  ✓ appNewScrollHandler
+  ✓ cachedNavigations
+  ✓ inlineCss
+  ✓ prefetchInlining
+
+[pipeline] loaded v9-section-count-fix | generate=300s per-model=150s repair=60s repair-outer=120s max-repairs=1 finalize=120s
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: modern_minimal (modern-minimal) | Palette: A (Cool Blue) | Hero: Option 1 | Archetype: social-proof-led | Choreography: proof-first
+[prompts-website] Routed style skill: modern_minimal for niche: saas
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'saas',
+  designFamily: 'modern_minimal',
+  selectedStyleId: 'modern_minimal',
+  variantPlan: {
+    designFamily: 'modern_minimal',
+    heroVariant: 'workflow-window',
+    sectionChoreography: 'story -> services -> proof -> cta',
+    bodyRoleSequence: [ 'story', 'services', 'proof', 'cta' ],
+    proofVariant: 'metrics-band',
+    featureVariant: 'dense-product-grid',
+    ctaVariant: 'dual-path-demo',
+    footerVariant: 'product-signal-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'balanced',
+    contrastMode: 'balanced'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 112001,
+  briefChars: 487,
+  estimatedPromptTokens: 28122
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 91.6s (26981 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/ProductGrid.tsx',
+    'src/components/MetricsBand.tsx',
+    'src/components/DemoPaths.tsx',
+    'src/components/ProductSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/WorkflowNarrative',
+    './components/ProductGrid',
+    './components/MetricsBand',
+    './components/DemoPaths',
+    './components/ProductSignalFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/ProductGrid.tsx',
+    'src/components/MetricsBand.tsx',
+    'src/components/DemoPaths.tsx',
+    'src/components/ProductSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/WorkflowNarrative',
+    './components/ProductGrid',
+    './components/MetricsBand',
+    './components/DemoPaths',
+    './components/ProductSignalFooter'
+  ]
+}
+[pipeline:critic] Critic [saas]: FAIL (1 hard, 3 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [soft] CTA must include a real action surface: CTA/conversion section has no form fields and no real contact info. It's just buttons.
+  - [soft] palette direction compliance: modern_minimal direction A: Palette direction A expects --primary hue in [215, 232], but found 210. Apply the binding palette CSS override.
+[pipeline:design-conformance] Design conformance [modern_minimal/saas]: FAIL (6 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> story -> services -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=saas slot=hero file=910130dc1285e5549518cd6acc8d14fb.jpg
+[image-generation] local-curated  niche=saas slot=support file=f14281875b7b16d18596fab170cd9b29.jpg
+[image-generation] local-curated  niche=saas slot=gallery1 file=258062a09ecac5314649f847a12795f9.jpg
+[image-generation] local-curated  niche=saas slot=gallery2 file=0649715c3f8466ed0f6acb7dc0a100ac.jpg
+[image-generation] local-curated  niche=saas slot=gallery3 file=258062a09ecac5314649f847a12795f9.jpg
+[image-generation] local-curated  niche=saas slot=detail1 file=a9c8844b6aded80732d924df1931d6c2.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [modern_minimal/saas]: FAIL (6 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> story -> services -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/ProductGrid.tsx',
+    'src/components/MetricsBand.tsx',
+    'src/components/DemoPaths.tsx',
+    'src/components/ProductSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/WorkflowNarrative',
+    './components/ProductGrid',
+    './components/MetricsBand',
+    './components/DemoPaths',
+    './components/ProductSignalFooter'
+  ]
+}
+[save-guard:create] {
+  userId: '9ebbf2fd-0d18-4660-afc9-4456f74a24de',
+  docId: '0e5d55ca-f9a6-4f43-8edc-51fd21c4c2d3'
+}
+[saveDocument] inserting {
+  id: '0e5d55ca-f9a6-4f43-8edc-51fd21c4c2d3',
+  userId: '9ebbf2fd-0d18-4660-afc9-4456f74a24de'
+}
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[chat:request] {
+  selectedChatModel: 'openai/gpt-4.1-mini',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: modern_minimal (modern-minimal) | Palette: C (Teal Focus) | Hero: Option 2 | Archetype: social-proof-led | Choreography: proof-first
+[prompts-website] Routed style skill: modern_minimal for niche: saas
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'saas',
+  designFamily: 'modern_minimal',
+  selectedStyleId: 'modern_minimal',
+  variantPlan: {
+    designFamily: 'modern_minimal',
+    heroVariant: 'centered-launch-rail',
+    sectionChoreography: 'story -> services -> proof -> cta',
+    bodyRoleSequence: [ 'story', 'services', 'proof', 'cta' ],
+    proofVariant: 'metrics-band',
+    featureVariant: 'alternating-workflow-rows',
+    ctaVariant: 'dual-path-demo',
+    footerVariant: 'product-signal-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'balanced',
+    contrastMode: 'soft'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 111417,
+  briefChars: 571,
+  estimatedPromptTokens: 27997
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: bold_commercial (bold-commercial) | Palette: B (Electric Red & Dark Steel) | Hero: Option 1 | Archetype: proof-wall | Choreography: story-first
+[prompts-website] Routed style skill: bold_commercial for niche: construction
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'construction',
+  designFamily: 'bold_commercial',
+  selectedStyleId: 'bold_commercial',
+  variantPlan: {
+    designFamily: 'bold_commercial',
+    heroVariant: 'crew-and-project-split',
+    sectionChoreography: 'story -> proof -> services -> cta',
+    bodyRoleSequence: [ 'story', 'proof', 'services', 'cta' ],
+    proofVariant: 'credential-strip',
+    featureVariant: 'service-lanes-with-highlight',
+    ctaVariant: 'service-area-booking',
+    footerVariant: 'commercial-contact-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'dense',
+    contrastMode: 'high'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 108170,
+  briefChars: 360,
+  estimatedPromptTokens: 27133
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 118.0s (35871 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/WorkflowRows.tsx',
+    'src/components/MetricsBand.tsx',
+    'src/components/DemoPaths.tsx',
+    'src/components/ProductSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/WorkflowNarrative',
+    './components/WorkflowRows',
+    './components/MetricsBand',
+    './components/DemoPaths',
+    './components/ProductSignalFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/WorkflowRows.tsx',
+    'src/components/MetricsBand.tsx',
+    'src/components/DemoPaths.tsx',
+    'src/components/ProductSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/WorkflowNarrative',
+    './components/WorkflowRows',
+    './components/MetricsBand',
+    './components/DemoPaths',
+    './components/ProductSignalFooter'
+  ]
+}
+[pipeline:critic] Critic [saas]: FAIL (4 hard, 3 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [hard] body sections must not repeat the same dominant layout type: Repeated layout signatures detected: centered-stack x3.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [soft] CTA must include a real action surface: CTA/conversion section has no form fields and no real contact info. It's just buttons.
+  - [hard] no two consecutive sections may share the same layout signature: Consecutive sections MetricsBand and DemoPaths share the same layout (centered-stack). Adjacent sections must differ.
+  - [hard] not all sections may use centered text alignment: 5 of 5 body sections use centered-only alignment. At least 2 sections must use left-aligned or asymmetric layouts.
+  - [soft] palette direction compliance: modern_minimal direction C: Palette direction C expects --primary hue in [162, 182], but found 210. Apply the binding palette CSS override.
+[pipeline:design-conformance] Design conformance [modern_minimal/saas]: FAIL (6 hard, 1 soft, confidence=0.20)
+  expected roles: navbar -> hero -> story -> services -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 100.8s (31345 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CompanyStory.tsx',
+    'src/components/CredentialStrip.tsx',
+    'src/components/ServiceLanes.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/CommercialContactFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CompanyStory',
+    './components/CredentialStrip',
+    './components/ServiceLanes',
+    './components/ServiceAreaBooking',
+    './components/CommercialContactFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CompanyStory.tsx',
+    'src/components/CredentialStrip.tsx',
+    'src/components/ServiceLanes.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/CommercialContactFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CompanyStory',
+    './components/CredentialStrip',
+    './components/ServiceLanes',
+    './components/ServiceAreaBooking',
+    './components/CommercialContactFooter'
+  ]
+}
+[pipeline:critic] Critic [construction]: FAIL (4 hard, 3 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [hard] body sections must not repeat the same dominant layout type: Repeated layout signatures detected: split x3.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [hard] no two consecutive sections may share the same layout signature: Consecutive sections CompanyStory and CredentialStrip share the same layout (split). Adjacent sections must differ.
+  - [hard] not all sections may use centered text alignment: 4 of 5 body sections use centered-only alignment. At least 2 sections must use left-aligned or asymmetric layouts.
+  - [soft] first body section must not duplicate hero stats rail: Hero has a stats rail and first body section (CompanyStory) is also stats-heavy. Avoid back-to-back metric rows.
+  - [soft] palette direction compliance: bold_commercial direction B: Palette direction B (Electric Red) expects --primary hue near 0–8 or 352–360, but found 210. Apply the binding palette CSS override.
+[pipeline:design-conformance] Design conformance [bold_commercial/construction]: FAIL (5 hard, 1 soft, confidence=0.20)
+  expected roles: navbar -> hero -> services -> gallery -> story -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/cta-structure-commercialcontactfooter: CTA surface does not meet the required structural contract.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=saas slot=hero file=910130dc1285e5549518cd6acc8d14fb.jpg
+[image-generation] local-curated  niche=saas slot=support file=f14281875b7b16d18596fab170cd9b29.jpg
+[image-generation] local-curated  niche=saas slot=gallery1 file=258062a09ecac5314649f847a12795f9.jpg
+[image-generation] local-curated  niche=saas slot=gallery2 file=0649715c3f8466ed0f6acb7dc0a100ac.jpg
+[image-generation] local-curated  niche=saas slot=gallery3 file=258062a09ecac5314649f847a12795f9.jpg
+[image-generation] local-curated  niche=saas slot=detail1 file=a9c8844b6aded80732d924df1931d6c2.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [modern_minimal/saas]: FAIL (6 hard, 1 soft, confidence=0.20)
+  expected roles: navbar -> hero -> story -> services -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/WorkflowRows.tsx',
+    'src/components/MetricsBand.tsx',
+    'src/components/DemoPaths.tsx',
+    'src/components/ProductSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/WorkflowNarrative',
+    './components/WorkflowRows',
+    './components/MetricsBand',
+    './components/DemoPaths',
+    './components/ProductSignalFooter'
+  ]
+}
+[save-guard:create] {
+  userId: '96b881b7-f1f3-4b0a-9ed6-17399a33b742',
+  docId: '13cf7ac0-a161-438c-8de5-b50387f76655'
+}
+[saveDocument] inserting {
+  id: '13cf7ac0-a161-438c-8de5-b50387f76655',
+  userId: '96b881b7-f1f3-4b0a-9ed6-17399a33b742'
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=construction slot=hero file=d318816d251bd0e8e4d8634a01a41471.jpg
+[image-generation] local-curated  niche=construction slot=support file=6af7ced476844d14c56b2c7b579eca6d.jpg
+[image-generation] local-curated  niche=construction slot=gallery1 file=31b97581c832c4b70abc4d0c7b3df81d.jpg
+[image-generation] local-curated  niche=construction slot=gallery2 file=fe61959b7cd8e6294667431721909691.jpg
+[image-generation] local-curated  niche=construction slot=gallery3 file=c37148ad71207dae77014becf201738d.jpg
+[image-generation] local-curated  niche=construction slot=detail1 file=b7387e2cebd1fd7ee20c04c0c80746ee.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [bold_commercial/construction]: FAIL (5 hard, 1 soft, confidence=0.20)
+  expected roles: navbar -> hero -> services -> gallery -> story -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/cta-structure-commercialcontactfooter: CTA surface does not meet the required structural contract.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CompanyStory.tsx',
+    'src/components/CredentialStrip.tsx',
+    'src/components/ServiceLanes.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/CommercialContactFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CompanyStory',
+    './components/CredentialStrip',
+    './components/ServiceLanes',
+    './components/ServiceAreaBooking',
+    './components/CommercialContactFooter'
+  ]
+}
+[save-guard:create] {
+  userId: '96b881b7-f1f3-4b0a-9ed6-17399a33b742',
+  docId: '318880f8-2a77-4b95-9a83-84dce5772fcb'
+}
+[saveDocument] inserting {
+  id: '318880f8-2a77-4b95-9a83-84dce5772fcb',
+  userId: '96b881b7-f1f3-4b0a-9ed6-17399a33b742'
+}
+[chat:request] {
+  selectedChatModel: 'openai/gpt-4.1-mini',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: editorial_luxury (editorial-luxury) | Palette: A (Brass & Graphite) | Hero: Option 1 | Archetype: editorial-showcase | Choreography: proof-first
+[prompts-website] Routed style skill: editorial_luxury for niche: restaurant
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'restaurant',
+  designFamily: 'editorial_luxury',
+  selectedStyleId: 'editorial_luxury',
+  variantPlan: {
+    designFamily: 'editorial_luxury',
+    heroVariant: 'cinematic-offset',
+    sectionChoreography: 'gallery -> story -> services -> proof -> cta',
+    bodyRoleSequence: [ 'gallery', 'story', 'services', 'proof', 'cta' ],
+    proofVariant: 'critic-pull-quote',
+    featureVariant: 'signature-course-feature',
+    ctaVariant: 'private-dining-contact',
+    footerVariant: 'editorial-closing-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'airy',
+    contrastMode: 'high'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 110509,
+  briefChars: 393,
+  estimatedPromptTokens: 27726
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: editorial_luxury (editorial-luxury) | Palette: B (Copper & Midnight) | Hero: Option 2 | Archetype: venue-narrative | Choreography: story-first
+[prompts-website] Routed style skill: editorial_luxury for niche: generic
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'generic',
+  designFamily: 'editorial_luxury',
+  selectedStyleId: 'editorial_luxury',
+  variantPlan: {
+    designFamily: 'editorial_luxury',
+    heroVariant: 'centered-premium-statement',
+    sectionChoreography: 'story -> services -> proof -> cta',
+    bodyRoleSequence: [ 'story', 'services', 'proof', 'cta' ],
+    proofVariant: 'metrics-band',
+    featureVariant: 'editorial-story-sections',
+    ctaVariant: 'contact-panel',
+    footerVariant: 'brand-contact-footer',
+    imageStrategy: 'approved-fallback',
+    densityMode: 'airy',
+    contrastMode: 'high'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 103524,
+  briefChars: 380,
+  estimatedPromptTokens: 25976
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: bold_commercial (bold-commercial) | Palette: A (Amber & Charcoal) | Hero: Option 2 | Archetype: proof-wall | Choreography: proof-first
+[prompts-website] Routed style skill: bold_commercial for niche: construction
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'construction',
+  designFamily: 'bold_commercial',
+  selectedStyleId: 'bold_commercial',
+  variantPlan: {
+    designFamily: 'bold_commercial',
+    heroVariant: 'metric-anchored-hero',
+    sectionChoreography: 'proof -> services -> gallery -> cta',
+    bodyRoleSequence: [ 'proof', 'services', 'gallery', 'cta' ],
+    proofVariant: 'project-proof-band',
+    featureVariant: 'project-scope-matrix',
+    ctaVariant: 'call-now-split-cta',
+    footerVariant: 'service-area-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'dense',
+    contrastMode: 'high'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 108494,
+  briefChars: 410,
+  estimatedPromptTokens: 27226
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 97.6s (29266 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 9,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/AtmosphereGallery.tsx',
+    'src/components/ChefStory.tsx',
+    'src/components/SignatureFeature.tsx',
+    'src/components/CriticQuote.tsx',
+    'src/components/PrivateDiningContact.tsx',
+    'src/components/EditorialClosingFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/AtmosphereGallery',
+    './components/ChefStory',
+    './components/SignatureFeature',
+    './components/CriticQuote',
+    './components/PrivateDiningContact',
+    './components/EditorialClosingFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 55,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/AtmosphereGallery.tsx',
+    'src/components/ChefStory.tsx',
+    'src/components/SignatureFeature.tsx',
+    'src/components/CriticQuote.tsx',
+    'src/components/PrivateDiningContact.tsx',
+    'src/components/EditorialClosingFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/AtmosphereGallery',
+    './components/ChefStory',
+    './components/SignatureFeature',
+    './components/CriticQuote',
+    './components/PrivateDiningContact'
+  ]
+}
+[pipeline:critic] Critic [restaurant]: FAIL (2 hard, 2 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [hard] no two consecutive sections may share the same layout signature: Consecutive sections SignatureFeature and CriticQuote share the same layout (centered-stack). Adjacent sections must differ.
+  - [soft] palette direction compliance: editorial_luxury direction A: Palette direction A expects --primary hue in [30, 45], but found 210. Apply the binding palette CSS override.
+[pipeline:design-conformance] Design conformance [editorial_luxury/restaurant]: FAIL (4 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> story -> services -> gallery -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 107.2s (30963 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/Story.tsx',
+    'src/components/EditorialStorySections.tsx',
+    'src/components/MetricsBand.tsx',
+    'src/components/ContactPanel.tsx',
+    'src/components/BrandContactFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/Story',
+    './components/EditorialStorySections',
+    './components/MetricsBand',
+    './components/ContactPanel',
+    './components/BrandContactFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/Story.tsx',
+    'src/components/EditorialStorySections.tsx',
+    'src/components/MetricsBand.tsx',
+    'src/components/ContactPanel.tsx',
+    'src/components/BrandContactFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/Story',
+    './components/EditorialStorySections',
+    './components/MetricsBand',
+    './components/ContactPanel',
+    './components/BrandContactFooter'
+  ]
+}
+[pipeline:critic] Critic [generic]: FAIL (2 hard, 2 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [hard] hero must include a supporting structure beyond headline and CTA: Hero lacks a supporting trust/stat/meta/media structure beyond headline/body/button.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [soft] palette direction compliance: editorial_luxury direction B: Palette direction B expects --primary hue in [14, 28], but found 210. Apply the binding palette CSS override.
+[pipeline:design-conformance] Design conformance [editorial_luxury/generic]: FAIL (4 hard, 1 soft, confidence=0.23)
+  expected roles: navbar -> hero -> story -> gallery -> proof -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 96.5s (30329 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ProjectProofBand.tsx',
+    'src/components/ScopeMatrix.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/CallNowSplit.tsx',
+    'src/components/ServiceAreaFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/ProjectProofBand',
+    './components/ScopeMatrix',
+    './components/ProjectGallery',
+    './components/CallNowSplit',
+    './components/ServiceAreaFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ProjectProofBand.tsx',
+    'src/components/ScopeMatrix.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/CallNowSplit.tsx',
+    'src/components/ServiceAreaFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/ProjectProofBand',
+    './components/ScopeMatrix',
+    './components/ProjectGallery',
+    './components/CallNowSplit',
+    './components/ServiceAreaFooter'
+  ]
+}
+[pipeline:critic] Critic [construction]: FAIL (1 hard, 4 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [soft] CTA must include a real action surface: CTA/conversion section has no form fields and no real contact info. It's just buttons.
+  - [soft] first body section must not duplicate hero stats rail: Hero has a stats rail and first body section (ProjectProofBand) is also stats-heavy. Avoid back-to-back metric rows.
+  - [soft] palette direction compliance: bold_commercial direction A: Palette direction A expects --primary hue in [20, 36], but found 210. Apply the binding palette CSS override.
+[pipeline:design-conformance] Design conformance [bold_commercial/construction]: FAIL (7 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> services -> gallery -> story -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [hard] component/gallery-blueprint-projectproofband: Gallery section drifts from the required asymmetric gallery blueprint.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/hero-display-drift: Hero headline drifts above the allowed typography scale.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=restaurant slot=hero file=9ebe12b03d0a5b025b09d93e6339ae6d.jpg
+[image-generation] local-curated  niche=restaurant slot=support file=ca4cb01e49a4d16c270c8805105d7197.jpg
+[image-generation] local-curated  niche=restaurant slot=gallery1 file=30ea75b248cea419eabce6fa5dd1f2f1.jpg
+[image-generation] local-curated  niche=restaurant slot=gallery2 file=5a1f8bcc52e254f3af88efe943794bb8.jpg
+[image-generation] local-curated  niche=restaurant slot=gallery3 file=cce4bff077b9cb28cbba83b822ddee1b.jpg
+[image-generation] local-curated  niche=restaurant slot=detail1 file=231320aeb74860c50ddf51ac5e387591.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [editorial_luxury/restaurant]: FAIL (4 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> story -> services -> gallery -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 61,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/AtmosphereGallery.tsx',
+    'src/components/ChefStory.tsx',
+    'src/components/SignatureFeature.tsx',
+    'src/components/CriticQuote.tsx',
+    'src/components/PrivateDiningContact.tsx',
+    'src/components/EditorialClosingFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/AtmosphereGallery',
+    './components/ChefStory',
+    './components/SignatureFeature',
+    './components/CriticQuote',
+    './components/PrivateDiningContact'
+  ]
+}
+[save-guard:create] {
+  userId: '96b881b7-f1f3-4b0a-9ed6-17399a33b742',
+  docId: 'dc39cdca-2bfb-4238-85df-5c64b5be594e'
+}
+[saveDocument] inserting {
+  id: 'dc39cdca-2bfb-4238-85df-5c64b5be594e',
+  userId: '96b881b7-f1f3-4b0a-9ed6-17399a33b742'
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] placeholder    niche=generic slot=hero (no local image)
+[image-generation] placeholder    niche=generic slot=support (no local image)
+[image-generation] placeholder    niche=generic slot=gallery1 (no local image)
+[image-generation] placeholder    niche=generic slot=gallery2 (no local image)
+[image-generation] placeholder    niche=generic slot=gallery3 (no local image)
+[image-generation] placeholder    niche=generic slot=detail1 (no local image)
+[image-generation] OpenAI disabled — 0 uploaded, 0 curated, 6 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [editorial_luxury/generic]: FAIL (4 hard, 1 soft, confidence=0.23)
+  expected roles: navbar -> hero -> story -> gallery -> proof -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/Story.tsx',
+    'src/components/EditorialStorySections.tsx',
+    'src/components/MetricsBand.tsx',
+    'src/components/ContactPanel.tsx',
+    'src/components/BrandContactFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/Story',
+    './components/EditorialStorySections',
+    './components/MetricsBand',
+    './components/ContactPanel',
+    './components/BrandContactFooter'
+  ]
+}
+[save-guard:create] {
+  userId: '96b881b7-f1f3-4b0a-9ed6-17399a33b742',
+  docId: '9a56a363-9bcd-44e9-91bf-aba5915ebcbc'
+}
+[saveDocument] inserting {
+  id: '9a56a363-9bcd-44e9-91bf-aba5915ebcbc',
+  userId: '96b881b7-f1f3-4b0a-9ed6-17399a33b742'
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=construction slot=hero file=d318816d251bd0e8e4d8634a01a41471.jpg
+[image-generation] local-curated  niche=construction slot=support file=6af7ced476844d14c56b2c7b579eca6d.jpg
+[image-generation] local-curated  niche=construction slot=gallery1 file=31b97581c832c4b70abc4d0c7b3df81d.jpg
+[image-generation] local-curated  niche=construction slot=gallery2 file=fe61959b7cd8e6294667431721909691.jpg
+[image-generation] local-curated  niche=construction slot=gallery3 file=c37148ad71207dae77014becf201738d.jpg
+[image-generation] local-curated  niche=construction slot=detail1 file=b7387e2cebd1fd7ee20c04c0c80746ee.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [bold_commercial/construction]: FAIL (7 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> services -> gallery -> story -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [hard] component/gallery-blueprint-projectproofband: Gallery section drifts from the required asymmetric gallery blueprint.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/hero-display-drift: Hero headline drifts above the allowed typography scale.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ProjectProofBand.tsx',
+    'src/components/ScopeMatrix.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/CallNowSplit.tsx',
+    'src/components/ServiceAreaFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/ProjectProofBand',
+    './components/ScopeMatrix',
+    './components/ProjectGallery',
+    './components/CallNowSplit',
+    './components/ServiceAreaFooter'
+  ]
+}
+[save-guard:create] {
+  userId: '96b881b7-f1f3-4b0a-9ed6-17399a33b742',
+  docId: '8cadf923-284d-437c-89eb-a31d650ffab3'
+}
+[saveDocument] inserting {
+  id: '8cadf923-284d-437c-89eb-a31d650ffab3',
+  userId: '96b881b7-f1f3-4b0a-9ed6-17399a33b742'
+}
+✓ Compiled in 1258ms
+[pipeline] loaded v9-section-count-fix | generate=300s per-model=150s repair=60s repair-outer=120s max-repairs=1 finalize=120s
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[save-guard:create] {
+  userId: 'a8765e8d-d6f6-46fa-82c0-66e79e095cc2',
+  docId: 'a30cee38-3e63-4d28-a0be-3d71bb5c4db7'
+}
+[saveDocument] inserting {
+  id: 'a30cee38-3e63-4d28-a0be-3d71bb5c4db7',
+  userId: 'a8765e8d-d6f6-46fa-82c0-66e79e095cc2'
+}
+[pipeline] loaded v9-section-count-fix | generate=300s per-model=150s repair=60s repair-outer=120s max-repairs=1 finalize=120s
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: modern_minimal (modern-minimal) | Palette: C (Teal Focus) | Hero: Option 2 | Archetype: social-proof-led | Choreography: proof-first
+[prompts-website] Routed style skill: modern_minimal for niche: saas
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'saas',
+  designFamily: 'modern_minimal',
+  selectedStyleId: 'modern_minimal',
+  variantPlan: {
+    designFamily: 'modern_minimal',
+    heroVariant: 'product-ui-split',
+    sectionChoreography: 'proof -> story -> services -> cta',
+    bodyRoleSequence: [ 'proof', 'story', 'services', 'cta' ],
+    proofVariant: 'case-study-strip',
+    featureVariant: 'alternating-workflow-rows',
+    ctaVariant: 'dual-path-demo',
+    footerVariant: 'brand-and-status-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'balanced',
+    contrastMode: 'balanced'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 110143,
+  briefChars: 474,
+  estimatedPromptTokens: 27654
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 135.1s (37399 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CaseStudyStrip.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/WorkflowRows.tsx',
+    'src/components/DemoPaths.tsx',
+    'src/components/BrandStatusFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CaseStudyStrip',
+    './components/WorkflowNarrative',
+    './components/WorkflowRows',
+    './components/DemoPaths',
+    './components/BrandStatusFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CaseStudyStrip.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/WorkflowRows.tsx',
+    'src/components/DemoPaths.tsx',
+    'src/components/BrandStatusFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CaseStudyStrip',
+    './components/WorkflowNarrative',
+    './components/WorkflowRows',
+    './components/DemoPaths',
+    './components/BrandStatusFooter'
+  ]
+}
+[pipeline:critic] Critic [saas]: FAIL (2 hard, 4 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [soft] CTA must include a real action surface: CTA/conversion section has no form fields and no real contact info. It's just buttons.
+  - [hard] no two consecutive sections may share the same layout signature: Consecutive sections WorkflowRows and DemoPaths share the same layout (centered-stack). Adjacent sections must differ.
+  - [soft] palette direction compliance: modern_minimal direction C: Palette direction C expects --primary hue in [162, 182], but found 210. Apply the binding palette CSS override.
+  - [soft] hero archetype compliance: Option 2 must not be a plain split hero: Hero uses a plain two-column split layout (lg:grid-cols-2 with text+image). Option 2 archetype requires a different composition.
+[pipeline:design-conformance] Design conformance [modern_minimal/saas]: FAIL (6 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> proof -> story -> services -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=saas slot=hero file=910130dc1285e5549518cd6acc8d14fb.jpg
+[image-generation] local-curated  niche=saas slot=support file=f14281875b7b16d18596fab170cd9b29.jpg
+[image-generation] local-curated  niche=saas slot=gallery1 file=258062a09ecac5314649f847a12795f9.jpg
+[image-generation] local-curated  niche=saas slot=gallery2 file=0649715c3f8466ed0f6acb7dc0a100ac.jpg
+[image-generation] local-curated  niche=saas slot=gallery3 file=258062a09ecac5314649f847a12795f9.jpg
+[image-generation] local-curated  niche=saas slot=detail1 file=a9c8844b6aded80732d924df1931d6c2.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [modern_minimal/saas]: FAIL (6 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> proof -> story -> services -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CaseStudyStrip.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/WorkflowRows.tsx',
+    'src/components/DemoPaths.tsx',
+    'src/components/BrandStatusFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CaseStudyStrip',
+    './components/WorkflowNarrative',
+    './components/WorkflowRows',
+    './components/DemoPaths',
+    './components/BrandStatusFooter'
+  ]
+}
+[save-guard:create] {
+  userId: '65359027-9ecd-4830-ad15-54f1bdfbd267',
+  docId: 'aa328126-248b-4f7f-a7f0-6b7faaaf0615'
+}
+[saveDocument] inserting {
+  id: 'aa328126-248b-4f7f-a7f0-6b7faaaf0615',
+  userId: '65359027-9ecd-4830-ad15-54f1bdfbd267'
+}
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: modern_minimal (modern-minimal) | Palette: D (Violet Edge) | Hero: Option 1 | Archetype: manifesto-first | Choreography: story-first
+[prompts-website] Routed style skill: modern_minimal for niche: saas
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'saas',
+  designFamily: 'modern_minimal',
+  selectedStyleId: 'modern_minimal',
+  variantPlan: {
+    designFamily: 'modern_minimal',
+    heroVariant: 'workflow-window',
+    sectionChoreography: 'story -> services -> proof -> cta',
+    bodyRoleSequence: [ 'story', 'services', 'proof', 'cta' ],
+    proofVariant: 'case-study-strip',
+    featureVariant: 'dense-product-grid',
+    ctaVariant: 'framed-conversion-panel',
+    footerVariant: 'product-signal-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'balanced',
+    contrastMode: 'balanced'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 110096,
+  briefChars: 468,
+  estimatedPromptTokens: 27641
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 98.2s (31043 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/ProductGrid.tsx',
+    'src/components/CaseStudyStrip.tsx',
+    'src/components/ConversionPanel.tsx',
+    'src/components/ProductSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/WorkflowNarrative',
+    './components/ProductGrid',
+    './components/CaseStudyStrip',
+    './components/ConversionPanel',
+    './components/ProductSignalFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/ProductGrid.tsx',
+    'src/components/CaseStudyStrip.tsx',
+    'src/components/ConversionPanel.tsx',
+    'src/components/ProductSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/WorkflowNarrative',
+    './components/ProductGrid',
+    './components/CaseStudyStrip',
+    './components/ConversionPanel',
+    './components/ProductSignalFooter'
+  ]
+}
+[pipeline:critic] Critic [saas]: FAIL (1 hard, 3 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [soft] CTA must include a real action surface: CTA/conversion section has no form fields and no real contact info. It's just buttons.
+  - [soft] palette direction compliance: modern_minimal direction D: Palette direction D expects --primary hue in [252, 272], but found 210. Apply the binding palette CSS override.
+[pipeline:design-conformance] Design conformance [modern_minimal/saas]: FAIL (5 hard, 1 soft, confidence=0.20)
+  expected roles: navbar -> hero -> story -> services -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=saas slot=hero file=910130dc1285e5549518cd6acc8d14fb.jpg
+[image-generation] local-curated  niche=saas slot=support file=f14281875b7b16d18596fab170cd9b29.jpg
+[image-generation] local-curated  niche=saas slot=gallery1 file=258062a09ecac5314649f847a12795f9.jpg
+[image-generation] local-curated  niche=saas slot=gallery2 file=0649715c3f8466ed0f6acb7dc0a100ac.jpg
+[image-generation] local-curated  niche=saas slot=gallery3 file=258062a09ecac5314649f847a12795f9.jpg
+[image-generation] local-curated  niche=saas slot=detail1 file=a9c8844b6aded80732d924df1931d6c2.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [modern_minimal/saas]: FAIL (5 hard, 1 soft, confidence=0.20)
+  expected roles: navbar -> hero -> story -> services -> proof -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/WorkflowNarrative.tsx',
+    'src/components/ProductGrid.tsx',
+    'src/components/CaseStudyStrip.tsx',
+    'src/components/ConversionPanel.tsx',
+    'src/components/ProductSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/WorkflowNarrative',
+    './components/ProductGrid',
+    './components/CaseStudyStrip',
+    './components/ConversionPanel',
+    './components/ProductSignalFooter'
+  ]
+}
+[save-guard:create] {
+  userId: 'a9bc0981-dcde-47bb-ab37-009e97b81f00',
+  docId: '0b2db2d8-19ce-45f3-b053-aff0a6e1f81e'
+}
+[saveDocument] inserting {
+  id: '0b2db2d8-19ce-45f3-b053-aff0a6e1f81e',
+  userId: 'a9bc0981-dcde-47bb-ab37-009e97b81f00'
+}
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: modern_minimal (modern-minimal) | Palette: D (Violet Edge) | Hero: Option 2 | Archetype: social-proof-led | Choreography: story-first
+[prompts-website] Routed style skill: modern_minimal for niche: construction
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'construction',
+  designFamily: 'modern_minimal',
+  selectedStyleId: 'modern_minimal',
+  variantPlan: {
+    designFamily: 'modern_minimal',
+    heroVariant: 'crew-and-project-split',
+    sectionChoreography: 'proof -> services -> gallery -> cta',
+    bodyRoleSequence: [ 'proof', 'services', 'gallery', 'cta' ],
+    proofVariant: 'credential-strip',
+    featureVariant: 'project-scope-matrix',
+    ctaVariant: 'service-area-booking',
+    footerVariant: 'service-area-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'balanced',
+    contrastMode: 'balanced'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 110172,
+  briefChars: 544,
+  estimatedPromptTokens: 27679
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 105.6s (32536 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CredentialStrip.tsx',
+    'src/components/ScopeMatrix.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/ServiceAreaFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CredentialStrip',
+    './components/ScopeMatrix',
+    './components/ProjectGallery',
+    './components/ServiceAreaBooking',
+    './components/ServiceAreaFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CredentialStrip.tsx',
+    'src/components/ScopeMatrix.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/ServiceAreaFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CredentialStrip',
+    './components/ScopeMatrix',
+    './components/ProjectGallery',
+    './components/ServiceAreaBooking',
+    './components/ServiceAreaFooter'
+  ]
+}
+[pipeline:critic] Critic [construction]: FAIL (3 hard, 2 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [hard] no two consecutive sections may share the same layout signature: Consecutive sections ProjectGallery and ServiceAreaBooking share the same layout (gallery). Adjacent sections must differ.
+  - [hard] not all sections may use centered text alignment: 4 of 5 body sections use centered-only alignment. At least 2 sections must use left-aligned or asymmetric layouts.
+  - [soft] palette direction compliance: modern_minimal direction D: Palette direction D expects --primary hue in [252, 272], but found 210. Apply the binding palette CSS override.
+[pipeline:design-conformance] Design conformance [modern_minimal/construction]: FAIL (6 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> proof -> services -> gallery -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=construction slot=hero file=39e1ec214c648ca10fc8b12aa87e7612.jpg
+[image-generation] local-curated  niche=construction slot=support file=b7387e2cebd1fd7ee20c04c0c80746ee.jpg
+[image-generation] local-curated  niche=construction slot=gallery1 file=44f1032c73e0d66c3809d4f6752a9bd9.jpg
+[image-generation] local-curated  niche=construction slot=gallery2 file=5bc0fedfc5b4795cd4c14e75a72a20df.jpg
+[image-generation] local-curated  niche=construction slot=gallery3 file=8ea2050b36b2e763f830d77966ff6607.jpg
+[image-generation] local-curated  niche=construction slot=detail1 file=6af7ced476844d14c56b2c7b579eca6d.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [modern_minimal/construction]: FAIL (6 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> proof -> services -> gallery -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CredentialStrip.tsx',
+    'src/components/ScopeMatrix.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/ServiceAreaFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CredentialStrip',
+    './components/ScopeMatrix',
+    './components/ProjectGallery',
+    './components/ServiceAreaBooking',
+    './components/ServiceAreaFooter'
+  ]
+}
+[save-guard:create] {
+  userId: 'da2de44f-32e1-4840-ade0-19e7988f9448',
+  docId: 'f3c540bf-397b-43e2-87f8-ad0e38a0c068'
+}
+[saveDocument] inserting {
+  id: 'f3c540bf-397b-43e2-87f8-ad0e38a0c068',
+  userId: 'da2de44f-32e1-4840-ade0-19e7988f9448'
+}
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: bold_commercial (bold-commercial) | Palette: A (Amber & Charcoal) | Hero: Option 1 | Archetype: authority-showcase | Choreography: story-first
+[prompts-website] Routed style skill: bold_commercial for niche: construction
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'construction',
+  designFamily: 'bold_commercial',
+  selectedStyleId: 'bold_commercial',
+  variantPlan: {
+    designFamily: 'bold_commercial',
+    heroVariant: 'crew-and-project-split',
+    sectionChoreography: 'story -> proof -> services -> cta',
+    bodyRoleSequence: [ 'story', 'proof', 'services', 'cta' ],
+    proofVariant: 'credential-strip',
+    featureVariant: 'service-lanes-with-highlight',
+    ctaVariant: 'service-area-booking',
+    footerVariant: 'commercial-contact-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'dense',
+    contrastMode: 'high'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 109220,
+  briefChars: 557,
+  estimatedPromptTokens: 27444
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[save-guard:create] {
+  userId: '17b570b3-5ab8-41a7-ae9e-7dcd19cb77b3',
+  docId: '4f55eeaa-e512-4dd0-ba01-dd4f7e0d09eb'
+}
+[saveDocument] inserting {
+  id: '4f55eeaa-e512-4dd0-ba01-dd4f7e0d09eb',
+  userId: '17b570b3-5ab8-41a7-ae9e-7dcd19cb77b3'
+}
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: bold_commercial (bold-commercial) | Palette: A (Amber & Charcoal) | Hero: Option 1 | Archetype: authority-showcase | Choreography: story-first
+[prompts-website] Routed style skill: bold_commercial for niche: construction
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'construction',
+  designFamily: 'bold_commercial',
+  selectedStyleId: 'bold_commercial',
+  variantPlan: {
+    designFamily: 'bold_commercial',
+    heroVariant: 'crew-and-project-split',
+    sectionChoreography: 'gallery -> proof -> services -> cta',
+    bodyRoleSequence: [ 'gallery', 'proof', 'services', 'cta' ],
+    proofVariant: 'credential-strip',
+    featureVariant: 'timeline-capabilities',
+    ctaVariant: 'service-area-booking',
+    footerVariant: 'trust-signal-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'dense',
+    contrastMode: 'high'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 110100,
+  briefChars: 705,
+  estimatedPromptTokens: 27701
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 116.6s (34619 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/CredentialStrip.tsx',
+    'src/components/CapabilityTimeline.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/TrustSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/ProjectGallery',
+    './components/CredentialStrip',
+    './components/CapabilityTimeline',
+    './components/ServiceAreaBooking',
+    './components/TrustSignalFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/CredentialStrip.tsx',
+    'src/components/CapabilityTimeline.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/TrustSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/ProjectGallery',
+    './components/CredentialStrip',
+    './components/CapabilityTimeline',
+    './components/ServiceAreaBooking',
+    './components/TrustSignalFooter'
+  ]
+}
+[pipeline:critic] Critic [construction]: FAIL (9 hard, 4 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [soft] CTA buttons must use Button primitive, not raw elements: 2 CTA-styled raw <a>/<button> elements found without Button primitive import. Use <Button> or <Button asChild><a>...</a></Button>.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [hard] not all sections may use centered text alignment: 4 of 5 body sections use centered-only alignment. At least 2 sections must use left-aligned or asymmetric layouts.
+  - [soft] first body section must not duplicate hero stats rail: Hero has a stats rail and first body section (ProjectGallery) is also stats-heavy. Avoid back-to-back metric rows.
+  - [soft] palette direction compliance: bold_commercial direction A: Palette direction A expects --primary hue in [20, 36], but found 210. Apply the binding palette CSS override.
+  - [hard] unresolved local import: unresolved import from src/components/Navbar.tsx: @/components/ui -> src/components/ui
+  - [hard] unresolved local import: unresolved import from src/components/Hero.tsx: @/components/ui -> src/components/ui
+  - [hard] unresolved local import: unresolved import from src/components/ProjectGallery.tsx: @/components/ui -> src/components/ui
+  - [hard] unresolved local import: unresolved import from src/components/CredentialStrip.tsx: @/components/ui -> src/components/ui
+  - [hard] unresolved local import: unresolved import from src/components/CapabilityTimeline.tsx: @/components/ui -> src/components/ui
+  - [hard] unresolved local import: unresolved import from src/components/ServiceAreaBooking.tsx: @/components/ui -> src/components/ui
+  - [hard] unresolved local import: unresolved import from src/components/TrustSignalFooter.tsx: @/components/ui -> src/components/ui
+[pipeline:design-conformance] Design conformance [bold_commercial/construction]: FAIL (5 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> gallery -> proof -> services -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=construction slot=hero file=d318816d251bd0e8e4d8634a01a41471.jpg
+[image-generation] local-curated  niche=construction slot=support file=6af7ced476844d14c56b2c7b579eca6d.jpg
+[image-generation] local-curated  niche=construction slot=gallery1 file=31b97581c832c4b70abc4d0c7b3df81d.jpg
+[image-generation] local-curated  niche=construction slot=gallery2 file=fe61959b7cd8e6294667431721909691.jpg
+[image-generation] local-curated  niche=construction slot=gallery3 file=c37148ad71207dae77014becf201738d.jpg
+[image-generation] local-curated  niche=construction slot=detail1 file=b7387e2cebd1fd7ee20c04c0c80746ee.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [bold_commercial/construction]: FAIL (5 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> gallery -> proof -> services -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] cta/missing-cta-surface: Generated output does not include a dedicated CTA/conversion section.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/CredentialStrip.tsx',
+    'src/components/CapabilityTimeline.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/TrustSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/ProjectGallery',
+    './components/CredentialStrip',
+    './components/CapabilityTimeline',
+    './components/ServiceAreaBooking',
+    './components/TrustSignalFooter'
+  ]
+}
+[save-guard:create] {
+  userId: 'cce5c67e-0045-4675-a448-ca9268f2d5de',
+  docId: 'b13ba52e-c1f1-4cba-bd3b-12667affc434'
+}
+[saveDocument] inserting {
+  id: 'b13ba52e-c1f1-4cba-bd3b-12667affc434',
+  userId: 'cce5c67e-0045-4675-a448-ca9268f2d5de'
+}
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: editorial_luxury (editorial-luxury) | Palette: A (Brass & Graphite) | Hero: Option 2 | Archetype: press-first | Choreography: story-first
+[prompts-website] Routed style skill: editorial_luxury for niche: restaurant
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'restaurant',
+  designFamily: 'editorial_luxury',
+  selectedStyleId: 'editorial_luxury',
+  variantPlan: {
+    designFamily: 'editorial_luxury',
+    heroVariant: 'cinematic-offset',
+    sectionChoreography: 'story -> services -> gallery -> proof -> cta',
+    bodyRoleSequence: [ 'story', 'services', 'gallery', 'proof', 'cta' ],
+    proofVariant: 'press-proof-band',
+    featureVariant: 'ritual-story-lanes',
+    ctaVariant: 'booking-panel',
+    footerVariant: 'venue-contact-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'airy',
+    contrastMode: 'high'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 112602,
+  briefChars: 627,
+  estimatedPromptTokens: 28307
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 105.6s (32479 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ChefStory.tsx',
+    'src/components/OmakaseExperience.tsx',
+    'src/components/MenuHighlights.tsx',
+    'src/components/ReservationPanel.tsx',
+    'src/components/Footer.tsx'
+  ],
+  appImports: [
+    'react',
+    '@/components/Navbar',
+    '@/components/Hero',
+    '@/components/ChefStory',
+    '@/components/OmakaseExperience',
+    '@/components/MenuHighlights',
+    '@/components/ReservationPanel',
+    '@/components/Footer'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ChefStory.tsx',
+    'src/components/OmakaseExperience.tsx',
+    'src/components/MenuHighlights.tsx',
+    'src/components/ReservationPanel.tsx',
+    'src/components/Footer.tsx'
+  ],
+  appImports: [
+    'react',
+    '@/components/Navbar',
+    '@/components/Hero',
+    '@/components/ChefStory',
+    '@/components/OmakaseExperience',
+    '@/components/MenuHighlights',
+    '@/components/ReservationPanel',
+    '@/components/Footer'
+  ]
+}
+[pipeline:critic] Critic [restaurant]: FAIL (4 hard, 2 soft)
+  - [hard] body sections must not repeat the same dominant layout type: Repeated layout signatures detected: centered-stack x3.
+  - [hard] App.tsx must import and render ordered section components: App.tsx composition too thin: importCount=0, renderCount=7.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [hard] no two consecutive sections may share the same layout signature: Consecutive sections OmakaseExperience and MenuHighlights share the same layout (centered-stack). Adjacent sections must differ.
+  - [hard] output must include the starter-base component scaffold: Missing starter-base component files: src/components/RitualStoryLanes.tsx, src/components/AtmosphereGallery.tsx, src/components/PressProofBand.tsx, src/components/BookingPanel.tsx, src/components/VenueContactFooter.tsx.
+  - [soft] palette direction compliance: editorial_luxury direction A: Palette direction A expects --primary hue in [30, 45], but found 210. Apply the binding palette CSS override.
+[pipeline:design-conformance] Design conformance [editorial_luxury/restaurant]: PASS (0 hard, 1 soft, confidence=0.94)
+  expected roles: navbar -> hero -> story -> services -> gallery -> proof -> cta -> footer
+  detected sections: Navbar -> Hero -> ChefStory -> OmakaseExperience -> MenuHighlights -> ReservationPanel -> Footer
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=restaurant slot=hero file=9ebe12b03d0a5b025b09d93e6339ae6d.jpg
+[image-generation] local-curated  niche=restaurant slot=support file=ca4cb01e49a4d16c270c8805105d7197.jpg
+[image-generation] local-curated  niche=restaurant slot=gallery1 file=30ea75b248cea419eabce6fa5dd1f2f1.jpg
+[image-generation] local-curated  niche=restaurant slot=gallery2 file=5a1f8bcc52e254f3af88efe943794bb8.jpg
+[image-generation] local-curated  niche=restaurant slot=gallery3 file=cce4bff077b9cb28cbba83b822ddee1b.jpg
+[image-generation] local-curated  niche=restaurant slot=detail1 file=231320aeb74860c50ddf51ac5e387591.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [editorial_luxury/restaurant]: PASS (0 hard, 1 soft, confidence=0.94)
+  expected roles: navbar -> hero -> story -> services -> gallery -> proof -> cta -> footer
+  detected sections: Navbar -> Hero -> ChefStory -> OmakaseExperience -> MenuHighlights -> ReservationPanel -> Footer
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ChefStory.tsx',
+    'src/components/OmakaseExperience.tsx',
+    'src/components/MenuHighlights.tsx',
+    'src/components/ReservationPanel.tsx',
+    'src/components/Footer.tsx'
+  ],
+  appImports: [
+    'react',
+    '@/components/Navbar',
+    '@/components/Hero',
+    '@/components/ChefStory',
+    '@/components/OmakaseExperience',
+    '@/components/MenuHighlights',
+    '@/components/ReservationPanel',
+    '@/components/Footer'
+  ]
+}
+[save-guard:create] {
+  userId: '70e95ed1-3552-499a-9fe8-446690d00bc6',
+  docId: '8fab5376-53d4-49f7-9721-c97bf34db956'
+}
+[saveDocument] inserting {
+  id: '8fab5376-53d4-49f7-9721-c97bf34db956',
+  userId: '70e95ed1-3552-499a-9fe8-446690d00bc6'
+}
+[pipeline] loaded v9-section-count-fix | generate=300s per-model=150s repair=60s repair-outer=120s max-repairs=1 finalize=120s
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: bold_commercial (bold-commercial) | Palette: A (Amber & Charcoal) | Hero: Option 1 | Archetype: proof-wall | Choreography: story-first
+[prompts-website] Routed style skill: bold_commercial for niche: construction
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'construction',
+  designFamily: 'bold_commercial',
+  selectedStyleId: 'bold_commercial',
+  variantPlan: {
+    designFamily: 'bold_commercial',
+    heroVariant: 'crew-and-project-split',
+    sectionChoreography: 'gallery -> proof -> services -> cta',
+    bodyRoleSequence: [ 'gallery', 'proof', 'services', 'cta' ],
+    proofVariant: 'metric-band',
+    featureVariant: 'project-scope-matrix',
+    ctaVariant: 'estimate-form-panel',
+    footerVariant: 'trust-signal-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'dense',
+    contrastMode: 'high'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 109827,
+  briefChars: 672,
+  estimatedPromptTokens: 27625
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 90.9s (28235 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/MetricBand.tsx',
+    'src/components/ScopeMatrix.tsx',
+    'src/components/EstimatePanel.tsx',
+    'src/components/TrustSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/ProjectGallery',
+    './components/MetricBand',
+    './components/ScopeMatrix',
+    './components/EstimatePanel',
+    './components/TrustSignalFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/MetricBand.tsx',
+    'src/components/ScopeMatrix.tsx',
+    'src/components/EstimatePanel.tsx',
+    'src/components/TrustSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/ProjectGallery',
+    './components/MetricBand',
+    './components/ScopeMatrix',
+    './components/EstimatePanel',
+    './components/TrustSignalFooter'
+  ]
+}
+[pipeline:critic] Critic [construction]: FAIL (2 hard, 2 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [hard] not all sections may use centered text alignment: 4 of 5 body sections use centered-only alignment. At least 2 sections must use left-aligned or asymmetric layouts.
+  - [soft] palette direction compliance: bold_commercial direction A: Palette direction A expects --primary hue in [20, 36], but found 210. Apply the binding palette CSS override.
+[pipeline:design-conformance] Design conformance [bold_commercial/construction]: FAIL (4 hard, 1 soft, confidence=0.23)
+  expected roles: navbar -> hero -> gallery -> proof -> services -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=construction slot=hero file=d318816d251bd0e8e4d8634a01a41471.jpg
+[image-generation] local-curated  niche=construction slot=support file=6af7ced476844d14c56b2c7b579eca6d.jpg
+[image-generation] local-curated  niche=construction slot=gallery1 file=31b97581c832c4b70abc4d0c7b3df81d.jpg
+[image-generation] local-curated  niche=construction slot=gallery2 file=fe61959b7cd8e6294667431721909691.jpg
+[image-generation] local-curated  niche=construction slot=gallery3 file=c37148ad71207dae77014becf201738d.jpg
+[image-generation] local-curated  niche=construction slot=detail1 file=b7387e2cebd1fd7ee20c04c0c80746ee.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [bold_commercial/construction]: FAIL (4 hard, 1 soft, confidence=0.23)
+  expected roles: navbar -> hero -> gallery -> proof -> services -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/ProjectGallery.tsx',
+    'src/components/MetricBand.tsx',
+    'src/components/ScopeMatrix.tsx',
+    'src/components/EstimatePanel.tsx',
+    'src/components/TrustSignalFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/ProjectGallery',
+    './components/MetricBand',
+    './components/ScopeMatrix',
+    './components/EstimatePanel',
+    './components/TrustSignalFooter'
+  ]
+}
+[save-guard:create] {
+  userId: '7ce7d9e3-7f1e-41eb-a0d9-df78c3f48809',
+  docId: '0aac07fa-c040-4e1c-b6f6-b543752aac36'
+}
+[saveDocument] inserting {
+  id: '0aac07fa-c040-4e1c-b6f6-b543752aac36',
+  userId: '7ce7d9e3-7f1e-41eb-a0d9-df78c3f48809'
+}
+[chat:request] {
+  selectedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  resolvedChatModel: 'anthropic/claude-sonnet-4-20250514',
+  provider: 'anthropic',
+  openaiDisabled: true
+}
+[skill-router] Selected style skill: modern_minimal (modern-minimal) | Palette: D (Violet Edge) | Hero: Option 2 | Archetype: product-led | Choreography: proof-first
+[prompts-website] Routed style skill: modern_minimal for niche: construction
+[build-prompt] Routed style active — gated: designFamily, archetypes, designIntelligence
+[pipeline:request] {
+  chatModel: 'anthropic/claude-sonnet-4-20250514',
+  generationChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  repairChain: [ 'anthropic/claude-sonnet-4-20250514' ],
+  imageMode: 'placeholder (OpenAI disabled)',
+  niche: 'construction',
+  designFamily: 'modern_minimal',
+  selectedStyleId: 'modern_minimal',
+  variantPlan: {
+    designFamily: 'modern_minimal',
+    heroVariant: 'crew-and-project-split',
+    sectionChoreography: 'story -> proof -> services -> cta',
+    bodyRoleSequence: [ 'story', 'proof', 'services', 'cta' ],
+    proofVariant: 'project-proof-band',
+    featureVariant: 'timeline-capabilities',
+    ctaVariant: 'service-area-booking',
+    footerVariant: 'commercial-contact-footer',
+    imageStrategy: 'curated-local',
+    densityMode: 'balanced',
+    contrastMode: 'balanced'
+  },
+  uploadedImages: 0,
+  maxRepairs: 1,
+  promptChars: 109850,
+  briefChars: 497,
+  estimatedPromptTokens: 27587
+}
+[pipeline] fallback chain: anthropic/claude-sonnet-4-20250514 (150s each)
+[pipeline] model 1/1: anthropic/claude-sonnet-4-20250514 — starting
+[pipeline] model anthropic/claude-sonnet-4-20250514 succeeded in 110.7s (33734 chars, hasAppTsx=true, hasFallback=false)
+[pipeline:trace:raw] {
+  hasAppTsx: true,
+  isFallback: false,
+  totalFiles: 8,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CompanyStory.tsx',
+    'src/components/ProjectProofBand.tsx',
+    'src/components/CapabilityTimeline.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/CommercialContactFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CompanyStory',
+    './components/ProjectProofBand',
+    './components/CapabilityTimeline',
+    './components/ServiceAreaBooking',
+    './components/CommercialContactFooter'
+  ]
+}
+[scaffold] real src/App.tsx found — keeping generated version
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:trace:light-finalize] {
+  isFallback: false,
+  totalFiles: 54,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CompanyStory.tsx',
+    'src/components/ProjectProofBand.tsx',
+    'src/components/CapabilityTimeline.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/CommercialContactFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CompanyStory',
+    './components/ProjectProofBand',
+    './components/CapabilityTimeline',
+    './components/ServiceAreaBooking',
+    './components/CommercialContactFooter'
+  ]
+}
+[pipeline:critic] Critic [construction]: FAIL (4 hard, 2 soft)
+  - [hard] App must render a real page composition: App composition invalid: hasMain=true, hasNavbar=true, hasHero=true, hasFooter=false, bodySectionCount=5.
+  - [hard] body sections must not repeat the same dominant layout type: Repeated layout signatures detected: gallery x3.
+  - [soft] manifest assets must use generated local assets: Manifest assets are not using the generated local asset contract. generated=0, fallback=0.
+  - [hard] no two consecutive sections may share the same layout signature: Consecutive sections CompanyStory and ProjectProofBand share the same layout (gallery). Adjacent sections must differ.
+  - [hard] not all sections may use centered text alignment: 5 of 5 body sections use centered-only alignment. At least 2 sections must use left-aligned or asymmetric layouts.
+  - [soft] palette direction compliance: modern_minimal direction D: Palette direction D expects --primary hue in [252, 272], but found 210. Apply the binding palette CSS override.
+[pipeline:design-conformance] Design conformance [modern_minimal/construction]: FAIL (6 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> story -> proof -> services -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] component/gallery-blueprint-projectproofband: Gallery section drifts from the required asymmetric gallery blueprint.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline] repair attempt with model: anthropic/claude-sonnet-4-20250514
+[scaffold] real src/App.tsx found — keeping generated version
+[image-generation] local-curated  niche=construction slot=hero file=39e1ec214c648ca10fc8b12aa87e7612.jpg
+[image-generation] local-curated  niche=construction slot=support file=b7387e2cebd1fd7ee20c04c0c80746ee.jpg
+[image-generation] local-curated  niche=construction slot=gallery1 file=44f1032c73e0d66c3809d4f6752a9bd9.jpg
+[image-generation] local-curated  niche=construction slot=gallery2 file=5bc0fedfc5b4795cd4c14e75a72a20df.jpg
+[image-generation] local-curated  niche=construction slot=gallery3 file=8ea2050b36b2e763f830d77966ff6607.jpg
+[image-generation] local-curated  niche=construction slot=detail1 file=6af7ced476844d14c56b2c7b579eca6d.jpg
+[image-generation] OpenAI disabled — 0 uploaded, 6 curated, 0 placeholder
+[scaffold] real src/App.tsx found — keeping generated version
+[pipeline:design-conformance:final] Design conformance [modern_minimal/construction]: FAIL (6 hard, 2 soft, confidence=0.20)
+  expected roles: navbar -> hero -> story -> proof -> services -> cta -> footer
+  detected sections: (none)
+  - [hard] section-order/manifest-app-order-mismatch: Manifest section order does not match the component order rendered by App.tsx.
+  - [hard] section-order/shell-opening-order: Page shell must open with Navbar followed immediately by Hero.
+  - [hard] section-order/shell-footer-order: Footer must be the final rendered page section.
+  - [hard] structure/required-shell-sections: Generated output is missing required shell sections.
+  - [hard] component/gallery-blueprint-projectproofband: Gallery section drifts from the required asymmetric gallery blueprint.
+  - [hard] color/raw-color-drift: Raw color literals were detected in generated section code instead of semantic theme tokens.
+  - [soft] typography/missing-font-body: Body token usage is sparse or absent.
+  - [soft] radius/radius-fragmentation: Too many rounded utility variants were used for one page, which suggests radius drift.
+[pipeline:trace:full-finalize] {
+  isFallback: false,
+  totalFiles: 60,
+  sectionComponents: [
+    'src/components/Navbar.tsx',
+    'src/components/Hero.tsx',
+    'src/components/CompanyStory.tsx',
+    'src/components/ProjectProofBand.tsx',
+    'src/components/CapabilityTimeline.tsx',
+    'src/components/ServiceAreaBooking.tsx',
+    'src/components/CommercialContactFooter.tsx'
+  ],
+  appImports: [
+    'react',
+    './components/Navbar',
+    './components/Hero',
+    './components/CompanyStory',
+    './components/ProjectProofBand',
+    './components/CapabilityTimeline',
+    './components/ServiceAreaBooking',
+    './components/CommercialContactFooter'
+  ]
+}
+[save-guard:create] {
+  userId: '4a397671-7d6f-49b5-836d-dc21bceb52f2',
+  docId: 'e82e393d-568e-468e-ad1d-1f2ff35cc1c7'
+}
+[saveDocument] inserting {
+  id: 'e82e393d-568e-468e-ad1d-1f2ff35cc1c7',
+  userId: '4a397671-7d6f-49b5-836d-dc21bceb52f2'
+}
+✓ Compiled in 1476ms
+✓ Compiled in 752ms
+✓ Compiled in 496ms
+✓ Compiled in 423ms
+✓ Compiled in 172ms
+✓ Compiled in 1757ms
+✓ Compiled in 210ms
+✓ Compiled in 432ms
+✓ Compiled in 577ms
+✓ Compiled in 223ms
+✓ Compiled in 376ms
+ │ GET http://localhost:3000/early-access?_rsc 200 in 129ms (cache skip)
+ │ │ Cache skipped reason: (fetchCache = default-no-store)
+ │ GET http://localhost:3000/early-access?_rsc 200 in 58ms (cache skip)
+ │ │ Cache skipped reason: (fetchCache = default-no-store)
+✓ Compiled in 2.9s
+✓ Compiled in 425ms
+✓ Compiled in 458ms
+✓ Compiled in 561ms
+✓ Compiled in 501ms
+○ Compiling /_error ...
+[?25h
+ ELIFECYCLE  Command failed with exit code 1.

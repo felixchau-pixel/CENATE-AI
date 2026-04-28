@@ -1,0 +1,883 @@
+===PROJECT_MANIFEST===
+{
+  "type": "project",
+  "framework": "vite-react-ts",
+  "title": "Lina Moreau - Creative Portfolio",
+  "entryFile": "src/main.tsx",
+  "previewEntryFile": "src/App.tsx",
+  "siteType": "portfolio",
+  "designDirection": "editorial luxury with serif display typography and high-contrast black/white photography",
+  "colorStrategy": "monochromatic black/white/gray with warm gold accents on dark background",
+  "typography": "Playfair Display serif for headlines, Inter for body text",
+  "sectionOrder": ["Hero", "SelectedWork", "About", "Process", "Testimonials", "Contact", "Footer"],
+  "assets": [
+    { "path": "public/images/hero.jpg", "kind": "image", "source": "fallback", "url": "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=1200&h=800&fit=crop&q=80", "prompt": "elegant portrait of creative professional in minimal studio" },
+    { "path": "public/images/work-1.jpg", "kind": "image", "source": "fallback", "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80", "prompt": "luxury brand identity design mockup" },
+    { "path": "public/images/work-2.jpg", "kind": "image", "source": "fallback", "url": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=1000&fit=crop&q=80", "prompt": "editorial magazine spread design" },
+    { "path": "public/images/work-3.jpg", "kind": "image", "source": "fallback", "url": "https://images.unsplash.com/photo-1607827448387-a67db1383b59?w=600&h=800&fit=crop&q=80", "prompt": "minimal packaging design concept" },
+    { "path": "public/images/about.jpg", "kind": "image", "source": "fallback", "url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&q=80", "prompt": "creative workspace with design materials" },
+    { "path": "public/images/process.jpg", "kind": "image", "source": "fallback", "url": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&h=500&fit=crop&q=80", "prompt": "design sketches and process documentation" }
+  ]
+}
+===END_MANIFEST===
+
+===FILE:package.json===
+{
+  "name": "lina-moreau-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
+}
+===END_FILE===
+
+===FILE:index.html===
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lina Moreau - Creative Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+===END_FILE===
+
+===FILE:tsconfig.json===
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
+===END_FILE===
+
+===FILE:vite.config.ts===
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
+})
+===END_FILE===
+
+===FILE:postcss.config.js===
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+===END_FILE===
+
+===FILE:tailwind.config.ts===
+import type { Config } from 'tailwindcss'
+
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        serif: ['Playfair Display', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        gold: '#D4AF37',
+        surface: '#111111',
+        muted: '#888888',
+      },
+    },
+  },
+  plugins: [],
+} satisfies Config
+===END_FILE===
+
+===FILE:src/main.tsx===
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import './styles/globals.css'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
+===END_FILE===
+
+===FILE:src/styles/globals.css===
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+===END_FILE===
+
+===FILE:src/App.tsx===
+import Hero from './components/Hero'
+import SelectedWork from './components/SelectedWork'
+import About from './components/About'
+import Process from './components/Process'
+import Testimonials from './components/Testimonials'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <Navbar />
+      <Hero />
+      <SelectedWork />
+      <About />
+      <Process />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </div>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Navbar.tsx===
+export default function Navbar() {
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="font-serif text-xl font-medium">
+          Lina Moreau
+        </div>
+        
+        <div className="hidden md:flex items-center space-x-8">
+          <a href="#work" className="text-sm font-medium hover:text-gold transition-colors">
+            Work
+          </a>
+          <a href="#about" className="text-sm font-medium hover:text-gold transition-colors">
+            About
+          </a>
+          <a href="#process" className="text-sm font-medium hover:text-gold transition-colors">
+            Process
+          </a>
+          <a href="#contact" className="text-sm font-medium hover:text-gold transition-colors">
+            Contact
+          </a>
+        </div>
+
+        <div className="md:hidden">
+          <button className="w-6 h-6 flex flex-col justify-center space-y-1">
+            <span className="w-full h-px bg-white"></span>
+            <span className="w-full h-px bg-white"></span>
+            <span className="w-full h-px bg-white"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Hero.tsx===
+export default function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=1200&h=800&fit=crop&q=80"
+          alt="Lina Moreau portrait"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+      </div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center min-h-screen">
+        <div className="lg:col-span-7 space-y-8">
+          <div className="space-y-4">
+            <div className="text-xs uppercase tracking-[0.3em] text-gold font-medium">
+              Creative Director & Designer
+            </div>
+            <h1 className="font-serif text-5xl md:text-7xl font-bold leading-[0.9] tracking-tight">
+              Crafting visual
+              <span className="block text-gold italic">narratives</span>
+              that resonate
+            </h1>
+          </div>
+          
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-xl">
+            I create distinctive brand identities and editorial experiences that bridge 
+            the gap between artistic vision and commercial impact.
+          </p>
+          
+          <div className="flex items-center space-x-6 pt-8">
+            <a 
+              href="#work" 
+              className="inline-flex items-center px-8 py-4 bg-gold text-black font-medium text-sm uppercase tracking-wider hover:bg-gold/90 transition-colors"
+            >
+              View Work
+            </a>
+            <a 
+              href="#contact" 
+              className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-medium text-sm uppercase tracking-wider hover:border-gold hover:text-gold transition-colors"
+            >
+              Get in Touch
+            </a>
+          </div>
+        </div>
+        
+        <div className="lg:col-span-5 space-y-8 lg:justify-self-end">
+          <div className="grid grid-cols-2 gap-6 text-center">
+            <div className="border border-white/10 bg-white/5 backdrop-blur-sm p-6">
+              <div className="text-2xl font-serif font-bold text-gold">12+</div>
+              <div className="text-xs uppercase tracking-wider text-gray-400 mt-2">Years Experience</div>
+            </div>
+            <div className="border border-white/10 bg-white/5 backdrop-blur-sm p-6">
+              <div className="text-2xl font-serif font-bold text-gold">85+</div>
+              <div className="text-xs uppercase tracking-wider text-gray-400 mt-2">Projects Completed</div>
+            </div>
+            <div className="border border-white/10 bg-white/5 backdrop-blur-sm p-6 col-span-2">
+              <div className="text-2xl font-serif font-bold text-gold">Award Winner</div>
+              <div className="text-xs uppercase tracking-wider text-gray-400 mt-2">D&AD Pencil • Cannes Lion • AIGA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
+        <div className="w-2 h-2 bg-white/60 rounded-full mx-auto mt-2 animate-pulse"></div>
+      </div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/SelectedWork.tsx===
+export default function SelectedWork() {
+  const projects = [
+    {
+      title: "Meridian Luxury Hotels",
+      category: "Brand Identity",
+      description: "A complete rebrand for the luxury hospitality chain, including visual identity, collateral system, and digital experience guidelines.",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&q=80",
+      year: "2024"
+    },
+    {
+      title: "Avant-Garde Magazine",
+      category: "Editorial Design",
+      description: "Art direction and layout design for a quarterly fashion and culture publication, featuring innovative typography and image treatment.",
+      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=1000&fit=crop&q=80",
+      year: "2023"
+    },
+    {
+      title: "Essence Skincare",
+      category: "Packaging Design",
+      description: "Minimal, sustainable packaging design for a premium skincare line, emphasizing tactile materials and clean aesthetics.",
+      image: "https://images.unsplash.com/photo-1607827448387-a67db1383b59?w=600&h=800&fit=crop&q=80",
+      year: "2024"
+    }
+  ]
+
+  return (
+    <section id="work" className="py-32 bg-zinc-900/50">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-3xl mb-20">
+          <div className="text-xs uppercase tracking-[0.3em] text-gold font-medium mb-4">
+            Selected Work
+          </div>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold leading-tight mb-8">
+            Projects that define
+            <span className="block italic text-gold">excellence</span>
+          </h2>
+          <p className="text-lg text-gray-300 leading-relaxed">
+            Each project represents a unique challenge and creative solution, 
+            crafted with meticulous attention to detail and strategic thinking.
+          </p>
+        </div>
+
+        <div className="space-y-32">
+          {projects.map((project, index) => (
+            <div key={project.title} className={`grid lg:grid-cols-12 gap-12 items-center ${
+              index % 2 === 0 ? '' : 'lg:grid-flow-dense'
+            }`}>
+              <div className={`lg:col-span-7 ${index % 2 === 0 ? '' : 'lg:col-start-6'}`}>
+                <div className="aspect-[4/3] relative group overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute top-6 right-6 text-gold font-serif font-medium text-lg opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
+                    {project.year}
+                  </div>
+                </div>
+              </div>
+              
+              <div className={`lg:col-span-5 space-y-6 ${index % 2 === 0 ? '' : 'lg:col-start-1'}`}>
+                <div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-gold font-medium mb-3">
+                    {project.category}
+                  </div>
+                  <h3 className="font-serif text-3xl md:text-4xl font-bold leading-tight mb-6">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed text-lg">
+                    {project.description}
+                  </p>
+                </div>
+                
+                <div className="flex items-center space-x-4 pt-4">
+                  <button className="text-gold text-sm font-medium uppercase tracking-wider hover:text-gold/80 transition-colors group">
+                    View Case Study
+                    <svg className="inline-block ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/About.tsx===
+export default function About() {
+  return (
+    <section id="about" className="py-32 bg-black">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-16 items-start">
+          <div className="lg:col-span-4">
+            <div className="space-y-8 sticky top-24">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&q=80"
+                alt="Creative workspace"
+                className="w-full aspect-[3/4] object-cover"
+              />
+              <div className="text-center space-y-2">
+                <div className="text-xs uppercase tracking-[0.2em] text-gold font-medium">
+                  Based in New York
+                </div>
+                <div className="text-sm text-gray-400">
+                  Available for global projects
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-8 space-y-12">
+            <div>
+              <div className="text-xs uppercase tracking-[0.3em] text-gold font-medium mb-4">
+                About
+              </div>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold leading-tight mb-8">
+                Designing with purpose
+                <span className="block italic text-gold">and precision</span>
+              </h2>
+            </div>
+            
+            <div className="space-y-8 text-lg leading-relaxed text-gray-300">
+              <p>
+                My journey began in the intersection of fine arts and commercial design, 
+                where I discovered the power of visual storytelling to transform brands 
+                and create meaningful connections with audiences.
+              </p>
+              
+              <p>
+                Over the past twelve years, I've had the privilege of working with 
+                Fortune 500 companies, emerging startups, and cultural institutions, 
+                always with the same commitment: to create design that is both beautiful 
+                and purposeful.
+              </p>
+              
+              <p className="text-white font-medium">
+                I believe that exceptional design emerges from the perfect balance of 
+                strategic thinking, creative vision, and meticulous execution. Every 
+                project is an opportunity to push boundaries and exceed expectations.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 pt-8 border-t border-white/10">
+              <div>
+                <h3 className="font-serif text-xl font-semibold mb-4 text-gold">
+                  Expertise
+                </h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li>Brand Identity & Strategy</li>
+                  <li>Editorial & Publication Design</li>
+                  <li>Packaging & Product Design</li>
+                  <li>Digital Experience Design</li>
+                  <li>Art Direction</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="font-serif text-xl font-semibold mb-4 text-gold">
+                  Recognition
+                </h3>
+                <ul className="space-y-2 text-gray-300">
+                  <li>D&AD Yellow Pencil, 2023</li>
+                  <li>Cannes Lions Gold, 2022</li>
+                  <li>AIGA Design Award, 2021</li>
+                  <li>Typography Annual, 2020</li>
+                  <li>Communication Arts Excellence, 2019</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Process.tsx===
+export default function Process() {
+  return (
+    <section id="process" className="py-32 bg-zinc-900/30">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-16 items-start">
+          <div className="lg:col-span-5">
+            <div className="space-y-8 sticky top-24">
+              <div>
+                <div className="text-xs uppercase tracking-[0.3em] text-gold font-medium mb-4">
+                  Philosophy
+                </div>
+                <h2 className="font-serif text-4xl md:text-5xl font-bold leading-tight">
+                  Methodology meets
+                  <span className="block italic text-gold">intuition</span>
+                </h2>
+              </div>
+              
+              <p className="text-lg text-gray-300 leading-relaxed">
+                My approach combines rigorous strategic thinking with creative 
+                intuition, ensuring every design decision is both meaningful and 
+                impactful.
+              </p>
+              
+              <div className="pt-8">
+                <img
+                  src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&h=500&fit=crop&q=80"
+                  alt="Design process sketches"
+                  className="w-full aspect-[4/5] object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-7">
+            <div className="space-y-16">
+              <div className="border-l-2 border-gold/30 pl-8">
+                <div className="space-y-4">
+                  <div className="text-6xl font-serif font-light text-gold/20 leading-none">
+                    01
+                  </div>
+                  <h3 className="font-serif text-2xl font-semibold text-gold">
+                    Immersion & Research
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    I begin every project by deeply understanding your brand, 
+                    audience, and market landscape. This research phase informs 
+                    all subsequent creative decisions and ensures relevance and 
+                    resonance.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="border-l-2 border-gold/30 pl-8">
+                <div className="space-y-4">
+                  <div className="text-6xl font-serif font-light text-gold/20 leading-none">
+                    02
+                  </div>
+                  <h3 className="font-serif text-2xl font-semibold text-gold">
+                    Strategic Foundation
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    With insights gathered, I develop a strategic framework that 
+                    defines the creative direction. This includes positioning, 
+                    key messages, and visual principles that will guide the 
+                    entire design process.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="border-l-2 border-gold/30 pl-8">
+                <div className="space-y-4">
+                  <div className="text-6xl font-serif font-light text-gold/20 leading-none">
+                    03
+                  </div>
+                  <h3 className="font-serif text-2xl font-semibold text-gold">
+                    Creative Exploration
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    This is where strategy meets creativity. I explore multiple 
+                    directions, experimenting with form, color, typography, and 
+                    composition to find the perfect expression of your brand's 
+                    unique story.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="border-l-2 border-gold/30 pl-8">
+                <div className="space-y-4">
+                  <div className="text-6xl font-serif font-light text-gold/20 leading-none">
+                    04
+                  </div>
+                  <h3 className="font-serif text-2xl font-semibold text-gold">
+                    Refinement & Delivery
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    The final phase involves meticulous refinement of the chosen 
+                    direction, ensuring every detail serves the overall vision. 
+                    I deliver comprehensive guidelines and assets for seamless 
+                    implementation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Testimonials.tsx===
+export default function Testimonials() {
+  const testimonials = [
+    {
+      quote: "Lina's ability to translate complex brand strategies into compelling visual narratives is unparalleled. She doesn't just create beautiful design—she creates meaningful connections.",
+      author: "Sarah Chen",
+      role: "Creative Director",
+      company: "Meridian Luxury Hotels"
+    },
+    {
+      quote: "Working with Lina was transformative for our brand. Her editorial sensibility and strategic thinking elevated our entire visual identity to new heights.",
+      author: "Marcus Rodriguez",
+      role: "Publisher",
+      company: "Avant-Garde Magazine"
+    }
+  ]
+
+  return (
+    <section className="py-32 bg-black">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <div className="text-xs uppercase tracking-[0.3em] text-gold font-medium mb-4">
+            Client Testimonials
+          </div>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold leading-tight">
+            Words from
+            <span className="block italic text-gold">collaborators</span>
+          </h2>
+        </div>
+
+        <div className="space-y-20">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+              <div className={`max-w-4xl ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
+                <blockquote className="space-y-8">
+                  <p className="font-serif text-2xl md:text-3xl leading-relaxed text-white font-light italic">
+                    "{testimonial.quote}"
+                  </p>
+                  
+                  <div className={`flex items-center space-x-4 ${index % 2 === 0 ? '' : 'flex-row-reverse space-x-reverse'}`}>
+                    <div className="w-12 h-px bg-gold"></div>
+                    <div className={`${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
+                      <div className="font-semibold text-gold">
+                        {testimonial.author}
+                      </div>
+                      <div className="text-sm text-gray-400">
+                        {testimonial.role}, {testimonial.company}
+                      </div>
+                    </div>
+                  </div>
+                </blockquote>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Contact.tsx===
+export default function Contact() {
+  return (
+    <section id="contact" className="py-32 bg-zinc-900/50">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-20 items-start">
+          <div className="space-y-12">
+            <div>
+              <div className="text-xs uppercase tracking-[0.3em] text-gold font-medium mb-4">
+                Let's Collaborate
+              </div>
+              <h2 className="font-serif text-5xl md:text-6xl font-bold leading-tight">
+                Have a project
+                <span className="block italic text-gold">in mind?</span>
+              </h2>
+            </div>
+            
+            <p className="text-xl text-gray-300 leading-relaxed">
+              I'm always excited to take on new challenges and create something 
+              extraordinary together. Whether you're a startup looking to make 
+              your mark or an established brand ready for transformation, I'd 
+              love to hear about your vision.
+            </p>
+            
+            <div className="space-y-6 pt-8">
+              <div className="flex items-center space-x-4">
+                <div className="w-6 h-6 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <a href="mailto:hello@linamoreau.com" className="text-lg hover:text-gold transition-colors">
+                  hello@linamoreau.com
+                </a>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="w-6 h-6 flex items-center justify-center">
+                  <svg className="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <span className="text-lg text-gray-300">
+                  New York, NY
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-8">
+            <form className="space-y-6">
+              <div className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gold mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="w-full px-4 py-3 bg-black/50 border border-white/20 text-white placeholder-gray-500 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                    placeholder="Your full name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gold mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full px-4 py-3 bg-black/50 border border-white/20 text-white placeholder-gray-500 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gold mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    className="w-full px-4 py-3 bg-black/50 border border-white/20 text-white placeholder-gray-500 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                    placeholder="Your company name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gold mb-2">
+                    Project Details
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={6}
+                    className="w-full px-4 py-3 bg-black/50 border border-white/20 text-white placeholder-gray-500 focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold resize-none"
+                    placeholder="Tell me about your project, timeline, and goals..."
+                  ></textarea>
+                </div>
+              </div>
+              
+              <button
+                type="submit"
+                className="w-full px-8 py-4 bg-gold text-black font-semibold uppercase tracking-wider hover:bg-gold/90 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+===END_FILE===
+
+===FILE:src/components/Footer.tsx===
+export default function Footer() {
+  return (
+    <footer className="bg-black border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-3 gap-12 items-start">
+          <div className="space-y-6">
+            <div className="font-serif text-2xl font-bold">
+              Lina Moreau
+            </div>
+            <p className="text-gray-400 leading-relaxed">
+              Creating distinctive visual narratives that bridge artistic vision 
+              and commercial impact.
+            </p>
+          </div>
+          
+          <div className="space-y-6">
+            <h3 className="font-semibold text-gold uppercase tracking-wider text-sm">
+              Connect
+            </h3>
+            <div className="space-y-3">
+              <a href="#" className="block text-gray-300 hover:text-gold transition-colors">
+                Dribbble
+              </a>
+              <a href="#" className="block text-gray-300 hover:text-gold transition-colors">
+                Behance
+              </a>
+              <a href="#" className="block text-gray-300 hover:text-gold transition-colors">
+                Instagram
+              </a>
+              <a href="#" className="block text-gray-300 hover:text-gold transition-colors">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+          
+          <div className="space-y-6">
+            <h3 className="font-semibold text-gold uppercase tracking-wider text-sm">
+              Studio
+            </h3>
+            <div className="text-gray-400 space-y-2">
+              <div>New York, NY</div>
+              <div>Available globally</div>
+              <a href="mailto:hello@linamoreau.com" className="block hover:text-gold transition-colors">
+                hello@linamoreau.com
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="text-gray-500 text-sm">
+            © 2024 Lina Moreau. All rights reserved.
+          </div>
+          <div className="text-gold font-serif italic text-sm">
+            Design is the silent ambassador of your brand.
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
+===END_FILE===
