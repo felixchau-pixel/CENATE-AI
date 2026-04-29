@@ -1,6 +1,6 @@
 "use client";
 
-import type { ComponentProps, HTMLAttributes, ReactNode } from "react";
+import type { ComponentProps, ReactNode } from "react";
 
 import { useControllableState } from "@radix-ui/react-use-controllable-state";
 import {
@@ -197,7 +197,11 @@ export const ReasoningTrigger = memo(
   }
 );
 
-export type ReasoningContentProps = HTMLAttributes<HTMLDivElement> & {
+export type ReasoningContentProps = Omit<
+  ComponentProps<typeof Streamdown>,
+  "children" | "className" | "plugins"
+> & {
+  className?: string;
   children: string;
 };
 
@@ -207,6 +211,10 @@ export const ReasoningContent = memo(
   ({ className, children, ...props }: ReasoningContentProps) => {
     const { isStreaming, isOpen } = useReasoning();
     const scrollRef = useRef<HTMLDivElement>(null);
+    const { dir, ...streamdownProps } = props;
+    const normalizedDir =
+      dir === "auto" || dir === "ltr" || dir === "rtl" ? dir : undefined;
+
     useEffect(() => {
       if (isStreaming && scrollRef.current) {
         scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
@@ -227,7 +235,11 @@ export const ReasoningContent = memo(
           ref={scrollRef}
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          <Streamdown plugins={streamdownPlugins} {...props}>
+          <Streamdown
+            dir={normalizedDir}
+            plugins={streamdownPlugins}
+            {...streamdownProps}
+          >
             {children}
           </Streamdown>
         </div>

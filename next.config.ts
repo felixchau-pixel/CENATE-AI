@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 
 const basePath = process.env.IS_DEMO === "1" ? "/demo" : "";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   ...(basePath
     ? {
         basePath,
@@ -53,6 +53,6 @@ const nextConfig: NextConfig = {
     inlineCss: true,
     turbopackFileSystemCacheForDev: true,
   },
-};
+} as NextConfig;
 
 export default withBotId(nextConfig);

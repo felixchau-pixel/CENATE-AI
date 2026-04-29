@@ -193,21 +193,17 @@ export function SharedHomeSurface({
           <div className="flex flex-1 items-center justify-center">
             <div className="w-full max-w-[720px]">
               <div className="mb-5 inline-flex h-[30px] items-center gap-2 rounded-full border border-white/[0.18] bg-black/30 px-4 backdrop-blur-md">
-                <div className="flex h-5 items-center justify-center rounded-full bg-white/[0.06] px-1.5">
-                  <CenateLogo variant="mark" className="h-5 w-5" />
+                <div className="flex h-5 items-center justify-center rounded-full bg-white/[0.00] px-1.5">
+                  <CenateLogo variant="mark" className="h-5 w-20" />
                 </div>
-                <span className="text-[12px] font-medium text-white/72">
-                  AI website generation for modern teams
-                </span>
+            
               </div>
 
               <h1 className="mx-auto max-w-[560px] text-[30px] font-semibold tracking-[-0.03em] text-white [text-shadow:0_2px_32px_rgba(0,0,0,0.7)] md:text-[42px]">
-                Build polished web experiences from a single prompt.
+                Build a ready web experiences from a single prompt.
               </h1>
 
-              <p className="mx-auto mt-3 max-w-[540px] text-sm leading-6 text-white/62 md:text-[15px]">
-                Cenate turns a clear idea into a premium starting point for your next product surface.
-              </p>
+              
 
               <div className="mt-7 w-full">
                 <PromptInputBox
