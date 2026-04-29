@@ -145,7 +145,12 @@ export function SharedHomeSurface({
     return (
       <section className="relative min-h-screen w-full overflow-hidden bg-[#0D0D0D]">
         <div className="pointer-events-none absolute inset-0 z-0 md:hidden">
-          <StaticLuxuryBackground />
+          <img
+            src="/background.png"
+            alt=""
+            aria-hidden
+            className="h-full w-full object-cover"
+          />
         </div>
 
         <video
@@ -247,7 +252,12 @@ export function SharedHomeSurface({
   return (
     <section className="relative h-full overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:rounded-[28px] md:border md:border-white/[0.08]">
       <div className="pointer-events-none absolute inset-0 z-0 md:hidden">
-        <StaticLuxuryBackground />
+        <img
+          src="/background.png"
+          alt=""
+          aria-hidden
+          className="h-full w-full object-cover"
+        />
       </div>
 
       <video

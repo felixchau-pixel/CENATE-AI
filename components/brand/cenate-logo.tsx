@@ -18,7 +18,7 @@ export function CenateLogo({
     return (
       <span className={cn("relative inline-flex h-8 w-8", className)}>
         <Image
-          src="/icon.png"
+          src="/cenate-mark.png"
           alt={alt}
           fill
           priority={priority}
@@ -33,7 +33,7 @@ export function CenateLogo({
     return (
       <span className={cn("relative inline-flex h-8 w-8", className)}>
         <Image
-          src="/Icons.png"
+          src="/cenate-mark.png"
           alt={alt}
           fill
           priority={priority}
@@ -46,14 +46,14 @@ export function CenateLogo({
 
   if (variant === "mark") {
     return (
-      <span className={cn("inline-flex h-7 w-7 overflow-hidden", className)}>
+      <span className={cn("relative inline-flex h-7 w-7", className)}>
         <Image
-          src="/Logo.png"
+          src="/cenate-mark.png"
           alt={alt}
-          width={112}
-          height={28}
+          fill
           priority={priority}
-          className="h-full w-auto max-w-none"
+          sizes="32px"
+          className="object-contain"
         />
       </span>
     );

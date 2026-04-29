@@ -74,7 +74,7 @@ export function AppSidebar({ user }: { user: User | undefined }) {
                 <SidebarMenuButton
                   asChild
                   className="size-8 !px-0 items-center justify-center group-data-[collapsible=icon]:group-hover/logo:opacity-0"
-                  tooltip="Chatbot"
+                  tooltip="Cenate AI"
                 >
                   <Link href="/dashboard" onClick={() => setOpenMobile(false)}>
                     <CenateLogo variant="mark" className="h-6 w-6 opacity-80" />
